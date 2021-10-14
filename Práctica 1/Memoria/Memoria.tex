@@ -138,8 +138,7 @@ En todas las partes en las que necesitemos usar números aleatorios, usaremos la
 % TODO -- los enlaces deben ser clicables
 En primer lugar, la fuente original del \emph{dataset} se puede encontrar en \url{https://www.kaggle.com/fedesoriano/heart-failure-prediction}. Aunque podemos estar trabajando con un \emph{dataset} ligeramente modificado por los profesores de la asignatura.
 
-Analizando los datos con \lstinline{KNIME}, como explicaremos más adelante, vemos que tenemos 12 columnas (una por cada una de las características del \emph{datasets}). Además, no tenemos \emph{missing values}.
-
+Analizando los datos con \lstinline{KNIME}, como explicaremos más adelante, vemos que tenemos 12 columnas (una por cada una de las características del \emph{datasets}). Además, tenemos \emph{missing values} en la característica \emph{Cholesterol}. Además, estos \emph{missing values} están marcados con un cero en el valor. Así que los pasamos a \emph{missing values} propios de \emph{KNIME} del siguiente modo: pasando esta columna a \lstinline{string}, cambiando el \lstinline{string} '0` al \lstinline{string} 'missing value`. Recuperamos el valor entero y con ello, generamos los \emph{missing values} correspondientes
 
 \pagebreak
 
