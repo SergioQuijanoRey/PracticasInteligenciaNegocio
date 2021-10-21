@@ -15,7 +15,7 @@
         </config>
         <config key="curves">
             <entry key="array-size" type="xint" value="1"/>
-            <entry key="0" type="xstring" value="P (HeartDisease=1)Prediction (prob)"/>
+            <entry key="0" type="xstring" value="P (HeartDisease=1)Prob Class"/>
         </config>
         <entry key="maxPoints" type="xint" value="2000"/>
     </config>
@@ -46,6 +46,6 @@
     </config>
     <config key="filestores">
         <entry key="file_store_location" type="xstring" isnull="true" value=""/>
-        <entry key="file_store_id" type="xstring" value="108cc058-0c71-417a-8021-2febfd18b19e"/>
+        <entry key="file_store_id" type="xstring" value="79bce208-8ca6-4089-a6cc-3f63cd8f2b7b"/>
     </config>
 </config>

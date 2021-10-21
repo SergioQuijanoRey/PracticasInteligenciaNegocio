@@ -6,11 +6,11 @@
         <entry key="memory_policy" type="xstring" value="CacheSmallInMemory"/>
     </config>
     <config key="model">
-        <entry key="classColumn" type="xstring" value="HeartDisease"/>
+        <entry key="classColumn" type="xstring" value="Prediction (HeartDisease)"/>
         <config key="positiveClass">
             <entry key="datacell" type="xstring" value="org.knime.core.data.def.StringCell"/>
             <config key="org.knime.core.data.def.StringCell">
-                <entry key="StringCell" type="xstring" value="1"/>
+                <entry key="StringCell" type="xstring" value="0"/>
             </config>
         </config>
         <config key="curves">
@@ -46,6 +46,6 @@
     </config>
     <config key="filestores">
         <entry key="file_store_location" type="xstring" isnull="true" value=""/>
-        <entry key="file_store_id" type="xstring" value="ea65ad76-5771-4017-aea5-81d34dc420e2"/>
+        <entry key="file_store_id" type="xstring" value="577db428-de03-407e-8255-2bc0d6492e77"/>
     </config>
 </config>
