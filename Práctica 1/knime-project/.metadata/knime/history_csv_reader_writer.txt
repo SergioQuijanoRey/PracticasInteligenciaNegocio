@@ -1,0 +1,2 @@
+/home/sergio/GitProjects/PracticasInteligenciaNegocio/Práctica 1/datasets/heart.csv
+/home/sergio/GitProjects/PracticasInteligenciaNegocio/Práctica 1/datasets

@@ -1,0 +1,672 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns="http://www.knime.org/2008/09/XMLConfig" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.knime.org/2008/09/XMLConfig http://www.knime.org/XMLConfig_2008_09.xsd" key="boxPlotInternals">
+    <entry key="numberOf" type="xint" value="7"/>
+    <config key="colSpec0">
+        <entry key="column_name" type="xstring" value="Age"/>
+        <config key="element_names">
+            <entry key="array-size" type="xint" value="0"/>
+        </config>
+        <config key="column_type">
+            <entry key="cell_class" type="xstring" value="org.knime.core.data.def.IntCell"/>
+        </config>
+        <config key="column_domain">
+            <config key="lower_bound">
+                <entry key="datacell" type="xstring" value="org.knime.core.data.def.IntCell"/>
+                <config key="org.knime.core.data.def.IntCell">
+                    <entry key="IntCell" type="xint" value="28"/>
+                </config>
+            </config>
+            <config key="upper_bound">
+                <entry key="datacell" type="xstring" value="org.knime.core.data.def.IntCell"/>
+                <config key="org.knime.core.data.def.IntCell">
+                    <entry key="IntCell" type="xint" value="77"/>
+                </config>
+            </config>
+        </config>
+        <config key="column_properties"/>
+        <config key="meta_data"/>
+    </config>
+    <config key="colSpec1">
+        <entry key="column_name" type="xstring" value="RestingBP"/>
+        <config key="element_names">
+            <entry key="array-size" type="xint" value="0"/>
+        </config>
+        <config key="column_type">
+            <entry key="cell_class" type="xstring" value="org.knime.core.data.def.IntCell"/>
+        </config>
+        <config key="column_domain">
+            <config key="lower_bound">
+                <entry key="datacell" type="xstring" value="org.knime.core.data.def.IntCell"/>
+                <config key="org.knime.core.data.def.IntCell">
+                    <entry key="IntCell" type="xint" value="0"/>
+                </config>
+            </config>
+            <config key="upper_bound">
+                <entry key="datacell" type="xstring" value="org.knime.core.data.def.IntCell"/>
+                <config key="org.knime.core.data.def.IntCell">
+                    <entry key="IntCell" type="xint" value="200"/>
+                </config>
+            </config>
+        </config>
+        <config key="column_properties"/>
+        <config key="meta_data"/>
+    </config>
+    <config key="colSpec2">
+        <entry key="column_name" type="xstring" value="Cholesterol"/>
+        <config key="element_names">
+            <entry key="array-size" type="xint" value="0"/>
+        </config>
+        <config key="column_type">
+            <entry key="cell_class" type="xstring" value="org.knime.core.data.def.IntCell"/>
+        </config>
+        <config key="column_domain">
+            <config key="lower_bound">
+                <entry key="datacell" type="xstring" value="org.knime.core.data.def.IntCell"/>
+                <config key="org.knime.core.data.def.IntCell">
+                    <entry key="IntCell" type="xint" value="0"/>
+                </config>
+            </config>
+            <config key="upper_bound">
+                <entry key="datacell" type="xstring" value="org.knime.core.data.def.IntCell"/>
+                <config key="org.knime.core.data.def.IntCell">
+                    <entry key="IntCell" type="xint" value="603"/>
+                </config>
+            </config>
+        </config>
+        <config key="column_properties"/>
+        <config key="meta_data"/>
+    </config>
+    <config key="colSpec3">
+        <entry key="column_name" type="xstring" value="FastingBS"/>
+        <config key="element_names">
+            <entry key="array-size" type="xint" value="0"/>
+        </config>
+        <config key="column_type">
+            <entry key="cell_class" type="xstring" value="org.knime.core.data.def.IntCell"/>
+        </config>
+        <config key="column_domain">
+            <config key="lower_bound">
+                <entry key="datacell" type="xstring" value="org.knime.core.data.def.IntCell"/>
+                <config key="org.knime.core.data.def.IntCell">
+                    <entry key="IntCell" type="xint" value="0"/>
+                </config>
+            </config>
+            <config key="upper_bound">
+                <entry key="datacell" type="xstring" value="org.knime.core.data.def.IntCell"/>
+                <config key="org.knime.core.data.def.IntCell">
+                    <entry key="IntCell" type="xint" value="1"/>
+                </config>
+            </config>
+        </config>
+        <config key="column_properties"/>
+        <config key="meta_data"/>
+    </config>
+    <config key="colSpec4">
+        <entry key="column_name" type="xstring" value="MaxHR"/>
+        <config key="element_names">
+            <entry key="array-size" type="xint" value="0"/>
+        </config>
+        <config key="column_type">
+            <entry key="cell_class" type="xstring" value="org.knime.core.data.def.IntCell"/>
+        </config>
+        <config key="column_domain">
+            <config key="lower_bound">
+                <entry key="datacell" type="xstring" value="org.knime.core.data.def.IntCell"/>
+                <config key="org.knime.core.data.def.IntCell">
+                    <entry key="IntCell" type="xint" value="60"/>
+                </config>
+            </config>
+            <config key="upper_bound">
+                <entry key="datacell" type="xstring" value="org.knime.core.data.def.IntCell"/>
+                <config key="org.knime.core.data.def.IntCell">
+                    <entry key="IntCell" type="xint" value="202"/>
+                </config>
+            </config>
+        </config>
+        <config key="column_properties"/>
+        <config key="meta_data"/>
+    </config>
+    <config key="colSpec5">
+        <entry key="column_name" type="xstring" value="Oldpeak"/>
+        <config key="element_names">
+            <entry key="array-size" type="xint" value="0"/>
+        </config>
+        <config key="column_type">
+            <entry key="cell_class" type="xstring" value="org.knime.core.data.def.DoubleCell"/>
+        </config>
+        <config key="column_domain">
+            <config key="lower_bound">
+                <entry key="datacell" type="xstring" value="org.knime.core.data.def.DoubleCell"/>
+                <config key="org.knime.core.data.def.DoubleCell">
+                    <entry key="DoubleCell" type="xdouble" value="-2.6"/>
+                </config>
+            </config>
+            <config key="upper_bound">
+                <entry key="datacell" type="xstring" value="org.knime.core.data.def.DoubleCell"/>
+                <config key="org.knime.core.data.def.DoubleCell">
+                    <entry key="DoubleCell" type="xdouble" value="6.2"/>
+                </config>
+            </config>
+        </config>
+        <config key="column_properties"/>
+        <config key="meta_data"/>
+    </config>
+    <config key="colSpec6">
+        <entry key="column_name" type="xstring" value="HeartDisease"/>
+        <config key="element_names">
+            <entry key="array-size" type="xint" value="0"/>
+        </config>
+        <config key="column_type">
+            <entry key="cell_class" type="xstring" value="org.knime.core.data.def.IntCell"/>
+        </config>
+        <config key="column_domain">
+            <config key="lower_bound">
+                <entry key="datacell" type="xstring" value="org.knime.core.data.def.IntCell"/>
+                <config key="org.knime.core.data.def.IntCell">
+                    <entry key="IntCell" type="xint" value="0"/>
+                </config>
+            </config>
+            <config key="upper_bound">
+                <entry key="datacell" type="xstring" value="org.knime.core.data.def.IntCell"/>
+                <config key="org.knime.core.data.def.IntCell">
+                    <entry key="IntCell" type="xint" value="1"/>
+                </config>
+            </config>
+        </config>
+        <config key="column_properties"/>
+        <config key="meta_data"/>
+    </config>
+    <config key="statsAge">
+        <entry key="array-size" type="xint" value="7"/>
+        <entry key="0" type="xdouble" value="28.0"/>
+        <entry key="1" type="xdouble" value="28.0"/>
+        <entry key="2" type="xdouble" value="47.0"/>
+        <entry key="3" type="xdouble" value="54.0"/>
+        <entry key="4" type="xdouble" value="60.0"/>
+        <entry key="5" type="xdouble" value="77.0"/>
+        <entry key="6" type="xdouble" value="77.0"/>
+    </config>
+    <config key="mildrowAge"/>
+    <config key="mildAge">
+        <entry key="array-size" type="xint" value="0"/>
+    </config>
+    <config key="extremerowAge"/>
+    <config key="extremeAge">
+        <entry key="array-size" type="xint" value="0"/>
+    </config>
+    <config key="statsRestingBP">
+        <entry key="array-size" type="xint" value="7"/>
+        <entry key="0" type="xdouble" value="0.0"/>
+        <entry key="1" type="xdouble" value="92.0"/>
+        <entry key="2" type="xdouble" value="120.0"/>
+        <entry key="3" type="xdouble" value="130.0"/>
+        <entry key="4" type="xdouble" value="140.0"/>
+        <entry key="5" type="xdouble" value="170.0"/>
+        <entry key="6" type="xdouble" value="200.0"/>
+    </config>
+    <config key="mildrowRestingBP">
+        <config key="mildrowRestingBP0">
+            <entry key="array-size" type="xint" value="1"/>
+            <entry key="0" type="xstring" value="Row314"/>
+        </config>
+        <config key="mildrowRestingBP1">
+            <entry key="array-size" type="xint" value="2"/>
+            <entry key="0" type="xstring" value="Row550"/>
+            <entry key="1" type="xstring" value="Row880"/>
+        </config>
+        <config key="mildrowRestingBP2">
+            <entry key="array-size" type="xint" value="1"/>
+            <entry key="0" type="xstring" value="Row673"/>
+        </config>
+        <config key="mildrowRestingBP3">
+            <entry key="array-size" type="xint" value="3"/>
+            <entry key="0" type="xstring" value="Row475"/>
+            <entry key="1" type="xstring" value="Row774"/>
+            <entry key="2" type="xstring" value="Row702"/>
+        </config>
+        <config key="mildrowRestingBP4">
+            <entry key="array-size" type="xint" value="12"/>
+            <entry key="0" type="xstring" value="Row725"/>
+            <entry key="1" type="xstring" value="Row274"/>
+            <entry key="2" type="xstring" value="Row780"/>
+            <entry key="3" type="xstring" value="Row275"/>
+            <entry key="4" type="xstring" value="Row123"/>
+            <entry key="5" type="xstring" value="Row189"/>
+            <entry key="6" type="xstring" value="Row585"/>
+            <entry key="7" type="xstring" value="Row278"/>
+            <entry key="8" type="xstring" value="Row411"/>
+            <entry key="9" type="xstring" value="Row423"/>
+            <entry key="10" type="xstring" value="Row190"/>
+            <entry key="11" type="xstring" value="Row855"/>
+        </config>
+        <config key="mildrowRestingBP5">
+            <entry key="array-size" type="xint" value="1"/>
+            <entry key="0" type="xstring" value="Row372"/>
+        </config>
+        <config key="mildrowRestingBP6">
+            <entry key="array-size" type="xint" value="2"/>
+            <entry key="0" type="xstring" value="Row109"/>
+            <entry key="1" type="xstring" value="Row592"/>
+        </config>
+        <config key="mildrowRestingBP7">
+            <entry key="array-size" type="xint" value="1"/>
+            <entry key="0" type="xstring" value="Row759"/>
+        </config>
+    </config>
+    <config key="mildRestingBP">
+        <entry key="array-size" type="xint" value="8"/>
+        <entry key="0" type="xdouble" value="80.0"/>
+        <entry key="1" type="xdouble" value="172.0"/>
+        <entry key="2" type="xdouble" value="174.0"/>
+        <entry key="3" type="xdouble" value="178.0"/>
+        <entry key="4" type="xdouble" value="180.0"/>
+        <entry key="5" type="xdouble" value="185.0"/>
+        <entry key="6" type="xdouble" value="190.0"/>
+        <entry key="7" type="xdouble" value="192.0"/>
+    </config>
+    <config key="extremerowRestingBP">
+        <config key="extremerowRestingBP0">
+            <entry key="array-size" type="xint" value="1"/>
+            <entry key="0" type="xstring" value="Row449"/>
+        </config>
+        <config key="extremerowRestingBP1">
+            <entry key="array-size" type="xint" value="1"/>
+            <entry key="0" type="xstring" value="Row732"/>
+        </config>
+    </config>
+    <config key="extremeRestingBP">
+        <entry key="array-size" type="xint" value="2"/>
+        <entry key="0" type="xdouble" value="0.0"/>
+        <entry key="1" type="xdouble" value="200.0"/>
+    </config>
+    <config key="statsCholesterol">
+        <entry key="array-size" type="xint" value="7"/>
+        <entry key="0" type="xdouble" value="0.0"/>
+        <entry key="1" type="xdouble" value="85.0"/>
+        <entry key="2" type="xdouble" value="173.0"/>
+        <entry key="3" type="xdouble" value="223.0"/>
+        <entry key="4" type="xdouble" value="267.0"/>
+        <entry key="5" type="xdouble" value="407.0"/>
+        <entry key="6" type="xdouble" value="603.0"/>
+    </config>
+    <config key="mildrowCholesterol">
+        <config key="mildrowCholesterol0">
+            <entry key="array-size" type="xint" value="172"/>
+            <entry key="0" type="xstring" value="Row406"/>
+            <entry key="1" type="xstring" value="Row407"/>
+            <entry key="2" type="xstring" value="Row408"/>
+            <entry key="3" type="xstring" value="Row409"/>
+            <entry key="4" type="xstring" value="Row370"/>
+            <entry key="5" type="xstring" value="Row371"/>
+            <entry key="6" type="xstring" value="Row492"/>
+            <entry key="7" type="xstring" value="Row372"/>
+            <entry key="8" type="xstring" value="Row373"/>
+            <entry key="9" type="xstring" value="Row374"/>
+            <entry key="10" type="xstring" value="Row375"/>
+            <entry key="11" type="xstring" value="Row376"/>
+            <entry key="12" type="xstring" value="Row377"/>
+            <entry key="13" type="xstring" value="Row410"/>
+            <entry key="14" type="xstring" value="Row378"/>
+            <entry key="15" type="xstring" value="Row411"/>
+            <entry key="16" type="xstring" value="Row379"/>
+            <entry key="17" type="xstring" value="Row412"/>
+            <entry key="18" type="xstring" value="Row413"/>
+            <entry key="19" type="xstring" value="Row414"/>
+            <entry key="20" type="xstring" value="Row535"/>
+            <entry key="21" type="xstring" value="Row415"/>
+            <entry key="22" type="xstring" value="Row536"/>
+            <entry key="23" type="xstring" value="Row380"/>
+            <entry key="24" type="xstring" value="Row381"/>
+            <entry key="25" type="xstring" value="Row382"/>
+            <entry key="26" type="xstring" value="Row383"/>
+            <entry key="27" type="xstring" value="Row384"/>
+            <entry key="28" type="xstring" value="Row385"/>
+            <entry key="29" type="xstring" value="Row386"/>
+            <entry key="30" type="xstring" value="Row387"/>
+            <entry key="31" type="xstring" value="Row300"/>
+            <entry key="32" type="xstring" value="Row388"/>
+            <entry key="33" type="xstring" value="Row421"/>
+            <entry key="34" type="xstring" value="Row301"/>
+            <entry key="35" type="xstring" value="Row389"/>
+            <entry key="36" type="xstring" value="Row302"/>
+            <entry key="37" type="xstring" value="Row423"/>
+            <entry key="38" type="xstring" value="Row303"/>
+            <entry key="39" type="xstring" value="Row424"/>
+            <entry key="40" type="xstring" value="Row304"/>
+            <entry key="41" type="xstring" value="Row305"/>
+            <entry key="42" type="xstring" value="Row306"/>
+            <entry key="43" type="xstring" value="Row427"/>
+            <entry key="44" type="xstring" value="Row508"/>
+            <entry key="45" type="xstring" value="Row470"/>
+            <entry key="46" type="xstring" value="Row350"/>
+            <entry key="47" type="xstring" value="Row471"/>
+            <entry key="48" type="xstring" value="Row351"/>
+            <entry key="49" type="xstring" value="Row472"/>
+            <entry key="50" type="xstring" value="Row352"/>
+            <entry key="51" type="xstring" value="Row353"/>
+            <entry key="52" type="xstring" value="Row474"/>
+            <entry key="53" type="xstring" value="Row354"/>
+            <entry key="54" type="xstring" value="Row475"/>
+            <entry key="55" type="xstring" value="Row355"/>
+            <entry key="56" type="xstring" value="Row356"/>
+            <entry key="57" type="xstring" value="Row477"/>
+            <entry key="58" type="xstring" value="Row357"/>
+            <entry key="59" type="xstring" value="Row358"/>
+            <entry key="60" type="xstring" value="Row479"/>
+            <entry key="61" type="xstring" value="Row359"/>
+            <entry key="62" type="xstring" value="Row514"/>
+            <entry key="63" type="xstring" value="Row515"/>
+            <entry key="64" type="xstring" value="Row518"/>
+            <entry key="65" type="xstring" value="Row480"/>
+            <entry key="66" type="xstring" value="Row360"/>
+            <entry key="67" type="xstring" value="Row481"/>
+            <entry key="68" type="xstring" value="Row361"/>
+            <entry key="69" type="xstring" value="Row362"/>
+            <entry key="70" type="xstring" value="Row483"/>
+            <entry key="71" type="xstring" value="Row363"/>
+            <entry key="72" type="xstring" value="Row484"/>
+            <entry key="73" type="xstring" value="Row364"/>
+            <entry key="74" type="xstring" value="Row365"/>
+            <entry key="75" type="xstring" value="Row366"/>
+            <entry key="76" type="xstring" value="Row367"/>
+            <entry key="77" type="xstring" value="Row400"/>
+            <entry key="78" type="xstring" value="Row368"/>
+            <entry key="79" type="xstring" value="Row401"/>
+            <entry key="80" type="xstring" value="Row369"/>
+            <entry key="81" type="xstring" value="Row402"/>
+            <entry key="82" type="xstring" value="Row403"/>
+            <entry key="83" type="xstring" value="Row404"/>
+            <entry key="84" type="xstring" value="Row405"/>
+            <entry key="85" type="xstring" value="Row329"/>
+            <entry key="86" type="xstring" value="Row293"/>
+            <entry key="87" type="xstring" value="Row294"/>
+            <entry key="88" type="xstring" value="Row295"/>
+            <entry key="89" type="xstring" value="Row296"/>
+            <entry key="90" type="xstring" value="Row450"/>
+            <entry key="91" type="xstring" value="Row297"/>
+            <entry key="92" type="xstring" value="Row330"/>
+            <entry key="93" type="xstring" value="Row451"/>
+            <entry key="94" type="xstring" value="Row298"/>
+            <entry key="95" type="xstring" value="Row331"/>
+            <entry key="96" type="xstring" value="Row299"/>
+            <entry key="97" type="xstring" value="Row332"/>
+            <entry key="98" type="xstring" value="Row453"/>
+            <entry key="99" type="xstring" value="Row333"/>
+            <entry key="100" type="xstring" value="Row334"/>
+            <entry key="101" type="xstring" value="Row455"/>
+            <entry key="102" type="xstring" value="Row335"/>
+            <entry key="103" type="xstring" value="Row456"/>
+            <entry key="104" type="xstring" value="Row336"/>
+            <entry key="105" type="xstring" value="Row457"/>
+            <entry key="106" type="xstring" value="Row337"/>
+            <entry key="107" type="xstring" value="Row458"/>
+            <entry key="108" type="xstring" value="Row338"/>
+            <entry key="109" type="xstring" value="Row459"/>
+            <entry key="110" type="xstring" value="Row339"/>
+            <entry key="111" type="xstring" value="Row340"/>
+            <entry key="112" type="xstring" value="Row461"/>
+            <entry key="113" type="xstring" value="Row341"/>
+            <entry key="114" type="xstring" value="Row342"/>
+            <entry key="115" type="xstring" value="Row463"/>
+            <entry key="116" type="xstring" value="Row343"/>
+            <entry key="117" type="xstring" value="Row464"/>
+            <entry key="118" type="xstring" value="Row344"/>
+            <entry key="119" type="xstring" value="Row345"/>
+            <entry key="120" type="xstring" value="Row466"/>
+            <entry key="121" type="xstring" value="Row346"/>
+            <entry key="122" type="xstring" value="Row467"/>
+            <entry key="123" type="xstring" value="Row347"/>
+            <entry key="124" type="xstring" value="Row348"/>
+            <entry key="125" type="xstring" value="Row349"/>
+            <entry key="126" type="xstring" value="Row307"/>
+            <entry key="127" type="xstring" value="Row428"/>
+            <entry key="128" type="xstring" value="Row308"/>
+            <entry key="129" type="xstring" value="Row429"/>
+            <entry key="130" type="xstring" value="Row309"/>
+            <entry key="131" type="xstring" value="Row390"/>
+            <entry key="132" type="xstring" value="Row391"/>
+            <entry key="133" type="xstring" value="Row392"/>
+            <entry key="134" type="xstring" value="Row393"/>
+            <entry key="135" type="xstring" value="Row394"/>
+            <entry key="136" type="xstring" value="Row395"/>
+            <entry key="137" type="xstring" value="Row396"/>
+            <entry key="138" type="xstring" value="Row397"/>
+            <entry key="139" type="xstring" value="Row430"/>
+            <entry key="140" type="xstring" value="Row310"/>
+            <entry key="141" type="xstring" value="Row398"/>
+            <entry key="142" type="xstring" value="Row311"/>
+            <entry key="143" type="xstring" value="Row399"/>
+            <entry key="144" type="xstring" value="Row312"/>
+            <entry key="145" type="xstring" value="Row313"/>
+            <entry key="146" type="xstring" value="Row434"/>
+            <entry key="147" type="xstring" value="Row314"/>
+            <entry key="148" type="xstring" value="Row435"/>
+            <entry key="149" type="xstring" value="Row315"/>
+            <entry key="150" type="xstring" value="Row436"/>
+            <entry key="151" type="xstring" value="Row316"/>
+            <entry key="152" type="xstring" value="Row437"/>
+            <entry key="153" type="xstring" value="Row317"/>
+            <entry key="154" type="xstring" value="Row438"/>
+            <entry key="155" type="xstring" value="Row318"/>
+            <entry key="156" type="xstring" value="Row439"/>
+            <entry key="157" type="xstring" value="Row319"/>
+            <entry key="158" type="xstring" value="Row440"/>
+            <entry key="159" type="xstring" value="Row320"/>
+            <entry key="160" type="xstring" value="Row441"/>
+            <entry key="161" type="xstring" value="Row321"/>
+            <entry key="162" type="xstring" value="Row442"/>
+            <entry key="163" type="xstring" value="Row322"/>
+            <entry key="164" type="xstring" value="Row323"/>
+            <entry key="165" type="xstring" value="Row324"/>
+            <entry key="166" type="xstring" value="Row325"/>
+            <entry key="167" type="xstring" value="Row446"/>
+            <entry key="168" type="xstring" value="Row326"/>
+            <entry key="169" type="xstring" value="Row327"/>
+            <entry key="170" type="xstring" value="Row328"/>
+            <entry key="171" type="xstring" value="Row449"/>
+        </config>
+        <config key="mildrowCholesterol1">
+            <entry key="array-size" type="xint" value="1"/>
+            <entry key="0" type="xstring" value="Row796"/>
+        </config>
+        <config key="mildrowCholesterol2">
+            <entry key="array-size" type="xint" value="1"/>
+            <entry key="0" type="xstring" value="Row69"/>
+        </config>
+        <config key="mildrowCholesterol3">
+            <entry key="array-size" type="xint" value="1"/>
+            <entry key="0" type="xstring" value="Row667"/>
+        </config>
+        <config key="mildrowCholesterol4">
+            <entry key="array-size" type="xint" value="1"/>
+            <entry key="0" type="xstring" value="Row496"/>
+        </config>
+        <config key="mildrowCholesterol5">
+            <entry key="array-size" type="xint" value="1"/>
+            <entry key="0" type="xstring" value="Row103"/>
+        </config>
+        <config key="mildrowCholesterol6">
+            <entry key="array-size" type="xint" value="1"/>
+            <entry key="0" type="xstring" value="Row28"/>
+        </config>
+        <config key="mildrowCholesterol7">
+            <entry key="array-size" type="xint" value="1"/>
+            <entry key="0" type="xstring" value="Row250"/>
+        </config>
+        <config key="mildrowCholesterol8">
+            <entry key="array-size" type="xint" value="1"/>
+            <entry key="0" type="xstring" value="Row30"/>
+        </config>
+        <config key="mildrowCholesterol9">
+            <entry key="array-size" type="xint" value="1"/>
+            <entry key="0" type="xstring" value="Row76"/>
+        </config>
+    </config>
+    <config key="mildCholesterol">
+        <entry key="array-size" type="xint" value="10"/>
+        <entry key="0" type="xdouble" value="0.0"/>
+        <entry key="1" type="xdouble" value="409.0"/>
+        <entry key="2" type="xdouble" value="412.0"/>
+        <entry key="3" type="xdouble" value="417.0"/>
+        <entry key="4" type="xdouble" value="458.0"/>
+        <entry key="5" type="xdouble" value="466.0"/>
+        <entry key="6" type="xdouble" value="468.0"/>
+        <entry key="7" type="xdouble" value="491.0"/>
+        <entry key="8" type="xdouble" value="518.0"/>
+        <entry key="9" type="xdouble" value="529.0"/>
+    </config>
+    <config key="extremerowCholesterol">
+        <config key="extremerowCholesterol0">
+            <entry key="array-size" type="xint" value="1"/>
+            <entry key="0" type="xstring" value="Row616"/>
+        </config>
+        <config key="extremerowCholesterol1">
+            <entry key="array-size" type="xint" value="1"/>
+            <entry key="0" type="xstring" value="Row149"/>
+        </config>
+    </config>
+    <config key="extremeCholesterol">
+        <entry key="array-size" type="xint" value="2"/>
+        <entry key="0" type="xdouble" value="564.0"/>
+        <entry key="1" type="xdouble" value="603.0"/>
+    </config>
+    <config key="statsFastingBS">
+        <entry key="array-size" type="xint" value="7"/>
+        <entry key="0" type="xdouble" value="0.0"/>
+        <entry key="1" type="xdouble" value="0.0"/>
+        <entry key="2" type="xdouble" value="0.0"/>
+        <entry key="3" type="xdouble" value="0.0"/>
+        <entry key="4" type="xdouble" value="0.0"/>
+        <entry key="5" type="xdouble" value="0.0"/>
+        <entry key="6" type="xdouble" value="1.0"/>
+    </config>
+    <config key="mildrowFastingBS"/>
+    <config key="mildFastingBS">
+        <entry key="array-size" type="xint" value="0"/>
+    </config>
+    <config key="extremerowFastingBS">
+        <config key="extremerowFastingBS0">
+            <entry key="array-size" type="xint" value="1"/>
+            <entry key="0" type="xstring" value="Row914"/>
+        </config>
+    </config>
+    <config key="extremeFastingBS">
+        <entry key="array-size" type="xint" value="1"/>
+        <entry key="0" type="xdouble" value="1.0"/>
+    </config>
+    <config key="statsMaxHR">
+        <entry key="array-size" type="xint" value="7"/>
+        <entry key="0" type="xdouble" value="60.0"/>
+        <entry key="1" type="xdouble" value="67.0"/>
+        <entry key="2" type="xdouble" value="120.0"/>
+        <entry key="3" type="xdouble" value="138.0"/>
+        <entry key="4" type="xdouble" value="156.0"/>
+        <entry key="5" type="xdouble" value="202.0"/>
+        <entry key="6" type="xdouble" value="202.0"/>
+    </config>
+    <config key="mildrowMaxHR">
+        <config key="mildrowMaxHR0">
+            <entry key="array-size" type="xint" value="1"/>
+            <entry key="0" type="xstring" value="Row390"/>
+        </config>
+        <config key="mildrowMaxHR1">
+            <entry key="array-size" type="xint" value="1"/>
+            <entry key="0" type="xstring" value="Row370"/>
+        </config>
+    </config>
+    <config key="mildMaxHR">
+        <entry key="array-size" type="xint" value="2"/>
+        <entry key="0" type="xdouble" value="60.0"/>
+        <entry key="1" type="xdouble" value="63.0"/>
+    </config>
+    <config key="extremerowMaxHR"/>
+    <config key="extremeMaxHR">
+        <entry key="array-size" type="xint" value="0"/>
+    </config>
+    <config key="statsOldpeak">
+        <entry key="array-size" type="xint" value="7"/>
+        <entry key="0" type="xdouble" value="-2.6"/>
+        <entry key="1" type="xdouble" value="-2.0"/>
+        <entry key="2" type="xdouble" value="0.0"/>
+        <entry key="3" type="xdouble" value="0.6"/>
+        <entry key="4" type="xdouble" value="1.5"/>
+        <entry key="5" type="xdouble" value="3.7"/>
+        <entry key="6" type="xdouble" value="6.2"/>
+    </config>
+    <config key="mildrowOldpeak">
+        <config key="mildrowOldpeak0">
+            <entry key="array-size" type="xint" value="1"/>
+            <entry key="0" type="xstring" value="Row324"/>
+        </config>
+        <config key="mildrowOldpeak1">
+            <entry key="array-size" type="xint" value="1"/>
+            <entry key="0" type="xstring" value="Row775"/>
+        </config>
+        <config key="mildrowOldpeak2">
+            <entry key="array-size" type="xint" value="8"/>
+            <entry key="0" type="xstring" value="Row908"/>
+            <entry key="1" type="xstring" value="Row521"/>
+            <entry key="2" type="xstring" value="Row68"/>
+            <entry key="3" type="xstring" value="Row500"/>
+            <entry key="4" type="xstring" value="Row732"/>
+            <entry key="5" type="xstring" value="Row624"/>
+            <entry key="6" type="xstring" value="Row537"/>
+            <entry key="7" type="xstring" value="Row559"/>
+        </config>
+        <config key="mildrowOldpeak3">
+            <entry key="array-size" type="xint" value="2"/>
+            <entry key="0" type="xstring" value="Row791"/>
+            <entry key="1" type="xstring" value="Row702"/>
+        </config>
+        <config key="mildrowOldpeak4">
+            <entry key="array-size" type="xint" value="1"/>
+            <entry key="0" type="xstring" value="Row900"/>
+        </config>
+        <config key="mildrowOldpeak5">
+            <entry key="array-size" type="xint" value="1"/>
+            <entry key="0" type="xstring" value="Row166"/>
+        </config>
+        <config key="mildrowOldpeak6">
+            <entry key="array-size" type="xint" value="1"/>
+            <entry key="0" type="xstring" value="Row771"/>
+        </config>
+    </config>
+    <config key="mildOldpeak">
+        <entry key="array-size" type="xint" value="7"/>
+        <entry key="0" type="xdouble" value="-2.6"/>
+        <entry key="1" type="xdouble" value="3.8"/>
+        <entry key="2" type="xdouble" value="4.0"/>
+        <entry key="3" type="xdouble" value="4.2"/>
+        <entry key="4" type="xdouble" value="4.4"/>
+        <entry key="5" type="xdouble" value="5.0"/>
+        <entry key="6" type="xdouble" value="5.6"/>
+    </config>
+    <config key="extremerowOldpeak">
+        <config key="extremerowOldpeak0">
+            <entry key="array-size" type="xint" value="1"/>
+            <entry key="0" type="xstring" value="Row850"/>
+        </config>
+    </config>
+    <config key="extremeOldpeak">
+        <entry key="array-size" type="xint" value="1"/>
+        <entry key="0" type="xdouble" value="6.2"/>
+    </config>
+    <config key="statsHeartDisease">
+        <entry key="array-size" type="xint" value="7"/>
+        <entry key="0" type="xdouble" value="0.0"/>
+        <entry key="1" type="xdouble" value="0.0"/>
+        <entry key="2" type="xdouble" value="0.0"/>
+        <entry key="3" type="xdouble" value="1.0"/>
+        <entry key="4" type="xdouble" value="1.0"/>
+        <entry key="5" type="xdouble" value="1.0"/>
+        <entry key="6" type="xdouble" value="1.0"/>
+    </config>
+    <config key="mildrowHeartDisease"/>
+    <config key="mildHeartDisease">
+        <entry key="array-size" type="xint" value="0"/>
+    </config>
+    <config key="extremerowHeartDisease"/>
+    <config key="extremeHeartDisease">
+        <entry key="array-size" type="xint" value="0"/>
+    </config>
+</config>
