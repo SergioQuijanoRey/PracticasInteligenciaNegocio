@@ -8,13 +8,13 @@
         <entry key="authored-by" type="xstring" value="sergio"/>
         <entry key="authored-when" type="xstring" value="2021-10-12 18:05:09 +0200"/>
         <entry key="lastEdited-by" type="xstring" value="sergio"/>
-        <entry key="lastEdited-when" type="xstring" value="2021-10-21 18:53:48 +0200"/>
+        <entry key="lastEdited-when" type="xstring" value="2021-10-21 19:33:08 +0200"/>
     </config>
     <entry key="customDescription" type="xstring" isnull="true" value=""/>
     <entry key="state" type="xstring" value="IDLE"/>
     <config key="nodecontainer_message">
         <entry key="type" type="xstring" value="ERROR"/>
-        <entry key="message" type="xstring" value="Cross Validation 3:54: Custom Cross Validation 3:54:0: X-Aggregator 3:54:0:1: Input table's structure differs from reference (first iteration) table: Column 12 [P (HeartDisease=1) (Number (double))] vs. [P (HeartDisease=0) (Number (double))]Column 13 [P (HeartDisease=0) (Number (double))] vs. [P (HeartDisease=1) (Number (double))]"/>
+        <entry key="message" type="xstring" value="Cross Validation 3:54: Contains 2 unconnected nodes"/>
     </config>
     <config key="workflow_credentials"/>
     <config key="annotations">
