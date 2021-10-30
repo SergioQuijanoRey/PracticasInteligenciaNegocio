@@ -10,7 +10,7 @@
         <config key="positiveClass">
             <entry key="datacell" type="xstring" value="org.knime.core.data.def.StringCell"/>
             <config key="org.knime.core.data.def.StringCell">
-                <entry key="StringCell" type="xstring" value="0"/>
+                <entry key="StringCell" type="xstring" value="1"/>
             </config>
         </config>
         <config key="curves">
@@ -46,6 +46,6 @@
     </config>
     <config key="filestores">
         <entry key="file_store_location" type="xstring" isnull="true" value=""/>
-        <entry key="file_store_id" type="xstring" value="38b3c2d7-7894-47c5-ab5e-30874a756e73"/>
+        <entry key="file_store_id" type="xstring" value="cd211a6f-a145-43c3-9e92-ec14e14c726e"/>
     </config>
 </config>
