@@ -75,7 +75,7 @@
                 <path d="M-3 -2 L69 -2 L69 9 L-3 9 L-3 -2 Z"/>
             </clipPath>
             <clipPath clipPathUnits="userSpaceOnUse" id="clipPath21">
-                <path d="M-1 -1 L1830 -1 L1830 884 L-1 884 L-1 -1 Z"/>
+                <path d="M-1 -1 L1837 -1 L1837 891 L-1 891 L-1 -1 Z"/>
             </clipPath>
         </defs>
         <g font-size="14" fill="white" font-family="&apos;JetBrains Mono&apos;"
@@ -402,11 +402,11 @@ C5MF0LpbaCn+gKns1VPY0ghGQtKXuPSV6QeHGdDjZ0FRBnTN3X8c32NplhsBEvB+
            font-family="&apos;JetBrains Mono&apos;" stroke="rgb(75,75,75)"
            stroke-width="2">
             <path fill="none"
+                  d="M128 378 C130 378 134 378 136 378 C348 378 597 159 809 159 C811 159 815 159 817 159"
+                  clip-path="url(#clipPath21)" fill-rule="evenodd"/>
+            <path fill="none"
                   d="M128 378 C130 378 134 378 136 378 C339 378 606 458 809 458 C811 458 815 458 817 458"
                   clip-path="url(#clipPath21)" fill-rule="evenodd"/>
-            <path clip-path="url(#clipPath21)" fill="none" fill-rule="evenodd"
-                  d="M128 378 C130 378 134 378 136 378 C348 378 597 159 809 159 C811 159 815 159 817 159"
-                  stroke="rgb(150,150,150)" stroke-width="1"/>
         </g>
     </g>
 </svg>
