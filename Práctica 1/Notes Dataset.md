@@ -10,3 +10,9 @@ ST_SLOPE
 | Algoritmos     | Accuracy | Precission | ROC Positive | ROC Negative |
 | ---            | ---      | ---        | ---          | ---          |
 | Decission Tree | 0.20     | 0.14       | 0.34         | 0.44         |
+
+# Datasets
+
+## 01: Heart Disease
+
+- No he podido usar *Random Forest* porque el `X-Aggregator` fallaba por algún motiva

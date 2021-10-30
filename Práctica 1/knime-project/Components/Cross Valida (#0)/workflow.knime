@@ -197,15 +197,15 @@
         </config>
         <config key="connection_3">
             <entry key="sourceID" type="xint" value="2"/>
-            <entry key="destID" type="xint" value="69"/>
-            <entry key="sourcePort" type="xint" value="1"/>
-            <entry key="destPort" type="xint" value="0"/>
-        </config>
-        <config key="connection_4">
-            <entry key="sourceID" type="xint" value="2"/>
             <entry key="destID" type="xint" value="70"/>
             <entry key="sourcePort" type="xint" value="2"/>
             <entry key="destPort" type="xint" value="2"/>
+        </config>
+        <config key="connection_4">
+            <entry key="sourceID" type="xint" value="2"/>
+            <entry key="destID" type="xint" value="69"/>
+            <entry key="sourcePort" type="xint" value="1"/>
+            <entry key="destPort" type="xint" value="0"/>
         </config>
         <config key="connection_5">
             <entry key="sourceID" type="xint" value="15"/>
@@ -221,20 +221,20 @@
         </config>
         <config key="connection_7">
             <entry key="sourceID" type="xint" value="69"/>
-            <entry key="destID" type="xint" value="16"/>
-            <entry key="sourcePort" type="xint" value="0"/>
-            <entry key="destPort" type="xint" value="1"/>
-        </config>
-        <config key="connection_8">
-            <entry key="sourceID" type="xint" value="69"/>
             <entry key="destID" type="xint" value="70"/>
             <entry key="sourcePort" type="xint" value="1"/>
             <entry key="destPort" type="xint" value="0"/>
         </config>
-        <config key="connection_9">
+        <config key="connection_8">
             <entry key="sourceID" type="xint" value="69"/>
             <entry key="destID" type="xint" value="70"/>
             <entry key="sourcePort" type="xint" value="2"/>
+            <entry key="destPort" type="xint" value="1"/>
+        </config>
+        <config key="connection_9">
+            <entry key="sourceID" type="xint" value="69"/>
+            <entry key="destID" type="xint" value="16"/>
+            <entry key="sourcePort" type="xint" value="0"/>
             <entry key="destPort" type="xint" value="1"/>
         </config>
         <config key="connection_10">

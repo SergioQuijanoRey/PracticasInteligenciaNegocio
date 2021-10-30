@@ -6,7 +6,7 @@
         <entry key="memory_policy" type="xstring" value="CacheSmallInMemory"/>
     </config>
     <config key="model">
-        <entry key="classColumn" type="xstring" value="HeartDisease"/>
+        <entry key="classColumn" type="xstring" value="HeartDisease (#3)"/>
         <config key="positiveClass">
             <entry key="datacell" type="xstring" value="org.knime.core.data.def.StringCell"/>
             <config key="org.knime.core.data.def.StringCell">
@@ -14,14 +14,15 @@
             </config>
         </config>
         <config key="curves">
-            <entry key="array-size" type="xint" value="7"/>
-            <entry key="0" type="xstring" value="Decision Tree"/>
-            <entry key="1" type="xstring" value="AdaBoost"/>
-            <entry key="2" type="xstring" value="Neural Net"/>
-            <entry key="3" type="xstring" value="Support Vector Machine"/>
-            <entry key="4" type="xstring" value="SVM + Normalization"/>
-            <entry key="5" type="xstring" value="KNN"/>
-            <entry key="6" type="xstring" value="Naive Bayes"/>
+            <entry key="array-size" type="xint" value="8"/>
+            <entry key="0" type="xstring" value="HeartDisease"/>
+            <entry key="1" type="xstring" value="Naive Bayes"/>
+            <entry key="2" type="xstring" value="P (HeartDisease=0)Prob Class"/>
+            <entry key="3" type="xstring" value="P (HeartDisease=1)Prob Class"/>
+            <entry key="4" type="xstring" value="Neural Net"/>
+            <entry key="5" type="xstring" value="Support Vector Machine"/>
+            <entry key="6" type="xstring" value="SVM + Normalization"/>
+            <entry key="7" type="xstring" value="KNN"/>
         </config>
         <entry key="maxPoints" type="xint" value="2000"/>
     </config>
@@ -40,10 +41,10 @@
         <config key="styles"/>
     </config>
     <entry key="customDescription" type="xstring" isnull="true" value=""/>
-    <entry key="state" type="xstring" value="IDLE"/>
+    <entry key="state" type="xstring" value="EXECUTED"/>
     <config key="nodecontainer_message">
         <entry key="type" type="xstring" value="WARNING"/>
-        <entry key="message" type="xstring" value="Sort column 'AdaBoost ' does not exist"/>
+        <entry key="message" type="xstring" value="Table contains missing values."/>
     </config>
     <entry key="factory" type="xstring" value="org.knime.base.node.viz.roc.ROCNodeFactory"/>
     <entry key="node-name" type="xstring" value="ROC Curve (local)"/>
@@ -57,16 +58,19 @@
     <entry key="node-feature-version" type="xstring" value="4.4.1.v202108201736"/>
     <config key="factory_settings"/>
     <entry key="name" type="xstring" value="ROC Curve (local)"/>
-    <entry key="hasContent" type="xboolean" value="false"/>
+    <entry key="hasContent" type="xboolean" value="true"/>
     <entry key="isInactive" type="xboolean" value="false"/>
     <config key="ports">
         <config key="port_1">
             <entry key="index" type="xint" value="1"/>
-            <entry key="port_dir_location" type="xstring" isnull="true" value=""/>
+            <entry key="port_spec_class" type="xstring" value="org.knime.core.data.DataTableSpec"/>
+            <entry key="port_object_class" type="xstring" value="org.knime.core.node.BufferedDataTable"/>
+            <entry key="port_object_summary" type="xstring" value="Rows: 8, Cols: 1"/>
+            <entry key="port_dir_location" type="xstring" value="port_1"/>
         </config>
     </config>
     <config key="filestores">
         <entry key="file_store_location" type="xstring" isnull="true" value=""/>
-        <entry key="file_store_id" type="xstring" isnull="true" value=""/>
+        <entry key="file_store_id" type="xstring" value="0dd2fafa-8fa0-4f58-a501-8fe276f8ba0a"/>
     </config>
 </config>

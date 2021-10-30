@@ -41,7 +41,7 @@
         <entry key="randomSampling" type="xboolean" value="false"/>
         <entry key="leaveOneOut" type="xboolean" value="false"/>
         <entry key="stratifiedSampling" type="xboolean" value="true"/>
-        <entry key="classColumn" type="xstring" value="Oldpeak"/>
+        <entry key="classColumn" type="xstring" value="HeartDisease"/>
         <entry key="useRandomSeed" type="xboolean" value="true"/>
         <entry key="randomSeed" type="xlong" value="123456789"/>
     </config>
@@ -81,19 +81,19 @@
             <entry key="index" type="xint" value="1"/>
             <entry key="port_spec_class" type="xstring" value="org.knime.core.data.DataTableSpec"/>
             <entry key="port_object_class" type="xstring" value="org.knime.core.node.BufferedDataTable"/>
-            <entry key="port_object_summary" type="xstring" value="Rows: 559, Cols: 12"/>
+            <entry key="port_object_summary" type="xstring" value="Rows: 735, Cols: 12"/>
             <entry key="port_dir_location" type="xstring" value="port_1"/>
         </config>
         <config key="port_2">
             <entry key="index" type="xint" value="2"/>
             <entry key="port_spec_class" type="xstring" value="org.knime.core.data.DataTableSpec"/>
             <entry key="port_object_class" type="xstring" value="org.knime.core.node.BufferedDataTable"/>
-            <entry key="port_object_summary" type="xstring" value="Rows: 139, Cols: 12"/>
+            <entry key="port_object_summary" type="xstring" value="Rows: 183, Cols: 12"/>
             <entry key="port_dir_location" type="xstring" value="port_2"/>
         </config>
     </config>
     <config key="filestores">
         <entry key="file_store_location" type="xstring" isnull="true" value=""/>
-        <entry key="file_store_id" type="xstring" value="f0bf53b2-9cc5-4c42-8358-c9c8e10d3e7a"/>
+        <entry key="file_store_id" type="xstring" value="7fef03d6-95c4-41db-b626-54007fa3743d"/>
     </config>
 </config>

@@ -55,7 +55,7 @@
         <entry key="text" type="xstring" value="Las columnas característica%%00010deben ser numéricas"/>
         <entry key="bgcolor" type="xint" value="16777215"/>
         <entry key="x-coordinate" type="xint" value="939"/>
-        <entry key="y-coordinate" type="xint" value="1379"/>
+        <entry key="y-coordinate" type="xint" value="1119"/>
         <entry key="width" type="xint" value="243"/>
         <entry key="height" type="xint" value="38"/>
         <entry key="alignment" type="xstring" value="CENTER"/>
@@ -86,7 +86,7 @@
             <entry key="index" type="xint" value="1"/>
             <entry key="port_spec_class" type="xstring" value="org.knime.core.data.DataTableSpec"/>
             <entry key="port_object_class" type="xstring" value="org.knime.core.node.BufferedDataTable"/>
-            <entry key="port_object_summary" type="xstring" value="Rows: 698, Cols: 12"/>
+            <entry key="port_object_summary" type="xstring" value="Rows: 918, Cols: 12"/>
             <entry key="port_dir_location" type="xstring" value="port_1"/>
         </config>
         <config key="port_2">
@@ -101,6 +101,6 @@
     </config>
     <config key="filestores">
         <entry key="file_store_location" type="xstring" isnull="true" value=""/>
-        <entry key="file_store_id" type="xstring" value="86d5d8b4-5187-422b-bbd5-c013b5b0f2a3"/>
+        <entry key="file_store_id" type="xstring" value="73bae837-cbe9-49be-a352-bf1c4b043e29"/>
     </config>
 </config>

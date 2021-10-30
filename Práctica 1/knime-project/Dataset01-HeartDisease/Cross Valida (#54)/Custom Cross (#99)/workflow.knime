@@ -13,8 +13,8 @@
     <config key="nodeAnnotation">
         <entry key="text" type="xstring" value=""/>
         <entry key="bgcolor" type="xint" value="16777215"/>
-        <entry key="x-coordinate" type="xint" value="1599"/>
-        <entry key="y-coordinate" type="xint" value="1366"/>
+        <entry key="x-coordinate" type="xint" value="1359"/>
+        <entry key="y-coordinate" type="xint" value="1106"/>
         <entry key="width" type="xint" value="162"/>
         <entry key="height" type="xint" value="20"/>
         <entry key="alignment" type="xstring" value="CENTER"/>
@@ -229,15 +229,15 @@
         </config>
         <config key="connection_3">
             <entry key="sourceID" type="xint" value="2"/>
-            <entry key="destID" type="xint" value="69"/>
-            <entry key="sourcePort" type="xint" value="1"/>
-            <entry key="destPort" type="xint" value="0"/>
-        </config>
-        <config key="connection_4">
-            <entry key="sourceID" type="xint" value="2"/>
             <entry key="destID" type="xint" value="70"/>
             <entry key="sourcePort" type="xint" value="2"/>
             <entry key="destPort" type="xint" value="2"/>
+        </config>
+        <config key="connection_4">
+            <entry key="sourceID" type="xint" value="2"/>
+            <entry key="destID" type="xint" value="69"/>
+            <entry key="sourcePort" type="xint" value="1"/>
+            <entry key="destPort" type="xint" value="0"/>
         </config>
         <config key="connection_5">
             <entry key="sourceID" type="xint" value="17"/>
@@ -261,20 +261,20 @@
         </config>
         <config key="connection_7">
             <entry key="sourceID" type="xint" value="69"/>
-            <entry key="destID" type="xint" value="70"/>
-            <entry key="sourcePort" type="xint" value="1"/>
-            <entry key="destPort" type="xint" value="0"/>
+            <entry key="destID" type="xint" value="71"/>
+            <entry key="sourcePort" type="xint" value="0"/>
+            <entry key="destPort" type="xint" value="1"/>
         </config>
         <config key="connection_8">
             <entry key="sourceID" type="xint" value="69"/>
             <entry key="destID" type="xint" value="70"/>
-            <entry key="sourcePort" type="xint" value="2"/>
-            <entry key="destPort" type="xint" value="1"/>
+            <entry key="sourcePort" type="xint" value="1"/>
+            <entry key="destPort" type="xint" value="0"/>
         </config>
         <config key="connection_9">
             <entry key="sourceID" type="xint" value="69"/>
-            <entry key="destID" type="xint" value="71"/>
-            <entry key="sourcePort" type="xint" value="0"/>
+            <entry key="destID" type="xint" value="70"/>
+            <entry key="sourcePort" type="xint" value="2"/>
             <entry key="destPort" type="xint" value="1"/>
         </config>
         <config key="connection_10">
@@ -285,12 +285,6 @@
         </config>
         <config key="connection_11">
             <entry key="sourceID" type="xint" value="71"/>
-            <entry key="destID" type="xint" value="17"/>
-            <entry key="sourcePort" type="xint" value="1"/>
-            <entry key="destPort" type="xint" value="1"/>
-        </config>
-        <config key="connection_12">
-            <entry key="sourceID" type="xint" value="71"/>
             <entry key="destID" type="xint" value="72"/>
             <entry key="sourcePort" type="xint" value="2"/>
             <entry key="destPort" type="xint" value="1"/>
@@ -298,6 +292,12 @@
             <config key="ui_settings">
                 <entry key="extrainfo.conn.bendpoints_size" type="xint" value="0"/>
             </config>
+        </config>
+        <config key="connection_12">
+            <entry key="sourceID" type="xint" value="71"/>
+            <entry key="destID" type="xint" value="17"/>
+            <entry key="sourcePort" type="xint" value="1"/>
+            <entry key="destPort" type="xint" value="1"/>
         </config>
         <config key="connection_13">
             <entry key="sourceID" type="xint" value="72"/>

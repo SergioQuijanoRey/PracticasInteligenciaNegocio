@@ -21,7 +21,7 @@
         <entry key="text" type="xstring" value="Agrego todos los datos%%00010de las distintas curvas ROC"/>
         <entry key="bgcolor" type="xint" value="16777215"/>
         <entry key="x-coordinate" type="xint" value="2759"/>
-        <entry key="y-coordinate" type="xint" value="616"/>
+        <entry key="y-coordinate" type="xint" value="606"/>
         <entry key="width" type="xint" value="243"/>
         <entry key="height" type="xint" value="38"/>
         <entry key="alignment" type="xstring" value="CENTER"/>
@@ -44,7 +44,7 @@
     <entry key="state" type="xstring" value="EXECUTED"/>
     <config key="nodecontainer_message">
         <entry key="type" type="xstring" value="WARNING"/>
-        <entry key="message" type="xstring" value="Table 2 is shorter than the selected table 0. Corresponding columns were filled using missing values."/>
+        <entry key="message" type="xstring" value="Table 2 is shorter than the selected table 0. Corresponding columns were filled using missing values. Table 4 is longer than the selected table 0. Extra rows were ignored."/>
     </config>
     <entry key="factory" type="xstring" value="org.knime.base.node.preproc.columnappend2.ColumnAppender2NodeFactory"/>
     <entry key="node-name" type="xstring" value="Column Appender"/>
@@ -71,9 +71,6 @@
             <config key="port_3">
                 <entry key="object_class" type="xstring" value="org.knime.core.node.BufferedDataTable"/>
             </config>
-            <config key="port_4">
-                <entry key="object_class" type="xstring" value="org.knime.core.node.BufferedDataTable"/>
-            </config>
         </config>
         <config key="Appended columns"/>
     </config>
@@ -85,12 +82,12 @@
             <entry key="index" type="xint" value="1"/>
             <entry key="port_spec_class" type="xstring" value="org.knime.core.data.DataTableSpec"/>
             <entry key="port_object_class" type="xstring" value="org.knime.core.node.BufferedDataTable"/>
-            <entry key="port_object_summary" type="xstring" value="Rows: 698, Cols: 15"/>
+            <entry key="port_object_summary" type="xstring" value="Rows: 644, Cols: 13"/>
             <entry key="port_dir_location" type="xstring" value="port_1"/>
         </config>
     </config>
     <config key="filestores">
         <entry key="file_store_location" type="xstring" isnull="true" value=""/>
-        <entry key="file_store_id" type="xstring" value="f1398b00-ee6d-4394-8685-c98606b3dbad"/>
+        <entry key="file_store_id" type="xstring" value="d2b0aa76-2aaa-409d-90de-62737dba153e"/>
     </config>
 </config>

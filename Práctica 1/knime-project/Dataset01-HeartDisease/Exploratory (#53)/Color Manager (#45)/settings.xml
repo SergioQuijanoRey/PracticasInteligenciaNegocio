@@ -6,6 +6,7 @@
         <entry key="memory_policy" type="xstring" value="CacheSmallInMemory"/>
     </config>
     <config key="model">
+        <entry key="palette_option" type="xstring" value="custom_set"/>
         <entry key="selected_column" type="xstring" value="HeartDisease"/>
         <entry key="is_nominal" type="xboolean" value="false"/>
         <entry key="min_color" type="xint" value="-65536"/>
@@ -70,6 +71,6 @@
     </config>
     <config key="filestores">
         <entry key="file_store_location" type="xstring" isnull="true" value=""/>
-        <entry key="file_store_id" type="xstring" value="60528aeb-3233-4ba2-8515-08a3f27a5204"/>
+        <entry key="file_store_id" type="xstring" value="999d525f-2db1-499f-861e-f31694a2af62"/>
     </config>
 </config>
