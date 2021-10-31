@@ -68,6 +68,12 @@
             "description": "Para modificar el nombre de la fila",
             "example": "Outliers borrados"
         },
+        "string-input-86:69:65:79": {
+            "type": "string",
+            "default": "Outliers borrados",
+            "description": "Para modificar el nombre de la fila",
+            "example": "Outliers borrados"
+        },
         "string-input-54:103:69:65:79": {
             "type": "string",
             "default": "Outliers borrados",

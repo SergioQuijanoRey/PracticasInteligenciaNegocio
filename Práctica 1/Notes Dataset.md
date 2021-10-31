@@ -44,4 +44,7 @@
 2. Borramos las filas que tengan missing values. Mirando la tabla de entrada y la tabla de salida, vemos que no hemos encontrado missing values
 3. La clase 0 tiene 508 ejemplos, la clase 1 tiene 410. Hay un ligero balanceo pero no es demasiasdo importante
 4. En el *Exploratory Data Analysis* muestra que tenemos bastantes outliers. En cada *cross-validation*, borramos solo en training usando `3 * IQR`
-5.
+5. Cross validation funciona, pero las curvas ROC por algun motivo no se muestran bien
+6. No tenemos algoritmos con resultados catastróficos
+7. Ajustamos los valores de Random Forest y de Redes neuronales
+    - Usamos `Parameter Optimization Loop`
