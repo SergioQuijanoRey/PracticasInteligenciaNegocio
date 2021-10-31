@@ -8,7 +8,7 @@
         <entry key="authored-by" type="xstring" value="sergio"/>
         <entry key="authored-when" type="xstring" value="2021-10-12 18:05:09 +0200"/>
         <entry key="lastEdited-by" type="xstring" value="sergio"/>
-        <entry key="lastEdited-when" type="xstring" value="2021-10-31 17:49:59 +0100"/>
+        <entry key="lastEdited-when" type="xstring" value="2021-10-31 18:05:10 +0100"/>
     </config>
     <entry key="customDescription" type="xstring" isnull="true" value=""/>
     <entry key="state" type="xstring" value="IDLE"/>
@@ -76,6 +76,29 @@
                 <config key="style_0">
                     <entry key="start" type="xint" value="0"/>
                     <entry key="length" type="xint" value="48"/>
+                    <entry key="fontname" type="xstring" value="JetBrains Mono"/>
+                    <entry key="fontstyle" type="xint" value="1"/>
+                    <entry key="fontsize" type="xint" value="16"/>
+                    <entry key="fgcolor" type="xint" value="0"/>
+                </config>
+            </config>
+        </config>
+        <config key="annotation_3">
+            <entry key="text" type="xstring" value="Eliminamos variables muy correladas y vemos que pasa"/>
+            <entry key="bgcolor" type="xint" value="16777215"/>
+            <entry key="x-coordinate" type="xint" value="1300"/>
+            <entry key="y-coordinate" type="xint" value="260"/>
+            <entry key="width" type="xint" value="701"/>
+            <entry key="height" type="xint" value="61"/>
+            <entry key="alignment" type="xstring" value="LEFT"/>
+            <entry key="borderSize" type="xint" value="10"/>
+            <entry key="borderColor" type="xint" value="11370408"/>
+            <entry key="defFontSize" type="xint" value="11"/>
+            <entry key="annotation-version" type="xint" value="20151123"/>
+            <config key="styles">
+                <config key="style_0">
+                    <entry key="start" type="xint" value="0"/>
+                    <entry key="length" type="xint" value="52"/>
                     <entry key="fontname" type="xstring" value="JetBrains Mono"/>
                     <entry key="fontstyle" type="xint" value="1"/>
                     <entry key="fontsize" type="xint" value="16"/>
@@ -165,6 +188,22 @@
                 </config>
             </config>
         </config>
+        <config key="node_90">
+            <entry key="id" type="xint" value="90"/>
+            <entry key="node_settings_file" type="xstring" value="Borrado de u (#90)/workflow.knime"/>
+            <entry key="node_is_meta" type="xboolean" value="true"/>
+            <entry key="node_type" type="xstring" value="MetaNode"/>
+            <entry key="ui_classname" type="xstring" value="org.knime.core.node.workflow.NodeUIInformation"/>
+            <config key="ui_settings">
+                <config key="extrainfo.node.bounds">
+                    <entry key="array-size" type="xint" value="4"/>
+                    <entry key="0" type="xint" value="1444"/>
+                    <entry key="1" type="xint" value="397"/>
+                    <entry key="2" type="xint" value="168"/>
+                    <entry key="3" type="xint" value="90"/>
+                </config>
+            </config>
+        </config>
     </config>
     <config key="connections">
         <config key="connection_0">
@@ -185,13 +224,19 @@
         </config>
         <config key="connection_2">
             <entry key="sourceID" type="xint" value="55"/>
-            <entry key="destID" type="xint" value="54"/>
+            <entry key="destID" type="xint" value="87"/>
             <entry key="sourcePort" type="xint" value="1"/>
             <entry key="destPort" type="xint" value="0"/>
         </config>
         <config key="connection_3">
             <entry key="sourceID" type="xint" value="55"/>
-            <entry key="destID" type="xint" value="87"/>
+            <entry key="destID" type="xint" value="54"/>
+            <entry key="sourcePort" type="xint" value="1"/>
+            <entry key="destPort" type="xint" value="0"/>
+        </config>
+        <config key="connection_4">
+            <entry key="sourceID" type="xint" value="55"/>
+            <entry key="destID" type="xint" value="90"/>
             <entry key="sourcePort" type="xint" value="1"/>
             <entry key="destPort" type="xint" value="0"/>
         </config>
@@ -201,7 +246,7 @@
         <entry key="workflow.editor.ShowGrid" type="xboolean" value="true"/>
         <entry key="workflow.editor.gridX" type="xint" value="20"/>
         <entry key="workflow.editor.gridY" type="xint" value="20"/>
-        <entry key="workflow.editor.zoomLevel" type="xdouble" value="1.1"/>
+        <entry key="workflow.editor.zoomLevel" type="xdouble" value="0.9"/>
         <entry key="workflow.editor.curvedConnections" type="xboolean" value="true"/>
         <entry key="workflow.editor.connectionWidth" type="xint" value="1"/>
     </config>

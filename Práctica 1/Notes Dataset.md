@@ -38,7 +38,7 @@
     - El siguiente grupo de variables están muy correladas:
         - ExerciseAngina
         - Oldpeak
-        - ST_SLOPE
+        - ST_SLOPE (la que más correlación tiene con la clase de salida)
         - HeartDisease
     - HeartDisease con ChestPainType
 2. Borramos las filas que tengan missing values. Mirando la tabla de entrada y la tabla de salida, vemos que no hemos encontrado missing values
@@ -49,3 +49,5 @@
 7. Ajustamos los valores de Random Forest y de Redes neuronales
     - Usamos `Parameter Optimization Loop`
     - Para las redes neuronales, tenemos que quitar los missing values y la normalizacion para que vaya bien. Esto provoca que los resultados sean muy malos
+8. Borramos las variables que están muy correladas y vemos que pasa
+    - Del grupo, me quedo con `ST_SLOPE` porque es la que más correlada está con `HeartDisease`

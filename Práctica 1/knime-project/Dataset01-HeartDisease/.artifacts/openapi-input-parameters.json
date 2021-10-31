@@ -2,13 +2,25 @@
 {
     "type": "object",
     "properties": {
-        "string-input-54:105:69:65:79": {
+        "string-input-90:89:105:69:65:79": {
             "type": "string",
             "default": "Outliers borrados",
             "description": "Para modificar el nombre de la fila",
             "example": "Outliers borrados"
         },
-        "string-input-54:103:70:67:79": {
+        "string-input-90:89:98:70:67:79": {
+            "type": "string",
+            "default": "Outliers borrados",
+            "description": "Para modificar el nombre de la fila",
+            "example": "Outliers borrados"
+        },
+        "string-input-90:89:102:69:65:79": {
+            "type": "string",
+            "default": "Outliers borrados",
+            "description": "Para modificar el nombre de la fila",
+            "example": "Outliers borrados"
+        },
+        "string-input-54:105:69:65:79": {
             "type": "string",
             "default": "Outliers borrados",
             "description": "Para modificar el nombre de la fila",
@@ -20,7 +32,7 @@
             "description": "Para modificar el nombre de la fila",
             "example": "Outliers borrados"
         },
-        "string-input-87:86:82:65:79": {
+        "string-input-90:89:99:69:65:79": {
             "type": "string",
             "default": "Outliers borrados",
             "description": "Para modificar el nombre de la fila",
@@ -32,19 +44,7 @@
             "description": "Para modificar el nombre de la fila",
             "example": "Outliers borrados"
         },
-        "string-input-54:97:69:65:79": {
-            "type": "string",
-            "default": "Outliers borrados",
-            "description": "Para modificar el nombre de la fila",
-            "example": "Outliers borrados"
-        },
         "string-input-54:102:69:65:79": {
-            "type": "string",
-            "default": "Outliers borrados",
-            "description": "Para modificar el nombre de la fila",
-            "example": "Outliers borrados"
-        },
-        "string-input-54:97:70:67:79": {
             "type": "string",
             "default": "Outliers borrados",
             "description": "Para modificar el nombre de la fila",
@@ -62,7 +62,7 @@
             "description": "Para modificar el nombre de la fila",
             "example": "Outliers borrados"
         },
-        "string-input-87:86:70:67:79": {
+        "string-input-90:89:99:70:67:79": {
             "type": "string",
             "default": "Outliers borrados",
             "description": "Para modificar el nombre de la fila",
@@ -75,6 +75,90 @@
             "example": "Outliers borrados"
         },
         "string-input-54:105:70:67:79": {
+            "type": "string",
+            "default": "Outliers borrados",
+            "description": "Para modificar el nombre de la fila",
+            "example": "Outliers borrados"
+        },
+        "string-input-90:89:97:70:67:79": {
+            "type": "string",
+            "default": "Outliers borrados",
+            "description": "Para modificar el nombre de la fila",
+            "example": "Outliers borrados"
+        },
+        "string-input-90:89:101:69:65:79": {
+            "type": "string",
+            "default": "Outliers borrados",
+            "description": "Para modificar el nombre de la fila",
+            "example": "Outliers borrados"
+        },
+        "string-input-90:89:105:70:67:79": {
+            "type": "string",
+            "default": "Outliers borrados",
+            "description": "Para modificar el nombre de la fila",
+            "example": "Outliers borrados"
+        },
+        "string-input-90:89:98:69:65:79": {
+            "type": "string",
+            "default": "Outliers borrados",
+            "description": "Para modificar el nombre de la fila",
+            "example": "Outliers borrados"
+        },
+        "string-input-90:89:102:70:67:79": {
+            "type": "string",
+            "default": "Outliers borrados",
+            "description": "Para modificar el nombre de la fila",
+            "example": "Outliers borrados"
+        },
+        "string-input-90:89:97:69:65:79": {
+            "type": "string",
+            "default": "Outliers borrados",
+            "description": "Para modificar el nombre de la fila",
+            "example": "Outliers borrados"
+        },
+        "string-input-90:89:103:70:67:79": {
+            "type": "string",
+            "default": "Outliers borrados",
+            "description": "Para modificar el nombre de la fila",
+            "example": "Outliers borrados"
+        },
+        "string-input-54:103:70:67:79": {
+            "type": "string",
+            "default": "Outliers borrados",
+            "description": "Para modificar el nombre de la fila",
+            "example": "Outliers borrados"
+        },
+        "string-input-87:86:82:65:79": {
+            "type": "string",
+            "default": "Outliers borrados",
+            "description": "Para modificar el nombre de la fila",
+            "example": "Outliers borrados"
+        },
+        "string-input-54:97:69:65:79": {
+            "type": "string",
+            "default": "Outliers borrados",
+            "description": "Para modificar el nombre de la fila",
+            "example": "Outliers borrados"
+        },
+        "string-input-90:89:103:69:65:79": {
+            "type": "string",
+            "default": "Outliers borrados",
+            "description": "Para modificar el nombre de la fila",
+            "example": "Outliers borrados"
+        },
+        "string-input-54:97:70:67:79": {
+            "type": "string",
+            "default": "Outliers borrados",
+            "description": "Para modificar el nombre de la fila",
+            "example": "Outliers borrados"
+        },
+        "string-input-87:86:70:67:79": {
+            "type": "string",
+            "default": "Outliers borrados",
+            "description": "Para modificar el nombre de la fila",
+            "example": "Outliers borrados"
+        },
+        "string-input-90:89:101:70:67:79": {
             "type": "string",
             "default": "Outliers borrados",
             "description": "Para modificar el nombre de la fila",
