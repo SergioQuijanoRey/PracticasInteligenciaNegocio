@@ -31,10 +31,6 @@
     </config>
     <entry key="customDescription" type="xstring" isnull="true" value=""/>
     <entry key="state" type="xstring" value="EXECUTED"/>
-    <config key="nodecontainer_message">
-        <entry key="type" type="xstring" value="WARNING"/>
-        <entry key="message" type="xstring" value="Normalized value is out of bounds. Original value: 28.0 Transformed value: -0.02083333333333337 Lower Bound: 0.0"/>
-    </config>
     <entry key="factory" type="xstring" value="org.knime.base.node.preproc.normalize.NormalizerApplyNodeFactory"/>
     <entry key="node-name" type="xstring" value="Normalizer (Apply)"/>
     <entry key="node-bundle-name" type="xstring" value="KNIME Base Nodes"/>

@@ -93,7 +93,7 @@
                 <path d="M431 462 L488 462 L488 473 L431 473 L431 462 Z"/>
             </clipPath>
             <clipPath clipPathUnits="userSpaceOnUse" id="clipPath27">
-                <path d="M-1 -1 L1640 -1 L1640 884 L-1 884 L-1 -1 Z"/>
+                <path d="M-1 -1 L2159 -1 L2159 891 L-1 891 L-1 -1 Z"/>
             </clipPath>
         </defs>
         <g font-size="14" fill="white" font-family="&apos;JetBrains Mono&apos;"
@@ -549,9 +549,9 @@ KCZEfQAAAABJRU5ErkJggg==" xlink:actuate="onLoad"/>
             <path fill="none"
                   d="M128 378 C130 378 134 378 136 378 C348 378 597 159 809 159 C811 159 815 159 817 159"
                   clip-path="url(#clipPath27)" fill-rule="evenodd"/>
-            <path clip-path="url(#clipPath27)" fill="none" fill-rule="evenodd"
+            <path fill="none"
                   d="M448 448 C450 448 454 448 456 448 C561 448 704 458 809 458 C811 458 815 458 817 458"
-                  stroke="rgb(75,75,75)" stroke-width="2"/>
+                  clip-path="url(#clipPath27)" fill-rule="evenodd"/>
             <path fill="none"
                   d="M128 378 C130 378 134 378 136 378 C215 378 310 458 389 458 C391 458 395 458 397 458"
                   clip-path="url(#clipPath27)" fill-rule="evenodd"/>

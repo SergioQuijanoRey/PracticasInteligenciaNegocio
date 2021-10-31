@@ -10,7 +10,7 @@
             <entry key="SettingsModelID" type="xstring" value="SMID_string"/>
             <entry key="EnabledStatus" type="xboolean" value="true"/>
         </config>
-        <entry key="selected_rowid_mode" type="xstring" value="IDENTICAL"/>
+        <entry key="selected_rowid_mode" type="xstring" value="KEY_TABLE"/>
         <config key="selected_rowid_table_Internals">
             <entry key="SettingsModelID" type="xstring" value="SMID_integer"/>
             <entry key="EnabledStatus" type="xboolean" value="true"/>
@@ -71,6 +71,6 @@
     </config>
     <config key="filestores">
         <entry key="file_store_location" type="xstring" isnull="true" value=""/>
-        <entry key="file_store_id" type="xstring" value="dd80ee1c-6bae-4ad0-a494-8bc48410679e"/>
+        <entry key="file_store_id" type="xstring" value="4ac3f827-2420-4438-9619-748ff7a96b74"/>
     </config>
 </config>

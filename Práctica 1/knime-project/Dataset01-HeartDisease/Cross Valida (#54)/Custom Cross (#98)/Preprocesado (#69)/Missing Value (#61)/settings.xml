@@ -18,16 +18,6 @@
                     <entry key="tableBackedExec" type="xboolean" value="false"/>
                 </config>
             </config>
-            <config key="org.knime.core.data.def.StringCell">
-                <entry key="factoryID" type="xstring" value="org.knime.base.node.preproc.pmml.missingval.handlers.FixedStringValueMissingCellHandlerFactory"/>
-                <config key="settings">
-                    <config key="fixStringValue_Internals">
-                        <entry key="SettingsModelID" type="xstring" value="SMID_string"/>
-                        <entry key="EnabledStatus" type="xboolean" value="true"/>
-                    </config>
-                    <entry key="fixStringValue" type="xstring" value="Missing Category"/>
-                </config>
-            </config>
             <config key="org.knime.core.data.def.DoubleCell">
                 <entry key="factoryID" type="xstring" value="org.knime.base.node.preproc.pmml.missingval.handlers.timeseries.LinearInterpolationMissingCellHandlerFactory"/>
                 <config key="settings">
