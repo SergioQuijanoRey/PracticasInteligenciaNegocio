@@ -51,3 +51,7 @@
     - Para las redes neuronales, tenemos que quitar los missing values y la normalizacion para que vaya bien. Esto provoca que los resultados sean muy malos
 8. Borramos las variables que están muy correladas y vemos que pasa
     - Del grupo, me quedo con `ST_SLOPE` porque es la que más correlada está con `HeartDisease`
+
+## 02: Mobile Prizes
+
+- Aplicando PCA con dimensión 2 se ven muy buenos resultados
