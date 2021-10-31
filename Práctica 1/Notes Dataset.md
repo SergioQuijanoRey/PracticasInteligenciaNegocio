@@ -48,3 +48,4 @@
 6. No tenemos algoritmos con resultados catastróficos
 7. Ajustamos los valores de Random Forest y de Redes neuronales
     - Usamos `Parameter Optimization Loop`
+    - Para las redes neuronales, tenemos que quitar los missing values y la normalizacion para que vaya bien. Esto provoca que los resultados sean muy malos

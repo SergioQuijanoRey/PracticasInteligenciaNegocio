@@ -20,6 +20,12 @@
             "description": "Para modificar el nombre de la fila",
             "example": "Outliers borrados"
         },
+        "string-input-87:86:82:65:79": {
+            "type": "string",
+            "default": "Outliers borrados",
+            "description": "Para modificar el nombre de la fila",
+            "example": "Outliers borrados"
+        },
         "string-input-54:102:70:67:79": {
             "type": "string",
             "default": "Outliers borrados",
@@ -56,6 +62,12 @@
             "description": "Para modificar el nombre de la fila",
             "example": "Outliers borrados"
         },
+        "string-input-87:86:70:67:79": {
+            "type": "string",
+            "default": "Outliers borrados",
+            "description": "Para modificar el nombre de la fila",
+            "example": "Outliers borrados"
+        },
         "string-input-54:101:69:65:79": {
             "type": "string",
             "default": "Outliers borrados",
@@ -63,12 +75,6 @@
             "example": "Outliers borrados"
         },
         "string-input-54:105:70:67:79": {
-            "type": "string",
-            "default": "Outliers borrados",
-            "description": "Para modificar el nombre de la fila",
-            "example": "Outliers borrados"
-        },
-        "string-input-86:69:65:79": {
             "type": "string",
             "default": "Outliers borrados",
             "description": "Para modificar el nombre de la fila",
