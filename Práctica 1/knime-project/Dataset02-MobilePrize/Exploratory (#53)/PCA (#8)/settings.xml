@@ -13,18 +13,27 @@
         <config key="used_columns">
             <entry key="filter-type" type="xstring" value="STANDARD"/>
             <config key="included_names">
-                <entry key="array-size" type="xint" value="11"/>
-                <entry key="0" type="xstring" value="Age"/>
-                <entry key="1" type="xstring" value="RestingBP"/>
-                <entry key="2" type="xstring" value="Cholesterol"/>
-                <entry key="3" type="xstring" value="FastingBS"/>
-                <entry key="4" type="xstring" value="MaxHR"/>
-                <entry key="5" type="xstring" value="Oldpeak"/>
-                <entry key="6" type="xstring" value="Sex (to number)"/>
-                <entry key="7" type="xstring" value="ChestPainType (to number)"/>
-                <entry key="8" type="xstring" value="RestingECG (to number)"/>
-                <entry key="9" type="xstring" value="ExerciseAngina (to number)"/>
-                <entry key="10" type="xstring" value="ST_Slope (to number)"/>
+                <entry key="array-size" type="xint" value="20"/>
+                <entry key="0" type="xstring" value="battery_power"/>
+                <entry key="1" type="xstring" value="blue"/>
+                <entry key="2" type="xstring" value="clock_speed"/>
+                <entry key="3" type="xstring" value="dual_sim"/>
+                <entry key="4" type="xstring" value="fc"/>
+                <entry key="5" type="xstring" value="four_g"/>
+                <entry key="6" type="xstring" value="int_memory"/>
+                <entry key="7" type="xstring" value="m_dep"/>
+                <entry key="8" type="xstring" value="mobile_wt"/>
+                <entry key="9" type="xstring" value="n_cores"/>
+                <entry key="10" type="xstring" value="pc"/>
+                <entry key="11" type="xstring" value="px_height"/>
+                <entry key="12" type="xstring" value="px_width"/>
+                <entry key="13" type="xstring" value="ram"/>
+                <entry key="14" type="xstring" value="sc_h"/>
+                <entry key="15" type="xstring" value="sc_w"/>
+                <entry key="16" type="xstring" value="talk_time"/>
+                <entry key="17" type="xstring" value="three_g"/>
+                <entry key="18" type="xstring" value="touch_screen"/>
+                <entry key="19" type="xstring" value="wifi"/>
             </config>
             <config key="excluded_names">
                 <entry key="array-size" type="xint" value="0"/>
@@ -92,7 +101,7 @@
         </config>
     </config>
     <entry key="customDescription" type="xstring" isnull="true" value=""/>
-    <entry key="state" type="xstring" value="CONFIGURED"/>
+    <entry key="state" type="xstring" value="EXECUTED"/>
     <entry key="factory" type="xstring" value="org.knime.base.node.mine.transformation.pca.perform.PCA2NodeFactory"/>
     <entry key="node-name" type="xstring" value="PCA"/>
     <entry key="node-bundle-name" type="xstring" value="KNIME Base Nodes"/>
@@ -105,16 +114,19 @@
     <entry key="node-feature-version" type="xstring" value="4.4.2.v202110181012"/>
     <config key="factory_settings"/>
     <entry key="name" type="xstring" value="PCA"/>
-    <entry key="hasContent" type="xboolean" value="false"/>
+    <entry key="hasContent" type="xboolean" value="true"/>
     <entry key="isInactive" type="xboolean" value="false"/>
     <config key="ports">
         <config key="port_1">
             <entry key="index" type="xint" value="1"/>
-            <entry key="port_dir_location" type="xstring" isnull="true" value=""/>
+            <entry key="port_spec_class" type="xstring" value="org.knime.core.data.DataTableSpec"/>
+            <entry key="port_object_class" type="xstring" value="org.knime.core.node.BufferedDataTable"/>
+            <entry key="port_object_summary" type="xstring" value="Rows: 2000, Cols: 2"/>
+            <entry key="port_dir_location" type="xstring" value="port_1"/>
         </config>
     </config>
     <config key="filestores">
         <entry key="file_store_location" type="xstring" isnull="true" value=""/>
-        <entry key="file_store_id" type="xstring" isnull="true" value=""/>
+        <entry key="file_store_id" type="xstring" value="0c112ce1-fa85-4d42-9a41-781e9173711e"/>
     </config>
 </config>

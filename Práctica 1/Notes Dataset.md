@@ -55,3 +55,12 @@
 ## 02: Mobile Prizes
 
 - Aplicando PCA con dimensión 2 se ven muy buenos resultados
+- Deberíamos hacer las métricas para cada una de las clases. Sin embargo nos quedamos con la clase 1 como clase positiva
+1. Variables Correladas
+    - Memoria RAM muy correlada con la variable de salida
+    - Los dos valores para los píxeles están muy correlados entre sí, como era de esperar
+    - `sc_w` y `sc_h` muy correladas entre sí
+2. Missing Values
+    - No hay missing values en el dataset
+3. Clase de salida desbalanceada
+    - Las clases están perfectamente balanceadas
