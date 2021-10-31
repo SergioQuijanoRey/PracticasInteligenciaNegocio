@@ -27,11 +27,19 @@
 # Algoritmos que me han dado problemas
 
 - Algoritmos que me han dado problemas, y que por tanto no he podido usar:
-1. Random Forest: con el X-Aggregator
-2. PRISM: problemas con variables numéricas aunque no estaban llegando dichas variables numéricas
+1. PRISM: problemas con variables numéricas aunque no estaban llegando dichas variables numéricas
 
 # Datasets
 
 ## 01: Heart Disease
 
-- No he podido usar *Random Forest* porque el `X-Aggregator` fallaba por algún motiva
+- No he podido usar PRISM por problemas con variables numéricas aunque estaba pre-procesando los datos correctamente
+1. Variables correladas
+    - El siguiente grupo de variables están muy correladas:
+        - ExerciseAngina
+        - Oldpeak
+        - ST_SLOPE
+        - HeartDisease
+    - HeartDisease con ChestPainType
+2.
+3. La clase 0 tiene 508 ejemplos, la clase 1 tiene 410. Hay un ligero balanceo pero no es demasiasdo importante

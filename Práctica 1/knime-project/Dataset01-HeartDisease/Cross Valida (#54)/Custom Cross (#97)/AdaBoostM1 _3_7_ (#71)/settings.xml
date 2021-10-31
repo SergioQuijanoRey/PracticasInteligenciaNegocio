@@ -25,11 +25,11 @@
     <entry key="node-bundle-name" type="xstring" value="KNIME WEKA nodes (3.7)"/>
     <entry key="node-bundle-symbolic-name" type="xstring" value="org.knime.ext.weka_3.7"/>
     <entry key="node-bundle-vendor" type="xstring" value="KNIME AG, Zurich, Switzerland"/>
-    <entry key="node-bundle-version" type="xstring" value="4.4.1.v202108201736"/>
+    <entry key="node-bundle-version" type="xstring" value="4.4.2.v202110181017"/>
     <entry key="node-feature-name" type="xstring" value="KNIME Weka Data Mining Integration (3.7)"/>
     <entry key="node-feature-symbolic-name" type="xstring" value="org.knime.features.ext.weka_3.7.feature.group"/>
     <entry key="node-feature-vendor" type="xstring" value="KNIME AG, Zurich, Switzerland"/>
-    <entry key="node-feature-version" type="xstring" value="4.4.1.v202108201736"/>
+    <entry key="node-feature-version" type="xstring" value="4.4.2.v202110181017"/>
     <config key="factory_settings">
         <entry key="weka-class" type="xstring" value="weka.classifiers.meta.AdaBoostM1"/>
         <entry key="weka-version" type="xstring" value="3.7"/>

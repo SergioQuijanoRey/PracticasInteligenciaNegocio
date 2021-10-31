@@ -6,16 +6,6 @@
         <entry key="memory_policy" type="xstring" value="CacheSmallInMemory"/>
     </config>
     <config key="model">
-        <config key="typeofround_Internals">
-            <entry key="SettingsModelID" type="xstring" value="SMID_string"/>
-            <entry key="EnabledStatus" type="xboolean" value="true"/>
-        </config>
-        <entry key="typeofround" type="xstring" value="round"/>
-        <config key="long_Internals">
-            <entry key="SettingsModelID" type="xstring" value="SMID_boolean"/>
-            <entry key="EnabledStatus" type="xboolean" value="true"/>
-        </config>
-        <entry key="long" type="xboolean" value="false"/>
         <config key="include_Internals">
             <entry key="SettingsModelID" type="xstring" value="SMID_columnfilter"/>
             <entry key="EnabledStatus" type="xboolean" value="true"/>
@@ -58,6 +48,16 @@
                 </config>
             </config>
         </config>
+        <config key="typeofround_Internals">
+            <entry key="SettingsModelID" type="xstring" value="SMID_string"/>
+            <entry key="EnabledStatus" type="xboolean" value="true"/>
+        </config>
+        <entry key="typeofround" type="xstring" value="round"/>
+        <config key="long_Internals">
+            <entry key="SettingsModelID" type="xstring" value="SMID_boolean"/>
+            <entry key="EnabledStatus" type="xboolean" value="true"/>
+        </config>
+        <entry key="long" type="xboolean" value="false"/>
     </config>
     <config key="nodeAnnotation">
         <entry key="text" type="xstring" value="La salida de clasificación %%00010la pasamos de double a int%%00010(0.0 =&gt; 0) "/>
@@ -80,11 +80,11 @@
     <entry key="node-bundle-name" type="xstring" value="KNIME Base Nodes"/>
     <entry key="node-bundle-symbolic-name" type="xstring" value="org.knime.base"/>
     <entry key="node-bundle-vendor" type="xstring" value="KNIME AG, Zurich, Switzerland"/>
-    <entry key="node-bundle-version" type="xstring" value="4.4.1.v202108201736"/>
+    <entry key="node-bundle-version" type="xstring" value="4.4.2.v202110181012"/>
     <entry key="node-feature-name" type="xstring" value="KNIME Base nodes"/>
     <entry key="node-feature-symbolic-name" type="xstring" value="org.knime.features.base.feature.group"/>
     <entry key="node-feature-vendor" type="xstring" value="KNIME AG, Zurich, Switzerland"/>
-    <entry key="node-feature-version" type="xstring" value="4.4.1.v202108201736"/>
+    <entry key="node-feature-version" type="xstring" value="4.4.2.v202110181012"/>
     <config key="factory_settings"/>
     <entry key="name" type="xstring" value="Double To Int"/>
     <entry key="hasContent" type="xboolean" value="true"/>
@@ -100,6 +100,6 @@
     </config>
     <config key="filestores">
         <entry key="file_store_location" type="xstring" isnull="true" value=""/>
-        <entry key="file_store_id" type="xstring" value="08ddce06-5a3f-4022-a4ee-19918518fa71"/>
+        <entry key="file_store_id" type="xstring" value="17ecfb61-5606-44ae-ad20-c13d4cddca7c"/>
     </config>
 </config>

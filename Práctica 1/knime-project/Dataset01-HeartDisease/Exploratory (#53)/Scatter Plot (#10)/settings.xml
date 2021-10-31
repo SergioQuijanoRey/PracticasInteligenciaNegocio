@@ -130,11 +130,11 @@
     <entry key="node-bundle-name" type="xstring" value="KNIME JavaScript Base Views"/>
     <entry key="node-bundle-symbolic-name" type="xstring" value="org.knime.js.views"/>
     <entry key="node-bundle-vendor" type="xstring" value="KNIME AG, Zurich, Switzerland"/>
-    <entry key="node-bundle-version" type="xstring" value="4.4.1.v202108201736"/>
+    <entry key="node-bundle-version" type="xstring" value="4.4.2.v202110181014"/>
     <entry key="node-feature-name" type="xstring" value="KNIME JavaScript Views"/>
     <entry key="node-feature-symbolic-name" type="xstring" value="org.knime.features.js.views.feature.group"/>
     <entry key="node-feature-vendor" type="xstring" value="KNIME AG, Zurich, Switzerland"/>
-    <entry key="node-feature-version" type="xstring" value="4.4.1.v202108201736"/>
+    <entry key="node-feature-version" type="xstring" value="4.4.2.v202110181014"/>
     <config key="factory_settings"/>
     <entry key="name" type="xstring" value="Scatter Plot"/>
     <entry key="hasContent" type="xboolean" value="true"/>
@@ -159,6 +159,6 @@
     </config>
     <config key="filestores">
         <entry key="file_store_location" type="xstring" isnull="true" value=""/>
-        <entry key="file_store_id" type="xstring" value="56d8d2fe-ab15-4935-8c4f-8a08edc8a1bf"/>
+        <entry key="file_store_id" type="xstring" value="8859930e-6b0e-4b08-9097-41cf37e35fd7"/>
     </config>
 </config>
