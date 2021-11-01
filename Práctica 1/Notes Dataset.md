@@ -109,6 +109,7 @@
 
 ## 03: Bank Marketing
 
+- Dataset mucho más grande, los modelos tardan mucho más en entrenarse
 - PCA en dos dimensiones no muestra muy buenos resultados
 1. Variables muy correladas linealmente entre ellas
     - Housing y loan están muy correladas
@@ -123,6 +124,7 @@
 4. Outliers
     - Hay variables con muchos outliers, como `duration`
     - Por eso borramos variables de salida con `3*IQR`
+        - **Problema**: esto borra demasiados datos. Tenemos que usar una técnica más avanzada
 5. Comprobar que cross validation funciona
 6. Comprobar que no haya algoritmos en Cross Validation con resultados catastróficos (esto demuestra algún fallo concreto en el problema)
 7. Comprobar que la curva ROC se visualiza correctamente
