@@ -877,9 +877,9 @@ C5MF0LpbaCn+gKns1VPY0ghGQtKXuPSV6QeHGdDjZ0FRBnTN3X8c32NplhsBEvB+
             <path fill="none"
                   d="M127 378 C129 378 133 378 135 378 C186 378 256 378 307 378 C309 378 313 378 315 378"
                   clip-path="url(#clipPath42)" fill-rule="evenodd"/>
-            <path fill="none"
+            <path clip-path="url(#clipPath42)" fill="none" fill-rule="evenodd"
                   d="M366 378 C368 378 372 378 374 378 C814 378 1387 158 1827 158 C1829 158 1833 158 1835 158"
-                  clip-path="url(#clipPath42)" fill-rule="evenodd"/>
+                  stroke="rgb(75,75,75)" stroke-width="2"/>
             <path fill="none"
                   d="M366 378 C368 378 372 378 374 378 C586 378 835 158 1047 158 C1049 158 1053 158 1055 158"
                   clip-path="url(#clipPath42)" fill-rule="evenodd"/>

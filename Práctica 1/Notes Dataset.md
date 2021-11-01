@@ -66,6 +66,9 @@
 - Todos estos problemas los podemos vender como problemas de los algoritmos. También lo podemos vender como problemas de KNIME para generar estructuras complejas
     - Es muy complicado hacer una adaptación tipo One vs All
     - No se pueden usar redes neuronales con softmax en la capa de salida
+- **Bonus**: hemos aplicado PCA para el proceso de aprendizaje
+    - Además aplicamos PCA de forma correcta
+    - Es decir, separamos en training y test, calculamos sobre training y aplicamos esto tanto en training como en test
 1. Variables Correladas
     - Memoria RAM muy correlada con la variable de salida
     - Los dos valores para los píxeles están muy correlados entre sí, como era de esperar
