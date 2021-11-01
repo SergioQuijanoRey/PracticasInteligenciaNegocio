@@ -13,12 +13,12 @@
         <config key="include">
             <entry key="filter-type" type="xstring" value="STANDARD"/>
             <config key="included_names">
-                <entry key="array-size" type="xint" value="1"/>
-                <entry key="0" type="xstring" value="Target Class"/>
+                <entry key="array-size" type="xint" value="0"/>
             </config>
             <config key="excluded_names">
-                <entry key="array-size" type="xint" value="1"/>
-                <entry key="0" type="xstring" value="P (Target Class=1)Prob Class"/>
+                <entry key="array-size" type="xint" value="2"/>
+                <entry key="0" type="xstring" value="P (Target Class=yes)Prob Class"/>
+                <entry key="1" type="xstring" value="P (Target Class=1)Prob Class"/>
             </config>
             <entry key="enforce_option" type="xstring" value="EnforceExclusion"/>
             <config key="name_pattern">
@@ -28,7 +28,6 @@
             </config>
             <config key="datatype">
                 <config key="typelist">
-                    <entry key="org.knime.core.data.IntValue" type="xboolean" value="false"/>
                     <entry key="org.knime.core.data.DoubleValue" type="xboolean" value="false"/>
                 </config>
             </config>
@@ -58,7 +57,11 @@
         </config>
     </config>
     <entry key="customDescription" type="xstring" isnull="true" value=""/>
-    <entry key="state" type="xstring" value="IDLE"/>
+    <entry key="state" type="xstring" value="EXECUTED"/>
+    <config key="nodecontainer_message">
+        <entry key="type" type="xstring" value="WARNING"/>
+        <entry key="message" type="xstring" value="No columns selected, returning input DataTable."/>
+    </config>
     <entry key="factory" type="xstring" value="org.knime.base.node.preproc.colconvert.numbertostring2.NumberToString2NodeFactory"/>
     <entry key="node-name" type="xstring" value="Number To String"/>
     <entry key="node-bundle-name" type="xstring" value="KNIME Base Nodes"/>
@@ -71,16 +74,19 @@
     <entry key="node-feature-version" type="xstring" value="4.4.2.v202110181012"/>
     <config key="factory_settings"/>
     <entry key="name" type="xstring" value="Number To String"/>
-    <entry key="hasContent" type="xboolean" value="false"/>
+    <entry key="hasContent" type="xboolean" value="true"/>
     <entry key="isInactive" type="xboolean" value="false"/>
     <config key="ports">
         <config key="port_1">
             <entry key="index" type="xint" value="1"/>
-            <entry key="port_dir_location" type="xstring" isnull="true" value=""/>
+            <entry key="port_spec_class" type="xstring" value="org.knime.core.data.DataTableSpec"/>
+            <entry key="port_object_class" type="xstring" value="org.knime.core.node.BufferedDataTable"/>
+            <entry key="port_object_summary" type="xstring" value="Rows: 33578, Cols: 2"/>
+            <entry key="port_dir_location" type="xstring" value="port_1"/>
         </config>
     </config>
     <config key="filestores">
         <entry key="file_store_location" type="xstring" isnull="true" value=""/>
-        <entry key="file_store_id" type="xstring" isnull="true" value=""/>
+        <entry key="file_store_id" type="xstring" value="951cadef-8afd-451d-b672-ea474a230909"/>
     </config>
 </config>

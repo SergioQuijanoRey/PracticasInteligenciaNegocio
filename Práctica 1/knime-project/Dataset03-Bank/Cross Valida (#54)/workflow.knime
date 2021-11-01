@@ -28,7 +28,7 @@
     <entry key="state" type="xstring" value="IDLE"/>
     <config key="nodecontainer_message">
         <entry key="type" type="xstring" value="ERROR"/>
-        <entry key="message" type="xstring" value="Custom Cross Validation 3:54:97: AdaBoostM1 (3.7) 3:54:97:71: Weka classifier cannot work with given data. Reason: weka.classifiers.meta.AdaBoostM1: Cannot handle string attributes!%%00010Custom Cross Validation 3:54:103: Category To Number 3:54:103:71: Maximum number of categories reached for column: duration%%00010Custom Cross Validation 3:54:105: RandomForest (3.7) 3:54:105:72: Weka classifier cannot work with given data. Reason: weka.classifiers.trees.RandomTree: Cannot handle string attributes!"/>
+        <entry key="message" type="xstring" value="Custom Cross Validation 3:54:103: Category To Number 3:54:103:71: Maximum number of categories reached for column: duration%%00010Custom Cross Validation 3:54:105: RandomForest (3.7) 3:54:105:72: Weka classifier cannot work with given data. Reason: weka.classifiers.trees.RandomTree: Cannot handle string attributes!"/>
     </config>
     <config key="workflow_credentials"/>
     <config key="annotations">

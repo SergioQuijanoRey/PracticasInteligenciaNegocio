@@ -24,13 +24,13 @@
             <entry key="type" type="xstring" value="variable"/>
             <entry key="name" type="xstring" value="Number of trees"/>
             <entry key="class" type="xstring" value="INTEGER"/>
-            <entry key="value" type="xint" value="90"/>
+            <entry key="value" type="xint" value="150"/>
         </config>
         <config key="Variable_5">
             <entry key="type" type="xstring" value="variable"/>
             <entry key="name" type="xstring" value="iteration"/>
             <entry key="class" type="xstring" value="INTEGER"/>
-            <entry key="value" type="xint" value="8"/>
+            <entry key="value" type="xint" value="14"/>
         </config>
     </config>
     <config key="internal_node_subsettings">
