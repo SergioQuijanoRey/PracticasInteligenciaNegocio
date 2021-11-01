@@ -43,10 +43,6 @@
     </config>
     <entry key="customDescription" type="xstring" isnull="true" value=""/>
     <entry key="state" type="xstring" value="EXECUTED"/>
-    <config key="nodecontainer_message">
-        <entry key="type" type="xstring" value="WARNING"/>
-        <entry key="message" type="xstring" value="The current settings use missing value handling methods that cannot be represented in PMML 4.2"/>
-    </config>
     <entry key="factory" type="xstring" value="org.knime.base.node.preproc.pmml.missingval.compute.MissingValueHandlerNodeFactory"/>
     <entry key="node-name" type="xstring" value="Missing Value"/>
     <entry key="node-bundle-name" type="xstring" value="KNIME Base Nodes"/>
@@ -66,7 +62,7 @@
             <entry key="index" type="xint" value="1"/>
             <entry key="port_spec_class" type="xstring" value="org.knime.core.data.DataTableSpec"/>
             <entry key="port_object_class" type="xstring" value="org.knime.core.node.BufferedDataTable"/>
-            <entry key="port_object_summary" type="xstring" value="Rows: 41188, Cols: 21"/>
+            <entry key="port_object_summary" type="xstring" value="Rows: 2000, Cols: 1"/>
             <entry key="port_dir_location" type="xstring" value="port_1"/>
         </config>
         <config key="port_2">
@@ -81,6 +77,6 @@
     </config>
     <config key="filestores">
         <entry key="file_store_location" type="xstring" isnull="true" value=""/>
-        <entry key="file_store_id" type="xstring" value="2a050fd1-d96d-44a1-97cf-170e66f17abd"/>
+        <entry key="file_store_id" type="xstring" value="d165721b-99ee-478f-a0db-ab5bdae704d3"/>
     </config>
 </config>

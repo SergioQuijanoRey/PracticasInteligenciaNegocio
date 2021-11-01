@@ -10,7 +10,7 @@
         <config key="positiveClass">
             <entry key="datacell" type="xstring" value="org.knime.core.data.def.StringCell"/>
             <config key="org.knime.core.data.def.StringCell">
-                <entry key="StringCell" type="xstring" value="1.0"/>
+                <entry key="StringCell" type="xstring" value="0.0"/>
             </config>
         </config>
         <config key="curves">

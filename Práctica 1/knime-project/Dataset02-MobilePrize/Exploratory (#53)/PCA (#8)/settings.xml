@@ -6,21 +6,6 @@
         <entry key="memory_policy" type="xstring" value="CacheSmallInMemory"/>
     </config>
     <config key="model">
-        <config key="use_fixed_number_dimensions_Internals">
-            <entry key="SettingsModelID" type="xstring" value="SMID_boolean"/>
-            <entry key="EnabledStatus" type="xboolean" value="true"/>
-        </config>
-        <entry key="use_fixed_number_dimensions" type="xboolean" value="true"/>
-        <config key="number_of_dimensions_Internals">
-            <entry key="SettingsModelID" type="xstring" value="SMID_integer"/>
-            <entry key="EnabledStatus" type="xboolean" value="true"/>
-        </config>
-        <entry key="number_of_dimensions" type="xint" value="2"/>
-        <config key="information_preservation_Internals">
-            <entry key="SettingsModelID" type="xstring" value="SMID_double"/>
-            <entry key="EnabledStatus" type="xboolean" value="false"/>
-        </config>
-        <entry key="information_preservation" type="xdouble" value="100.0"/>
         <config key="used_columns_Internals">
             <entry key="SettingsModelID" type="xstring" value="SMID_columnfilter"/>
             <entry key="EnabledStatus" type="xboolean" value="true"/>
@@ -67,16 +52,31 @@
                 </config>
             </config>
         </config>
-        <config key="remove_used_columns_Internals">
-            <entry key="SettingsModelID" type="xstring" value="SMID_boolean"/>
-            <entry key="EnabledStatus" type="xboolean" value="true"/>
-        </config>
-        <entry key="remove_used_columns" type="xboolean" value="true"/>
         <config key="fail_on_missings_Internals">
             <entry key="SettingsModelID" type="xstring" value="SMID_boolean"/>
             <entry key="EnabledStatus" type="xboolean" value="true"/>
         </config>
         <entry key="fail_on_missings" type="xboolean" value="false"/>
+        <config key="remove_used_columns_Internals">
+            <entry key="SettingsModelID" type="xstring" value="SMID_boolean"/>
+            <entry key="EnabledStatus" type="xboolean" value="true"/>
+        </config>
+        <entry key="remove_used_columns" type="xboolean" value="true"/>
+        <config key="number_of_dimensions_Internals">
+            <entry key="SettingsModelID" type="xstring" value="SMID_integer"/>
+            <entry key="EnabledStatus" type="xboolean" value="true"/>
+        </config>
+        <entry key="number_of_dimensions" type="xint" value="2"/>
+        <config key="information_preservation_Internals">
+            <entry key="SettingsModelID" type="xstring" value="SMID_double"/>
+            <entry key="EnabledStatus" type="xboolean" value="false"/>
+        </config>
+        <entry key="information_preservation" type="xdouble" value="100.0"/>
+        <config key="use_fixed_number_dimensions_Internals">
+            <entry key="SettingsModelID" type="xstring" value="SMID_boolean"/>
+            <entry key="EnabledStatus" type="xboolean" value="true"/>
+        </config>
+        <entry key="use_fixed_number_dimensions" type="xboolean" value="true"/>
     </config>
     <config key="nodeAnnotation">
         <entry key="text" type="xstring" value="Hacemos PCA. Dejamos%%00010la variable de salida%%00010sin modifcar"/>
@@ -102,7 +102,11 @@
         </config>
     </config>
     <entry key="customDescription" type="xstring" isnull="true" value=""/>
-    <entry key="state" type="xstring" value="EXECUTED"/>
+    <entry key="state" type="xstring" value="IDLE"/>
+    <config key="nodecontainer_message">
+        <entry key="type" type="xstring" value="WARNING"/>
+        <entry key="message" type="xstring" value="The number of dimensions to project to must be less than or equal to the number of selected columns"/>
+    </config>
     <entry key="factory" type="xstring" value="org.knime.base.node.mine.transformation.pca.perform.PCA2NodeFactory"/>
     <entry key="node-name" type="xstring" value="PCA"/>
     <entry key="node-bundle-name" type="xstring" value="KNIME Base Nodes"/>
@@ -115,19 +119,16 @@
     <entry key="node-feature-version" type="xstring" value="4.4.2.v202110181012"/>
     <config key="factory_settings"/>
     <entry key="name" type="xstring" value="PCA"/>
-    <entry key="hasContent" type="xboolean" value="true"/>
+    <entry key="hasContent" type="xboolean" value="false"/>
     <entry key="isInactive" type="xboolean" value="false"/>
     <config key="ports">
         <config key="port_1">
             <entry key="index" type="xint" value="1"/>
-            <entry key="port_spec_class" type="xstring" value="org.knime.core.data.DataTableSpec"/>
-            <entry key="port_object_class" type="xstring" value="org.knime.core.node.BufferedDataTable"/>
-            <entry key="port_object_summary" type="xstring" value="Rows: 41188, Cols: 12"/>
-            <entry key="port_dir_location" type="xstring" value="port_1"/>
+            <entry key="port_dir_location" type="xstring" isnull="true" value=""/>
         </config>
     </config>
     <config key="filestores">
         <entry key="file_store_location" type="xstring" isnull="true" value=""/>
-        <entry key="file_store_id" type="xstring" value="2f9a2cef-1b68-4ae6-9a0e-15688a767e98"/>
+        <entry key="file_store_id" type="xstring" isnull="true" value=""/>
     </config>
 </config>

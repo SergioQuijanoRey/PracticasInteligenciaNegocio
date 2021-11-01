@@ -8,10 +8,14 @@
         <entry key="authored-by" type="xstring" value="sergio"/>
         <entry key="authored-when" type="xstring" value="2021-10-31 18:07:12 +0100"/>
         <entry key="lastEdited-by" type="xstring" value="sergio"/>
-        <entry key="lastEdited-when" type="xstring" value="2021-11-01 19:54:42 +0100"/>
+        <entry key="lastEdited-when" type="xstring" value="2021-11-01 20:37:11 +0100"/>
     </config>
     <entry key="customDescription" type="xstring" isnull="true" value=""/>
     <entry key="state" type="xstring" value="IDLE"/>
+    <config key="nodecontainer_message">
+        <entry key="type" type="xstring" value="ERROR"/>
+        <entry key="message" type="xstring" value="PCA Learning 3:96: Aplicamos PCA 3:96:96: Category To Number 3:96:96:9: Maximum number of categories reached for column: battery_power,blue,clock_speed,dual_sim,fc,four_g,int_memory,m_dep,mobile_wt,n_cores,pc,px_height,px_width,ram,sc_h,sc_w,talk_time,three_g,touch_screen,wifi,price_range (to number)%%00010Exploratory Data Analysis 3:53: Category To Number 3:53:9: Maximum number of categories reached for column: battery_power,blue,clock_speed,dual_sim,fc,four_g,int_memory,m_dep,mobile_wt,n_cores,pc,px_height,px_width,ram,sc_h,sc_w,talk_time,three_g,touch_screen,wifi,price_range (to number)%%00010Category To Number 3:53:48: Maximum number of categories reached for column: battery_power,blue,clock_speed,dual_sim,fc,four_g,int_memory,m_dep,mobile_wt,n_cores,pc,px_height,px_width,ram,sc_h,sc_w,talk_time,three_g,touch_screen,wifi,price_range%%00010Cross Validation 3:54: Category To Number 3:54:23: Maximum number of categories reached for column: battery_power,blue,clock_speed,dual_sim,fc,four_g,int_memory,m_dep,mobile_wt,n_cores,pc,px_height,px_width,ram,sc_h,sc_w,talk_time,three_g,touch_screen,wifi,price_range"/>
+    </config>
     <config key="workflow_credentials"/>
     <config key="annotations">
         <config key="annotation_0">

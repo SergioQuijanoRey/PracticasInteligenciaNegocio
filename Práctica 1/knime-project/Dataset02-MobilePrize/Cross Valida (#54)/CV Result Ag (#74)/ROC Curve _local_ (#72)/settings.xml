@@ -15,7 +15,7 @@
         </config>
         <config key="curves">
             <entry key="array-size" type="xint" value="1"/>
-            <entry key="0" type="xstring" value="P (Target Class=1)Prob Class"/>
+            <entry key="0" type="xstring" value="P (Target Class=yes)Prob Class"/>
         </config>
         <entry key="maxPoints" type="xint" value="2000"/>
     </config>

@@ -8,8 +8,8 @@
     <config key="model">
         <config key="all_columns">
             <config key="0">
-                <entry key="old_column_name" type="xstring" value="P (Target Class=1)Prob Class"/>
-                <entry key="new_column_name" type="xstring" value="AdaBoost"/>
+                <entry key="old_column_name" type="xstring" value="P (Target Class=yes)Prob Class"/>
+                <entry key="new_column_name" type="xstring" value="Ada Boost"/>
                 <entry key="new_column_type" type="xint" value="0"/>
             </config>
         </config>

@@ -17,8 +17,9 @@
                 <entry key="0" type="xstring" value="Target Class"/>
             </config>
             <config key="excluded_names">
-                <entry key="array-size" type="xint" value="1"/>
-                <entry key="0" type="xstring" value="P (Target Class=1)Prob Class"/>
+                <entry key="array-size" type="xint" value="2"/>
+                <entry key="0" type="xstring" value="P (Target Class=yes)Prob Class"/>
+                <entry key="1" type="xstring" value="P (Target Class=1)Prob Class"/>
             </config>
             <entry key="enforce_option" type="xstring" value="EnforceExclusion"/>
             <config key="name_pattern">

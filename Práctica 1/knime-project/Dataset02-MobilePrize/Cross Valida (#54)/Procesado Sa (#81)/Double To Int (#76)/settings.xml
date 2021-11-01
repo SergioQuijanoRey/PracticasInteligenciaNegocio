@@ -13,23 +13,43 @@
         <config key="include">
             <entry key="filter-type" type="xstring" value="STANDARD"/>
             <config key="included_names">
-                <entry key="array-size" type="xint" value="2"/>
-                <entry key="0" type="xstring" value="HeartDisease"/>
-                <entry key="1" type="xstring" value="Prediction (HeartDisease)"/>
+                <entry key="array-size" type="xint" value="1"/>
+                <entry key="0" type="xstring" value="Prediction (HeartDisease)"/>
             </config>
             <config key="excluded_names">
-                <entry key="array-size" type="xint" value="11"/>
-                <entry key="0" type="xstring" value="Age"/>
-                <entry key="1" type="xstring" value="Sex"/>
-                <entry key="2" type="xstring" value="ChestPainType"/>
-                <entry key="3" type="xstring" value="RestingBP"/>
-                <entry key="4" type="xstring" value="Cholesterol"/>
-                <entry key="5" type="xstring" value="FastingBS"/>
-                <entry key="6" type="xstring" value="RestingECG"/>
-                <entry key="7" type="xstring" value="MaxHR"/>
-                <entry key="8" type="xstring" value="ExerciseAngina"/>
-                <entry key="9" type="xstring" value="Oldpeak"/>
-                <entry key="10" type="xstring" value="ST_Slope"/>
+                <entry key="array-size" type="xint" value="32"/>
+                <entry key="0" type="xstring" value="age"/>
+                <entry key="1" type="xstring" value="job"/>
+                <entry key="2" type="xstring" value="marital"/>
+                <entry key="3" type="xstring" value="education"/>
+                <entry key="4" type="xstring" value="default"/>
+                <entry key="5" type="xstring" value="housing"/>
+                <entry key="6" type="xstring" value="loan"/>
+                <entry key="7" type="xstring" value="contact"/>
+                <entry key="8" type="xstring" value="month"/>
+                <entry key="9" type="xstring" value="day_of_week"/>
+                <entry key="10" type="xstring" value="duration"/>
+                <entry key="11" type="xstring" value="campaign"/>
+                <entry key="12" type="xstring" value="pdays"/>
+                <entry key="13" type="xstring" value="previous"/>
+                <entry key="14" type="xstring" value="poutcome"/>
+                <entry key="15" type="xstring" value="emp.var.rate"/>
+                <entry key="16" type="xstring" value="cons.price.idx"/>
+                <entry key="17" type="xstring" value="cons.conf.idx"/>
+                <entry key="18" type="xstring" value="euribor3m"/>
+                <entry key="19" type="xstring" value="nr.employed"/>
+                <entry key="20" type="xstring" value="Target Class"/>
+                <entry key="21" type="xstring" value="Age"/>
+                <entry key="22" type="xstring" value="Sex"/>
+                <entry key="23" type="xstring" value="ChestPainType"/>
+                <entry key="24" type="xstring" value="RestingBP"/>
+                <entry key="25" type="xstring" value="Cholesterol"/>
+                <entry key="26" type="xstring" value="FastingBS"/>
+                <entry key="27" type="xstring" value="RestingECG"/>
+                <entry key="28" type="xstring" value="MaxHR"/>
+                <entry key="29" type="xstring" value="ExerciseAngina"/>
+                <entry key="30" type="xstring" value="Oldpeak"/>
+                <entry key="31" type="xstring" value="ST_Slope"/>
             </config>
             <entry key="enforce_option" type="xstring" value="EnforceExclusion"/>
             <config key="name_pattern">

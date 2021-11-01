@@ -32,7 +32,11 @@
         <config key="styles"/>
     </config>
     <entry key="customDescription" type="xstring" isnull="true" value=""/>
-    <entry key="state" type="xstring" value="EXECUTED"/>
+    <entry key="state" type="xstring" value="IDLE"/>
+    <config key="nodecontainer_message">
+        <entry key="type" type="xstring" value="WARNING"/>
+        <entry key="message" type="xstring" value="No columns to visualize are available! Please refer to the NodeDescription to find out why!"/>
+    </config>
     <entry key="factory" type="xstring" value="org.knime.base.node.viz.plotter.scattermatrix.ScatterMatrixNodeFactory"/>
     <entry key="node-name" type="xstring" value="Scatter Matrix (local)"/>
     <entry key="node-bundle-name" type="xstring" value="KNIME Base Nodes"/>
@@ -45,11 +49,11 @@
     <entry key="node-feature-version" type="xstring" value="4.4.2.v202110181012"/>
     <config key="factory_settings"/>
     <entry key="name" type="xstring" value="Scatter Matrix (local)"/>
-    <entry key="hasContent" type="xboolean" value="true"/>
+    <entry key="hasContent" type="xboolean" value="false"/>
     <entry key="isInactive" type="xboolean" value="false"/>
     <config key="ports"/>
     <config key="filestores">
         <entry key="file_store_location" type="xstring" isnull="true" value=""/>
-        <entry key="file_store_id" type="xstring" value="4573a756-039d-4ef8-925d-19d6eaacb046"/>
+        <entry key="file_store_id" type="xstring" isnull="true" value=""/>
     </config>
 </config>

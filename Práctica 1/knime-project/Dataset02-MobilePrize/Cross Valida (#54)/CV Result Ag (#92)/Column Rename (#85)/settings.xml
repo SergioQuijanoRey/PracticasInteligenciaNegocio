@@ -8,7 +8,7 @@
     <config key="model">
         <config key="all_columns">
             <config key="0">
-                <entry key="old_column_name" type="xstring" value="P (HeartDisease=1)Prob Classification"/>
+                <entry key="old_column_name" type="xstring" value="P (Target Class=yes)Prob Classification"/>
                 <entry key="new_column_name" type="xstring" value="Naive Bayes"/>
                 <entry key="new_column_type" type="xint" value="0"/>
             </config>
