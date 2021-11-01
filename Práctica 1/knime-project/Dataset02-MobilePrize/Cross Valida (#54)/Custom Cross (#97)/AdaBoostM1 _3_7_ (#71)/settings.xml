@@ -12,7 +12,7 @@
         <config key="weka-optionhandler-settings">
             <entry key="-P_(#0)" type="xstring" value="100"/>
             <entry key="-S_(#1)" type="xstring" value="123456789"/>
-            <entry key="-I_(#2)" type="xstring" value="10"/>
+            <entry key="-I_(#2)" type="xstring" value="20"/>
             <entry key="-W_(#3)" type="xstring" value="weka.classifiers.trees.DecisionStump"/>
             <entry key="options_list_with_placeholders" type="xstring" value="-P #0 -S #1 -I #2 -W #3"/>
             <entry key="additional_options" type="xstring" value=""/>

@@ -56,6 +56,7 @@
 
 - Aplicando PCA con dimensión 2 se ven muy buenos resultados
 - Deberíamos hacer las métricas para cada una de las clases. Sin embargo nos quedamos con la clase 1 como clase positiva
+- En Support Vector Machine, no estamos haciendo la adaptación a multiclase. Probar con un One-To-One o similares
 1. Variables Correladas
     - Memoria RAM muy correlada con la variable de salida
     - Los dos valores para los píxeles están muy correlados entre sí, como era de esperar
