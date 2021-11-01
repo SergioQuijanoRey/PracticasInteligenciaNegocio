@@ -662,9 +662,9 @@
             },
             {
                 "id": "org.knime.optimization.internal.node.parameter.loopstart.LoopStartParOptNodeFactory#Parameter Optimization Loop Start",
-                "nrexecs": 1219,
+                "nrexecs": 1220,
                 "nrfails": 0,
-                "exectime": 803,
+                "exectime": 811,
                 "nrcreated": 2,
                 "successor": "org.knime.base.node.mine.knn.KnnNodeFactory2#K Nearest Neighbor"
             },
@@ -722,14 +722,14 @@
             "nrcreated": 0
         }
     },
-    "uptime": 3136479,
+    "uptime": 3041515,
     "workflowsOpened": 1,
     "remoteWorkflowsOpened": 0,
     "workflowsImported": 0,
     "workflowsExported": 0,
-    "launches": 31,
+    "launches": 32,
     "lastApplicationID": "org.knime.product.KNIME_APPLICATION",
-    "timeSinceLastStart": 4686702,
-    "crashes": 3,
+    "timeSinceLastStart": 97646,
+    "crashes": 4,
     "properlyShutDown": false
 }

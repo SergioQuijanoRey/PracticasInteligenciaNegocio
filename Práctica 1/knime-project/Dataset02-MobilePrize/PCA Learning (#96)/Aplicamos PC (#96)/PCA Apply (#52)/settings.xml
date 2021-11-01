@@ -6,31 +6,31 @@
         <entry key="memory_policy" type="xstring" value="CacheSmallInMemory"/>
     </config>
     <config key="model">
-        <config key="use_fixed_number_dimensions_Internals">
-            <entry key="SettingsModelID" type="xstring" value="SMID_boolean"/>
-            <entry key="EnabledStatus" type="xboolean" value="true"/>
-        </config>
-        <entry key="use_fixed_number_dimensions" type="xboolean" value="true"/>
-        <config key="number_of_dimensions_Internals">
-            <entry key="SettingsModelID" type="xstring" value="SMID_integer"/>
-            <entry key="EnabledStatus" type="xboolean" value="true"/>
-        </config>
-        <entry key="number_of_dimensions" type="xint" value="2"/>
-        <config key="information_preservation_Internals">
-            <entry key="SettingsModelID" type="xstring" value="SMID_double"/>
-            <entry key="EnabledStatus" type="xboolean" value="false"/>
-        </config>
-        <entry key="information_preservation" type="xdouble" value="100.0"/>
         <config key="remove_used_columns_Internals">
             <entry key="SettingsModelID" type="xstring" value="SMID_boolean"/>
             <entry key="EnabledStatus" type="xboolean" value="true"/>
         </config>
         <entry key="remove_used_columns" type="xboolean" value="true"/>
+        <config key="number_of_dimensions_Internals">
+            <entry key="SettingsModelID" type="xstring" value="SMID_integer"/>
+            <entry key="EnabledStatus" type="xboolean" value="true"/>
+        </config>
+        <entry key="number_of_dimensions" type="xint" value="2"/>
         <config key="fail_on_missings_Internals">
             <entry key="SettingsModelID" type="xstring" value="SMID_boolean"/>
             <entry key="EnabledStatus" type="xboolean" value="true"/>
         </config>
         <entry key="fail_on_missings" type="xboolean" value="false"/>
+        <config key="information_preservation_Internals">
+            <entry key="SettingsModelID" type="xstring" value="SMID_double"/>
+            <entry key="EnabledStatus" type="xboolean" value="false"/>
+        </config>
+        <entry key="information_preservation" type="xdouble" value="100.0"/>
+        <config key="use_fixed_number_dimensions_Internals">
+            <entry key="SettingsModelID" type="xstring" value="SMID_boolean"/>
+            <entry key="EnabledStatus" type="xboolean" value="true"/>
+        </config>
+        <entry key="use_fixed_number_dimensions" type="xboolean" value="true"/>
     </config>
     <config key="nodeAnnotation">
         <entry key="text" type="xstring" value="Aplicamos PCA a training"/>
@@ -73,6 +73,6 @@
     </config>
     <config key="filestores">
         <entry key="file_store_location" type="xstring" isnull="true" value=""/>
-        <entry key="file_store_id" type="xstring" value="408f8131-b109-4a1e-8aad-a0ef007c2efc"/>
+        <entry key="file_store_id" type="xstring" value="f88e4a04-9de1-4bd3-b45b-93670f171b67"/>
     </config>
 </config>

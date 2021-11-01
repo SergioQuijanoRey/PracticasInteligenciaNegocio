@@ -57,7 +57,7 @@
                 <path d="M202 419 L483 419 L483 497 L202 497 L202 419 Z"/>
             </clipPath>
             <clipPath clipPathUnits="userSpaceOnUse" id="clipPath15">
-                <path d="M1699 186 L2028 186 L2028 264 L1699 264 L1699 186 Z"/>
+                <path d="M1699 186 L2025 186 L2025 264 L1699 264 L1699 186 Z"/>
             </clipPath>
             <clipPath clipPathUnits="userSpaceOnUse" id="clipPath16">
                 <path d="M53 336 L154 336 L154 358 L53 358 L53 336 Z"/>
@@ -246,11 +246,11 @@
                   y="493" clip-path="url(#clipPath14)" fill="black"
                   stroke="none" xml:space="preserve">los que vamos a trabajar</text><text x="1700"
                   y="203" clip-path="url(#clipPath15)" fill="black"
-                  stroke="none" xml:space="preserve">Hemos visto que PCA tiene muy buenos</text><text x="1705"
+                  stroke="none" xml:space="preserve">Hemos visto que PCA tiene muy buenos</text><text x="1704"
                   y="222" clip-path="url(#clipPath15)" fill="black"
-                  stroke="none" xml:space="preserve">resultados. Por ello, aplicamos PCA</text><text x="1714"
+                  stroke="none" xml:space="preserve">resultados. Por ello, aplicamos PCA</text><text x="1713"
                   y="241" clip-path="url(#clipPath15)" fill="black"
-                  stroke="none" xml:space="preserve">y usamos un algoritmo simple para</text><text x="1705"
+                  stroke="none" xml:space="preserve">y usamos un algoritmo simple para</text><text x="1704"
                   y="260" clip-path="url(#clipPath15)" fill="black"
                   stroke="none" xml:space="preserve">ver la efectividad de este proceso.</text><text x="54"
                   y="353" clip-path="url(#clipPath16)" fill="black"
@@ -596,11 +596,11 @@ C5MF0LpbaCn+gKns1VPY0ghGQtKXuPSV6QeHGdDjZ0FRBnTN3X8c32NplhsBEvB+
                   y="493" clip-path="url(#clipPath14)" stroke="none"
                   font-weight="normal" xml:space="preserve">los que vamos a trabajar</text><text x="1700"
                   y="203" clip-path="url(#clipPath15)" stroke="none"
-                  font-weight="normal" xml:space="preserve">Hemos visto que PCA tiene muy buenos</text><text x="1705"
+                  font-weight="normal" xml:space="preserve">Hemos visto que PCA tiene muy buenos</text><text x="1704"
                   y="222" clip-path="url(#clipPath15)" stroke="none"
-                  font-weight="normal" xml:space="preserve">resultados. Por ello, aplicamos PCA</text><text x="1714"
+                  font-weight="normal" xml:space="preserve">resultados. Por ello, aplicamos PCA</text><text x="1713"
                   y="241" clip-path="url(#clipPath15)" stroke="none"
-                  font-weight="normal" xml:space="preserve">y usamos un algoritmo simple para</text><text x="1705"
+                  font-weight="normal" xml:space="preserve">y usamos un algoritmo simple para</text><text x="1704"
                   y="260" clip-path="url(#clipPath15)" stroke="none"
                   font-weight="normal" xml:space="preserve">ver la efectividad de este proceso.</text><text xml:space="preserve"
                   x="54" y="353" clip-path="url(#clipPath16)" stroke="none">CSV Reader</text><image xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -869,22 +869,22 @@ C5MF0LpbaCn+gKns1VPY0ghGQtKXuPSV6QeHGdDjZ0FRBnTN3X8c32NplhsBEvB+
            text-rendering="optimizeLegibility"
            font-family="&apos;JetBrains Mono&apos;" stroke="rgb(150,150,150)">
             <path fill="none"
+                  d="M686 448 C688 448 692 448 694 448 C799 448 942 457 1047 457 C1049 457 1053 457 1055 457"
+                  clip-path="url(#clipPath42)" fill-rule="evenodd"/>
+            <path fill="none"
                   d="M366 378 C368 378 372 378 374 378 C453 378 548 457 627 457 C629 457 633 457 635 457"
+                  clip-path="url(#clipPath42)" fill-rule="evenodd"/>
+            <path fill="none"
+                  d="M366 378 C368 378 372 378 374 378 C586 378 835 158 1047 158 C1049 158 1053 158 1055 158"
+                  clip-path="url(#clipPath42)" fill-rule="evenodd"/>
+            <path fill="none"
+                  d="M127 378 C129 378 133 378 135 378 C186 378 256 378 307 378 C309 378 313 378 315 378"
                   clip-path="url(#clipPath42)" fill-rule="evenodd"/>
             <path fill="none"
                   d="M686 448 C688 448 692 448 694 448 C870 448 871 917 1047 917 C1049 917 1053 917 1055 917"
                   clip-path="url(#clipPath42)" fill-rule="evenodd"/>
             <path fill="none"
-                  d="M127 378 C129 378 133 378 135 378 C186 378 256 378 307 378 C309 378 313 378 315 378"
-                  clip-path="url(#clipPath42)" fill-rule="evenodd"/>
-            <path clip-path="url(#clipPath42)" fill="none" fill-rule="evenodd"
                   d="M366 378 C368 378 372 378 374 378 C814 378 1387 158 1827 158 C1829 158 1833 158 1835 158"
-                  stroke="rgb(75,75,75)" stroke-width="2"/>
-            <path fill="none"
-                  d="M366 378 C368 378 372 378 374 378 C586 378 835 158 1047 158 C1049 158 1053 158 1055 158"
-                  clip-path="url(#clipPath42)" fill-rule="evenodd"/>
-            <path fill="none"
-                  d="M686 448 C688 448 692 448 694 448 C799 448 942 457 1047 457 C1049 457 1053 457 1055 457"
                   clip-path="url(#clipPath42)" fill-rule="evenodd"/>
         </g>
     </g>
