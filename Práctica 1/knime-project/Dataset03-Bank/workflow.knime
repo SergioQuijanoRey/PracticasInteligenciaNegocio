@@ -8,10 +8,10 @@
         <entry key="authored-by" type="xstring" value="sergio"/>
         <entry key="authored-when" type="xstring" value="2021-11-01 21:32:14 +0100"/>
         <entry key="lastEdited-by" type="xstring" value="sergio"/>
-        <entry key="lastEdited-when" type="xstring" value="2021-11-01 21:43:11 +0100"/>
+        <entry key="lastEdited-when" type="xstring" value="2021-11-01 21:51:02 +0100"/>
     </config>
     <entry key="customDescription" type="xstring" isnull="true" value=""/>
-    <entry key="state" type="xstring" value="IDLE"/>
+    <entry key="state" type="xstring" value="CONFIGURED"/>
     <config key="nodecontainer_message">
         <entry key="type" type="xstring" value="ERROR"/>
         <entry key="message" type="xstring" value="Cross Validation 3:54: Custom Cross Validation 3:54:103: Category To Number 3:54:103:71: Maximum number of categories reached for column: duration%%00010Custom Cross Validation 3:54:105: RandomForest (3.7) 3:54:105:72: Weka classifier cannot work with given data. Reason: weka.classifiers.trees.RandomTree: Cannot handle string attributes!"/>

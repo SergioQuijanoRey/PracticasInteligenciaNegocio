@@ -138,7 +138,7 @@
                 <path d="M1802 154 L1854 154 L1854 165 L1802 165 L1802 154 Z"/>
             </clipPath>
             <clipPath clipPathUnits="userSpaceOnUse" id="clipPath42">
-                <path d="M-1 -1 L2420 -1 L2420 1188 L-1 1188 L-1 -1 Z"/>
+                <path d="M-1 -1 L2865 -1 L2865 1188 L-1 1188 L-1 -1 Z"/>
             </clipPath>
         </defs>
         <g font-size="14" fill="white" font-family="&apos;JetBrains Mono&apos;"
@@ -348,15 +348,14 @@ AADhvucPJbgFY3M3FzIAAAAASUVORK5CYII=" xlink:actuate="onLoad"/>
                    xlink:show="embed" xlink:type="simple"
                    clip-path="url(#clipPath18)" preserveAspectRatio="none"
                    font-weight="normal" height="16" x="0" y="0"
-                   xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABX0lEQVR42qVTzUrD
-QBD+Jl1rDj358wxSvEhEfQPFu/oIVg/6BB4aj4JXaXwEFTyKD+BBisWLiOAbiDkV
-TdOk6+xuUjaKTcQvZMhuvpmdnfmGYEE+oYHYvYHEGi+nrF9DEO5RjzZpEX3bh8bO
-D+4urzp6T+KF7fUI9aFDsYMRtni9oGj87NFydF4IkDkH/PkOiCZ5/bdx4AvUaAep
-7DXmgeSZt2Y5SCsPUtNpp+KOv0Pyojk/iD9y57Q3Iyn8PPYvIdW+HyQn7ZY44MO2
-24fJqX8GTm/g3ppMRBOVoHmU+cHhd1Xd2U57EjRP1Uj5ZQEE2yv8BYYvkBtIerTv
-XRpA8w3NBCC5xFZn4byGopAyd+DnPZifHSO0SFSfgaNfHb7D6CLJa9BVIjF9Lofm
-GVF1TYDpaEMrzIikAjRPst96JSUWTs6VCLlP3qAzeRZUq1S1VcHKZqEwjUZhK1Wn
-8d/4AmSylsd4KZ0LAAAAAElFTkSuQmCC" xlink:actuate="onLoad"/>
+                   xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABFklEQVR42mNgGPrg
+xC3zgydvmunjkj9+yyJ3/34HFlzyTP8ZGO3+MTKdAyqcfvK6mTAWNZPYpX9eOHbT
+0hmbAcwpuTINQJoRiE3+MzGmJufIfo0JVjm3cOGDfyAFIHmgpBgjI0MckK2Xli11
+es6Upx/gLkAzUJCR8f9kDukf50/cMXfEYmHQPyama0DXNp95ZswFEmAEcv7jCaJz
+QGyEQ+4J4///pUyURgIuA64wMv13slQ7YYxF7gcQt7Dy/Fa3UD+5Aj163v//z1j3
+8xn7DEfHA3+waF7H9O9fibnGqfswAZgBoBCfxfT3X4255qm36LqAUX0VSORbqR/f
+iy7HApQ8DMR51mrHLuDwTt7Pp+zTcbhoOAAAed5kVj7ixHoAAAAASUVORK5CYII="
+                   xlink:actuate="onLoad"/>
             <polygon clip-path="url(#clipPath26)"
                      points=" 1057 454 1066 458 1057 463" stroke="none"/>
             <polygon clip-path="url(#clipPath27)"
@@ -688,15 +687,14 @@ AADhvucPJbgFY3M3FzIAAAAASUVORK5CYII=" xlink:actuate="onLoad"/>
                    xlink:show="embed" xlink:type="simple"
                    clip-path="url(#clipPath18)" preserveAspectRatio="none"
                    font-weight="normal" height="16" x="0" y="0"
-                   xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABX0lEQVR42qVTzUrD
-QBD+Jl1rDj358wxSvEhEfQPFu/oIVg/6BB4aj4JXaXwEFTyKD+BBisWLiOAbiDkV
-TdOk6+xuUjaKTcQvZMhuvpmdnfmGYEE+oYHYvYHEGi+nrF9DEO5RjzZpEX3bh8bO
-D+4urzp6T+KF7fUI9aFDsYMRtni9oGj87NFydF4IkDkH/PkOiCZ5/bdx4AvUaAep
-7DXmgeSZt2Y5SCsPUtNpp+KOv0Pyojk/iD9y57Q3Iyn8PPYvIdW+HyQn7ZY44MO2
-24fJqX8GTm/g3ppMRBOVoHmU+cHhd1Xd2U57EjRP1Uj5ZQEE2yv8BYYvkBtIerTv
-XRpA8w3NBCC5xFZn4byGopAyd+DnPZifHSO0SFSfgaNfHb7D6CLJa9BVIjF9Lofm
-GVF1TYDpaEMrzIikAjRPst96JSUWTs6VCLlP3qAzeRZUq1S1VcHKZqEwjUZhK1Wn
-8d/4AmSylsd4KZ0LAAAAAElFTkSuQmCC" xlink:actuate="onLoad"/>
+                   xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABFklEQVR42mNgGPrg
+xC3zgydvmunjkj9+yyJ3/34HFlzyTP8ZGO3+MTKdAyqcfvK6mTAWNZPYpX9eOHbT
+0hmbAcwpuTINQJoRiE3+MzGmJufIfo0JVjm3cOGDfyAFIHmgpBgjI0MckK2Xli11
+es6Upx/gLkAzUJCR8f9kDukf50/cMXfEYmHQPyama0DXNp95ZswFEmAEcv7jCaJz
+QGyEQ+4J4///pUyURgIuA64wMv13slQ7YYxF7gcQt7Dy/Fa3UD+5Aj163v//z1j3
+8xn7DEfHA3+waF7H9O9fibnGqfswAZgBoBCfxfT3X4255qm36LqAUX0VSORbqR/f
+iy7HApQ8DMR51mrHLuDwTt7Pp+zTcbhoOAAAed5kVj7ixHoAAAAASUVORK5CYII="
+                   xlink:actuate="onLoad"/>
             <polygon clip-path="url(#clipPath26)"
                      points=" 1057 454 1066 458 1057 463" stroke="none"/>
             <polygon clip-path="url(#clipPath27)"
@@ -881,11 +879,11 @@ GVF1TYDpaEMrzIikAjRPst96JSUWTs6VCLlP3qAzeRZUq1S1VcHKZqEwjUZhK1Wn
             <line clip-path="url(#clipPath42)" fill="none" x1="1826" x2="1834"
                   y1="158" y2="158"/>
             <line clip-path="url(#clipPath42)" fill="none" x1="686" x2="694"
-                  y1="447" y2="447" stroke="rgb(75,75,75)" stroke-width="2"/>
+                  y1="447" y2="447"/>
             <line clip-path="url(#clipPath42)" fill="none" x1="694" x2="1047"
-                  y1="447" y2="456" stroke="rgb(75,75,75)" stroke-width="2"/>
+                  y1="447" y2="456"/>
             <line clip-path="url(#clipPath42)" fill="none" x1="1047" x2="1055"
-                  y1="456" y2="456" stroke="rgb(75,75,75)" stroke-width="2"/>
+                  y1="456" y2="456"/>
             <line clip-path="url(#clipPath42)" fill="none" x1="365" x2="373"
                   y1="377" y2="377"/>
             <line clip-path="url(#clipPath42)" fill="none" x1="373" x2="626"

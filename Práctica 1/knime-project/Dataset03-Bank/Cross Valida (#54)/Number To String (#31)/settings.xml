@@ -17,27 +17,47 @@
                 <entry key="0" type="xstring" value="Target Class"/>
             </config>
             <config key="excluded_names">
-                <entry key="array-size" type="xint" value="20"/>
-                <entry key="0" type="xstring" value="battery_power"/>
-                <entry key="1" type="xstring" value="blue"/>
-                <entry key="2" type="xstring" value="clock_speed"/>
-                <entry key="3" type="xstring" value="dual_sim"/>
-                <entry key="4" type="xstring" value="fc"/>
-                <entry key="5" type="xstring" value="four_g"/>
-                <entry key="6" type="xstring" value="int_memory"/>
-                <entry key="7" type="xstring" value="m_dep"/>
-                <entry key="8" type="xstring" value="mobile_wt"/>
-                <entry key="9" type="xstring" value="n_cores"/>
-                <entry key="10" type="xstring" value="pc"/>
-                <entry key="11" type="xstring" value="px_height"/>
-                <entry key="12" type="xstring" value="px_width"/>
-                <entry key="13" type="xstring" value="ram"/>
-                <entry key="14" type="xstring" value="sc_h"/>
-                <entry key="15" type="xstring" value="sc_w"/>
-                <entry key="16" type="xstring" value="talk_time"/>
-                <entry key="17" type="xstring" value="three_g"/>
-                <entry key="18" type="xstring" value="touch_screen"/>
-                <entry key="19" type="xstring" value="wifi"/>
+                <entry key="array-size" type="xint" value="40"/>
+                <entry key="0" type="xstring" value="age"/>
+                <entry key="1" type="xstring" value="job"/>
+                <entry key="2" type="xstring" value="marital"/>
+                <entry key="3" type="xstring" value="education"/>
+                <entry key="4" type="xstring" value="default"/>
+                <entry key="5" type="xstring" value="housing"/>
+                <entry key="6" type="xstring" value="loan"/>
+                <entry key="7" type="xstring" value="contact"/>
+                <entry key="8" type="xstring" value="month"/>
+                <entry key="9" type="xstring" value="day_of_week"/>
+                <entry key="10" type="xstring" value="duration"/>
+                <entry key="11" type="xstring" value="campaign"/>
+                <entry key="12" type="xstring" value="pdays"/>
+                <entry key="13" type="xstring" value="previous"/>
+                <entry key="14" type="xstring" value="poutcome"/>
+                <entry key="15" type="xstring" value="emp.var.rate"/>
+                <entry key="16" type="xstring" value="cons.price.idx"/>
+                <entry key="17" type="xstring" value="cons.conf.idx"/>
+                <entry key="18" type="xstring" value="euribor3m"/>
+                <entry key="19" type="xstring" value="nr.employed"/>
+                <entry key="20" type="xstring" value="battery_power"/>
+                <entry key="21" type="xstring" value="blue"/>
+                <entry key="22" type="xstring" value="clock_speed"/>
+                <entry key="23" type="xstring" value="dual_sim"/>
+                <entry key="24" type="xstring" value="fc"/>
+                <entry key="25" type="xstring" value="four_g"/>
+                <entry key="26" type="xstring" value="int_memory"/>
+                <entry key="27" type="xstring" value="m_dep"/>
+                <entry key="28" type="xstring" value="mobile_wt"/>
+                <entry key="29" type="xstring" value="n_cores"/>
+                <entry key="30" type="xstring" value="pc"/>
+                <entry key="31" type="xstring" value="px_height"/>
+                <entry key="32" type="xstring" value="px_width"/>
+                <entry key="33" type="xstring" value="ram"/>
+                <entry key="34" type="xstring" value="sc_h"/>
+                <entry key="35" type="xstring" value="sc_w"/>
+                <entry key="36" type="xstring" value="talk_time"/>
+                <entry key="37" type="xstring" value="three_g"/>
+                <entry key="38" type="xstring" value="touch_screen"/>
+                <entry key="39" type="xstring" value="wifi"/>
             </config>
             <entry key="enforce_option" type="xstring" value="EnforceExclusion"/>
             <config key="name_pattern">
@@ -94,6 +114,6 @@
     </config>
     <config key="filestores">
         <entry key="file_store_location" type="xstring" isnull="true" value=""/>
-        <entry key="file_store_id" type="xstring" value="12c10fd6-bced-4a1d-accf-035abe33aed6"/>
+        <entry key="file_store_id" type="xstring" value="cfcca06a-d426-42a1-8d84-f99a39675b8b"/>
     </config>
 </config>
