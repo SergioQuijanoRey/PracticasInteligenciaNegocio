@@ -1,4 +1,3 @@
 /home/sergio/GitProjects/PracticasInteligenciaNegocio/Práctica 1/datasets/mobile_price_classification.csv
-/home/sergio/GitProjects/PracticasInteligenciaNegocio/Práctica 1/datasets/bank-additional-full.csv
 /home/sergio/GitProjects/PracticasInteligenciaNegocio/Práctica 1/datasets/heart.csv
 /home/sergio/GitProjects/PracticasInteligenciaNegocio/Práctica 1/datasets
