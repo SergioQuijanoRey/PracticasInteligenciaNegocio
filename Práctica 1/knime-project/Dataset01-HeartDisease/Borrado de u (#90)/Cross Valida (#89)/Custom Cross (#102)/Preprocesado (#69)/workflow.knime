@@ -214,7 +214,7 @@
             </config>
             <config key="outport_3">
                 <entry key="index" type="xint" value="3"/>
-                <entry key="name" type="xstring" value="Connected to: Outport 0"/>
+                <entry key="name" type="xstring" value="Connected to: Processed data"/>
                 <config key="type">
                     <entry key="object_class" type="xstring" value="org.knime.core.node.BufferedDataTable"/>
                 </config>

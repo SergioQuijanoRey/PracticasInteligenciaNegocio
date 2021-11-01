@@ -24,13 +24,13 @@
             <entry key="type" type="xstring" value="variable"/>
             <entry key="name" type="xstring" value="Number of trees"/>
             <entry key="class" type="xstring" value="INTEGER"/>
-            <entry key="value" type="xint" value="10"/>
+            <entry key="value" type="xint" value="150"/>
         </config>
         <config key="Variable_5">
             <entry key="type" type="xstring" value="variable"/>
             <entry key="name" type="xstring" value="iteration"/>
             <entry key="class" type="xstring" value="INTEGER"/>
-            <entry key="value" type="xint" value="0"/>
+            <entry key="value" type="xint" value="14"/>
         </config>
     </config>
     <config key="internal_node_subsettings">
@@ -99,7 +99,7 @@
         </config>
     </config>
     <config key="filestores">
-        <entry key="file_store_location" type="xstring" isnull="true" value=""/>
-        <entry key="file_store_id" type="xstring" value="9319edcd-2943-427c-951d-9c0bccc7af44"/>
+        <entry key="file_store_location" type="xstring" value="filestore"/>
+        <entry key="file_store_id" type="xstring" value="8c02743c-1033-454b-ac66-02e4b174142f"/>
     </config>
 </config>

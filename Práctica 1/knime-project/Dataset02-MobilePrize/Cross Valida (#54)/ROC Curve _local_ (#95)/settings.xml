@@ -14,12 +14,13 @@
             </config>
         </config>
         <config key="curves">
-            <entry key="array-size" type="xint" value="5"/>
+            <entry key="array-size" type="xint" value="6"/>
             <entry key="0" type="xstring" value="AdaBoost"/>
             <entry key="1" type="xstring" value="Neural Net"/>
             <entry key="2" type="xstring" value="Support Vector Machine"/>
-            <entry key="3" type="xstring" value="K-NN"/>
-            <entry key="4" type="xstring" value="Random Forest"/>
+            <entry key="3" type="xstring" value="Support Vector Machine + Normalization"/>
+            <entry key="4" type="xstring" value="K-NN"/>
+            <entry key="5" type="xstring" value="Random Forest"/>
         </config>
         <entry key="maxPoints" type="xint" value="5000"/>
     </config>
@@ -58,12 +59,12 @@
             <entry key="index" type="xint" value="1"/>
             <entry key="port_spec_class" type="xstring" value="org.knime.core.data.DataTableSpec"/>
             <entry key="port_object_class" type="xstring" value="org.knime.core.node.BufferedDataTable"/>
-            <entry key="port_object_summary" type="xstring" value="Rows: 5, Cols: 1"/>
+            <entry key="port_object_summary" type="xstring" value="Rows: 6, Cols: 1"/>
             <entry key="port_dir_location" type="xstring" value="port_1"/>
         </config>
     </config>
     <config key="filestores">
         <entry key="file_store_location" type="xstring" isnull="true" value=""/>
-        <entry key="file_store_id" type="xstring" value="5e18666a-bfc7-42f1-8579-c3311717b562"/>
+        <entry key="file_store_id" type="xstring" value="1105e1fa-f7ec-4251-9f00-614da9e1d591"/>
     </config>
 </config>

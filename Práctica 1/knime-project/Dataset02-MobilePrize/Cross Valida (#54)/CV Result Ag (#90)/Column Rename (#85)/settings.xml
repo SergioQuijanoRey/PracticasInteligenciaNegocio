@@ -8,8 +8,8 @@
     <config key="model">
         <config key="all_columns">
             <config key="0">
-                <entry key="old_column_name" type="xstring" value="P (HeartDisease=1)Prob Classification"/>
-                <entry key="new_column_name" type="xstring" value="SVM + Normalization"/>
+                <entry key="old_column_name" type="xstring" value="P (Target Class=1)Prob Classification"/>
+                <entry key="new_column_name" type="xstring" value="Support Vector Machine + Normalization"/>
                 <entry key="new_column_type" type="xint" value="0"/>
             </config>
         </config>
@@ -39,10 +39,6 @@
     </config>
     <entry key="customDescription" type="xstring" isnull="true" value=""/>
     <entry key="state" type="xstring" value="EXECUTED"/>
-    <config key="nodecontainer_message">
-        <entry key="type" type="xstring" value="WARNING"/>
-        <entry key="message" type="xstring" value="The following columns are configured but no longer exist: &quot;P (HeartDisease=1)Prob Classification&quot;"/>
-    </config>
     <entry key="factory" type="xstring" value="org.knime.base.node.preproc.rename.RenameNodeFactory"/>
     <entry key="node-name" type="xstring" value="Column Rename"/>
     <entry key="node-bundle-name" type="xstring" value="KNIME Base Nodes"/>
@@ -68,6 +64,6 @@
     </config>
     <config key="filestores">
         <entry key="file_store_location" type="xstring" isnull="true" value=""/>
-        <entry key="file_store_id" type="xstring" value="399eec2b-038e-478c-abba-6f0563351930"/>
+        <entry key="file_store_id" type="xstring" value="9307e8fa-2f0f-4298-acf7-a84a95298dd0"/>
     </config>
 </config>

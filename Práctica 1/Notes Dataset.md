@@ -12,8 +12,10 @@
 - Cross Validation concreto
     5. Comprobar que cross validation funciona
     6. Comprobar que no haya algoritmos en Cross Validation con resultados catastróficos (esto demuestra algún fallo concreto en el problema)
+    7. Comprobar que la curva ROC se visualiza correctamente
 - Ajustar un par de algoritmos
-    7. Ajustar los valores para un par de parámetros
+    8. Ajustar los valores para un par de parámetros
+        - Intento ajustar G-mean, pero con el nodo `loop_end`, que espera una varible flow, no se puede actualizar el G-Mean (o al menos no sé cómo hacer eso)
 
 # Técnicas avanzadas que probar al menos una vez
 
@@ -21,7 +23,8 @@
     - Una vez hecho eso, probar con quitar las variables que no han tenido importancia
 - [ ] Borrado del ruido usando un *Ensemble filter* o similar
 - [ ] Imputar missing values usando un predictor
-- [ ] Reducción de datos para un problema que tenga demasiadas categorías
+- [x] Reducción de datos para un problema que tenga demasiadas categorías
+    - Lo he hecho en el primer dataset
 - [ ] Balancear clases usando *SMOTE*
 
 # Algoritmos que me han dado problemas
@@ -46,10 +49,12 @@
 4. En el *Exploratory Data Analysis* muestra que tenemos bastantes outliers. En cada *cross-validation*, borramos solo en training usando `3 * IQR`
 5. Cross validation funciona, pero las curvas ROC por algun motivo no se muestran bien
 6. No tenemos algoritmos con resultados catastróficos
-7. Ajustamos los valores de Random Forest y de Redes neuronales
+7. La curva ROC se muestra mal para un par de algoritmos
+    - En la memoria, con Latex mostrar también las curvas ROC de formas individuales en un mosaico
+8. Ajustamos los valores de Random Forest y de Redes neuronales
     - Usamos `Parameter Optimization Loop`
     - Para las redes neuronales, tenemos que quitar los missing values y la normalizacion para que vaya bien. Esto provoca que los resultados sean muy malos
-8. Borramos las variables que están muy correladas y vemos que pasa
+9. Borramos las variables que están muy correladas y vemos que pasa
     - Del grupo, me quedo con `ST_SLOPE` porque es la que más correlada está con `HeartDisease`
 
 ## 02: Mobile Prizes
@@ -69,3 +74,26 @@
     - No hay missing values en el dataset
 3. Clase de salida desbalanceada
     - Las clases están perfectamente balanceadas
+4. Outliers
+5. Cross Validation funciona
+    - Obtenemos los resultados de forma correcta
+6. Algoritmos con resultados catastróficos
+    - Tres algoritmos tienen resultados catastróficos (miramos G-Mean)
+        - Redes neuronales: en KNIME no podemos especificar más de una neurona de salida con SoftMax
+        - Support Vector machine sin normalizar: la falta de normalización junto con la no adaptación a multiclase
+        - Support Vector machine normalizado: no tenemos adaptación a multiclase
+7. Comprobar que la curva ROC se visualiza correctamente
+    - Parece que se visualiza correctamente la curva ROC
+    - Sin embargo, se ve que los resultados no son tan buenos como deberían
+    - Notar que estamos visualizando la curva ROC de una sola clase, y no de las cuatro clases
+8. Ajustar los valores de un par de algoritmos
+    - Los mejores algoritmos que hemos encontrado son (mirando G-Mean):
+        - Naive Bayes
+        - Random Forest
+        - K-NN
+    - Ajusto los parámetros de:
+        - Random Forest: se consigue una buena optimización del Accuracy
+        - Naive Bayes: intento ajustar algunos parámetros pero no consigo modifcar el accuracy
+        - K-NN: obtenemos muy buenos resultados
+9. En el EDA, vemos que PCA de tamaño 2 genera muy buenos resultados (muy buena separación)
+    - Por esto, era de esperar los buenos resultados de K-NN obtenidos

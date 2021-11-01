@@ -17,23 +17,24 @@
                 <entry key="0" type="xstring" value="Target Class"/>
             </config>
             <config key="excluded_names">
-                <entry key="array-size" type="xint" value="16"/>
+                <entry key="array-size" type="xint" value="17"/>
                 <entry key="0" type="xstring" value="P (Target Class=1)Prob Classification"/>
                 <entry key="1" type="xstring" value="Target Class (#1)"/>
                 <entry key="2" type="xstring" value="AdaBoost"/>
                 <entry key="3" type="xstring" value="Neural Net"/>
                 <entry key="4" type="xstring" value="Support Vector Machine"/>
-                <entry key="5" type="xstring" value="P (Target Class=1)Prob Classification (#1)"/>
+                <entry key="5" type="xstring" value="Support Vector Machine + Normalization"/>
                 <entry key="6" type="xstring" value="Target Class (#5)"/>
                 <entry key="7" type="xstring" value="K-NN"/>
                 <entry key="8" type="xstring" value="Target Class (#6)"/>
                 <entry key="9" type="xstring" value="Random Forest"/>
-                <entry key="10" type="xstring" value="Naive Bayes"/>
-                <entry key="11" type="xstring" value="HeartDisease (#1)"/>
-                <entry key="12" type="xstring" value="SVM + Normalization"/>
-                <entry key="13" type="xstring" value="HeartDisease (#3)"/>
-                <entry key="14" type="xstring" value="KNN"/>
-                <entry key="15" type="xstring" value="HeartDisease (#4)"/>
+                <entry key="10" type="xstring" value="P (Target Class=1)Prob Classification (#1)"/>
+                <entry key="11" type="xstring" value="Naive Bayes"/>
+                <entry key="12" type="xstring" value="HeartDisease (#1)"/>
+                <entry key="13" type="xstring" value="SVM + Normalization"/>
+                <entry key="14" type="xstring" value="HeartDisease (#3)"/>
+                <entry key="15" type="xstring" value="KNN"/>
+                <entry key="16" type="xstring" value="HeartDisease (#4)"/>
             </config>
             <entry key="enforce_option" type="xstring" value="EnforceExclusion"/>
             <config key="name_pattern">
@@ -99,6 +100,6 @@
     </config>
     <config key="filestores">
         <entry key="file_store_location" type="xstring" isnull="true" value=""/>
-        <entry key="file_store_id" type="xstring" value="52e6f676-9129-4394-804d-2528803a8b71"/>
+        <entry key="file_store_id" type="xstring" value="da73da00-caa5-4726-8263-64b6222823aa"/>
     </config>
 </config>

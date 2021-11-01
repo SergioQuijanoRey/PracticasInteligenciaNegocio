@@ -6,7 +6,7 @@
         <entry key="memory_policy" type="xstring" value="CacheSmallInMemory"/>
     </config>
     <config key="model">
-        <entry key="targetColumn" type="xstring" value="HeartDisease"/>
+        <entry key="targetColumn" type="xstring" value="Target Class"/>
         <entry key="seed" type="xstring" value="123456789"/>
         <entry key="maxLevels" type="xint" value="-1"/>
         <entry key="minNodeSize" type="xint" value="-1"/>
@@ -27,18 +27,27 @@
         <config key="columnFilterConfig">
             <entry key="filter-type" type="xstring" value="STANDARD"/>
             <config key="included_names">
-                <entry key="array-size" type="xint" value="11"/>
-                <entry key="0" type="xstring" value="Age"/>
-                <entry key="1" type="xstring" value="Sex"/>
-                <entry key="2" type="xstring" value="ChestPainType"/>
-                <entry key="3" type="xstring" value="RestingBP"/>
-                <entry key="4" type="xstring" value="Cholesterol"/>
-                <entry key="5" type="xstring" value="FastingBS"/>
-                <entry key="6" type="xstring" value="RestingECG"/>
-                <entry key="7" type="xstring" value="MaxHR"/>
-                <entry key="8" type="xstring" value="ExerciseAngina"/>
-                <entry key="9" type="xstring" value="Oldpeak"/>
-                <entry key="10" type="xstring" value="ST_Slope"/>
+                <entry key="array-size" type="xint" value="20"/>
+                <entry key="0" type="xstring" value="battery_power"/>
+                <entry key="1" type="xstring" value="blue"/>
+                <entry key="2" type="xstring" value="clock_speed"/>
+                <entry key="3" type="xstring" value="dual_sim"/>
+                <entry key="4" type="xstring" value="fc"/>
+                <entry key="5" type="xstring" value="four_g"/>
+                <entry key="6" type="xstring" value="int_memory"/>
+                <entry key="7" type="xstring" value="m_dep"/>
+                <entry key="8" type="xstring" value="mobile_wt"/>
+                <entry key="9" type="xstring" value="n_cores"/>
+                <entry key="10" type="xstring" value="pc"/>
+                <entry key="11" type="xstring" value="px_height"/>
+                <entry key="12" type="xstring" value="px_width"/>
+                <entry key="13" type="xstring" value="ram"/>
+                <entry key="14" type="xstring" value="sc_h"/>
+                <entry key="15" type="xstring" value="sc_w"/>
+                <entry key="16" type="xstring" value="talk_time"/>
+                <entry key="17" type="xstring" value="three_g"/>
+                <entry key="18" type="xstring" value="touch_screen"/>
+                <entry key="19" type="xstring" value="wifi"/>
             </config>
             <config key="excluded_names">
                 <entry key="array-size" type="xint" value="0"/>
@@ -51,10 +60,10 @@
             </config>
             <config key="datatype">
                 <config key="typelist">
-                    <entry key="org.knime.core.data.StringValue" type="xboolean" value="false"/>
-                    <entry key="org.knime.core.data.BooleanValue" type="xboolean" value="false"/>
                     <entry key="org.knime.core.data.IntValue" type="xboolean" value="false"/>
                     <entry key="org.knime.core.data.DoubleValue" type="xboolean" value="false"/>
+                    <entry key="org.knime.core.data.StringValue" type="xboolean" value="false"/>
+                    <entry key="org.knime.core.data.BooleanValue" type="xboolean" value="false"/>
                     <entry key="org.knime.core.data.LongValue" type="xboolean" value="false"/>
                     <entry key="org.knime.core.data.date.DateAndTimeValue" type="xboolean" value="false"/>
                 </config>
@@ -80,7 +89,7 @@
         <entry key="x-coordinate" type="xint" value="819"/>
         <entry key="y-coordinate" type="xint" value="499"/>
         <entry key="width" type="xint" value="162"/>
-        <entry key="height" type="xint" value="40"/>
+        <entry key="height" type="xint" value="38"/>
         <entry key="alignment" type="xstring" value="CENTER"/>
         <entry key="borderSize" type="xint" value="0"/>
         <entry key="borderColor" type="xint" value="16777215"/>
@@ -98,7 +107,7 @@
         </config>
     </config>
     <entry key="customDescription" type="xstring" isnull="true" value=""/>
-    <entry key="state" type="xstring" value="IDLE"/>
+    <entry key="state" type="xstring" value="EXECUTED"/>
     <entry key="factory" type="xstring" value="org.knime.base.node.mine.treeensemble2.node.randomforest.learner.classification.RandomForestClassificationLearnerNodeFactory2"/>
     <entry key="node-name" type="xstring" value="Random Forest Learner"/>
     <entry key="node-bundle-name" type="xstring" value="Decisions Tree Ensembles for KNIME"/>
@@ -111,20 +120,41 @@
     <entry key="node-feature-version" type="xstring" value="4.4.0.v202106251355"/>
     <config key="factory_settings"/>
     <entry key="name" type="xstring" value="Random Forest Learner"/>
-    <entry key="hasContent" type="xboolean" value="false"/>
+    <entry key="hasContent" type="xboolean" value="true"/>
     <entry key="isInactive" type="xboolean" value="false"/>
     <config key="ports">
         <config key="port_1">
             <entry key="index" type="xint" value="1"/>
-            <entry key="port_dir_location" type="xstring" isnull="true" value=""/>
+            <entry key="port_spec_class" type="xstring" value="org.knime.core.data.DataTableSpec"/>
+            <entry key="port_object_class" type="xstring" value="org.knime.core.node.BufferedDataTable"/>
+            <entry key="port_object_summary" type="xstring" value="Rows: 1400, Cols: 28"/>
+            <entry key="port_dir_location" type="xstring" value="port_1"/>
         </config>
         <config key="port_2">
             <entry key="index" type="xint" value="2"/>
-            <entry key="port_dir_location" type="xstring" isnull="true" value=""/>
+            <entry key="port_spec_class" type="xstring" value="org.knime.core.data.DataTableSpec"/>
+            <entry key="port_object_class" type="xstring" value="org.knime.core.node.BufferedDataTable"/>
+            <entry key="port_object_summary" type="xstring" value="Rows: 20, Cols: 6"/>
+            <entry key="port_dir_location" type="xstring" value="port_2"/>
         </config>
         <config key="port_3">
             <entry key="index" type="xint" value="3"/>
-            <entry key="port_dir_location" type="xstring" isnull="true" value=""/>
+            <entry key="port_spec_class" type="xstring" value="org.knime.base.node.mine.treeensemble2.model.TreeEnsembleModelPortObjectSpec"/>
+            <entry key="port_object_class" type="xstring" value="org.knime.base.node.mine.treeensemble2.model.TreeEnsembleModelPortObject"/>
+            <entry key="port_object_summary" type="xstring" value="150 classifiers on 20 attributes"/>
+            <entry key="port_spec_location" type="xstring" value="spec/spec.zip"/>
+            <entry key="port_object_location" type="xstring" value="object/portobject.zip"/>
+            <entry key="port_dir_location" type="xstring" value="port_3"/>
+        </config>
+    </config>
+    <config key="internalObjects">
+        <entry key="location" type="xstring" value="internalTables"/>
+        <config key="content">
+            <config key="object_0">
+                <entry key="index" type="xint" value="0"/>
+                <entry key="type" type="xstring" value="referenced_output"/>
+                <entry key="outport" type="xint" value="3"/>
+            </config>
         </config>
     </config>
     <config key="filestores">
