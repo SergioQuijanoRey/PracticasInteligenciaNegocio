@@ -57,6 +57,8 @@
 9. Borramos las variables que están muy correladas y vemos que pasa
     - Del grupo, me quedo con `ST_SLOPE` porque es la que más correlada está con `HeartDisease`
 
+-------------------------------------------------------------------------------
+
 ## 02: Mobile Prizes
 
 - Aplicando PCA con dimensión 2 se ven muy buenos resultados
@@ -78,6 +80,8 @@
 3. Clase de salida desbalanceada
     - Las clases están perfectamente balanceadas
 4. Outliers
+    - Vemos que tenemos bastantes outliers
+    - Por tanto, en cada cross validation borramos outliers con `3*IQR`
 5. Cross Validation funciona
     - Obtenemos los resultados de forma correcta
 6. Algoritmos con resultados catastróficos
@@ -100,3 +104,27 @@
         - K-NN: obtenemos muy buenos resultados
 9. En el EDA, vemos que PCA de tamaño 2 genera muy buenos resultados (muy buena separación)
     - Por esto, era de esperar los buenos resultados de K-NN obtenidos
+
+-------------------------------------------------------------------------------
+
+## 03: Bank Marketing
+
+- PCA en dos dimensiones no muestra muy buenos resultados
+1. Variables muy correladas linealmente entre ellas
+    - Housing y loan están muy correladas
+    - Previous, PDays y POutcome muy correladas
+    - Emp.var.rate y cons.price.idx muy correladas
+    - Euribor3m y nr.employed muy correladas
+    - Ninguna variable está excesivamente correlada con la variable de salida
+2. Missing values
+     - No tenemos missing values como muestra el nodo que borra los missing values
+3. Clase de salida desbalanceada
+    - La salida "no" tiene muchos más ejemplos que la salida "yes"
+4. Outliers
+    - Hay variables con muchos outliers, como `duration`
+    - Por eso borramos variables de salida con `3*IQR`
+5. Comprobar que cross validation funciona
+6. Comprobar que no haya algoritmos en Cross Validation con resultados catastróficos (esto demuestra algún fallo concreto en el problema)
+7. Comprobar que la curva ROC se visualiza correctamente
+8. Ajustar los valores para un par de parámetros
+

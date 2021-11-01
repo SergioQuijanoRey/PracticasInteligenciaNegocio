@@ -3,7 +3,7 @@
     <entry key="spec_name" type="xstring" value="Correlation values"/>
     <entry key="number_columns" type="xint" value="21"/>
     <config key="column_spec_0">
-        <entry key="column_name" type="xstring" value="battery_power"/>
+        <entry key="column_name" type="xstring" value="age"/>
         <config key="element_names">
             <entry key="array-size" type="xint" value="0"/>
         </config>
@@ -30,7 +30,7 @@
         <config key="meta_data"/>
     </config>
     <config key="column_spec_1">
-        <entry key="column_name" type="xstring" value="blue"/>
+        <entry key="column_name" type="xstring" value="job"/>
         <config key="element_names">
             <entry key="array-size" type="xint" value="0"/>
         </config>
@@ -57,7 +57,7 @@
         <config key="meta_data"/>
     </config>
     <config key="column_spec_2">
-        <entry key="column_name" type="xstring" value="clock_speed"/>
+        <entry key="column_name" type="xstring" value="marital"/>
         <config key="element_names">
             <entry key="array-size" type="xint" value="0"/>
         </config>
@@ -84,7 +84,7 @@
         <config key="meta_data"/>
     </config>
     <config key="column_spec_3">
-        <entry key="column_name" type="xstring" value="dual_sim"/>
+        <entry key="column_name" type="xstring" value="education"/>
         <config key="element_names">
             <entry key="array-size" type="xint" value="0"/>
         </config>
@@ -111,7 +111,7 @@
         <config key="meta_data"/>
     </config>
     <config key="column_spec_4">
-        <entry key="column_name" type="xstring" value="fc"/>
+        <entry key="column_name" type="xstring" value="default"/>
         <config key="element_names">
             <entry key="array-size" type="xint" value="0"/>
         </config>
@@ -138,7 +138,7 @@
         <config key="meta_data"/>
     </config>
     <config key="column_spec_5">
-        <entry key="column_name" type="xstring" value="four_g"/>
+        <entry key="column_name" type="xstring" value="housing"/>
         <config key="element_names">
             <entry key="array-size" type="xint" value="0"/>
         </config>
@@ -165,7 +165,7 @@
         <config key="meta_data"/>
     </config>
     <config key="column_spec_6">
-        <entry key="column_name" type="xstring" value="int_memory"/>
+        <entry key="column_name" type="xstring" value="loan"/>
         <config key="element_names">
             <entry key="array-size" type="xint" value="0"/>
         </config>
@@ -192,7 +192,7 @@
         <config key="meta_data"/>
     </config>
     <config key="column_spec_7">
-        <entry key="column_name" type="xstring" value="m_dep"/>
+        <entry key="column_name" type="xstring" value="contact"/>
         <config key="element_names">
             <entry key="array-size" type="xint" value="0"/>
         </config>
@@ -219,7 +219,7 @@
         <config key="meta_data"/>
     </config>
     <config key="column_spec_8">
-        <entry key="column_name" type="xstring" value="mobile_wt"/>
+        <entry key="column_name" type="xstring" value="month"/>
         <config key="element_names">
             <entry key="array-size" type="xint" value="0"/>
         </config>
@@ -246,7 +246,7 @@
         <config key="meta_data"/>
     </config>
     <config key="column_spec_9">
-        <entry key="column_name" type="xstring" value="n_cores"/>
+        <entry key="column_name" type="xstring" value="day_of_week"/>
         <config key="element_names">
             <entry key="array-size" type="xint" value="0"/>
         </config>
@@ -273,7 +273,7 @@
         <config key="meta_data"/>
     </config>
     <config key="column_spec_10">
-        <entry key="column_name" type="xstring" value="pc"/>
+        <entry key="column_name" type="xstring" value="duration"/>
         <config key="element_names">
             <entry key="array-size" type="xint" value="0"/>
         </config>
@@ -300,7 +300,7 @@
         <config key="meta_data"/>
     </config>
     <config key="column_spec_11">
-        <entry key="column_name" type="xstring" value="px_height"/>
+        <entry key="column_name" type="xstring" value="campaign"/>
         <config key="element_names">
             <entry key="array-size" type="xint" value="0"/>
         </config>
@@ -327,7 +327,7 @@
         <config key="meta_data"/>
     </config>
     <config key="column_spec_12">
-        <entry key="column_name" type="xstring" value="px_width"/>
+        <entry key="column_name" type="xstring" value="pdays"/>
         <config key="element_names">
             <entry key="array-size" type="xint" value="0"/>
         </config>
@@ -354,7 +354,7 @@
         <config key="meta_data"/>
     </config>
     <config key="column_spec_13">
-        <entry key="column_name" type="xstring" value="ram"/>
+        <entry key="column_name" type="xstring" value="previous"/>
         <config key="element_names">
             <entry key="array-size" type="xint" value="0"/>
         </config>
@@ -381,7 +381,7 @@
         <config key="meta_data"/>
     </config>
     <config key="column_spec_14">
-        <entry key="column_name" type="xstring" value="sc_h"/>
+        <entry key="column_name" type="xstring" value="poutcome"/>
         <config key="element_names">
             <entry key="array-size" type="xint" value="0"/>
         </config>
@@ -408,7 +408,7 @@
         <config key="meta_data"/>
     </config>
     <config key="column_spec_15">
-        <entry key="column_name" type="xstring" value="sc_w"/>
+        <entry key="column_name" type="xstring" value="emp.var.rate"/>
         <config key="element_names">
             <entry key="array-size" type="xint" value="0"/>
         </config>
@@ -435,7 +435,7 @@
         <config key="meta_data"/>
     </config>
     <config key="column_spec_16">
-        <entry key="column_name" type="xstring" value="talk_time"/>
+        <entry key="column_name" type="xstring" value="cons.price.idx"/>
         <config key="element_names">
             <entry key="array-size" type="xint" value="0"/>
         </config>
@@ -462,7 +462,7 @@
         <config key="meta_data"/>
     </config>
     <config key="column_spec_17">
-        <entry key="column_name" type="xstring" value="three_g"/>
+        <entry key="column_name" type="xstring" value="cons.conf.idx"/>
         <config key="element_names">
             <entry key="array-size" type="xint" value="0"/>
         </config>
@@ -489,7 +489,7 @@
         <config key="meta_data"/>
     </config>
     <config key="column_spec_18">
-        <entry key="column_name" type="xstring" value="touch_screen"/>
+        <entry key="column_name" type="xstring" value="euribor3m"/>
         <config key="element_names">
             <entry key="array-size" type="xint" value="0"/>
         </config>
@@ -516,7 +516,7 @@
         <config key="meta_data"/>
     </config>
     <config key="column_spec_19">
-        <entry key="column_name" type="xstring" value="wifi"/>
+        <entry key="column_name" type="xstring" value="nr.employed"/>
         <config key="element_names">
             <entry key="array-size" type="xint" value="0"/>
         </config>

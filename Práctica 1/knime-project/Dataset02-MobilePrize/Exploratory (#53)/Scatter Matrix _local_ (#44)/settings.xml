@@ -10,7 +10,7 @@
             <entry key="SettingsModelID" type="xstring" value="SMID_integer"/>
             <entry key="EnabledStatus" type="xboolean" value="true"/>
         </config>
-        <entry key="end" type="xint" value="2500"/>
+        <entry key="end" type="xint" value="10000000"/>
         <config key="max_nominal_values_Internals">
             <entry key="SettingsModelID" type="xstring" value="SMID_integer"/>
             <entry key="EnabledStatus" type="xboolean" value="true"/>
@@ -50,6 +50,6 @@
     <config key="ports"/>
     <config key="filestores">
         <entry key="file_store_location" type="xstring" isnull="true" value=""/>
-        <entry key="file_store_id" type="xstring" value="9d32cce3-f3e0-47b1-b435-9528d43742ee"/>
+        <entry key="file_store_id" type="xstring" value="4573a756-039d-4ef8-925d-19d6eaacb046"/>
     </config>
 </config>

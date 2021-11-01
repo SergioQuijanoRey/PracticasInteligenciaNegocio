@@ -11,16 +11,6 @@
             <entry key="EnabledStatus" type="xboolean" value="true"/>
         </config>
         <entry key="compute_median" type="xboolean" value="false"/>
-        <config key="num_nominal-values_Internals">
-            <entry key="SettingsModelID" type="xstring" value="SMID_integer"/>
-            <entry key="EnabledStatus" type="xboolean" value="true"/>
-        </config>
-        <entry key="num_nominal-values" type="xint" value="20"/>
-        <config key="num_nominal-values_output_Internals">
-            <entry key="SettingsModelID" type="xstring" value="SMID_integer"/>
-            <entry key="EnabledStatus" type="xboolean" value="true"/>
-        </config>
-        <entry key="num_nominal-values_output" type="xint" value="1000"/>
         <config key="filter_nominal_columns_Internals">
             <entry key="SettingsModelID" type="xstring" value="SMID_columnfilter"/>
             <entry key="EnabledStatus" type="xboolean" value="true"/>
@@ -28,19 +18,28 @@
         <config key="filter_nominal_columns">
             <entry key="filter-type" type="xstring" value="STANDARD"/>
             <config key="included_names">
-                <entry key="array-size" type="xint" value="12"/>
-                <entry key="0" type="xstring" value="Age"/>
-                <entry key="1" type="xstring" value="Sex"/>
-                <entry key="2" type="xstring" value="ChestPainType"/>
-                <entry key="3" type="xstring" value="RestingBP"/>
-                <entry key="4" type="xstring" value="Cholesterol"/>
-                <entry key="5" type="xstring" value="FastingBS"/>
-                <entry key="6" type="xstring" value="RestingECG"/>
-                <entry key="7" type="xstring" value="MaxHR"/>
-                <entry key="8" type="xstring" value="ExerciseAngina"/>
-                <entry key="9" type="xstring" value="Oldpeak"/>
-                <entry key="10" type="xstring" value="ST_Slope"/>
-                <entry key="11" type="xstring" value="HeartDisease"/>
+                <entry key="array-size" type="xint" value="21"/>
+                <entry key="0" type="xstring" value="age"/>
+                <entry key="1" type="xstring" value="job"/>
+                <entry key="2" type="xstring" value="marital"/>
+                <entry key="3" type="xstring" value="education"/>
+                <entry key="4" type="xstring" value="default"/>
+                <entry key="5" type="xstring" value="housing"/>
+                <entry key="6" type="xstring" value="loan"/>
+                <entry key="7" type="xstring" value="contact"/>
+                <entry key="8" type="xstring" value="month"/>
+                <entry key="9" type="xstring" value="day_of_week"/>
+                <entry key="10" type="xstring" value="duration"/>
+                <entry key="11" type="xstring" value="campaign"/>
+                <entry key="12" type="xstring" value="pdays"/>
+                <entry key="13" type="xstring" value="previous"/>
+                <entry key="14" type="xstring" value="poutcome"/>
+                <entry key="15" type="xstring" value="emp.var.rate"/>
+                <entry key="16" type="xstring" value="cons.price.idx"/>
+                <entry key="17" type="xstring" value="cons.conf.idx"/>
+                <entry key="18" type="xstring" value="euribor3m"/>
+                <entry key="19" type="xstring" value="nr.employed"/>
+                <entry key="20" type="xstring" value="Target Class"/>
             </config>
             <config key="excluded_names">
                 <entry key="array-size" type="xint" value="0"/>
@@ -62,6 +61,21 @@
                 </config>
             </config>
         </config>
+        <config key="num_nominal-values_Internals">
+            <entry key="SettingsModelID" type="xstring" value="SMID_integer"/>
+            <entry key="EnabledStatus" type="xboolean" value="true"/>
+        </config>
+        <entry key="num_nominal-values" type="xint" value="20"/>
+        <config key="num_nominal-values_output_Internals">
+            <entry key="SettingsModelID" type="xstring" value="SMID_integer"/>
+            <entry key="EnabledStatus" type="xboolean" value="true"/>
+        </config>
+        <entry key="num_nominal-values_output" type="xint" value="100000000"/>
+        <config key="enable HiLite_Internals">
+            <entry key="SettingsModelID" type="xstring" value="SMID_boolean"/>
+            <entry key="EnabledStatus" type="xboolean" value="true"/>
+        </config>
+        <entry key="enable HiLite" type="xboolean" value="false"/>
         <config key="image format_Internals">
             <entry key="SettingsModelID" type="xstring" value="SMID_string"/>
             <entry key="EnabledStatus" type="xboolean" value="true"/>
@@ -77,11 +91,6 @@
             <entry key="EnabledStatus" type="xboolean" value="true"/>
         </config>
         <entry key="histogram height" type="xint" value="100"/>
-        <config key="enable HiLite_Internals">
-            <entry key="SettingsModelID" type="xstring" value="SMID_boolean"/>
-            <entry key="EnabledStatus" type="xboolean" value="true"/>
-        </config>
-        <entry key="enable HiLite" type="xboolean" value="false"/>
         <config key="show min max_Internals">
             <entry key="SettingsModelID" type="xstring" value="SMID_boolean"/>
             <entry key="EnabledStatus" type="xboolean" value="true"/>
@@ -89,12 +98,12 @@
         <entry key="show min max" type="xboolean" value="true"/>
     </config>
     <config key="nodeAnnotation">
-        <entry key="text" type="xstring" value="Mostramos algunas estadisticas.%%00010Importante no mirar las estadísticas%%00010del conjunto de test."/>
+        <entry key="text" type="xstring" value="Mostramos algunas estadisticas.%%00010Importante no mirar las estadísticas%%00010del conjunto de test. La variable de%%00010salida está desbalanceada (muchos mas%%00010yes que no)"/>
         <entry key="bgcolor" type="xint" value="16777215"/>
-        <entry key="x-coordinate" type="xint" value="359"/>
+        <entry key="x-coordinate" type="xint" value="352"/>
         <entry key="y-coordinate" type="xint" value="-121"/>
-        <entry key="width" type="xint" value="324"/>
-        <entry key="height" type="xint" value="57"/>
+        <entry key="width" type="xint" value="338"/>
+        <entry key="height" type="xint" value="100"/>
         <entry key="alignment" type="xstring" value="CENTER"/>
         <entry key="borderSize" type="xint" value="0"/>
         <entry key="borderColor" type="xint" value="16777215"/>
@@ -123,26 +132,26 @@
             <entry key="index" type="xint" value="1"/>
             <entry key="port_spec_class" type="xstring" value="org.knime.core.data.DataTableSpec"/>
             <entry key="port_object_class" type="xstring" value="org.knime.core.node.BufferedDataTable"/>
-            <entry key="port_object_summary" type="xstring" value="Rows: 21, Cols: 16"/>
+            <entry key="port_object_summary" type="xstring" value="Rows: 10, Cols: 16"/>
             <entry key="port_dir_location" type="xstring" value="port_1"/>
         </config>
         <config key="port_2">
             <entry key="index" type="xint" value="2"/>
             <entry key="port_spec_class" type="xstring" value="org.knime.core.data.DataTableSpec"/>
             <entry key="port_object_class" type="xstring" value="org.knime.core.node.BufferedDataTable"/>
-            <entry key="port_object_summary" type="xstring" value="Rows: 0, Cols: 3"/>
+            <entry key="port_object_summary" type="xstring" value="Rows: 21, Cols: 3"/>
             <entry key="port_dir_location" type="xstring" value="port_2"/>
         </config>
         <config key="port_3">
             <entry key="index" type="xint" value="3"/>
             <entry key="port_spec_class" type="xstring" value="org.knime.core.data.DataTableSpec"/>
             <entry key="port_object_class" type="xstring" value="org.knime.core.node.BufferedDataTable"/>
-            <entry key="port_object_summary" type="xstring" value="Rows: 0, Cols: 0"/>
+            <entry key="port_object_summary" type="xstring" value="Rows: 1544, Cols: 63"/>
             <entry key="port_dir_location" type="xstring" value="port_3"/>
         </config>
     </config>
     <config key="filestores">
         <entry key="file_store_location" type="xstring" isnull="true" value=""/>
-        <entry key="file_store_id" type="xstring" value="b98940b8-67cf-4e0a-8817-a745b32452ea"/>
+        <entry key="file_store_id" type="xstring" value="3040bdf9-6505-4df8-a1d5-f6941c79edad"/>
     </config>
 </config>

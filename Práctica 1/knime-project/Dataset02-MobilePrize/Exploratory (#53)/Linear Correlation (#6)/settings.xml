@@ -14,26 +14,26 @@
             <entry key="filter-type" type="xstring" value="STANDARD"/>
             <config key="included_names">
                 <entry key="array-size" type="xint" value="21"/>
-                <entry key="0" type="xstring" value="battery_power"/>
-                <entry key="1" type="xstring" value="blue"/>
-                <entry key="2" type="xstring" value="clock_speed"/>
-                <entry key="3" type="xstring" value="dual_sim"/>
-                <entry key="4" type="xstring" value="fc"/>
-                <entry key="5" type="xstring" value="four_g"/>
-                <entry key="6" type="xstring" value="int_memory"/>
-                <entry key="7" type="xstring" value="m_dep"/>
-                <entry key="8" type="xstring" value="mobile_wt"/>
-                <entry key="9" type="xstring" value="n_cores"/>
-                <entry key="10" type="xstring" value="pc"/>
-                <entry key="11" type="xstring" value="px_height"/>
-                <entry key="12" type="xstring" value="px_width"/>
-                <entry key="13" type="xstring" value="ram"/>
-                <entry key="14" type="xstring" value="sc_h"/>
-                <entry key="15" type="xstring" value="sc_w"/>
-                <entry key="16" type="xstring" value="talk_time"/>
-                <entry key="17" type="xstring" value="three_g"/>
-                <entry key="18" type="xstring" value="touch_screen"/>
-                <entry key="19" type="xstring" value="wifi"/>
+                <entry key="0" type="xstring" value="age"/>
+                <entry key="1" type="xstring" value="job"/>
+                <entry key="2" type="xstring" value="marital"/>
+                <entry key="3" type="xstring" value="education"/>
+                <entry key="4" type="xstring" value="default"/>
+                <entry key="5" type="xstring" value="housing"/>
+                <entry key="6" type="xstring" value="loan"/>
+                <entry key="7" type="xstring" value="contact"/>
+                <entry key="8" type="xstring" value="month"/>
+                <entry key="9" type="xstring" value="day_of_week"/>
+                <entry key="10" type="xstring" value="duration"/>
+                <entry key="11" type="xstring" value="campaign"/>
+                <entry key="12" type="xstring" value="pdays"/>
+                <entry key="13" type="xstring" value="previous"/>
+                <entry key="14" type="xstring" value="poutcome"/>
+                <entry key="15" type="xstring" value="emp.var.rate"/>
+                <entry key="16" type="xstring" value="cons.price.idx"/>
+                <entry key="17" type="xstring" value="cons.conf.idx"/>
+                <entry key="18" type="xstring" value="euribor3m"/>
+                <entry key="19" type="xstring" value="nr.employed"/>
                 <entry key="20" type="xstring" value="Target Class"/>
             </config>
             <config key="excluded_names">
@@ -48,11 +48,16 @@
             <config key="datatype">
                 <config key="typelist">
                     <entry key="org.knime.core.data.IntValue" type="xboolean" value="false"/>
-                    <entry key="org.knime.core.data.StringValue" type="xboolean" value="false"/>
                     <entry key="org.knime.core.data.DoubleValue" type="xboolean" value="false"/>
+                    <entry key="org.knime.core.data.StringValue" type="xboolean" value="false"/>
                 </config>
             </config>
         </config>
+        <config key="columnPairsFilter_Internals">
+            <entry key="SettingsModelID" type="xstring" value="SMID_string"/>
+            <entry key="EnabledStatus" type="xboolean" value="true"/>
+        </config>
+        <entry key="columnPairsFilter" type="xstring" value="COMPATIBLE_PAIRS"/>
         <config key="possibleValuesCount_Internals">
             <entry key="SettingsModelID" type="xstring" value="SMID_integer"/>
             <entry key="EnabledStatus" type="xboolean" value="true"/>
@@ -63,11 +68,6 @@
             <entry key="EnabledStatus" type="xboolean" value="true"/>
         </config>
         <entry key="pvalAlternative" type="xstring" value="TWO_SIDED"/>
-        <config key="columnPairsFilter_Internals">
-            <entry key="SettingsModelID" type="xstring" value="SMID_string"/>
-            <entry key="EnabledStatus" type="xboolean" value="true"/>
-        </config>
-        <entry key="columnPairsFilter" type="xstring" value="COMPATIBLE_PAIRS"/>
     </config>
     <config key="nodeAnnotation">
         <entry key="text" type="xstring" value="Miramos las correlaciones entre %%00010las variables del dataset. Sobre%%00010todo con la variable de salida"/>
@@ -136,6 +136,6 @@
     </config>
     <config key="filestores">
         <entry key="file_store_location" type="xstring" isnull="true" value=""/>
-        <entry key="file_store_id" type="xstring" value="db59028c-635a-4d6a-b1a9-041af8b7a2d4"/>
+        <entry key="file_store_id" type="xstring" value="210648c5-9664-4a77-a76e-489e51484a7f"/>
     </config>
 </config>

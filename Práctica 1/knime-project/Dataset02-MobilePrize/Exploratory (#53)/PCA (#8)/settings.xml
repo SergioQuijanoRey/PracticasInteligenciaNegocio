@@ -6,6 +6,21 @@
         <entry key="memory_policy" type="xstring" value="CacheSmallInMemory"/>
     </config>
     <config key="model">
+        <config key="use_fixed_number_dimensions_Internals">
+            <entry key="SettingsModelID" type="xstring" value="SMID_boolean"/>
+            <entry key="EnabledStatus" type="xboolean" value="true"/>
+        </config>
+        <entry key="use_fixed_number_dimensions" type="xboolean" value="true"/>
+        <config key="number_of_dimensions_Internals">
+            <entry key="SettingsModelID" type="xstring" value="SMID_integer"/>
+            <entry key="EnabledStatus" type="xboolean" value="true"/>
+        </config>
+        <entry key="number_of_dimensions" type="xint" value="2"/>
+        <config key="information_preservation_Internals">
+            <entry key="SettingsModelID" type="xstring" value="SMID_double"/>
+            <entry key="EnabledStatus" type="xboolean" value="false"/>
+        </config>
+        <entry key="information_preservation" type="xdouble" value="100.0"/>
         <config key="used_columns_Internals">
             <entry key="SettingsModelID" type="xstring" value="SMID_columnfilter"/>
             <entry key="EnabledStatus" type="xboolean" value="true"/>
@@ -13,27 +28,28 @@
         <config key="used_columns">
             <entry key="filter-type" type="xstring" value="STANDARD"/>
             <config key="included_names">
-                <entry key="array-size" type="xint" value="20"/>
-                <entry key="0" type="xstring" value="battery_power"/>
-                <entry key="1" type="xstring" value="blue"/>
-                <entry key="2" type="xstring" value="clock_speed"/>
-                <entry key="3" type="xstring" value="dual_sim"/>
-                <entry key="4" type="xstring" value="fc"/>
-                <entry key="5" type="xstring" value="four_g"/>
-                <entry key="6" type="xstring" value="int_memory"/>
-                <entry key="7" type="xstring" value="m_dep"/>
-                <entry key="8" type="xstring" value="mobile_wt"/>
-                <entry key="9" type="xstring" value="n_cores"/>
-                <entry key="10" type="xstring" value="pc"/>
-                <entry key="11" type="xstring" value="px_height"/>
-                <entry key="12" type="xstring" value="px_width"/>
-                <entry key="13" type="xstring" value="ram"/>
-                <entry key="14" type="xstring" value="sc_h"/>
-                <entry key="15" type="xstring" value="sc_w"/>
-                <entry key="16" type="xstring" value="talk_time"/>
-                <entry key="17" type="xstring" value="three_g"/>
-                <entry key="18" type="xstring" value="touch_screen"/>
-                <entry key="19" type="xstring" value="wifi"/>
+                <entry key="array-size" type="xint" value="21"/>
+                <entry key="0" type="xstring" value="age"/>
+                <entry key="1" type="xstring" value="duration"/>
+                <entry key="2" type="xstring" value="campaign"/>
+                <entry key="3" type="xstring" value="pdays"/>
+                <entry key="4" type="xstring" value="previous"/>
+                <entry key="5" type="xstring" value="emp.var.rate"/>
+                <entry key="6" type="xstring" value="cons.price.idx"/>
+                <entry key="7" type="xstring" value="cons.conf.idx"/>
+                <entry key="8" type="xstring" value="euribor3m"/>
+                <entry key="9" type="xstring" value="nr.employed"/>
+                <entry key="10" type="xstring" value="job (to number)"/>
+                <entry key="11" type="xstring" value="marital (to number)"/>
+                <entry key="12" type="xstring" value="education (to number)"/>
+                <entry key="13" type="xstring" value="default (to number)"/>
+                <entry key="14" type="xstring" value="housing (to number)"/>
+                <entry key="15" type="xstring" value="loan (to number)"/>
+                <entry key="16" type="xstring" value="contact (to number)"/>
+                <entry key="17" type="xstring" value="month (to number)"/>
+                <entry key="18" type="xstring" value="day_of_week (to number)"/>
+                <entry key="19" type="xstring" value="poutcome (to number)"/>
+                <entry key="20" type="xstring" value="Target Class (to number)"/>
             </config>
             <config key="excluded_names">
                 <entry key="array-size" type="xint" value="0"/>
@@ -51,31 +67,16 @@
                 </config>
             </config>
         </config>
-        <config key="fail_on_missings_Internals">
-            <entry key="SettingsModelID" type="xstring" value="SMID_boolean"/>
-            <entry key="EnabledStatus" type="xboolean" value="true"/>
-        </config>
-        <entry key="fail_on_missings" type="xboolean" value="false"/>
         <config key="remove_used_columns_Internals">
             <entry key="SettingsModelID" type="xstring" value="SMID_boolean"/>
             <entry key="EnabledStatus" type="xboolean" value="true"/>
         </config>
         <entry key="remove_used_columns" type="xboolean" value="true"/>
-        <config key="number_of_dimensions_Internals">
-            <entry key="SettingsModelID" type="xstring" value="SMID_integer"/>
-            <entry key="EnabledStatus" type="xboolean" value="true"/>
-        </config>
-        <entry key="number_of_dimensions" type="xint" value="2"/>
-        <config key="information_preservation_Internals">
-            <entry key="SettingsModelID" type="xstring" value="SMID_double"/>
-            <entry key="EnabledStatus" type="xboolean" value="false"/>
-        </config>
-        <entry key="information_preservation" type="xdouble" value="100.0"/>
-        <config key="use_fixed_number_dimensions_Internals">
+        <config key="fail_on_missings_Internals">
             <entry key="SettingsModelID" type="xstring" value="SMID_boolean"/>
             <entry key="EnabledStatus" type="xboolean" value="true"/>
         </config>
-        <entry key="use_fixed_number_dimensions" type="xboolean" value="true"/>
+        <entry key="fail_on_missings" type="xboolean" value="false"/>
     </config>
     <config key="nodeAnnotation">
         <entry key="text" type="xstring" value="Hacemos PCA. Dejamos%%00010la variable de salida%%00010sin modifcar"/>
@@ -121,12 +122,12 @@
             <entry key="index" type="xint" value="1"/>
             <entry key="port_spec_class" type="xstring" value="org.knime.core.data.DataTableSpec"/>
             <entry key="port_object_class" type="xstring" value="org.knime.core.node.BufferedDataTable"/>
-            <entry key="port_object_summary" type="xstring" value="Rows: 2000, Cols: 2"/>
+            <entry key="port_object_summary" type="xstring" value="Rows: 41188, Cols: 12"/>
             <entry key="port_dir_location" type="xstring" value="port_1"/>
         </config>
     </config>
     <config key="filestores">
         <entry key="file_store_location" type="xstring" isnull="true" value=""/>
-        <entry key="file_store_id" type="xstring" value="dbf0d749-6bf6-44ae-8e2f-6502b595e333"/>
+        <entry key="file_store_id" type="xstring" value="2f9a2cef-1b68-4ae6-9a0e-15688a767e98"/>
     </config>
 </config>

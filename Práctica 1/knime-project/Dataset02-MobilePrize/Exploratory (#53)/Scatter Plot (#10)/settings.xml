@@ -34,7 +34,7 @@
         <entry key="chartSubtitle" type="xstring" value=""/>
         <entry key="xCol" type="xstring" value="PCA dimension 0"/>
         <entry key="yCol" type="xstring" value="PCA dimension 1"/>
-        <entry key="maxRows" type="xint" value="2500"/>
+        <entry key="maxRows" type="xint" value="10000000"/>
         <entry key="selectionColumnName" type="xstring" value="Selected (Scatter Plot)"/>
         <entry key="xAxisLabel" type="xstring" value=""/>
         <entry key="yAxisLabel" type="xstring" value=""/>
@@ -153,12 +153,12 @@
             <entry key="index" type="xint" value="2"/>
             <entry key="port_spec_class" type="xstring" value="org.knime.core.data.DataTableSpec"/>
             <entry key="port_object_class" type="xstring" value="org.knime.core.node.BufferedDataTable"/>
-            <entry key="port_object_summary" type="xstring" value="Rows: 2000, Cols: 4"/>
+            <entry key="port_object_summary" type="xstring" value="Rows: 41188, Cols: 14"/>
             <entry key="port_dir_location" type="xstring" value="port_2"/>
         </config>
     </config>
     <config key="filestores">
         <entry key="file_store_location" type="xstring" isnull="true" value=""/>
-        <entry key="file_store_id" type="xstring" value="916feb45-8062-4306-919a-09e0e679e562"/>
+        <entry key="file_store_id" type="xstring" value="ffbbc69f-41b7-419e-a33e-c3b7ef844eae"/>
     </config>
 </config>
