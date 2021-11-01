@@ -57,6 +57,10 @@
 - Aplicando PCA con dimensión 2 se ven muy buenos resultados
 - Deberíamos hacer las métricas para cada una de las clases. Sin embargo nos quedamos con la clase 1 como clase positiva
 - En Support Vector Machine, no estamos haciendo la adaptación a multiclase. Probar con un One-To-One o similares
+- En redes neuronales, también estamos teniendo problemas por ser un problema multiclase
+- Todos estos problemas los podemos vender como problemas de los algoritmos. También lo podemos vender como problemas de KNIME para generar estructuras complejas
+    - Es muy complicado hacer una adaptación tipo One vs All
+    - No se pueden usar redes neuronales con softmax en la capa de salida
 1. Variables Correladas
     - Memoria RAM muy correlada con la variable de salida
     - Los dos valores para los píxeles están muy correlados entre sí, como era de esperar
