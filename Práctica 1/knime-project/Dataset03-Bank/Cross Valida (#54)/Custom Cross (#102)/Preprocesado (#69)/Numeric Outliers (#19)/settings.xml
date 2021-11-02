@@ -6,6 +6,11 @@
         <entry key="memory_policy" type="xstring" value="CacheSmallInMemory"/>
     </config>
     <config key="model">
+        <config key="estimation-type_Internals">
+            <entry key="SettingsModelID" type="xstring" value="SMID_string"/>
+            <entry key="EnabledStatus" type="xboolean" value="true"/>
+        </config>
+        <entry key="estimation-type" type="xstring" value="R_4"/>
         <config key="groups-list_Internals">
             <entry key="SettingsModelID" type="xstring" value="SMID_columnfilter"/>
             <entry key="EnabledStatus" type="xboolean" value="false"/>
@@ -56,6 +61,11 @@
                 </config>
             </config>
         </config>
+        <config key="memory-policy_Internals">
+            <entry key="SettingsModelID" type="xstring" value="SMID_boolean"/>
+            <entry key="EnabledStatus" type="xboolean" value="false"/>
+        </config>
+        <entry key="memory-policy" type="xboolean" value="false"/>
         <config key="outlier-list_Internals">
             <entry key="SettingsModelID" type="xstring" value="SMID_columnfilter"/>
             <entry key="EnabledStatus" type="xboolean" value="true"/>
@@ -111,21 +121,16 @@
             <entry key="EnabledStatus" type="xboolean" value="true"/>
         </config>
         <entry key="iqr-scalar" type="xdouble" value="3.0"/>
-        <config key="estimation-type_Internals">
-            <entry key="SettingsModelID" type="xstring" value="SMID_string"/>
-            <entry key="EnabledStatus" type="xboolean" value="true"/>
-        </config>
-        <entry key="estimation-type" type="xstring" value="R_4"/>
-        <config key="memory-policy_Internals">
-            <entry key="SettingsModelID" type="xstring" value="SMID_boolean"/>
-            <entry key="EnabledStatus" type="xboolean" value="false"/>
-        </config>
-        <entry key="memory-policy" type="xboolean" value="false"/>
         <config key="use-groups_Internals">
             <entry key="SettingsModelID" type="xstring" value="SMID_boolean"/>
             <entry key="EnabledStatus" type="xboolean" value="true"/>
         </config>
         <entry key="use-groups" type="xboolean" value="false"/>
+        <config key="replacement-strategy_Internals">
+            <entry key="SettingsModelID" type="xstring" value="SMID_string"/>
+            <entry key="EnabledStatus" type="xboolean" value="false"/>
+        </config>
+        <entry key="replacement-strategy" type="xstring" value="Missing values"/>
         <config key="outlier-treatment_Internals">
             <entry key="SettingsModelID" type="xstring" value="SMID_string"/>
             <entry key="EnabledStatus" type="xboolean" value="true"/>
@@ -136,21 +141,16 @@
             <entry key="EnabledStatus" type="xboolean" value="true"/>
         </config>
         <entry key="detection-option" type="xstring" value="All outliers"/>
-        <config key="replacement-strategy_Internals">
-            <entry key="SettingsModelID" type="xstring" value="SMID_string"/>
-            <entry key="EnabledStatus" type="xboolean" value="false"/>
-        </config>
-        <entry key="replacement-strategy" type="xstring" value="Missing values"/>
-        <config key="use-heuristic_Internals">
-            <entry key="SettingsModelID" type="xstring" value="SMID_string"/>
-            <entry key="EnabledStatus" type="xboolean" value="true"/>
-        </config>
-        <entry key="use-heuristic" type="xstring" value="false"/>
         <config key="update-domain_Internals">
             <entry key="SettingsModelID" type="xstring" value="SMID_boolean"/>
             <entry key="EnabledStatus" type="xboolean" value="true"/>
         </config>
         <entry key="update-domain" type="xboolean" value="false"/>
+        <config key="use-heuristic_Internals">
+            <entry key="SettingsModelID" type="xstring" value="SMID_string"/>
+            <entry key="EnabledStatus" type="xboolean" value="true"/>
+        </config>
+        <entry key="use-heuristic" type="xstring" value="false"/>
     </config>
     <config key="nodeAnnotation">
         <entry key="text" type="xstring" value="Borramos los outliers%%00010antes de pasar los %%00010datos al modelo. Quitamos%%00010los datos por encima de%%000103 * IQR"/>

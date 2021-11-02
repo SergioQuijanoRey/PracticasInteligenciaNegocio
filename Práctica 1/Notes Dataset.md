@@ -119,6 +119,8 @@
     - Se dice que el mejor modelo fue una red neuronal
     - Se da la selección de variables que ellos encontraron de forma óptima
 - Support Vector Machine tarda demasiado en entrenar, incluso normalizando
+    - Por eso, ponemos un `partitioning` para poder bajar la carga a dicho algoritmo para poder bajar la carga a dicho algoritmo
+    - De hecho, SVM con normalización la tenemos que quitar porque no se ejecuta en un tiempo razonable (en menos de una hora)
 1. Variables muy correladas linealmente entre ellas
     - Housing y loan están muy correladas
     - Previous, PDays y POutcome muy correladas

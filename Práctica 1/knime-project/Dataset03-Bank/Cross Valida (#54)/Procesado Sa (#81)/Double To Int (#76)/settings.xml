@@ -6,16 +6,6 @@
         <entry key="memory_policy" type="xstring" value="CacheSmallInMemory"/>
     </config>
     <config key="model">
-        <config key="typeofround_Internals">
-            <entry key="SettingsModelID" type="xstring" value="SMID_string"/>
-            <entry key="EnabledStatus" type="xboolean" value="true"/>
-        </config>
-        <entry key="typeofround" type="xstring" value="round"/>
-        <config key="long_Internals">
-            <entry key="SettingsModelID" type="xstring" value="SMID_boolean"/>
-            <entry key="EnabledStatus" type="xboolean" value="true"/>
-        </config>
-        <entry key="long" type="xboolean" value="false"/>
         <config key="include_Internals">
             <entry key="SettingsModelID" type="xstring" value="SMID_columnfilter"/>
             <entry key="EnabledStatus" type="xboolean" value="true"/>
@@ -77,6 +67,16 @@
                 </config>
             </config>
         </config>
+        <config key="typeofround_Internals">
+            <entry key="SettingsModelID" type="xstring" value="SMID_string"/>
+            <entry key="EnabledStatus" type="xboolean" value="true"/>
+        </config>
+        <entry key="typeofround" type="xstring" value="round"/>
+        <config key="long_Internals">
+            <entry key="SettingsModelID" type="xstring" value="SMID_boolean"/>
+            <entry key="EnabledStatus" type="xboolean" value="true"/>
+        </config>
+        <entry key="long" type="xboolean" value="false"/>
     </config>
     <config key="nodeAnnotation">
         <entry key="text" type="xstring" value="La salida de clasificación %%00010la pasamos de double a int%%00010(0.0 =&gt; 0) "/>
@@ -119,6 +119,6 @@
     </config>
     <config key="filestores">
         <entry key="file_store_location" type="xstring" isnull="true" value=""/>
-        <entry key="file_store_id" type="xstring" value="aea3c96a-cf0a-4ed2-b028-49a41ea4c9b2"/>
+        <entry key="file_store_id" type="xstring" value="fa0bf02b-60f9-4495-b8e4-2c25f2b89bce"/>
     </config>
 </config>
