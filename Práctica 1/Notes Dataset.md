@@ -118,6 +118,7 @@
 - En el **paper original** *S. Moro, P. Cortez and P. Rita. A Data-Driven Approach to Predict the Success of Bank Telemarketing. Decision Support Systems, Elsevier, 62:22-31, June 2014*:
     - Se dice que el mejor modelo fue una red neuronal
     - Se da la selección de variables que ellos encontraron de forma óptima
+- Support Vector Machine tarda demasiado en entrenar, incluso normalizando
 1. Variables muy correladas linealmente entre ellas
     - Housing y loan están muy correladas
     - Previous, PDays y POutcome muy correladas

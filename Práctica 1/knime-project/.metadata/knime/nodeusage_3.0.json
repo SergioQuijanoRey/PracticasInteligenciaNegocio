@@ -6,9 +6,9 @@
         "nodes": [
             {
                 "id": "org.knime.base.node.io.filehandling.csv.reader.CSVTableReaderNodeFactory#CSV Reader",
-                "nrexecs": 50,
+                "nrexecs": 53,
                 "nrfails": 0,
-                "exectime": 13207,
+                "exectime": 15036,
                 "nrcreated": 1,
                 "successor": "NodeContainer"
             },
@@ -30,9 +30,9 @@
             },
             {
                 "id": "org.knime.base.node.preproc.colconvert.numbertostring2.NumberToString2NodeFactory#Number To String",
-                "nrexecs": 2374,
+                "nrexecs": 2447,
                 "nrfails": 0,
-                "exectime": 41760,
+                "exectime": 45033,
                 "nrcreated": 18,
                 "successor": "org.knime.ext.weka37.predictor3.WekaPredictorNodeFactory#Weka Predictor (3.7)"
             },
@@ -54,25 +54,25 @@
             },
             {
                 "id": "org.knime.base.node.preproc.filter.column.DataColumnSpecFilterNodeFactory#Column Filter",
-                "nrexecs": 5250,
+                "nrexecs": 5404,
                 "nrfails": 0,
-                "exectime": 2299,
+                "exectime": 2342,
                 "nrcreated": 8,
                 "successor": "org.knime.base.node.viz.roc.ROCNodeFactory#ROC Curve (local)"
             },
             {
                 "id": "org.knime.base.node.preproc.filter.row.RowFilterNodeFactory#Row Filter",
-                "nrexecs": 4216,
+                "nrexecs": 4350,
                 "nrfails": 0,
-                "exectime": 14379,
+                "exectime": 14812,
                 "nrcreated": 3,
                 "successor": "org.knime.base.node.preproc.rowkey2.RowKeyNodeFactory2#RowID"
             },
             {
                 "id": "org.knime.base.node.meta.xvalidation.XValidatePartitionerFactory#X-Partitioner",
-                "nrexecs": 2508,
-                "nrfails": 0,
-                "exectime": 111385,
+                "nrexecs": 2578,
+                "nrfails": 1,
+                "exectime": 133202,
                 "nrcreated": 0,
                 "successor": "org.knime.base.node.stats.outlier.applier.NumericOutliersApplyNodeFactory#Numeric Outliers (Apply)"
             },
@@ -94,17 +94,17 @@
             },
             {
                 "id": "org.knime.base.node.meta.xvalidation.AggregateOutputNodeFactory#X-Aggregator",
-                "nrexecs": 2433,
+                "nrexecs": 2492,
                 "nrfails": 41,
-                "exectime": 22081,
+                "exectime": 26721,
                 "nrcreated": 0,
                 "successor": "n/a"
             },
             {
                 "id": "org.knime.base.node.mine.scorer.accuracy.AccuracyScorer2NodeFactory#Scorer",
-                "nrexecs": 1858,
+                "nrexecs": 1868,
                 "nrfails": 0,
-                "exectime": 17747,
+                "exectime": 18510,
                 "nrcreated": 3,
                 "successor": "org.knime.optimization.internal.node.parameter.loopend.LoopEndParOptNodeFactory#Parameter Optimization Loop End"
             },
@@ -174,9 +174,9 @@
             },
             {
                 "id": "org.knime.base.node.preproc.colconvert.categorytonumber2.CategoryToNumberNodeFactory2#Category To Number",
-                "nrexecs": 2230,
+                "nrexecs": 2273,
                 "nrfails": 7,
-                "exectime": 78188,
+                "exectime": 84500,
                 "nrcreated": 26,
                 "successor": "org.knime.base.node.preproc.colconvert.categorytonumber.CategoryToNumberApplyNodeFactory#Category To Number (Apply)"
             },
@@ -222,41 +222,41 @@
             },
             {
                 "id": "org.knime.base.node.stats.outlier.handler.NumericOutliersNodeFactory#Numeric Outliers",
-                "nrexecs": 1966,
-                "nrfails": 0,
-                "exectime": 191801,
+                "nrexecs": 2034,
+                "nrfails": 1,
+                "exectime": 224656,
                 "nrcreated": 2,
                 "successor": "NodeContainer"
             },
             {
                 "id": "org.knime.base.node.mine.neural.mlp2.MLPPredictorNodeFactory#MultiLayerPerceptron Predictor",
-                "nrexecs": 609,
+                "nrexecs": 611,
                 "nrfails": 3,
-                "exectime": 51761,
+                "exectime": 52073,
                 "nrcreated": 1,
                 "successor": "org.knime.base.node.meta.xvalidation.AggregateOutputNodeFactory#X-Aggregator"
             },
             {
                 "id": "org.knime.base.node.mine.neural.rprop.RPropNodeFactory2#RProp MLP Learner",
-                "nrexecs": 612,
-                "nrfails": 23,
-                "exectime": 542306,
+                "nrexecs": 614,
+                "nrfails": 24,
+                "exectime": 585552,
                 "nrcreated": 1,
                 "successor": "org.knime.base.node.mine.neural.mlp2.MLPPredictorNodeFactory#MultiLayerPerceptron Predictor"
             },
             {
                 "id": "org.knime.base.node.preproc.normalize3.Normalizer3NodeFactory#Normalizer",
-                "nrexecs": 404,
+                "nrexecs": 413,
                 "nrfails": 0,
-                "exectime": 55181,
-                "nrcreated": 11,
+                "exectime": 66695,
+                "nrcreated": 12,
                 "successor": "org.knime.base.node.preproc.normalize.NormalizerApplyNodeFactory#Normalizer (Apply)"
             },
             {
                 "id": "org.knime.base.node.mine.svm.learner.SVMLearnerNodeFactory2#SVM Learner",
                 "nrexecs": 687,
-                "nrfails": 6,
-                "exectime": 3165851,
+                "nrfails": 8,
+                "exectime": 3262527,
                 "nrcreated": 2,
                 "successor": "org.knime.base.node.mine.svm.predictor2.SVMPredictorNodeFactory#SVM Predictor"
             },
@@ -302,9 +302,9 @@
             },
             {
                 "id": "org.knime.base.node.mine.knn.KnnNodeFactory2#K Nearest Neighbor",
-                "nrexecs": 447,
-                "nrfails": 2,
-                "exectime": 67107,
+                "nrexecs": 475,
+                "nrfails": 3,
+                "exectime": 123983,
                 "nrcreated": 5,
                 "successor": "org.knime.base.node.meta.xvalidation.AggregateOutputNodeFactory#X-Aggregator"
             },
@@ -326,33 +326,33 @@
             },
             {
                 "id": "org.knime.ext.weka37.classifier.WekaClassifierNodeFactory#AdaBoostM1 (3.7)",
-                "nrexecs": 315,
-                "nrfails": 3,
-                "exectime": 175488,
+                "nrexecs": 319,
+                "nrfails": 5,
+                "exectime": 218555,
                 "nrcreated": 4,
                 "successor": "org.knime.ext.weka37.predictor3.WekaPredictorNodeFactory#Weka Predictor (3.7)"
             },
             {
                 "id": "org.knime.ext.weka37.predictor3.WekaPredictorNodeFactory#Weka Predictor (3.7)",
-                "nrexecs": 458,
+                "nrexecs": 472,
                 "nrfails": 6,
-                "exectime": 139528,
+                "exectime": 163921,
                 "nrcreated": 5,
                 "successor": "org.knime.base.node.meta.xvalidation.AggregateOutputNodeFactory#X-Aggregator"
             },
             {
                 "id": "org.knime.base.node.viz.roc.ROCNodeFactory#ROC Curve (local)",
-                "nrexecs": 487,
+                "nrexecs": 497,
                 "nrfails": 0,
-                "exectime": 12570,
+                "exectime": 14827,
                 "nrcreated": 7,
                 "successor": "org.knime.base.node.preproc.columnappend2.ColumnAppender2NodeFactory#Column Appender"
             },
             {
                 "id": "org.knime.base.node.preproc.columnappend2.ColumnAppender2NodeFactory#Column Appender",
-                "nrexecs": 1171,
+                "nrexecs": 1191,
                 "nrfails": 8,
-                "exectime": 13700,
+                "exectime": 13749,
                 "nrcreated": 10,
                 "successor": "org.knime.base.node.preproc.partition.PartitionNodeFactory#Partitioning"
             },
@@ -366,9 +366,9 @@
             },
             {
                 "id": "org.knime.base.node.preproc.rename.RenameNodeFactory#Column Rename",
-                "nrexecs": 637,
+                "nrexecs": 654,
                 "nrfails": 0,
-                "exectime": 233,
+                "exectime": 242,
                 "nrcreated": 7,
                 "successor": "NodeContainer"
             },
@@ -382,17 +382,17 @@
             },
             {
                 "id": "org.knime.base.node.preproc.filter.row.RowFilter2PortNodeFactory#Row Splitter",
-                "nrexecs": 415,
+                "nrexecs": 425,
                 "nrfails": 0,
-                "exectime": 1703,
+                "exectime": 1725,
                 "nrcreated": 3,
                 "successor": "org.knime.base.node.preproc.autobinner3.AutoBinnerLearnNodeFactory#Auto-Binner"
             },
             {
                 "id": "org.knime.base.node.preproc.rowkey2.RowKeyNodeFactory2#RowID",
-                "nrexecs": 4208,
+                "nrexecs": 4341,
                 "nrfails": 0,
-                "exectime": 13551,
+                "exectime": 13860,
                 "nrcreated": 3,
                 "successor": "NodeContainer"
             },
@@ -422,9 +422,9 @@
             },
             {
                 "id": "org.knime.ext.jep.JEPNodeFactory#Math Formula",
-                "nrexecs": 4229,
+                "nrexecs": 4363,
                 "nrfails": 0,
-                "exectime": 24457,
+                "exectime": 25156,
                 "nrcreated": 4,
                 "successor": "org.knime.optimization.internal.node.parameter.loopend.LoopEndParOptNodeFactory#Parameter Optimization Loop End"
             },
@@ -470,17 +470,17 @@
             },
             {
                 "id": "org.knime.base.node.flowvariable.appendvariabletotable4.AppendVariableToTable4NodeFactory#Variable to Table Column",
-                "nrexecs": 4204,
+                "nrexecs": 4338,
                 "nrfails": 0,
-                "exectime": 17632,
+                "exectime": 18129,
                 "nrcreated": 1,
                 "successor": "org.knime.base.node.preproc.rowkey2.RowKeyNodeFactory2#RowID"
             },
             {
                 "id": "org.knime.base.node.preproc.pmml.missingval.compute.MissingValueHandlerNodeFactory#Missing Value",
-                "nrexecs": 1980,
-                "nrfails": 0,
-                "exectime": 137537,
+                "nrexecs": 2051,
+                "nrfails": 1,
+                "exectime": 160423,
                 "nrcreated": 2,
                 "successor": "NodeContainer"
             },
@@ -502,17 +502,17 @@
             },
             {
                 "id": "org.knime.base.node.mine.bayes.naivebayes.learner3.NaiveBayesLearnerNodeFactory4#Naive Bayes Learner",
-                "nrexecs": 925,
-                "nrfails": 2,
-                "exectime": 24685,
+                "nrexecs": 940,
+                "nrfails": 3,
+                "exectime": 30234,
                 "nrcreated": 1,
                 "successor": "org.knime.base.node.mine.bayes.naivebayes.predictor4.NaiveBayesPredictorNodeFactory3#Naive Bayes Predictor"
             },
             {
                 "id": "org.knime.base.node.mine.bayes.naivebayes.predictor4.NaiveBayesPredictorNodeFactory3#Naive Bayes Predictor",
-                "nrexecs": 924,
+                "nrexecs": 939,
                 "nrfails": 5,
-                "exectime": 77377,
+                "exectime": 83999,
                 "nrcreated": 1,
                 "successor": "org.knime.base.node.meta.xvalidation.AggregateOutputNodeFactory#X-Aggregator"
             },
@@ -534,17 +534,17 @@
             },
             {
                 "id": "org.knime.base.node.preproc.pmml.missingval.apply.MissingValueApplyNodeFactory#Missing Value (Apply)",
-                "nrexecs": 1914,
-                "nrfails": 0,
-                "exectime": 205454,
+                "nrexecs": 1974,
+                "nrfails": 1,
+                "exectime": 213908,
                 "nrcreated": 2,
                 "successor": "org.knime.base.node.preproc.colconvert.categorytonumber2.CategoryToNumberNodeFactory2#Category To Number"
             },
             {
                 "id": "org.knime.base.node.stats.outlier.applier.NumericOutliersApplyNodeFactory#Numeric Outliers (Apply)",
-                "nrexecs": 1939,
+                "nrexecs": 2007,
                 "nrfails": 0,
-                "exectime": 51952,
+                "exectime": 59663,
                 "nrcreated": 1,
                 "successor": "NodeContainer"
             },
@@ -558,9 +558,9 @@
             },
             {
                 "id": "org.knime.base.node.preproc.normalize.NormalizerApplyNodeFactory#Normalizer (Apply)",
-                "nrexecs": 288,
+                "nrexecs": 291,
                 "nrfails": 0,
-                "exectime": 5203,
+                "exectime": 5382,
                 "nrcreated": 5,
                 "successor": "org.knime.base.node.preproc.normalize3.Normalizer3NodeFactory#Normalizer"
             },
@@ -638,9 +638,9 @@
             },
             {
                 "id": "org.knime.ext.weka37.classifier.WekaClassifierNodeFactory#RandomForest (3.7)",
-                "nrexecs": 136,
-                "nrfails": 4,
-                "exectime": 262384,
+                "nrexecs": 146,
+                "nrfails": 5,
+                "exectime": 331915,
                 "nrcreated": 1,
                 "successor": "org.knime.ext.weka37.predictor3.WekaPredictorNodeFactory#Weka Predictor (3.7)"
             },
@@ -722,14 +722,14 @@
             "nrcreated": 0
         }
     },
-    "uptime": 2817905,
+    "uptime": 2843480,
     "workflowsOpened": 1,
     "remoteWorkflowsOpened": 0,
     "workflowsImported": 0,
     "workflowsExported": 0,
     "launches": 36,
     "lastApplicationID": "org.knime.product.KNIME_APPLICATION",
-    "timeSinceLastStart": 71618,
+    "timeSinceLastStart": 992317,
     "crashes": 4,
     "properlyShutDown": false
 }
