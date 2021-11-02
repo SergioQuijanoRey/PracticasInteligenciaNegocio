@@ -25,7 +25,7 @@
 - [ ] Imputar missing values usando un predictor
 - [x] Reducción de datos para un problema que tenga demasiadas categorías
     - Lo he hecho en el primer dataset
-- [ ] Balancear clases usando *SMOTE*
+- [x] Balancear clases usando *SMOTE*
 
 # Algoritmos que me han dado problemas
 
@@ -145,7 +145,31 @@
     - El resto de algoritmos funcionan bien
 7. Comprobar que la curva ROC se visualiza correctamente
     - Los problemas que llevamos acarreando toda la práctica
-8. Ajustar los valores para un par de parámetros
+8. Ajustar los valores para un par de parámetroS
     - Los mejores algoritmos son: Naive Bayes (no ajustable), Random Forest, Random Forest y Redes neuronales
 9. Aplicamos SMOTE y comparamos CV para ver cómo cambia
     - Perdemos algo de accuracy, pero tenemos una ganancia en G-Mean enorme
+
+-------------------------------------------------------------------------------
+
+## 04: Tanzania Water Pump
+
+
+- Tenemos demasiadas columnas. Podemos decidir con un árbol de decisión cuáles son las variables más relevantes
+- Las variables nominales tienen demasiados valores para las salidas
+1. Variables muy correladas linealmente entre ellas
+    - Hay variables que están muy correladas dos a dos
+    - `extraction_type{...}` tres variables muy correladas dos a dos
+    - `management{_grou}`: dos variables muy correladas
+    - Y más ejemplos que son del tipo `algo{_subclases}`
+2. Missing values
+    - Si borro los missing values me quedo con la mitad de las filas, por tanto esto no es una buena solución
+    - La primera opción que contemplo es usar interpolación lineal para los valores más usados y el valor más frecuente para strings
+3. Clase de salida desbalanceada
+    - Las clases de salida están desbalanceada: 3200 funcionales, 22000 no funcionales
+4. Outliers
+5. Comprobar que cross validation funciona
+6. Comprobar que no haya algoritmos en Cross Validation con resultados catastróficos (esto demuestra algún fallo concreto en el problema)
+7. Comprobar que la curva ROC se visualiza correctamente
+8. Ajustar los valores para un par de parámetros
+
