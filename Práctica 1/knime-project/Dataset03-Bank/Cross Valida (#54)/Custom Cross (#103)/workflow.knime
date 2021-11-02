@@ -25,11 +25,7 @@
         <config key="styles"/>
     </config>
     <entry key="customDescription" type="xstring" value="Provides a skeleton of nodes necessary for cross validation Provides a skeleton of nodes necessary for cross validation Provides a skeleton of nodes necessary for cross validation"/>
-    <entry key="state" type="xstring" value="CONFIGURED"/>
-    <config key="nodecontainer_message">
-        <entry key="type" type="xstring" value="ERROR"/>
-        <entry key="message" type="xstring" value="Category To Number 3:54:103:71: Maximum number of categories reached for column: duration"/>
-    </config>
+    <entry key="state" type="xstring" value="IDLE"/>
     <config key="workflow_credentials"/>
     <config key="annotations">
         <config key="annotation_0">

@@ -25,11 +25,7 @@
         <config key="styles"/>
     </config>
     <entry key="customDescription" type="xstring" isnull="true" value=""/>
-    <entry key="state" type="xstring" value="CONFIGURED"/>
-    <config key="nodecontainer_message">
-        <entry key="type" type="xstring" value="ERROR"/>
-        <entry key="message" type="xstring" value="Custom Cross Validation 3:54:103: Category To Number 3:54:103:71: Maximum number of categories reached for column: duration%%00010Custom Cross Validation 3:54:105: RandomForest (3.7) 3:54:105:72: Weka classifier cannot work with given data. Reason: weka.classifiers.trees.RandomTree: Cannot handle string attributes!"/>
-    </config>
+    <entry key="state" type="xstring" value="IDLE"/>
     <config key="workflow_credentials"/>
     <config key="annotations">
         <config key="annotation_0">

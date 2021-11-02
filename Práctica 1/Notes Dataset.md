@@ -111,6 +111,13 @@
 
 - Dataset mucho más grande, los modelos tardan mucho más en entrenarse
 - PCA en dos dimensiones no muestra muy buenos resultados
+- Hay atributos que tienen muchos valores constantes
+    - Por ejemplo, `pdays` tiene casi todos los valores en 999.
+    - En UCI vemos que esto significa que el cliente no ha sido contactado
+- En la página de UCI especifican que no hay *missing values*, así que suponemos que estos valores no son *missing values*
+- En el **paper original** *S. Moro, P. Cortez and P. Rita. A Data-Driven Approach to Predict the Success of Bank Telemarketing. Decision Support Systems, Elsevier, 62:22-31, June 2014*:
+    - Se dice que el mejor modelo fue una red neuronal
+    - Se da la selección de variables que ellos encontraron de forma óptima
 1. Variables muy correladas linealmente entre ellas
     - Housing y loan están muy correladas
     - Previous, PDays y POutcome muy correladas
