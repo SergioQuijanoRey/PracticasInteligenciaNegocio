@@ -148,3 +148,4 @@
 8. Ajustar los valores para un par de parámetros
     - Los mejores algoritmos son: Naive Bayes (no ajustable), Random Forest, Random Forest y Redes neuronales
 9. Aplicamos SMOTE y comparamos CV para ver cómo cambia
+    - Perdemos algo de accuracy, pero tenemos una ganancia en G-Mean enorme
