@@ -131,12 +131,20 @@
      - No tenemos missing values como muestra el nodo que borra los missing values
 3. Clase de salida desbalanceada
     - La salida "no" tiene muchos más ejemplos que la salida "yes"
+    - Por ello aplicamos SMOTE para balancear las clases, y volvemos a comparar
 4. Outliers
     - Hay variables con muchos outliers, como `duration`
     - Por eso borramos variables de salida con `3*IQR`
         - **Problema**: esto borra demasiados datos. Tenemos que usar una técnica más avanzada
 5. Comprobar que cross validation funciona
+    - SVM funciona muy mal:
+        - SVM sin normalización con 10% de los datos
+        - SVM con normalización directamente no lo ejecutamos
 6. Comprobar que no haya algoritmos en Cross Validation con resultados catastróficos (esto demuestra algún fallo concreto en el problema)
+    - Por lo ya comentado, SVM tiene resultados realmente malos
+    - El resto de algoritmos funcionan bien
 7. Comprobar que la curva ROC se visualiza correctamente
+    - Los problemas que llevamos acarreando toda la práctica
 8. Ajustar los valores para un par de parámetros
-
+    - Los mejores algoritmos son: Naive Bayes (no ajustable), Random Forest, Random Forest y Redes neuronales
+9. Aplicamos SMOTE y comparamos CV para ver cómo cambia

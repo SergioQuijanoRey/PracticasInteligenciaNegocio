@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns="http://www.knime.org/2008/09/XMLConfig" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.knime.org/2008/09/XMLConfig http://www.knime.org/XMLConfig_2008_09.xsd" key="settings.xml">
+    <entry key="node_file" type="xstring" value="settings.xml"/>
+    <config key="flow_stack"/>
+    <config key="internal_node_subsettings">
+        <entry key="memory_policy" type="xstring" value="CacheSmallInMemory"/>
+    </config>
+    <config key="model">
+        <config key="include_Internals">
+            <entry key="SettingsModelID" type="xstring" value="SMID_columnfilter"/>
+            <entry key="EnabledStatus" type="xboolean" value="true"/>
+        </config>
+        <config key="include">
+            <entry key="filter-type" type="xstring" value="STANDARD"/>
+            <config key="included_names">
+                <entry key="array-size" type="xint" value="1"/>
+                <entry key="0" type="xstring" value="Target Class"/>
+            </config>
+            <config key="excluded_names">
+                <entry key="array-size" type="xint" value="40"/>
+                <entry key="0" type="xstring" value="age"/>
+                <entry key="1" type="xstring" value="job"/>
+                <entry key="2" type="xstring" value="marital"/>
+                <entry key="3" type="xstring" value="education"/>
+                <entry key="4" type="xstring" value="default"/>
+                <entry key="5" type="xstring" value="housing"/>
+                <entry key="6" type="xstring" value="loan"/>
+                <entry key="7" type="xstring" value="contact"/>
+                <entry key="8" type="xstring" value="month"/>
+                <entry key="9" type="xstring" value="day_of_week"/>
+                <entry key="10" type="xstring" value="duration"/>
+                <entry key="11" type="xstring" value="campaign"/>
+                <entry key="12" type="xstring" value="pdays"/>
+                <entry key="13" type="xstring" value="previous"/>
+                <entry key="14" type="xstring" value="poutcome"/>
+                <entry key="15" type="xstring" value="emp.var.rate"/>
+                <entry key="16" type="xstring" value="cons.price.idx"/>
+                <entry key="17" type="xstring" value="cons.conf.idx"/>
+                <entry key="18" type="xstring" value="euribor3m"/>
+                <entry key="19" type="xstring" value="nr.employed"/>
+                <entry key="20" type="xstring" value="battery_power"/>
+                <entry key="21" type="xstring" value="blue"/>
+                <entry key="22" type="xstring" value="clock_speed"/>
+                <entry key="23" type="xstring" value="dual_sim"/>
+                <entry key="24" type="xstring" value="fc"/>
+                <entry key="25" type="xstring" value="four_g"/>
+                <entry key="26" type="xstring" value="int_memory"/>
+                <entry key="27" type="xstring" value="m_dep"/>
+                <entry key="28" type="xstring" value="mobile_wt"/>
+                <entry key="29" type="xstring" value="n_cores"/>
+                <entry key="30" type="xstring" value="pc"/>
+                <entry key="31" type="xstring" value="px_height"/>
+                <entry key="32" type="xstring" value="px_width"/>
+                <entry key="33" type="xstring" value="ram"/>
+                <entry key="34" type="xstring" value="sc_h"/>
+                <entry key="35" type="xstring" value="sc_w"/>
+                <entry key="36" type="xstring" value="talk_time"/>
+                <entry key="37" type="xstring" value="three_g"/>
+                <entry key="38" type="xstring" value="touch_screen"/>
+                <entry key="39" type="xstring" value="wifi"/>
+            </config>
+            <entry key="enforce_option" type="xstring" value="EnforceExclusion"/>
+            <config key="name_pattern">
+                <entry key="pattern" type="xstring" value=""/>
+                <entry key="type" type="xstring" value="Wildcard"/>
+                <entry key="caseSensitive" type="xboolean" value="true"/>
+            </config>
+            <config key="datatype">
+                <config key="typelist">
+                    <entry key="org.knime.core.data.IntValue" type="xboolean" value="false"/>
+                    <entry key="org.knime.core.data.DoubleValue" type="xboolean" value="false"/>
+                </config>
+            </config>
+        </config>
+    </config>
+    <config key="nodeAnnotation">
+        <entry key="text" type="xstring" value="La columna de salida %%00010debe ser categórica"/>
+        <entry key="bgcolor" type="xint" value="16777215"/>
+        <entry key="x-coordinate" type="xint" value="1206"/>
+        <entry key="y-coordinate" type="xint" value="1119"/>
+        <entry key="width" type="xint" value="189"/>
+        <entry key="height" type="xint" value="38"/>
+        <entry key="alignment" type="xstring" value="CENTER"/>
+        <entry key="borderSize" type="xint" value="0"/>
+        <entry key="borderColor" type="xint" value="16777215"/>
+        <entry key="defFontSize" type="xint" value="11"/>
+        <entry key="annotation-version" type="xint" value="20151123"/>
+        <config key="styles"/>
+    </config>
+    <entry key="customDescription" type="xstring" isnull="true" value=""/>
+    <entry key="state" type="xstring" value="CONFIGURED"/>
+    <entry key="factory" type="xstring" value="org.knime.base.node.preproc.colconvert.numbertostring2.NumberToString2NodeFactory"/>
+    <entry key="node-name" type="xstring" value="Number To String"/>
+    <entry key="node-bundle-name" type="xstring" value="KNIME Base Nodes"/>
+    <entry key="node-bundle-symbolic-name" type="xstring" value="org.knime.base"/>
+    <entry key="node-bundle-vendor" type="xstring" value="KNIME AG, Zurich, Switzerland"/>
+    <entry key="node-bundle-version" type="xstring" value="4.4.2.v202110181012"/>
+    <entry key="node-feature-name" type="xstring" value="KNIME Base nodes"/>
+    <entry key="node-feature-symbolic-name" type="xstring" value="org.knime.features.base.feature.group"/>
+    <entry key="node-feature-vendor" type="xstring" value="KNIME AG, Zurich, Switzerland"/>
+    <entry key="node-feature-version" type="xstring" value="4.4.2.v202110181012"/>
+    <config key="factory_settings"/>
+    <entry key="name" type="xstring" value="Number To String"/>
+    <entry key="hasContent" type="xboolean" value="false"/>
+    <entry key="isInactive" type="xboolean" value="false"/>
+    <config key="ports">
+        <config key="port_1">
+            <entry key="index" type="xint" value="1"/>
+            <entry key="port_dir_location" type="xstring" isnull="true" value=""/>
+        </config>
+    </config>
+    <config key="filestores">
+        <entry key="file_store_location" type="xstring" isnull="true" value=""/>
+        <entry key="file_store_id" type="xstring" isnull="true" value=""/>
+    </config>
+</config>
