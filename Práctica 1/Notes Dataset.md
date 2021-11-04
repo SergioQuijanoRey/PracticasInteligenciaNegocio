@@ -192,6 +192,13 @@
     - En el siguiente [enlace](https://forum.knime.com/t/can-svm-learner-runtime-be-improved/27366/2) se muestra que el equipo de desarrolladores saben que funcionan mal
     - Consigo llegar al 80% de los datos ejecutados sin problemas
 6. Comprobar que no haya algoritmos en Cross Validation con resultados catastróficos (esto demuestra algún fallo concreto en el problema)
+    - No hay ningún algoritmo que tenga resultados desastrosos
 7. Comprobar que la curva ROC se visualiza correctamente
+    - Como pasa anteriormente, no conseguimos visualizar correctamente las curvas ROC de forma conjunta
 8. Ajustar los valores para un par de parámetros
+    - Los mejores algoritmos son:
+        1. Redes neuronales
+            - Ajusto `hidden layers` y `neurons per hidden layer`
+        2. Naive Bayes
+        3. K-NN
 9. Aplicamos SMOTE al dataset para balancear las clases

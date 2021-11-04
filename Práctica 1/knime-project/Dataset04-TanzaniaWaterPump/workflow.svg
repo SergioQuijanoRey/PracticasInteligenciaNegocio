@@ -162,7 +162,7 @@
                 <path d="M1197 334 L1254 334 L1254 345 L1197 345 L1197 334 Z"/>
             </clipPath>
             <clipPath clipPathUnits="userSpaceOnUse" id="clipPath50">
-                <path d="M-1 -1 L3899 -1 L3899 1188 L-1 1188 L-1 -1 Z"/>
+                <path d="M-1 -1 L4292 -1 L4292 1188 L-1 1188 L-1 -1 Z"/>
             </clipPath>
         </defs>
         <g font-size="14" fill="white" font-family="&apos;JetBrains Mono&apos;"
@@ -387,15 +387,16 @@ AADhvucPJbgFY3M3FzIAAAAASUVORK5CYII=" xlink:actuate="onLoad"/>
                    xlink:show="embed" xlink:type="simple"
                    clip-path="url(#clipPath20)" preserveAspectRatio="none"
                    font-weight="normal" height="16" x="0" y="0"
-                   xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABX0lEQVR42qVTzUrD
-QBD+Jl1rDj358wxSvEhEfQPFu/oIVg/6BB4aj4JXaXwEFTyKD+BBisWLiOAbiDkV
-TdOk6+xuUjaKTcQvZMhuvpmdnfmGYEE+oYHYvYHEGi+nrF9DEO5RjzZpEX3bh8bO
-D+4urzp6T+KF7fUI9aFDsYMRtni9oGj87NFydF4IkDkH/PkOiCZ5/bdx4AvUaAep
-7DXmgeSZt2Y5SCsPUtNpp+KOv0Pyojk/iD9y57Q3Iyn8PPYvIdW+HyQn7ZY44MO2
-24fJqX8GTm/g3ppMRBOVoHmU+cHhd1Xd2U57EjRP1Uj5ZQEE2yv8BYYvkBtIerTv
-XRpA8w3NBCC5xFZn4byGopAyd+DnPZifHSO0SFSfgaNfHb7D6CLJa9BVIjF9Lofm
-GVF1TYDpaEMrzIikAjRPst96JSUWTs6VCLlP3qAzeRZUq1S1VcHKZqEwjUZhK1Wn
-8d/4AmSylsd4KZ0LAAAAAElFTkSuQmCC" xlink:actuate="onLoad"/>
+                   xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABiElEQVR42mNgGGjA
+SIri00+1DP8zMK0FMln+/2eYaS5zpZWJWM1ADUxAtBLIVARiWUZGhjSQONEGnH6u
+3QCklJGEfhJtwLnnhqIM/xnTkdT/Avp9NojBAiLOPNOW+/efseE/w/8bD6W0esMY
+V/9FNuDPv9/LgJQYwj8Mt0ykr/TAXQDUvBFIJTIyMrYoPr++cdX/UGaY2hPPdNyA
+lCWSeR+Y/v9LAYbBf7gLgEAEajIrUNRF4dn1DcBA8zvA4MDM9OzNFKAMN1LEHTKR
+vXYSxmOBxuU1oEZpaLSyA7Hrqee6q7j+v7kPZKsgaX728w9DArL3wF7g+vDfF0id
+B7sBAtgZ///3BUqmwNMKI8NvYFz22cpffo9hgLb21V9MjOy2QEVXkOTYgaYJIgXc
+bVPpK33oMQQPrFm9z3+nF8su/P//rz/QIDE0dZ8Y//0PluZ//RTdAJR0YCJ19hs7
+C5MF0LpbaCn+gKns1VPY0ghGQtKXuPSV6QeHGdDjZ0FRBnTN3X8c32NplhsBEvB+
+/elUcvwAAAAASUVORK5CYII=" xlink:actuate="onLoad"/>
             <polygon clip-path="url(#clipPath28)"
                      points=" 1797 455 1806 459 1797 464" stroke="none"/>
             <polygon clip-path="url(#clipPath29)"
@@ -405,10 +406,10 @@ GVF1TYDpaEMrzIikAjRPst96JSUWTs6VCLlP3qAzeRZUq1S1VcHKZqEwjUZhK1Wn
                    xlink:show="embed" xlink:type="simple"
                    clip-path="url(#clipPath30)" preserveAspectRatio="none"
                    font-weight="normal" height="7" x="0" y="0"
-                   xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAYAAADEUlfTAAAAe0lEQVR42mNkAILf
-l8TKGJkY0v8zsXIw/vv94/8/hpmseq+6GEES/7j46//yC3MxQAHzx7ffmL59bGQC
-6UCWAAEQHyTOBDKKAQsAiTOB7MAmCRJnAlkOsgNZAsQHizdP/3q0PoXlD8u398pM
-37/8YPny9jXjr5+9INcCAFTLPAcamW/3AAAAAElFTkSuQmCC" xlink:actuate="onLoad"/>
+                   xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAYAAADEUlfTAAAAaElEQVR42mNkAIKW
+6RZlTEyM6ewcjBw/f/z/8e/f/5k1mSe6GEESkhJM9Vra/7gYoODaVaZvz1/8a2QC
+6UCWAAEQHyTOBDKKAQsAiTOB7MAmCRJnAlkOsgNZAsQHiTOiuZYTqOM7zLUAUdI5
+1d6tmSUAAAAASUVORK5CYII=" xlink:actuate="onLoad"/>
             <text xml:space="preserve" x="598" y="433"
                   clip-path="url(#clipPath31)" stroke="none">Missing Value</text><image xmlns:xlink="http://www.w3.org/1999/xlink"
                    transform="matrix(1,0,0,1,646,444)" width="32"
@@ -808,15 +809,16 @@ AADhvucPJbgFY3M3FzIAAAAASUVORK5CYII=" xlink:actuate="onLoad"/>
                    xlink:show="embed" xlink:type="simple"
                    clip-path="url(#clipPath20)" preserveAspectRatio="none"
                    font-weight="normal" height="16" x="0" y="0"
-                   xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABX0lEQVR42qVTzUrD
-QBD+Jl1rDj358wxSvEhEfQPFu/oIVg/6BB4aj4JXaXwEFTyKD+BBisWLiOAbiDkV
-TdOk6+xuUjaKTcQvZMhuvpmdnfmGYEE+oYHYvYHEGi+nrF9DEO5RjzZpEX3bh8bO
-D+4urzp6T+KF7fUI9aFDsYMRtni9oGj87NFydF4IkDkH/PkOiCZ5/bdx4AvUaAep
-7DXmgeSZt2Y5SCsPUtNpp+KOv0Pyojk/iD9y57Q3Iyn8PPYvIdW+HyQn7ZY44MO2
-24fJqX8GTm/g3ppMRBOVoHmU+cHhd1Xd2U57EjRP1Uj5ZQEE2yv8BYYvkBtIerTv
-XRpA8w3NBCC5xFZn4byGopAyd+DnPZifHSO0SFSfgaNfHb7D6CLJa9BVIjF9Lofm
-GVF1TYDpaEMrzIikAjRPst96JSUWTs6VCLlP3qAzeRZUq1S1VcHKZqEwjUZhK1Wn
-8d/4AmSylsd4KZ0LAAAAAElFTkSuQmCC" xlink:actuate="onLoad"/>
+                   xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABiElEQVR42mNgGGjA
+SIri00+1DP8zMK0FMln+/2eYaS5zpZWJWM1ADUxAtBLIVARiWUZGhjSQONEGnH6u
+3QCklJGEfhJtwLnnhqIM/xnTkdT/Avp9NojBAiLOPNOW+/efseE/w/8bD6W0esMY
+V/9FNuDPv9/LgJQYwj8Mt0ykr/TAXQDUvBFIJTIyMrYoPr++cdX/UGaY2hPPdNyA
+lCWSeR+Y/v9LAYbBf7gLgEAEajIrUNRF4dn1DcBA8zvA4MDM9OzNFKAMN1LEHTKR
+vXYSxmOBxuU1oEZpaLSyA7Hrqee6q7j+v7kPZKsgaX728w9DArL3wF7g+vDfF0id
+B7sBAtgZ///3BUqmwNMKI8NvYFz22cpffo9hgLb21V9MjOy2QEVXkOTYgaYJIgXc
+bVPpK33oMQQPrFm9z3+nF8su/P//rz/QIDE0dZ8Y//0PluZ//RTdAJR0YCJ19hs7
+C5MF0LpbaCn+gKns1VPY0ghGQtKXuPSV6QeHGdDjZ0FRBnTN3X8c32NplhsBEvB+
+/elUcvwAAAAASUVORK5CYII=" xlink:actuate="onLoad"/>
             <polygon clip-path="url(#clipPath28)"
                      points=" 1797 455 1806 459 1797 464" stroke="none"/>
             <polygon clip-path="url(#clipPath29)"
@@ -826,10 +828,10 @@ GVF1TYDpaEMrzIikAjRPst96JSUWTs6VCLlP3qAzeRZUq1S1VcHKZqEwjUZhK1Wn
                    xlink:show="embed" xlink:type="simple"
                    clip-path="url(#clipPath30)" preserveAspectRatio="none"
                    font-weight="normal" height="7" x="0" y="0"
-                   xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAYAAADEUlfTAAAAe0lEQVR42mNkAILf
-l8TKGJkY0v8zsXIw/vv94/8/hpmseq+6GEES/7j46//yC3MxQAHzx7ffmL59bGQC
-6UCWAAEQHyTOBDKKAQsAiTOB7MAmCRJnAlkOsgNZAsQHizdP/3q0PoXlD8u398pM
-37/8YPny9jXjr5+9INcCAFTLPAcamW/3AAAAAElFTkSuQmCC" xlink:actuate="onLoad"/>
+                   xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAYAAADEUlfTAAAAaElEQVR42mNkAIKW
+6RZlTEyM6ewcjBw/f/z/8e/f/5k1mSe6GEESkhJM9Vra/7gYoODaVaZvz1/8a2QC
+6UCWAAEQHyTOBDKKAQsAiTOB7MAmCRJnAlkOsgNZAsQHiTOiuZYTqOM7zLUAUdI5
+1d6tmSUAAAAASUVORK5CYII=" xlink:actuate="onLoad"/>
             <text xml:space="preserve" x="598" y="433"
                   clip-path="url(#clipPath31)" stroke="none">Missing Value</text><image xmlns:xlink="http://www.w3.org/1999/xlink"
                    transform="matrix(1,0,0,1,646,444)" width="32"
@@ -1060,9 +1062,9 @@ GVF1TYDpaEMrzIikAjRPst96JSUWTs6VCLlP3qAzeRZUq1S1VcHKZqEwjUZhK1Wn
             <path fill="none"
                   d="M365 379 C367 379 371 379 373 379 C1034 379 1905 158 2566 158 C2568 158 2572 158 2574 158"
                   clip-path="url(#clipPath50)" fill-rule="evenodd"/>
-            <path clip-path="url(#clipPath50)" fill="none" fill-rule="evenodd"
+            <path fill="none"
                   d="M1105 458 C1107 458 1111 458 1113 458 C1315 458 1585 458 1787 458 C1789 458 1793 458 1795 458"
-                  stroke="rgb(75,75,75)" stroke-width="2"/>
+                  clip-path="url(#clipPath50)" fill-rule="evenodd"/>
             <path fill="none"
                   d="M1105 458 C1107 458 1111 458 1113 458 C1162 458 1177 338 1226 338 C1228 338 1232 338 1234 338"
                   clip-path="url(#clipPath50)" fill-rule="evenodd"/>
