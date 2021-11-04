@@ -144,7 +144,7 @@
         </config>
     </config>
     <entry key="customDescription" type="xstring" isnull="true" value=""/>
-    <entry key="state" type="xstring" value="IDLE"/>
+    <entry key="state" type="xstring" value="CONFIGURED"/>
     <entry key="factory" type="xstring" value="org.knime.ext.jfc.node.linechart.JfcLineChartColoredNodeFactory"/>
     <entry key="node-name" type="xstring" value="Line Chart (JFreeChart)"/>
     <entry key="node-bundle-name" type="xstring" value="KNIME JFreeChart nodes"/>

@@ -201,4 +201,5 @@
             - Ajusto `hidden layers` y `neurons per hidden layer`
         2. Naive Bayes
         3. K-NN
+    - Ajusto los parámetros de *Redes Neuronales* y de *Naive Bayes*
 9. Aplicamos SMOTE al dataset para balancear las clases
