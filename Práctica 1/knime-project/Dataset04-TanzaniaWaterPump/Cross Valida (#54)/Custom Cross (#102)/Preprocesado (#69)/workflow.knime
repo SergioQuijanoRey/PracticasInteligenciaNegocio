@@ -50,7 +50,7 @@
         </config>
     </config>
     <entry key="customDescription" type="xstring" isnull="true" value=""/>
-    <entry key="state" type="xstring" value="CONFIGURED"/>
+    <entry key="state" type="xstring" value="EXECUTED"/>
     <config key="workflow_credentials"/>
     <config key="nodes">
         <config key="node_19">
@@ -78,8 +78,8 @@
             <config key="ui_settings">
                 <config key="extrainfo.node.bounds">
                     <entry key="array-size" type="xint" value="4"/>
-                    <entry key="0" type="xint" value="801"/>
-                    <entry key="1" type="xint" value="265"/>
+                    <entry key="0" type="xint" value="864"/>
+                    <entry key="1" type="xint" value="277"/>
                     <entry key="2" type="xint" value="128"/>
                     <entry key="3" type="xint" value="83"/>
                 </config>

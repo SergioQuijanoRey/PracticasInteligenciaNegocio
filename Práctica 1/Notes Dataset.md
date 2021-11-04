@@ -185,7 +185,8 @@
     - Tenemos muchos outliers así que tenemos que borrarlos usando `3*IQR`
     - Incluso tenemos muchos *outliers* después de filtrar las filas
 5. Comprobar que cross validation funciona
+    - Support Vector Machine, en sus dos variantes, tarda muchísimo en ejecutar
 6. Comprobar que no haya algoritmos en Cross Validation con resultados catastróficos (esto demuestra algún fallo concreto en el problema)
 7. Comprobar que la curva ROC se visualiza correctamente
 8. Ajustar los valores para un par de parámetros
-
+9. Aplicamos SMOTE al dataset para balancear las clases

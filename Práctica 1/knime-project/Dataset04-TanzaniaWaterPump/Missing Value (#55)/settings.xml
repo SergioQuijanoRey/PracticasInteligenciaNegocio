@@ -37,10 +37,10 @@
     <config key="nodeAnnotation">
         <entry key="text" type="xstring" value="Interpolamos los missing%%00010values porque borrar filas%%00010con missing values nos deja con%%00010la mitad de las filas originales"/>
         <entry key="bgcolor" type="xint" value="16777215"/>
-        <entry key="x-coordinate" type="xint" value="474"/>
-        <entry key="y-coordinate" type="xint" value="999"/>
-        <entry key="width" type="xint" value="293"/>
-        <entry key="height" type="xint" value="80"/>
+        <entry key="x-coordinate" type="xint" value="-264"/>
+        <entry key="y-coordinate" type="xint" value="1000"/>
+        <entry key="width" type="xint" value="288"/>
+        <entry key="height" type="xint" value="76"/>
         <entry key="alignment" type="xstring" value="CENTER"/>
         <entry key="borderSize" type="xint" value="0"/>
         <entry key="borderColor" type="xint" value="16777215"/>
@@ -88,6 +88,6 @@
     </config>
     <config key="filestores">
         <entry key="file_store_location" type="xstring" isnull="true" value=""/>
-        <entry key="file_store_id" type="xstring" isnull="true" value=""/>
+        <entry key="file_store_id" type="xstring" value="fd0dfe9a-4401-48fc-a344-31bca1abec57"/>
     </config>
 </config>

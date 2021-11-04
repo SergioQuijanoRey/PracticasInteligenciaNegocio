@@ -6,33 +6,40 @@
         <entry key="memory_policy" type="xstring" value="CacheSmallInMemory"/>
     </config>
     <config key="model">
-        <entry key="mode" type="xstring" value="MINMAX"/>
+        <entry key="mode" type="xstring" value="Z_SCORE"/>
         <entry key="new-min" type="xdouble" value="0.0"/>
         <entry key="new-max" type="xdouble" value="1.0"/>
         <config key="data-column-filter">
             <entry key="filter-type" type="xstring" value="STANDARD"/>
             <config key="included_names">
-                <entry key="array-size" type="xint" value="20"/>
-                <entry key="0" type="xstring" value="battery_power"/>
-                <entry key="1" type="xstring" value="blue"/>
-                <entry key="2" type="xstring" value="clock_speed"/>
-                <entry key="3" type="xstring" value="dual_sim"/>
-                <entry key="4" type="xstring" value="fc"/>
-                <entry key="5" type="xstring" value="four_g"/>
-                <entry key="6" type="xstring" value="int_memory"/>
-                <entry key="7" type="xstring" value="m_dep"/>
-                <entry key="8" type="xstring" value="mobile_wt"/>
-                <entry key="9" type="xstring" value="n_cores"/>
-                <entry key="10" type="xstring" value="pc"/>
-                <entry key="11" type="xstring" value="px_height"/>
-                <entry key="12" type="xstring" value="px_width"/>
-                <entry key="13" type="xstring" value="ram"/>
-                <entry key="14" type="xstring" value="sc_h"/>
-                <entry key="15" type="xstring" value="sc_w"/>
-                <entry key="16" type="xstring" value="talk_time"/>
-                <entry key="17" type="xstring" value="three_g"/>
-                <entry key="18" type="xstring" value="touch_screen"/>
-                <entry key="19" type="xstring" value="wifi"/>
+                <entry key="array-size" type="xint" value="27"/>
+                <entry key="0" type="xstring" value="amount_tsh"/>
+                <entry key="1" type="xstring" value="date_recorded"/>
+                <entry key="2" type="xstring" value="funder"/>
+                <entry key="3" type="xstring" value="gps_height"/>
+                <entry key="4" type="xstring" value="installer"/>
+                <entry key="5" type="xstring" value="longitude"/>
+                <entry key="6" type="xstring" value="latitude"/>
+                <entry key="7" type="xstring" value="wpt_name"/>
+                <entry key="8" type="xstring" value="num_private"/>
+                <entry key="9" type="xstring" value="subvillage"/>
+                <entry key="10" type="xstring" value="region"/>
+                <entry key="11" type="xstring" value="region_code"/>
+                <entry key="12" type="xstring" value="lga"/>
+                <entry key="13" type="xstring" value="ward"/>
+                <entry key="14" type="xstring" value="population"/>
+                <entry key="15" type="xstring" value="public_meeting"/>
+                <entry key="16" type="xstring" value="recorded_by"/>
+                <entry key="17" type="xstring" value="scheme_name"/>
+                <entry key="18" type="xstring" value="permit"/>
+                <entry key="19" type="xstring" value="construction_year"/>
+                <entry key="20" type="xstring" value="extraction_type"/>
+                <entry key="21" type="xstring" value="management"/>
+                <entry key="22" type="xstring" value="payment"/>
+                <entry key="23" type="xstring" value="water_quality"/>
+                <entry key="24" type="xstring" value="quantity"/>
+                <entry key="25" type="xstring" value="source"/>
+                <entry key="26" type="xstring" value="waterpoint_type"/>
             </config>
             <config key="excluded_names">
                 <entry key="array-size" type="xint" value="0"/>
@@ -45,8 +52,8 @@
             </config>
             <config key="datatype">
                 <config key="typelist">
-                    <entry key="org.knime.core.data.IntValue" type="xboolean" value="false"/>
                     <entry key="org.knime.core.data.DoubleValue" type="xboolean" value="false"/>
+                    <entry key="org.knime.core.data.IntValue" type="xboolean" value="false"/>
                 </config>
             </config>
         </config>
@@ -54,7 +61,7 @@
     <config key="nodeAnnotation">
         <entry key="text" type="xstring" value="Normalizamos para que%%00010SVM tenga un mejor%%00010funcionamiento"/>
         <entry key="bgcolor" type="xint" value="16777215"/>
-        <entry key="x-coordinate" type="xint" value="1406"/>
+        <entry key="x-coordinate" type="xint" value="1227"/>
         <entry key="y-coordinate" type="xint" value="1399"/>
         <entry key="width" type="xint" value="189"/>
         <entry key="height" type="xint" value="57"/>
@@ -68,7 +75,7 @@
                 <entry key="start" type="xint" value="0"/>
                 <entry key="length" type="xint" value="55"/>
                 <entry key="fontname" type="xstring" value="JetBrains Mono"/>
-                <entry key="fontstyle" type="xint" value="1"/>
+                <entry key="fontstyle" type="xint" value="0"/>
                 <entry key="fontsize" type="xint" value="11"/>
                 <entry key="fgcolor" type="xint" value="0"/>
             </config>
@@ -76,10 +83,6 @@
     </config>
     <entry key="customDescription" type="xstring" isnull="true" value=""/>
     <entry key="state" type="xstring" value="CONFIGURED"/>
-    <config key="nodecontainer_message">
-        <entry key="type" type="xstring" value="WARNING"/>
-        <entry key="message" type="xstring" value="No columns included - input stays unchanged.%%00010The following columns were included before but no longer exist:%%00010&quot;battery_power&quot;, &quot;blue&quot;, &quot;clock_speed&quot;,  ... &lt;17 more&gt;"/>
-    </config>
     <entry key="factory" type="xstring" value="org.knime.base.node.preproc.normalize3.Normalizer3NodeFactory"/>
     <entry key="node-name" type="xstring" value="Normalizer"/>
     <entry key="node-bundle-name" type="xstring" value="KNIME Base Nodes"/>
