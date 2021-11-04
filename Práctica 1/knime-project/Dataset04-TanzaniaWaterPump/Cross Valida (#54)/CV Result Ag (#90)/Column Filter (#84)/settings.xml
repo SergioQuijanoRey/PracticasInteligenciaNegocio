@@ -11,7 +11,7 @@
             <config key="included_names">
                 <entry key="array-size" type="xint" value="2"/>
                 <entry key="0" type="xstring" value="Target Class"/>
-                <entry key="1" type="xstring" value="P (Target Class=non functional)Prob Classification"/>
+                <entry key="1" type="xstring" value="P (Target Class=non functional)Prob Target"/>
             </config>
             <config key="excluded_names">
                 <entry key="array-size" type="xint" value="68"/>
@@ -42,32 +42,32 @@
                 <entry key="24" type="xstring" value="quantity"/>
                 <entry key="25" type="xstring" value="source"/>
                 <entry key="26" type="xstring" value="waterpoint_type"/>
-                <entry key="27" type="xstring" value="P (Target Class=functional)Prob Classification"/>
+                <entry key="27" type="xstring" value="P (Target Class=functional)Prob Target"/>
                 <entry key="28" type="xstring" value="Prediction (Target Class)"/>
                 <entry key="29" type="xstring" value="fold #"/>
-                <entry key="30" type="xstring" value="battery_power"/>
-                <entry key="31" type="xstring" value="blue"/>
-                <entry key="32" type="xstring" value="clock_speed"/>
-                <entry key="33" type="xstring" value="dual_sim"/>
-                <entry key="34" type="xstring" value="fc"/>
-                <entry key="35" type="xstring" value="four_g"/>
-                <entry key="36" type="xstring" value="int_memory"/>
-                <entry key="37" type="xstring" value="m_dep"/>
-                <entry key="38" type="xstring" value="mobile_wt"/>
-                <entry key="39" type="xstring" value="n_cores"/>
-                <entry key="40" type="xstring" value="pc"/>
-                <entry key="41" type="xstring" value="px_height"/>
-                <entry key="42" type="xstring" value="px_width"/>
-                <entry key="43" type="xstring" value="ram"/>
-                <entry key="44" type="xstring" value="sc_h"/>
-                <entry key="45" type="xstring" value="sc_w"/>
-                <entry key="46" type="xstring" value="talk_time"/>
-                <entry key="47" type="xstring" value="three_g"/>
-                <entry key="48" type="xstring" value="touch_screen"/>
-                <entry key="49" type="xstring" value="wifi"/>
-                <entry key="50" type="xstring" value="P (Target Class=2)Prob Classification"/>
-                <entry key="51" type="xstring" value="P (Target Class=3)Prob Classification"/>
-                <entry key="52" type="xstring" value="P (Target Class=0)Prob Classification"/>
+                <entry key="30" type="xstring" value="P (Target Class=functional)Prob Classification"/>
+                <entry key="31" type="xstring" value="battery_power"/>
+                <entry key="32" type="xstring" value="blue"/>
+                <entry key="33" type="xstring" value="clock_speed"/>
+                <entry key="34" type="xstring" value="dual_sim"/>
+                <entry key="35" type="xstring" value="fc"/>
+                <entry key="36" type="xstring" value="four_g"/>
+                <entry key="37" type="xstring" value="int_memory"/>
+                <entry key="38" type="xstring" value="m_dep"/>
+                <entry key="39" type="xstring" value="mobile_wt"/>
+                <entry key="40" type="xstring" value="n_cores"/>
+                <entry key="41" type="xstring" value="pc"/>
+                <entry key="42" type="xstring" value="px_height"/>
+                <entry key="43" type="xstring" value="px_width"/>
+                <entry key="44" type="xstring" value="ram"/>
+                <entry key="45" type="xstring" value="sc_h"/>
+                <entry key="46" type="xstring" value="sc_w"/>
+                <entry key="47" type="xstring" value="talk_time"/>
+                <entry key="48" type="xstring" value="three_g"/>
+                <entry key="49" type="xstring" value="touch_screen"/>
+                <entry key="50" type="xstring" value="wifi"/>
+                <entry key="51" type="xstring" value="P (Target Class=2)Prob Classification"/>
+                <entry key="52" type="xstring" value="P (Target Class=3)Prob Classification"/>
                 <entry key="53" type="xstring" value="Age"/>
                 <entry key="54" type="xstring" value="Sex"/>
                 <entry key="55" type="xstring" value="ChestPainType"/>
@@ -152,6 +152,6 @@
     </config>
     <config key="filestores">
         <entry key="file_store_location" type="xstring" isnull="true" value=""/>
-        <entry key="file_store_id" type="xstring" value="fb844c24-5d1f-46d0-8a44-2b21a71d9693"/>
+        <entry key="file_store_id" type="xstring" value="ece94ba1-ae48-487d-8cda-7e3d36001ad0"/>
     </config>
 </config>
