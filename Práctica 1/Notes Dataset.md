@@ -190,6 +190,7 @@
     - Hago `partitioning` para que SVM funcione en un tiempo razonable
     - Uso también la implementación de *WEKA* para este *SVM*
     - En el siguiente [enlace](https://forum.knime.com/t/can-svm-learner-runtime-be-improved/27366/2) se muestra que el equipo de desarrolladores saben que funcionan mal
+    - Consigo llegar al 80% de los datos ejecutados sin problemas
 6. Comprobar que no haya algoritmos en Cross Validation con resultados catastróficos (esto demuestra algún fallo concreto en el problema)
 7. Comprobar que la curva ROC se visualiza correctamente
 8. Ajustar los valores para un par de parámetros
