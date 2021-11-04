@@ -14,9 +14,9 @@
             },
             {
                 "id": "org.knime.base.node.stats.viz.extended.ExtendedStatisticsNodeFactory#Statistics",
-                "nrexecs": 61,
+                "nrexecs": 62,
                 "nrfails": 3,
-                "exectime": 593831,
+                "exectime": 613223,
                 "nrcreated": 3,
                 "successor": "n/a"
             },
@@ -54,11 +54,11 @@
             },
             {
                 "id": "org.knime.base.node.preproc.filter.column.DataColumnSpecFilterNodeFactory#Column Filter",
-                "nrexecs": 5971,
+                "nrexecs": 5972,
                 "nrfails": 0,
-                "exectime": 2461,
-                "nrcreated": 8,
-                "successor": "org.knime.base.node.viz.roc.ROCNodeFactory#ROC Curve (local)"
+                "exectime": 2462,
+                "nrcreated": 9,
+                "successor": "NodeContainer"
             },
             {
                 "id": "org.knime.base.node.preproc.filter.row.RowFilterNodeFactory#Row Filter",
@@ -118,9 +118,9 @@
             },
             {
                 "id": "org.knime.js.base.node.viz.plotter.scatterSelectionAppender.ScatterPlotNodeFactory#Scatter Plot",
-                "nrexecs": 64,
+                "nrexecs": 67,
                 "nrfails": 0,
-                "exectime": 21986,
+                "exectime": 27994,
                 "nrcreated": 2,
                 "successor": "n/a"
             },
@@ -150,9 +150,9 @@
             },
             {
                 "id": "org.knime.base.node.mine.transformation.pca.perform.PCA2NodeFactory#PCA",
-                "nrexecs": 73,
-                "nrfails": 4,
-                "exectime": 299009,
+                "nrexecs": 77,
+                "nrfails": 5,
+                "exectime": 315291,
                 "nrcreated": 3,
                 "successor": "org.knime.js.base.node.viz.plotter.scatterSelectionAppender.ScatterPlotNodeFactory#Scatter Plot"
             },
@@ -182,7 +182,7 @@
             },
             {
                 "id": "org.knime.base.node.viz.property.color.ColorManager2NodeFactory#Color Manager",
-                "nrexecs": 59,
+                "nrexecs": 61,
                 "nrfails": 0,
                 "exectime": 476,
                 "nrcreated": 2,
@@ -350,9 +350,9 @@
             },
             {
                 "id": "org.knime.base.node.preproc.columnappend2.ColumnAppender2NodeFactory#Column Appender",
-                "nrexecs": 1291,
+                "nrexecs": 1294,
                 "nrfails": 8,
-                "exectime": 20745,
+                "exectime": 22919,
                 "nrcreated": 10,
                 "successor": "org.knime.base.node.preproc.partition.PartitionNodeFactory#Partitioning"
             },
@@ -374,7 +374,7 @@
             },
             {
                 "id": "org.knime.base.node.preproc.split2.SplitNodeFactory2#Column Splitter",
-                "nrexecs": 74,
+                "nrexecs": 76,
                 "nrfails": 0,
                 "exectime": 39,
                 "nrcreated": 3,
@@ -478,11 +478,11 @@
             },
             {
                 "id": "org.knime.base.node.preproc.pmml.missingval.compute.MissingValueHandlerNodeFactory#Missing Value",
-                "nrexecs": 2284,
+                "nrexecs": 2286,
                 "nrfails": 1,
-                "exectime": 245309,
+                "exectime": 249975,
                 "nrcreated": 2,
-                "successor": "org.knime.base.node.mine.decisiontree2.predictor2.DecTreePredictorNodeFactory#Decision Tree Predictor"
+                "successor": "org.knime.base.node.preproc.filter.column.DataColumnSpecFilterNodeFactory#Column Filter"
             },
             {
                 "id": "org.knime.base.node.preproc.double2int2.DoubleToIntNodeFactory#Double To Int",
@@ -754,14 +754,14 @@
             "nrcreated": 0
         }
     },
-    "uptime": 2765407,
+    "uptime": 2801110,
     "workflowsOpened": 1,
     "remoteWorkflowsOpened": 0,
     "workflowsImported": 0,
     "workflowsExported": 0,
     "launches": 40,
     "lastApplicationID": "org.knime.product.KNIME_APPLICATION",
-    "timeSinceLastStart": 1032532,
+    "timeSinceLastStart": 2460672,
     "crashes": 5,
     "properlyShutDown": false
 }

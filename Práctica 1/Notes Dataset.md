@@ -163,6 +163,16 @@
     - `management{_grou}`: dos variables muy correladas
     - Y más ejemplos que son del tipo `algo{_subclases}`
     - Tenemos 40 atributos, así que uso las correlaciones lineales para borrar algunos de estos atributos
+        - Quito `extraction_type{_group, class}` y me quedo con `extraction_type`
+        - Quito `source_{type, class}` y me quedo con `source`
+        - Quito `waterpoint_type` y me quedo con `waterpoint`
+        - Quito `management_group, scheme_managemente` y me quedo con `management`
+        - Quito `basin` y me quedo con `region`
+        - Quito `district_code` y me quedo con `region_code`
+        - Quito `payment_type` y me quedo con `payment`
+        - Quito `quality_group` y me quedo con `water_quality`
+        - Quito `quantity_group` y me quedo con `quantity`
+    - Con esto paso de 40 columnas a 28 columnas
 2. Missing values
     - Si borro los missing values me quedo con la mitad de las filas, por tanto esto no es una buena solución
     - La primera opción que contemplo es usar interpolación lineal para los valores más usados y el valor más frecuente para strings
