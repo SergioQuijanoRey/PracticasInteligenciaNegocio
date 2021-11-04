@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg stroke-dasharray="none" shape-rendering="auto"
      xmlns="http://www.w3.org/2000/svg" font-family="&apos;Dialog&apos;"
-     width="2383" text-rendering="auto" fill-opacity="1"
+     width="2663" text-rendering="auto" fill-opacity="1"
      contentScriptType="text/ecmascript" color-interpolation="auto"
      color-rendering="auto" preserveAspectRatio="xMidYMid meet" font-size="12"
      fill="black" xmlns:xlink="http://www.w3.org/1999/xlink" stroke="black"
@@ -15,49 +15,49 @@
     <g>
         <defs id="defs1">
             <clipPath clipPathUnits="userSpaceOnUse" id="clipPath1">
-                <path d="M1101 -1 L1564 -1 L1564 62 L1101 62 L1101 -1 Z"/>
+                <path d="M1381 -1 L1844 -1 L1844 62 L1381 62 L1381 -1 Z"/>
             </clipPath>
             <clipPath clipPathUnits="userSpaceOnUse" id="clipPath2">
-                <path d="M1111 9 L1554 9 L1554 39 L1111 39 L1111 9 Z"/>
+                <path d="M1391 9 L1834 9 L1834 39 L1391 39 L1391 9 Z"/>
             </clipPath>
             <clipPath clipPathUnits="userSpaceOnUse" id="clipPath3">
-                <path d="M1101 339 L1562 339 L1562 402 L1101 402 L1101 339 Z"/>
+                <path d="M1381 339 L1842 339 L1842 402 L1381 402 L1381 339 Z"/>
             </clipPath>
             <clipPath clipPathUnits="userSpaceOnUse" id="clipPath4">
-                <path d="M1111 349 L1552 349 L1552 379 L1111 379 L1111 349 Z"/>
+                <path d="M1391 349 L1832 349 L1832 379 L1391 379 L1391 349 Z"/>
             </clipPath>
             <clipPath clipPathUnits="userSpaceOnUse" id="clipPath5">
-                <path d="M1101 719 L1804 719 L1804 782 L1101 782 L1101 719 Z"/>
+                <path d="M1381 719 L2084 719 L2084 782 L1381 782 L1381 719 Z"/>
             </clipPath>
             <clipPath clipPathUnits="userSpaceOnUse" id="clipPath6">
-                <path d="M1111 729 L1794 729 L1794 759 L1111 759 L1111 729 Z"/>
+                <path d="M1391 729 L2074 729 L2074 759 L1391 759 L1391 729 Z"/>
             </clipPath>
             <clipPath clipPathUnits="userSpaceOnUse" id="clipPath7">
-                <path d="M1921 -1 L2384 -1 L2384 82 L1921 82 L1921 -1 Z"/>
+                <path d="M2201 -1 L2664 -1 L2664 82 L2201 82 L2201 -1 Z"/>
             </clipPath>
             <clipPath clipPathUnits="userSpaceOnUse" id="clipPath8">
-                <path d="M1931 9 L2366 9 L2366 67 L1931 67 L1931 9 Z"/>
+                <path d="M2211 9 L2646 9 L2646 67 L2211 67 L2211 9 Z"/>
             </clipPath>
             <clipPath clipPathUnits="userSpaceOnUse" id="clipPath9">
                 <path d="M-1 420 L208 420 L208 460 L-1 460 L-1 420 Z"/>
             </clipPath>
             <clipPath clipPathUnits="userSpaceOnUse" id="clipPath10">
-                <path d="M1162 186 L1443 186 L1443 226 L1162 226 L1162 186 Z"/>
+                <path d="M1442 186 L1723 186 L1723 226 L1442 226 L1442 186 Z"/>
             </clipPath>
             <clipPath clipPathUnits="userSpaceOnUse" id="clipPath11">
-                <path d="M1232 486 L1612 486 L1612 659 L1232 659 L1232 486 Z"/>
+                <path d="M1392 486 L1772 486 L1772 659 L1392 659 L1392 486 Z"/>
             </clipPath>
             <clipPath clipPathUnits="userSpaceOnUse" id="clipPath12">
                 <path d="M517 499 L810 499 L810 577 L517 577 L517 499 Z"/>
             </clipPath>
             <clipPath clipPathUnits="userSpaceOnUse" id="clipPath13">
-                <path d="M1171 945 L1434 945 L1434 1023 L1171 1023 L1171 945 Z"/>
+                <path d="M1451 945 L1714 945 L1714 1023 L1451 1023 L1451 945 Z"/>
             </clipPath>
             <clipPath clipPathUnits="userSpaceOnUse" id="clipPath14">
                 <path d="M202 420 L483 420 L483 498 L202 498 L202 420 Z"/>
             </clipPath>
             <clipPath clipPathUnits="userSpaceOnUse" id="clipPath15">
-                <path d="M1919 186 L2245 186 L2245 264 L1919 264 L1919 186 Z"/>
+                <path d="M2199 186 L2525 186 L2525 264 L2199 264 L2199 186 Z"/>
             </clipPath>
             <clipPath clipPathUnits="userSpaceOnUse" id="clipPath16">
                 <path d="M856 499 L1311 499 L1311 596 L856 596 L856 499 Z"/>
@@ -81,22 +81,22 @@
                 <path d="M112 375 L154 375 L154 386 L112 386 L112 375 Z"/>
             </clipPath>
             <clipPath clipPathUnits="userSpaceOnUse" id="clipPath23">
-                <path d="M1247 96 L1357 96 L1357 118 L1247 118 L1247 96 Z"/>
+                <path d="M1527 96 L1637 96 L1637 118 L1527 118 L1527 96 Z"/>
             </clipPath>
             <clipPath clipPathUnits="userSpaceOnUse" id="clipPath24">
-                <path d="M1237 116 L1367 116 L1367 138 L1237 138 L1237 116 Z"/>
+                <path d="M1517 116 L1647 116 L1647 138 L1517 138 L1517 116 Z"/>
             </clipPath>
             <clipPath clipPathUnits="userSpaceOnUse" id="clipPath25">
-                <path d="M1237 154 L1294 154 L1294 165 L1237 165 L1237 154 Z"/>
+                <path d="M1517 154 L1574 154 L1574 165 L1517 165 L1517 154 Z"/>
             </clipPath>
             <clipPath clipPathUnits="userSpaceOnUse" id="clipPath26">
-                <path d="M1342 416 L1502 416 L1502 438 L1342 438 L1342 416 Z"/>
+                <path d="M1502 416 L1662 416 L1662 438 L1502 438 L1502 416 Z"/>
             </clipPath>
             <clipPath clipPathUnits="userSpaceOnUse" id="clipPath27">
-                <path d="M1342 454 L1414 454 L1414 465 L1342 465 L1342 454 Z"/>
+                <path d="M1502 454 L1574 454 L1574 465 L1502 465 L1502 454 Z"/>
             </clipPath>
             <clipPath clipPathUnits="userSpaceOnUse" id="clipPath28">
-                <path d="M1430 454 L1502 454 L1502 465 L1430 465 L1430 454 Z"/>
+                <path d="M1590 454 L1662 454 L1662 465 L1590 465 L1590 454 Z"/>
             </clipPath>
             <clipPath clipPathUnits="userSpaceOnUse" id="clipPath29">
                 <path d="M-3 -2 L69 -2 L69 9 L-3 9 L-3 -2 Z"/>
@@ -117,13 +117,13 @@
                 <path d="M670 463 L727 463 L727 474 L670 474 L670 463 Z"/>
             </clipPath>
             <clipPath clipPathUnits="userSpaceOnUse" id="clipPath35">
-                <path d="M1252 855 L1353 855 L1353 877 L1252 877 L1252 855 Z"/>
+                <path d="M1532 855 L1633 855 L1633 877 L1532 877 L1532 855 Z"/>
             </clipPath>
             <clipPath clipPathUnits="userSpaceOnUse" id="clipPath36">
-                <path d="M1198 875 L1407 875 L1407 897 L1198 897 L1198 875 Z"/>
+                <path d="M1478 875 L1687 875 L1687 897 L1478 897 L1478 875 Z"/>
             </clipPath>
             <clipPath clipPathUnits="userSpaceOnUse" id="clipPath37">
-                <path d="M1198 913 L1294 913 L1294 924 L1198 924 L1198 913 Z"/>
+                <path d="M1478 913 L1574 913 L1574 924 L1478 924 L1478 913 Z"/>
             </clipPath>
             <clipPath clipPathUnits="userSpaceOnUse" id="clipPath38">
                 <path d="M277 337 L407 337 L407 359 L277 359 L277 337 Z"/>
@@ -135,10 +135,10 @@
                 <path d="M350 375 L407 375 L407 386 L350 386 L350 375 Z"/>
             </clipPath>
             <clipPath clipPathUnits="userSpaceOnUse" id="clipPath41">
-                <path d="M2022 116 L2142 116 L2142 138 L2022 138 L2022 116 Z"/>
+                <path d="M2302 116 L2422 116 L2422 138 L2302 138 L2302 116 Z"/>
             </clipPath>
             <clipPath clipPathUnits="userSpaceOnUse" id="clipPath42">
-                <path d="M2022 154 L2074 154 L2074 165 L2022 165 L2022 154 Z"/>
+                <path d="M2302 154 L2354 154 L2354 165 L2302 165 L2302 154 Z"/>
             </clipPath>
             <clipPath clipPathUnits="userSpaceOnUse" id="clipPath43">
                 <path d="M1017 416 L1147 416 L1147 438 L1017 438 L1017 416 Z"/>
@@ -150,87 +150,87 @@
                 <path d="M1090 454 L1147 454 L1147 465 L1090 465 L1090 454 Z"/>
             </clipPath>
             <clipPath clipPathUnits="userSpaceOnUse" id="clipPath46">
-                <path d="M-1 -1 L2858 -1 L2858 1188 L-1 1188 L-1 -1 Z"/>
+                <path d="M-1 -1 L3815 -1 L3815 1319 L-1 1319 L-1 -1 Z"/>
             </clipPath>
         </defs>
         <g font-size="14" fill="white" font-family="&apos;JetBrains Mono&apos;"
            stroke-linejoin="round" stroke="white" stroke-width="0"
            stroke-miterlimit="0">
-            <rect x="1102" y="0" clip-path="url(#clipPath1)" width="461"
+            <rect x="1382" y="0" clip-path="url(#clipPath1)" width="461"
                   height="61" stroke="none"/>
         </g>
         <g font-size="20" font-family="&apos;JetBrains Mono&apos;"
            stroke-linejoin="round" font-weight="bold" stroke-width="0"
            stroke-miterlimit="0">
-            <text xml:space="preserve" x="1112" y="32"
+            <text xml:space="preserve" x="1392" y="32"
                   clip-path="url(#clipPath2)" stroke="none">Análisis Exploratorio de Datos.</text>
         </g><g stroke-linecap="butt" font-size="14" fill="rgb(78,154,6)"
            font-family="&apos;JetBrains Mono&apos;" stroke="rgb(78,154,6)"
            stroke-width="10">
-            <rect x="1107" y="5" clip-path="url(#clipPath1)" fill="none"
+            <rect x="1387" y="5" clip-path="url(#clipPath1)" fill="none"
                   width="451" height="51"/>
-            <rect x="1102" y="340" clip-path="url(#clipPath3)" fill="white"
+            <rect x="1382" y="340" clip-path="url(#clipPath3)" fill="white"
                   width="459" height="61" stroke="none"/>
         </g>
         <g stroke-width="10" font-size="20"
            font-family="&apos;JetBrains Mono&apos;" font-weight="bold"
            stroke-linecap="butt">
-            <text xml:space="preserve" x="1112" y="372"
+            <text xml:space="preserve" x="1392" y="372"
                   clip-path="url(#clipPath4)" stroke="none">Probamos con distintos modelos</text>
         </g><g stroke-linecap="butt" font-size="14" fill="rgb(114,159,207)"
            font-family="&apos;JetBrains Mono&apos;" stroke="rgb(114,159,207)"
            stroke-width="10">
-            <rect x="1107" y="345" clip-path="url(#clipPath3)" fill="none"
+            <rect x="1387" y="345" clip-path="url(#clipPath3)" fill="none"
                   width="449" height="51"/>
-            <rect x="1102" y="720" clip-path="url(#clipPath5)" fill="white"
+            <rect x="1382" y="720" clip-path="url(#clipPath5)" fill="white"
                   width="701" height="61" stroke="none"/>
         </g>
         <g stroke-width="10" font-size="20"
            font-family="&apos;JetBrains Mono&apos;" font-weight="bold"
            stroke-linecap="butt">
-            <text xml:space="preserve" x="1112" y="752"
+            <text xml:space="preserve" x="1392" y="752"
                   clip-path="url(#clipPath6)" stroke="none">Ajustamos los parámetros de un par de algoritmos</text>
         </g><g stroke-linecap="butt" font-size="14" fill="rgb(173,127,168)"
            font-family="&apos;JetBrains Mono&apos;" stroke="rgb(173,127,168)"
            stroke-width="10">
-            <rect x="1107" y="725" clip-path="url(#clipPath5)" fill="none"
+            <rect x="1387" y="725" clip-path="url(#clipPath5)" fill="none"
                   width="691" height="51"/>
-            <rect x="1922" y="0" clip-path="url(#clipPath7)" fill="white"
+            <rect x="2202" y="0" clip-path="url(#clipPath7)" fill="white"
                   width="461" height="81" stroke="none"/>
         </g>
         <g stroke-width="10" font-size="20"
            font-family="&apos;JetBrains Mono&apos;" font-weight="bold"
            stroke-linecap="butt">
-            <text xml:space="preserve" x="1932" y="32"
+            <text xml:space="preserve" x="2212" y="32"
                   clip-path="url(#clipPath8)" stroke="none">Usamos PCA para el proceso de</text><text xml:space="preserve"
-                  x="1932" y="60" clip-path="url(#clipPath8)" stroke="none">aprendizaje</text>
+                  x="2212" y="60" clip-path="url(#clipPath8)" stroke="none">aprendizaje</text>
         </g><g stroke-linecap="butt" font-size="14" fill="rgb(245,121,0)"
            font-family="&apos;JetBrains Mono&apos;" stroke="rgb(245,121,0)"
            stroke-width="10">
-            <rect x="1927" y="5" clip-path="url(#clipPath7)" fill="none"
+            <rect x="2207" y="5" clip-path="url(#clipPath7)" fill="none"
                   width="451" height="71"/>
             <text x="13" y="437" clip-path="url(#clipPath9)" fill="black"
                   stroke="none" xml:space="preserve">Cargamos el dataset </text><text x="0"
                   y="456" clip-path="url(#clipPath9)" fill="black" stroke="none"
-                  xml:space="preserve">en el workflow de knime</text><text x="1163"
+                  xml:space="preserve">en el workflow de knime</text><text x="1443"
                   y="203" clip-path="url(#clipPath10)" fill="black"
-                  stroke="none" xml:space="preserve">Expandir este metandoo para ver</text><text x="1181"
+                  stroke="none" xml:space="preserve">Expandir este metandoo para ver</text><text x="1461"
                   y="222" clip-path="url(#clipPath10)" fill="black"
-                  stroke="none" xml:space="preserve">la exploración de los datos</text><text x="1282"
+                  stroke="none" xml:space="preserve">la exploración de los datos</text><text x="1442"
                   y="503" clip-path="url(#clipPath11)" fill="black"
-                  stroke="none" xml:space="preserve">Expandir este metanodo para ver</text><text x="1264"
+                  stroke="none" xml:space="preserve">Expandir este metanodo para ver</text><text x="1424"
                   y="522" clip-path="url(#clipPath11)" fill="black"
-                  stroke="none" xml:space="preserve">la exploración de distintos modelos</text><text x="1246"
+                  stroke="none" xml:space="preserve">la exploración de distintos modelos</text><text x="1406"
                   y="541" clip-path="url(#clipPath11)" fill="black"
-                  stroke="none" xml:space="preserve">usando 5-fold cross validation. Podemos</text><text x="1246"
+                  stroke="none" xml:space="preserve">usando 5-fold cross validation. Podemos</text><text x="1406"
                   y="560" clip-path="url(#clipPath11)" fill="black"
-                  stroke="none" xml:space="preserve">mirar el output port para consultar la </text><text x="1242"
+                  stroke="none" xml:space="preserve">mirar el output port para consultar la </text><text x="1402"
                   y="579" clip-path="url(#clipPath11)" fill="black"
-                  stroke="none" xml:space="preserve">tabla de datos agregados. Dentro tenemos</text><text x="1260"
+                  stroke="none" xml:space="preserve">tabla de datos agregados. Dentro tenemos</text><text x="1420"
                   y="598" clip-path="url(#clipPath11)" fill="black"
-                  stroke="none" xml:space="preserve">las curvas ROC en una única gráfica.</text><text x="1242"
+                  stroke="none" xml:space="preserve">las curvas ROC en una única gráfica.</text><text x="1402"
                   y="636" clip-path="url(#clipPath11)" fill="black"
-                  stroke="none" xml:space="preserve">Cada cross validation lleva su procesado</text><text x="1233"
+                  stroke="none" xml:space="preserve">Cada cross validation lleva su procesado</text><text x="1393"
                   y="655" clip-path="url(#clipPath11)" fill="black"
                   stroke="none" xml:space="preserve">de datos, con training y test por separado</text><text x="554"
                   y="516" clip-path="url(#clipPath12)" fill="black"
@@ -240,13 +240,13 @@
                   y="554" clip-path="url(#clipPath12)" fill="black"
                   stroke="none" xml:space="preserve">con missing values nos deja con</text><text x="518"
                   y="573" clip-path="url(#clipPath12)" fill="black"
-                  stroke="none" xml:space="preserve">la mitad de las filas originales</text><text x="1172"
+                  stroke="none" xml:space="preserve">la mitad de las filas originales</text><text x="1452"
                   y="962" clip-path="url(#clipPath13)" fill="black"
-                  stroke="none" xml:space="preserve">Ajuste de los hiperparámetros</text><text x="1181"
+                  stroke="none" xml:space="preserve">Ajuste de los hiperparámetros</text><text x="1461"
                   y="981" clip-path="url(#clipPath13)" fill="black"
-                  stroke="none" xml:space="preserve">de dos algoritmos que hemos</text><text x="1176"
+                  stroke="none" xml:space="preserve">de dos algoritmos que hemos</text><text x="1456"
                   y="1000" clip-path="url(#clipPath13)" fill="black"
-                  stroke="none" xml:space="preserve">escogido. Expandir este nodo</text><text x="1190"
+                  stroke="none" xml:space="preserve">escogido. Expandir este nodo</text><text x="1470"
                   y="1019" clip-path="url(#clipPath13)" fill="black"
                   stroke="none" xml:space="preserve">para comprobar el proceso</text><text x="225"
                   y="437" clip-path="url(#clipPath14)" fill="black"
@@ -256,13 +256,13 @@
                   y="475" clip-path="url(#clipPath14)" fill="black"
                   stroke="none" xml:space="preserve">con los siguientes datasets con</text><text x="234"
                   y="494" clip-path="url(#clipPath14)" fill="black"
-                  stroke="none" xml:space="preserve">los que vamos a trabajar</text><text x="1920"
+                  stroke="none" xml:space="preserve">los que vamos a trabajar</text><text x="2200"
                   y="203" clip-path="url(#clipPath15)" fill="black"
-                  stroke="none" xml:space="preserve">Hemos visto que PCA tiene muy buenos</text><text x="1924"
+                  stroke="none" xml:space="preserve">Hemos visto que PCA tiene muy buenos</text><text x="2204"
                   y="222" clip-path="url(#clipPath15)" fill="black"
-                  stroke="none" xml:space="preserve">resultados. Por ello, aplicamos PCA</text><text x="1933"
+                  stroke="none" xml:space="preserve">resultados. Por ello, aplicamos PCA</text><text x="2213"
                   y="241" clip-path="url(#clipPath15)" fill="black"
-                  stroke="none" xml:space="preserve">y usamos un algoritmo simple para</text><text x="1924"
+                  stroke="none" xml:space="preserve">y usamos un algoritmo simple para</text><text x="2204"
                   y="260" clip-path="url(#clipPath15)" fill="black"
                   stroke="none" xml:space="preserve">ver la efectividad de este proceso.</text><text x="925"
                   y="516" clip-path="url(#clipPath16)" fill="black"
@@ -329,10 +329,10 @@ rkJggg==" xlink:actuate="onLoad"/>
            text-rendering="optimizeLegibility"
            font-family="&apos;JetBrains Mono&apos;" font-weight="bold"
            stroke-width="10">
-            <text xml:space="preserve" x="1248" y="113"
+            <text xml:space="preserve" x="1528" y="113"
                   clip-path="url(#clipPath23)" stroke="none">Exploratory</text><text xml:space="preserve"
-                  x="1238" y="133" clip-path="url(#clipPath24)" stroke="none">Data Analysis</text><image xmlns:xlink="http://www.w3.org/1999/xlink"
-                   transform="matrix(1,0,0,1,1286,144)" width="32"
+                  x="1518" y="133" clip-path="url(#clipPath24)" stroke="none">Data Analysis</text><image xmlns:xlink="http://www.w3.org/1999/xlink"
+                   transform="matrix(1,0,0,1,1566,144)" width="32"
                    xlink:show="embed" xlink:type="simple"
                    clip-path="url(#clipPath18)" preserveAspectRatio="none"
                    font-weight="normal" height="32" x="0" y="0"
@@ -340,7 +340,7 @@ rkJggg==" xlink:actuate="onLoad"/>
 IBQCUb7jUalak1qsjlWQLAEpLyVKbVfG5F9nL8t4H1NJ5gAAAAAAAAAAAAAAAAAA
 AADhvucPJbgFY3M3FzIAAAAASUVORK5CYII=" xlink:actuate="onLoad"/>
             <image xmlns:xlink="http://www.w3.org/1999/xlink"
-                   transform="matrix(1,0,0,1,1294,152)" width="16"
+                   transform="matrix(1,0,0,1,1574,152)" width="16"
                    xlink:show="embed" xlink:type="simple"
                    clip-path="url(#clipPath19)" preserveAspectRatio="none"
                    font-weight="normal" height="16" x="0" y="0"
@@ -355,10 +355,10 @@ bVPpK33oMQQPrFm9z3+nF8su/P//rz/QIDE0dZ8Y//0PluZ//RTdAJR0YCJ19hs7
 C5MF0LpbaCn+gKns1VPY0ghGQtKXuPSV6QeHGdDjZ0FRBnTN3X8c32NplhsBEvB+
 /elUcvwAAAAASUVORK5CYII=" xlink:actuate="onLoad"/>
             <polygon clip-path="url(#clipPath25)"
-                     points=" 1277 155 1286 159 1277 164" stroke="none"/>
-            <text xml:space="preserve" x="1343" y="433"
+                     points=" 1557 155 1566 159 1557 164" stroke="none"/>
+            <text xml:space="preserve" x="1503" y="433"
                   clip-path="url(#clipPath26)" stroke="none">Cross Validation</text><image xmlns:xlink="http://www.w3.org/1999/xlink"
-                   transform="matrix(1,0,0,1,1406,444)" width="32"
+                   transform="matrix(1,0,0,1,1566,444)" width="32"
                    xlink:show="embed" xlink:type="simple"
                    clip-path="url(#clipPath18)" preserveAspectRatio="none"
                    font-weight="normal" height="32" x="0" y="0"
@@ -366,7 +366,7 @@ C5MF0LpbaCn+gKns1VPY0ghGQtKXuPSV6QeHGdDjZ0FRBnTN3X8c32NplhsBEvB+
 IBQCUb7jUalak1qsjlWQLAEpLyVKbVfG5F9nL8t4H1NJ5gAAAAAAAAAAAAAAAAAA
 AADhvucPJbgFY3M3FzIAAAAASUVORK5CYII=" xlink:actuate="onLoad"/>
             <image xmlns:xlink="http://www.w3.org/1999/xlink"
-                   transform="matrix(1,0,0,1,1414,452)" width="16"
+                   transform="matrix(1,0,0,1,1574,452)" width="16"
                    xlink:show="embed" xlink:type="simple"
                    clip-path="url(#clipPath19)" preserveAspectRatio="none"
                    font-weight="normal" height="16" x="0" y="0"
@@ -380,11 +380,11 @@ XRpA8w3NBCC5xFZn4byGopAyd+DnPZifHSO0SFSfgaNfHb7D6CLJa9BVIjF9Lofm
 GVF1TYDpaEMrzIikAjRPst96JSUWTs6VCLlP3qAzeRZUq1S1VcHKZqEwjUZhK1Wn
 8d/4AmSylsd4KZ0LAAAAAElFTkSuQmCC" xlink:actuate="onLoad"/>
             <polygon clip-path="url(#clipPath27)"
-                     points=" 1397 455 1406 459 1397 464" stroke="none"/>
+                     points=" 1557 455 1566 459 1557 464" stroke="none"/>
             <polygon clip-path="url(#clipPath28)"
-                     points=" 1438 455 1447 459 1438 464" stroke="none"/>
+                     points=" 1598 455 1607 459 1598 464" stroke="none"/>
             <image xmlns:xlink="http://www.w3.org/1999/xlink"
-                   transform="matrix(1,0,0,1,1433,456)" width="7"
+                   transform="matrix(1,0,0,1,1593,456)" width="7"
                    xlink:show="embed" xlink:type="simple"
                    clip-path="url(#clipPath29)" preserveAspectRatio="none"
                    font-weight="normal" height="7" x="0" y="0"
@@ -448,10 +448,10 @@ KCZEfQAAAABJRU5ErkJggg==" xlink:actuate="onLoad"/>
                      points=" 678 445 687 449 678 454" stroke="none"/>
             <polygon fill="rgb(20,105,175)" clip-path="url(#clipPath34)"
                      points=" 678 464 687 464 687 473 678 473" stroke="none"/>
-            <text xml:space="preserve" x="1253" y="872"
+            <text xml:space="preserve" x="1533" y="872"
                   clip-path="url(#clipPath35)" stroke="none">Two models</text><text xml:space="preserve"
-                  x="1199" y="892" clip-path="url(#clipPath36)" stroke="none">hyperparameter tuning</text><image xmlns:xlink="http://www.w3.org/1999/xlink"
-                   transform="matrix(1,0,0,1,1286,903)" width="32"
+                  x="1479" y="892" clip-path="url(#clipPath36)" stroke="none">hyperparameter tuning</text><image xmlns:xlink="http://www.w3.org/1999/xlink"
+                   transform="matrix(1,0,0,1,1566,903)" width="32"
                    xlink:show="embed" xlink:type="simple"
                    clip-path="url(#clipPath18)" preserveAspectRatio="none"
                    font-weight="normal" height="32" x="0" y="0"
@@ -459,7 +459,7 @@ KCZEfQAAAABJRU5ErkJggg==" xlink:actuate="onLoad"/>
 IBQCUb7jUalak1qsjlWQLAEpLyVKbVfG5F9nL8t4H1NJ5gAAAAAAAAAAAAAAAAAA
 AADhvucPJbgFY3M3FzIAAAAASUVORK5CYII=" xlink:actuate="onLoad"/>
             <image xmlns:xlink="http://www.w3.org/1999/xlink"
-                   transform="matrix(1,0,0,1,1294,911)" width="16"
+                   transform="matrix(1,0,0,1,1574,911)" width="16"
                    xlink:show="embed" xlink:type="simple"
                    clip-path="url(#clipPath19)" preserveAspectRatio="none"
                    font-weight="normal" height="16" x="0" y="0"
@@ -473,7 +473,7 @@ XRpA8w3NBCC5xFZn4byGopAyd+DnPZifHSO0SFSfgaNfHb7D6CLJa9BVIjF9Lofm
 GVF1TYDpaEMrzIikAjRPst96JSUWTs6VCLlP3qAzeRZUq1S1VcHKZqEwjUZhK1Wn
 8d/4AmSylsd4KZ0LAAAAAElFTkSuQmCC" xlink:actuate="onLoad"/>
             <polygon clip-path="url(#clipPath37)"
-                     points=" 1277 914 1286 918 1277 923" stroke="none"/>
+                     points=" 1557 914 1566 918 1557 923" stroke="none"/>
             <text xml:space="preserve" x="278" y="354"
                   clip-path="url(#clipPath38)" stroke="none">Column Rename</text><image xmlns:xlink="http://www.w3.org/1999/xlink"
                    transform="matrix(1,0,0,1,326,365)" width="32"
@@ -515,9 +515,9 @@ rkJggg==" xlink:actuate="onLoad"/>
                      points=" 317 376 326 380 317 385" stroke="none"/>
             <polygon clip-path="url(#clipPath40)"
                      points=" 358 376 367 380 358 385" stroke="none"/>
-            <text xml:space="preserve" x="2023" y="133"
+            <text xml:space="preserve" x="2303" y="133"
                   clip-path="url(#clipPath41)" stroke="none">PCA Learning</text><image xmlns:xlink="http://www.w3.org/1999/xlink"
-                   transform="matrix(1,0,0,1,2066,144)" width="32"
+                   transform="matrix(1,0,0,1,2346,144)" width="32"
                    xlink:show="embed" xlink:type="simple"
                    clip-path="url(#clipPath18)" preserveAspectRatio="none"
                    font-weight="normal" height="32" x="0" y="0"
@@ -525,7 +525,7 @@ rkJggg==" xlink:actuate="onLoad"/>
 IBQCUb7jUalak1qsjlWQLAEpLyVKbVfG5F9nL8t4H1NJ5gAAAAAAAAAAAAAAAAAA
 AADhvucPJbgFY3M3FzIAAAAASUVORK5CYII=" xlink:actuate="onLoad"/>
             <image xmlns:xlink="http://www.w3.org/1999/xlink"
-                   transform="matrix(1,0,0,1,2074,152)" width="16"
+                   transform="matrix(1,0,0,1,2354,152)" width="16"
                    xlink:show="embed" xlink:type="simple"
                    clip-path="url(#clipPath19)" preserveAspectRatio="none"
                    font-weight="normal" height="16" x="0" y="0"
@@ -539,7 +539,7 @@ XRpA8w3NBCC5xFZn4byGopAyd+DnPZifHSO0SFSfgaNfHb7D6CLJa9BVIjF9Lofm
 GVF1TYDpaEMrzIikAjRPst96JSUWTs6VCLlP3qAzeRZUq1S1VcHKZqEwjUZhK1Wn
 8d/4AmSylsd4KZ0LAAAAAElFTkSuQmCC" xlink:actuate="onLoad"/>
             <polygon clip-path="url(#clipPath42)"
-                     points=" 2057 155 2066 159 2057 164" stroke="none"/>
+                     points=" 2337 155 2346 159 2337 164" stroke="none"/>
             <text xml:space="preserve" x="1018" y="433"
                   clip-path="url(#clipPath43)" stroke="none">Column Filter</text><image xmlns:xlink="http://www.w3.org/1999/xlink"
                    transform="matrix(1,0,0,1,1066,444)" width="32"
@@ -580,54 +580,54 @@ rkJggg==" xlink:actuate="onLoad"/>
                      points=" 1057 455 1066 459 1057 464" stroke="none"/>
             <polygon clip-path="url(#clipPath45)"
                      points=" 1098 455 1107 459 1098 464" stroke="none"/>
-            <rect x="1102" y="0" clip-path="url(#clipPath1)" fill="white"
+            <rect x="1382" y="0" clip-path="url(#clipPath1)" fill="white"
                   width="461" height="61" stroke="none"/>
-            <text x="1112" font-size="20" y="32" clip-path="url(#clipPath2)"
-                  stroke="none" xml:space="preserve">Análisis Exploratorio de Datos.</text><rect x="1107"
+            <text x="1392" font-size="20" y="32" clip-path="url(#clipPath2)"
+                  stroke="none" xml:space="preserve">Análisis Exploratorio de Datos.</text><rect x="1387"
                   y="5" clip-path="url(#clipPath1)" fill="none" width="451"
                   height="51" stroke="rgb(78,154,6)"/>
-            <rect x="1102" y="340" clip-path="url(#clipPath3)" fill="white"
+            <rect x="1382" y="340" clip-path="url(#clipPath3)" fill="white"
                   width="459" height="61" stroke="none"/>
-            <text x="1112" font-size="20" y="372" clip-path="url(#clipPath4)"
-                  stroke="none" xml:space="preserve">Probamos con distintos modelos</text><rect x="1107"
+            <text x="1392" font-size="20" y="372" clip-path="url(#clipPath4)"
+                  stroke="none" xml:space="preserve">Probamos con distintos modelos</text><rect x="1387"
                   y="345" clip-path="url(#clipPath3)" fill="none" width="449"
                   height="51" stroke="rgb(114,159,207)"/>
-            <rect x="1102" y="720" clip-path="url(#clipPath5)" fill="white"
+            <rect x="1382" y="720" clip-path="url(#clipPath5)" fill="white"
                   width="701" height="61" stroke="none"/>
-            <text x="1112" font-size="20" y="752" clip-path="url(#clipPath6)"
-                  stroke="none" xml:space="preserve">Ajustamos los parámetros de un par de algoritmos</text><rect x="1107"
+            <text x="1392" font-size="20" y="752" clip-path="url(#clipPath6)"
+                  stroke="none" xml:space="preserve">Ajustamos los parámetros de un par de algoritmos</text><rect x="1387"
                   y="725" clip-path="url(#clipPath5)" fill="none" width="691"
                   height="51" stroke="rgb(173,127,168)"/>
-            <rect x="1922" y="0" clip-path="url(#clipPath7)" fill="white"
+            <rect x="2202" y="0" clip-path="url(#clipPath7)" fill="white"
                   width="461" height="81" stroke="none"/>
-            <text x="1932" font-size="20" y="32" clip-path="url(#clipPath8)"
-                  stroke="none" xml:space="preserve">Usamos PCA para el proceso de</text><text x="1932"
+            <text x="2212" font-size="20" y="32" clip-path="url(#clipPath8)"
+                  stroke="none" xml:space="preserve">Usamos PCA para el proceso de</text><text x="2212"
                   font-size="20" y="60" clip-path="url(#clipPath8)"
-                  stroke="none" xml:space="preserve">aprendizaje</text><rect x="1927"
+                  stroke="none" xml:space="preserve">aprendizaje</text><rect x="2207"
                   y="5" clip-path="url(#clipPath7)" fill="none" width="451"
                   height="71" stroke="rgb(245,121,0)"/>
             <text x="13" y="437" clip-path="url(#clipPath9)" stroke="none"
                   font-weight="normal" xml:space="preserve">Cargamos el dataset </text><text x="0"
                   y="456" clip-path="url(#clipPath9)" stroke="none"
-                  font-weight="normal" xml:space="preserve">en el workflow de knime</text><text x="1163"
+                  font-weight="normal" xml:space="preserve">en el workflow de knime</text><text x="1443"
                   y="203" clip-path="url(#clipPath10)" stroke="none"
-                  font-weight="normal" xml:space="preserve">Expandir este metandoo para ver</text><text x="1181"
+                  font-weight="normal" xml:space="preserve">Expandir este metandoo para ver</text><text x="1461"
                   y="222" clip-path="url(#clipPath10)" stroke="none"
-                  font-weight="normal" xml:space="preserve">la exploración de los datos</text><text x="1282"
+                  font-weight="normal" xml:space="preserve">la exploración de los datos</text><text x="1442"
                   y="503" clip-path="url(#clipPath11)" stroke="none"
-                  font-weight="normal" xml:space="preserve">Expandir este metanodo para ver</text><text x="1264"
+                  font-weight="normal" xml:space="preserve">Expandir este metanodo para ver</text><text x="1424"
                   y="522" clip-path="url(#clipPath11)" stroke="none"
-                  font-weight="normal" xml:space="preserve">la exploración de distintos modelos</text><text x="1246"
+                  font-weight="normal" xml:space="preserve">la exploración de distintos modelos</text><text x="1406"
                   y="541" clip-path="url(#clipPath11)" stroke="none"
-                  font-weight="normal" xml:space="preserve">usando 5-fold cross validation. Podemos</text><text x="1246"
+                  font-weight="normal" xml:space="preserve">usando 5-fold cross validation. Podemos</text><text x="1406"
                   y="560" clip-path="url(#clipPath11)" stroke="none"
-                  font-weight="normal" xml:space="preserve">mirar el output port para consultar la </text><text x="1242"
+                  font-weight="normal" xml:space="preserve">mirar el output port para consultar la </text><text x="1402"
                   y="579" clip-path="url(#clipPath11)" stroke="none"
-                  font-weight="normal" xml:space="preserve">tabla de datos agregados. Dentro tenemos</text><text x="1260"
+                  font-weight="normal" xml:space="preserve">tabla de datos agregados. Dentro tenemos</text><text x="1420"
                   y="598" clip-path="url(#clipPath11)" stroke="none"
-                  font-weight="normal" xml:space="preserve">las curvas ROC en una única gráfica.</text><text x="1242"
+                  font-weight="normal" xml:space="preserve">las curvas ROC en una única gráfica.</text><text x="1402"
                   y="636" clip-path="url(#clipPath11)" stroke="none"
-                  font-weight="normal" xml:space="preserve">Cada cross validation lleva su procesado</text><text x="1233"
+                  font-weight="normal" xml:space="preserve">Cada cross validation lleva su procesado</text><text x="1393"
                   y="655" clip-path="url(#clipPath11)" stroke="none"
                   font-weight="normal" xml:space="preserve">de datos, con training y test por separado</text><text x="554"
                   y="516" clip-path="url(#clipPath12)" stroke="none"
@@ -637,13 +637,13 @@ rkJggg==" xlink:actuate="onLoad"/>
                   y="554" clip-path="url(#clipPath12)" stroke="none"
                   font-weight="normal" xml:space="preserve">con missing values nos deja con</text><text x="518"
                   y="573" clip-path="url(#clipPath12)" stroke="none"
-                  font-weight="normal" xml:space="preserve">la mitad de las filas originales</text><text x="1172"
+                  font-weight="normal" xml:space="preserve">la mitad de las filas originales</text><text x="1452"
                   y="962" clip-path="url(#clipPath13)" stroke="none"
-                  font-weight="normal" xml:space="preserve">Ajuste de los hiperparámetros</text><text x="1181"
+                  font-weight="normal" xml:space="preserve">Ajuste de los hiperparámetros</text><text x="1461"
                   y="981" clip-path="url(#clipPath13)" stroke="none"
-                  font-weight="normal" xml:space="preserve">de dos algoritmos que hemos</text><text x="1176"
+                  font-weight="normal" xml:space="preserve">de dos algoritmos que hemos</text><text x="1456"
                   y="1000" clip-path="url(#clipPath13)" stroke="none"
-                  font-weight="normal" xml:space="preserve">escogido. Expandir este nodo</text><text x="1190"
+                  font-weight="normal" xml:space="preserve">escogido. Expandir este nodo</text><text x="1470"
                   y="1019" clip-path="url(#clipPath13)" stroke="none"
                   font-weight="normal" xml:space="preserve">para comprobar el proceso</text><text x="225"
                   y="437" clip-path="url(#clipPath14)" stroke="none"
@@ -653,13 +653,13 @@ rkJggg==" xlink:actuate="onLoad"/>
                   y="475" clip-path="url(#clipPath14)" stroke="none"
                   font-weight="normal" xml:space="preserve">con los siguientes datasets con</text><text x="234"
                   y="494" clip-path="url(#clipPath14)" stroke="none"
-                  font-weight="normal" xml:space="preserve">los que vamos a trabajar</text><text x="1920"
+                  font-weight="normal" xml:space="preserve">los que vamos a trabajar</text><text x="2200"
                   y="203" clip-path="url(#clipPath15)" stroke="none"
-                  font-weight="normal" xml:space="preserve">Hemos visto que PCA tiene muy buenos</text><text x="1924"
+                  font-weight="normal" xml:space="preserve">Hemos visto que PCA tiene muy buenos</text><text x="2204"
                   y="222" clip-path="url(#clipPath15)" stroke="none"
-                  font-weight="normal" xml:space="preserve">resultados. Por ello, aplicamos PCA</text><text x="1933"
+                  font-weight="normal" xml:space="preserve">resultados. Por ello, aplicamos PCA</text><text x="2213"
                   y="241" clip-path="url(#clipPath15)" stroke="none"
-                  font-weight="normal" xml:space="preserve">y usamos un algoritmo simple para</text><text x="1924"
+                  font-weight="normal" xml:space="preserve">y usamos un algoritmo simple para</text><text x="2204"
                   y="260" clip-path="url(#clipPath15)" stroke="none"
                   font-weight="normal" xml:space="preserve">ver la efectividad de este proceso.</text><text x="925"
                   y="516" clip-path="url(#clipPath16)" stroke="none"
@@ -719,10 +719,10 @@ ir3V90X5ySZEZDHapZQLqWyHf0U8CySxQQxQQitb8R1Aad2UTw6JfgAAAABJRU5E
 rkJggg==" xlink:actuate="onLoad"/>
             <polygon clip-path="url(#clipPath22)"
                      points=" 119 376 128 380 119 385" stroke="none"/>
-            <text xml:space="preserve" x="1248" y="113"
+            <text xml:space="preserve" x="1528" y="113"
                   clip-path="url(#clipPath23)" stroke="none">Exploratory</text><text xml:space="preserve"
-                  x="1238" y="133" clip-path="url(#clipPath24)" stroke="none">Data Analysis</text><image xmlns:xlink="http://www.w3.org/1999/xlink"
-                   transform="matrix(1,0,0,1,1286,144)" width="32"
+                  x="1518" y="133" clip-path="url(#clipPath24)" stroke="none">Data Analysis</text><image xmlns:xlink="http://www.w3.org/1999/xlink"
+                   transform="matrix(1,0,0,1,1566,144)" width="32"
                    xlink:show="embed" xlink:type="simple"
                    clip-path="url(#clipPath18)" preserveAspectRatio="none"
                    font-weight="normal" height="32" x="0" y="0"
@@ -730,7 +730,7 @@ rkJggg==" xlink:actuate="onLoad"/>
 IBQCUb7jUalak1qsjlWQLAEpLyVKbVfG5F9nL8t4H1NJ5gAAAAAAAAAAAAAAAAAA
 AADhvucPJbgFY3M3FzIAAAAASUVORK5CYII=" xlink:actuate="onLoad"/>
             <image xmlns:xlink="http://www.w3.org/1999/xlink"
-                   transform="matrix(1,0,0,1,1294,152)" width="16"
+                   transform="matrix(1,0,0,1,1574,152)" width="16"
                    xlink:show="embed" xlink:type="simple"
                    clip-path="url(#clipPath19)" preserveAspectRatio="none"
                    font-weight="normal" height="16" x="0" y="0"
@@ -745,10 +745,10 @@ bVPpK33oMQQPrFm9z3+nF8su/P//rz/QIDE0dZ8Y//0PluZ//RTdAJR0YCJ19hs7
 C5MF0LpbaCn+gKns1VPY0ghGQtKXuPSV6QeHGdDjZ0FRBnTN3X8c32NplhsBEvB+
 /elUcvwAAAAASUVORK5CYII=" xlink:actuate="onLoad"/>
             <polygon clip-path="url(#clipPath25)"
-                     points=" 1277 155 1286 159 1277 164" stroke="none"/>
-            <text xml:space="preserve" x="1343" y="433"
+                     points=" 1557 155 1566 159 1557 164" stroke="none"/>
+            <text xml:space="preserve" x="1503" y="433"
                   clip-path="url(#clipPath26)" stroke="none">Cross Validation</text><image xmlns:xlink="http://www.w3.org/1999/xlink"
-                   transform="matrix(1,0,0,1,1406,444)" width="32"
+                   transform="matrix(1,0,0,1,1566,444)" width="32"
                    xlink:show="embed" xlink:type="simple"
                    clip-path="url(#clipPath18)" preserveAspectRatio="none"
                    font-weight="normal" height="32" x="0" y="0"
@@ -756,7 +756,7 @@ C5MF0LpbaCn+gKns1VPY0ghGQtKXuPSV6QeHGdDjZ0FRBnTN3X8c32NplhsBEvB+
 IBQCUb7jUalak1qsjlWQLAEpLyVKbVfG5F9nL8t4H1NJ5gAAAAAAAAAAAAAAAAAA
 AADhvucPJbgFY3M3FzIAAAAASUVORK5CYII=" xlink:actuate="onLoad"/>
             <image xmlns:xlink="http://www.w3.org/1999/xlink"
-                   transform="matrix(1,0,0,1,1414,452)" width="16"
+                   transform="matrix(1,0,0,1,1574,452)" width="16"
                    xlink:show="embed" xlink:type="simple"
                    clip-path="url(#clipPath19)" preserveAspectRatio="none"
                    font-weight="normal" height="16" x="0" y="0"
@@ -770,11 +770,11 @@ XRpA8w3NBCC5xFZn4byGopAyd+DnPZifHSO0SFSfgaNfHb7D6CLJa9BVIjF9Lofm
 GVF1TYDpaEMrzIikAjRPst96JSUWTs6VCLlP3qAzeRZUq1S1VcHKZqEwjUZhK1Wn
 8d/4AmSylsd4KZ0LAAAAAElFTkSuQmCC" xlink:actuate="onLoad"/>
             <polygon clip-path="url(#clipPath27)"
-                     points=" 1397 455 1406 459 1397 464" stroke="none"/>
+                     points=" 1557 455 1566 459 1557 464" stroke="none"/>
             <polygon clip-path="url(#clipPath28)"
-                     points=" 1438 455 1447 459 1438 464" stroke="none"/>
+                     points=" 1598 455 1607 459 1598 464" stroke="none"/>
             <image xmlns:xlink="http://www.w3.org/1999/xlink"
-                   transform="matrix(1,0,0,1,1433,456)" width="7"
+                   transform="matrix(1,0,0,1,1593,456)" width="7"
                    xlink:show="embed" xlink:type="simple"
                    clip-path="url(#clipPath29)" preserveAspectRatio="none"
                    font-weight="normal" height="7" x="0" y="0"
@@ -838,10 +838,10 @@ KCZEfQAAAABJRU5ErkJggg==" xlink:actuate="onLoad"/>
                      points=" 678 445 687 449 678 454" stroke="none"/>
             <polygon fill="rgb(20,105,175)" clip-path="url(#clipPath34)"
                      points=" 678 464 687 464 687 473 678 473" stroke="none"/>
-            <text xml:space="preserve" x="1253" y="872"
+            <text xml:space="preserve" x="1533" y="872"
                   clip-path="url(#clipPath35)" stroke="none">Two models</text><text xml:space="preserve"
-                  x="1199" y="892" clip-path="url(#clipPath36)" stroke="none">hyperparameter tuning</text><image xmlns:xlink="http://www.w3.org/1999/xlink"
-                   transform="matrix(1,0,0,1,1286,903)" width="32"
+                  x="1479" y="892" clip-path="url(#clipPath36)" stroke="none">hyperparameter tuning</text><image xmlns:xlink="http://www.w3.org/1999/xlink"
+                   transform="matrix(1,0,0,1,1566,903)" width="32"
                    xlink:show="embed" xlink:type="simple"
                    clip-path="url(#clipPath18)" preserveAspectRatio="none"
                    font-weight="normal" height="32" x="0" y="0"
@@ -849,7 +849,7 @@ KCZEfQAAAABJRU5ErkJggg==" xlink:actuate="onLoad"/>
 IBQCUb7jUalak1qsjlWQLAEpLyVKbVfG5F9nL8t4H1NJ5gAAAAAAAAAAAAAAAAAA
 AADhvucPJbgFY3M3FzIAAAAASUVORK5CYII=" xlink:actuate="onLoad"/>
             <image xmlns:xlink="http://www.w3.org/1999/xlink"
-                   transform="matrix(1,0,0,1,1294,911)" width="16"
+                   transform="matrix(1,0,0,1,1574,911)" width="16"
                    xlink:show="embed" xlink:type="simple"
                    clip-path="url(#clipPath19)" preserveAspectRatio="none"
                    font-weight="normal" height="16" x="0" y="0"
@@ -863,7 +863,7 @@ XRpA8w3NBCC5xFZn4byGopAyd+DnPZifHSO0SFSfgaNfHb7D6CLJa9BVIjF9Lofm
 GVF1TYDpaEMrzIikAjRPst96JSUWTs6VCLlP3qAzeRZUq1S1VcHKZqEwjUZhK1Wn
 8d/4AmSylsd4KZ0LAAAAAElFTkSuQmCC" xlink:actuate="onLoad"/>
             <polygon clip-path="url(#clipPath37)"
-                     points=" 1277 914 1286 918 1277 923" stroke="none"/>
+                     points=" 1557 914 1566 918 1557 923" stroke="none"/>
             <text xml:space="preserve" x="278" y="354"
                   clip-path="url(#clipPath38)" stroke="none">Column Rename</text><image xmlns:xlink="http://www.w3.org/1999/xlink"
                    transform="matrix(1,0,0,1,326,365)" width="32"
@@ -905,9 +905,9 @@ rkJggg==" xlink:actuate="onLoad"/>
                      points=" 317 376 326 380 317 385" stroke="none"/>
             <polygon clip-path="url(#clipPath40)"
                      points=" 358 376 367 380 358 385" stroke="none"/>
-            <text xml:space="preserve" x="2023" y="133"
+            <text xml:space="preserve" x="2303" y="133"
                   clip-path="url(#clipPath41)" stroke="none">PCA Learning</text><image xmlns:xlink="http://www.w3.org/1999/xlink"
-                   transform="matrix(1,0,0,1,2066,144)" width="32"
+                   transform="matrix(1,0,0,1,2346,144)" width="32"
                    xlink:show="embed" xlink:type="simple"
                    clip-path="url(#clipPath18)" preserveAspectRatio="none"
                    font-weight="normal" height="32" x="0" y="0"
@@ -915,7 +915,7 @@ rkJggg==" xlink:actuate="onLoad"/>
 IBQCUb7jUalak1qsjlWQLAEpLyVKbVfG5F9nL8t4H1NJ5gAAAAAAAAAAAAAAAAAA
 AADhvucPJbgFY3M3FzIAAAAASUVORK5CYII=" xlink:actuate="onLoad"/>
             <image xmlns:xlink="http://www.w3.org/1999/xlink"
-                   transform="matrix(1,0,0,1,2074,152)" width="16"
+                   transform="matrix(1,0,0,1,2354,152)" width="16"
                    xlink:show="embed" xlink:type="simple"
                    clip-path="url(#clipPath19)" preserveAspectRatio="none"
                    font-weight="normal" height="16" x="0" y="0"
@@ -929,7 +929,7 @@ XRpA8w3NBCC5xFZn4byGopAyd+DnPZifHSO0SFSfgaNfHb7D6CLJa9BVIjF9Lofm
 GVF1TYDpaEMrzIikAjRPst96JSUWTs6VCLlP3qAzeRZUq1S1VcHKZqEwjUZhK1Wn
 8d/4AmSylsd4KZ0LAAAAAElFTkSuQmCC" xlink:actuate="onLoad"/>
             <polygon clip-path="url(#clipPath42)"
-                     points=" 2057 155 2066 159 2057 164" stroke="none"/>
+                     points=" 2337 155 2346 159 2337 164" stroke="none"/>
             <text xml:space="preserve" x="1018" y="433"
                   clip-path="url(#clipPath43)" stroke="none">Column Filter</text><image xmlns:xlink="http://www.w3.org/1999/xlink"
                    transform="matrix(1,0,0,1,1066,444)" width="32"
@@ -971,30 +971,31 @@ rkJggg==" xlink:actuate="onLoad"/>
             <polygon clip-path="url(#clipPath45)"
                      points=" 1098 455 1107 459 1098 464" stroke="none"/>
         </g>
-        <g stroke-linecap="butt" font-size="14" fill="rgb(150,150,150)"
+        <g stroke-linecap="butt" font-size="14" fill="rgb(75,75,75)"
            text-rendering="optimizeLegibility"
-           font-family="&apos;JetBrains Mono&apos;" stroke="rgb(150,150,150)">
+           font-family="&apos;JetBrains Mono&apos;" stroke="rgb(75,75,75)"
+           stroke-width="2">
             <path fill="none"
-                  d="M1106 458 C1108 458 1112 458 1114 458 C1195 458 1306 458 1387 458 C1389 458 1393 458 1395 458"
+                  d="M1106 458 C1108 458 1112 458 1114 458 C1243 458 1417 458 1546 458 C1548 458 1552 458 1554 458"
                   clip-path="url(#clipPath46)" fill-rule="evenodd"/>
-            <path fill="none"
-                  d="M366 380 C368 380 372 380 374 380 C880 380 1541 158 2047 158 C2049 158 2053 158 2055 158"
-                  clip-path="url(#clipPath46)" fill-rule="evenodd"/>
-            <path fill="none"
-                  d="M686 448 C688 448 692 448 694 448 C916 448 1045 917 1267 917 C1269 917 1273 917 1275 917"
-                  clip-path="url(#clipPath46)" fill-rule="evenodd"/>
-            <path fill="none"
-                  d="M366 380 C368 380 372 380 374 380 C650 380 991 158 1267 158 C1269 158 1273 158 1275 158"
-                  clip-path="url(#clipPath46)" fill-rule="evenodd"/>
-            <path fill="none"
-                  d="M127 380 C129 380 133 380 135 380 C186 380 256 380 307 380 C309 380 313 380 315 380"
-                  clip-path="url(#clipPath46)" fill-rule="evenodd"/>
-            <path fill="none"
-                  d="M686 448 C688 448 692 448 694 448 C799 448 942 458 1047 458 C1049 458 1053 458 1055 458"
-                  clip-path="url(#clipPath46)" fill-rule="evenodd"/>
-            <path fill="none"
-                  d="M366 380 C368 380 372 380 374 380 C453 380 548 458 627 458 C629 458 633 458 635 458"
-                  clip-path="url(#clipPath46)" fill-rule="evenodd"/>
+            <path clip-path="url(#clipPath46)" fill="none" fill-rule="evenodd"
+                  d="M366 380 C368 380 372 380 374 380 C963 380 1737 158 2326 158 C2328 158 2332 158 2334 158"
+                  stroke="rgb(150,150,150)" stroke-width="1"/>
+            <path clip-path="url(#clipPath46)" fill="none" fill-rule="evenodd"
+                  d="M686 448 C688 448 692 448 694 448 C985 448 1255 918 1546 918 C1548 918 1552 918 1554 918"
+                  stroke="rgb(150,150,150)" stroke-width="1"/>
+            <path clip-path="url(#clipPath46)" fill="none" fill-rule="evenodd"
+                  d="M366 380 C368 380 372 380 374 380 C731 380 1189 158 1546 158 C1548 158 1552 158 1554 158"
+                  stroke="rgb(150,150,150)" stroke-width="1"/>
+            <path clip-path="url(#clipPath46)" fill="none" fill-rule="evenodd"
+                  d="M128 380 C130 380 134 380 136 380 C187 380 255 380 306 380 C308 380 312 380 314 380"
+                  stroke="rgb(150,150,150)" stroke-width="1"/>
+            <path clip-path="url(#clipPath46)" fill="none" fill-rule="evenodd"
+                  d="M686 448 C688 448 692 448 694 448 C799 448 941 458 1046 458 C1048 458 1052 458 1054 458"
+                  stroke="rgb(150,150,150)" stroke-width="1"/>
+            <path clip-path="url(#clipPath46)" fill="none" fill-rule="evenodd"
+                  d="M366 380 C368 380 372 380 374 380 C453 380 547 458 626 458 C628 458 632 458 634 458"
+                  stroke="rgb(150,150,150)" stroke-width="1"/>
         </g>
     </g>
 </svg>

@@ -157,6 +157,7 @@
 - Tenemos demasiadas columnas. Podemos decidir con un árbol de decisión cuáles son las variables más relevantes
 - Las variables nominales tienen demasiados valores para las salidas
 - Longitud y latitud tienen demasiados valores únicos
+- Nuestra varible positiva, por ser la de mayor interés, será la de *"no funcional"*
 1. Variables muy correladas linealmente entre ellas
     - Hay variables que están muy correladas dos a dos
     - `extraction_type{...}` tres variables muy correladas dos a dos
@@ -178,6 +179,7 @@
     - La primera opción que contemplo es usar interpolación lineal para los valores más usados y el valor más frecuente para strings
 3. Clase de salida desbalanceada
     - Las clases de salida están desbalanceada: 3200 funcionales, 22000 no funcionales
+    - Por eso, hacemos **SMOTE** y, de nuevo, comparamos los resultados obtenidos
 4. Outliers
 5. Comprobar que cross validation funciona
 6. Comprobar que no haya algoritmos en Cross Validation con resultados catastróficos (esto demuestra algún fallo concreto en el problema)
