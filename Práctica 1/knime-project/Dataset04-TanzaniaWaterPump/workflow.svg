@@ -48,7 +48,7 @@
                 <path d="M892 485 L1272 485 L1272 658 L892 658 L892 485 Z"/>
             </clipPath>
             <clipPath clipPathUnits="userSpaceOnUse" id="clipPath12">
-                <path d="M495 498 L830 498 L830 576 L495 576 L495 498 Z"/>
+                <path d="M517 498 L810 498 L810 576 L517 576 L517 498 Z"/>
             </clipPath>
             <clipPath clipPathUnits="userSpaceOnUse" id="clipPath13">
                 <path d="M951 945 L1214 945 L1214 1023 L951 1023 L951 945 Z"/>
@@ -220,15 +220,15 @@
                   y="635" clip-path="url(#clipPath11)" fill="black"
                   stroke="none" xml:space="preserve">Cada cross validation lleva su procesado</text><text x="893"
                   y="654" clip-path="url(#clipPath11)" fill="black"
-                  stroke="none" xml:space="preserve">de datos, con training y test por separado</text><text x="536"
+                  stroke="none" xml:space="preserve">de datos, con training y test por separado</text><text x="554"
                   y="515" clip-path="url(#clipPath12)" fill="black"
-                  stroke="none" xml:space="preserve">Borramos las fila que tengan</text><text x="496"
+                  stroke="none" xml:space="preserve">Interpolamos los missing</text><text x="545"
                   y="534" clip-path="url(#clipPath12)" fill="black"
-                  stroke="none" xml:space="preserve">algun missing value en sus atributos.</text><text x="496"
+                  stroke="none" xml:space="preserve">values porque borrar filas</text><text x="523"
                   y="553" clip-path="url(#clipPath12)" fill="black"
-                  stroke="none" xml:space="preserve">Vemos que no estamos borrando ninguna</text><text x="640"
+                  stroke="none" xml:space="preserve">con missing values nos deja con</text><text x="518"
                   y="572" clip-path="url(#clipPath12)" fill="black"
-                  stroke="none" xml:space="preserve">fila.</text><text x="952"
+                  stroke="none" xml:space="preserve">la mitad de las filas originales</text><text x="952"
                   y="962" clip-path="url(#clipPath13)" fill="black"
                   stroke="none" xml:space="preserve">Ajuste de los hiperparámetros</text><text x="961"
                   y="981" clip-path="url(#clipPath13)" fill="black"
@@ -567,15 +567,15 @@ GVF1TYDpaEMrzIikAjRPst96JSUWTs6VCLlP3qAzeRZUq1S1VcHKZqEwjUZhK1Wn
                   y="635" clip-path="url(#clipPath11)" stroke="none"
                   font-weight="normal" xml:space="preserve">Cada cross validation lleva su procesado</text><text x="893"
                   y="654" clip-path="url(#clipPath11)" stroke="none"
-                  font-weight="normal" xml:space="preserve">de datos, con training y test por separado</text><text x="536"
+                  font-weight="normal" xml:space="preserve">de datos, con training y test por separado</text><text x="554"
                   y="515" clip-path="url(#clipPath12)" stroke="none"
-                  font-weight="normal" xml:space="preserve">Borramos las fila que tengan</text><text x="496"
+                  font-weight="normal" xml:space="preserve">Interpolamos los missing</text><text x="545"
                   y="534" clip-path="url(#clipPath12)" stroke="none"
-                  font-weight="normal" xml:space="preserve">algun missing value en sus atributos.</text><text x="496"
+                  font-weight="normal" xml:space="preserve">values porque borrar filas</text><text x="523"
                   y="553" clip-path="url(#clipPath12)" stroke="none"
-                  font-weight="normal" xml:space="preserve">Vemos que no estamos borrando ninguna</text><text x="640"
+                  font-weight="normal" xml:space="preserve">con missing values nos deja con</text><text x="518"
                   y="572" clip-path="url(#clipPath12)" stroke="none"
-                  font-weight="normal" xml:space="preserve">fila.</text><text x="952"
+                  font-weight="normal" xml:space="preserve">la mitad de las filas originales</text><text x="952"
                   y="962" clip-path="url(#clipPath13)" stroke="none"
                   font-weight="normal" xml:space="preserve">Ajuste de los hiperparámetros</text><text x="961"
                   y="981" clip-path="url(#clipPath13)" stroke="none"
@@ -863,19 +863,19 @@ GVF1TYDpaEMrzIikAjRPst96JSUWTs6VCLlP3qAzeRZUq1S1VcHKZqEwjUZhK1Wn
            text-rendering="optimizeLegibility"
            font-family="&apos;JetBrains Mono&apos;" stroke="rgb(150,150,150)">
             <path fill="none"
-                  d="M127 378 C129 378 133 378 135 378 C186 378 256 378 307 378 C309 378 313 378 315 378"
+                  d="M366 378 C368 378 372 378 374 378 C814 378 1387 158 1827 158 C1829 158 1833 158 1835 158"
                   clip-path="url(#clipPath42)" fill-rule="evenodd"/>
             <path fill="none"
-                  d="M366 378 C368 378 372 378 374 378 C814 378 1387 158 1827 158 C1829 158 1833 158 1835 158"
+                  d="M686 448 C688 448 692 448 694 448 C870 448 871 917 1047 917 C1049 917 1053 917 1055 917"
                   clip-path="url(#clipPath42)" fill-rule="evenodd"/>
             <path fill="none"
                   d="M366 378 C368 378 372 378 374 378 C586 378 835 158 1047 158 C1049 158 1053 158 1055 158"
                   clip-path="url(#clipPath42)" fill-rule="evenodd"/>
             <path fill="none"
-                  d="M366 378 C368 378 372 378 374 378 C453 378 548 457 627 457 C629 457 633 457 635 457"
+                  d="M127 378 C129 378 133 378 135 378 C186 378 256 378 307 378 C309 378 313 378 315 378"
                   clip-path="url(#clipPath42)" fill-rule="evenodd"/>
             <path fill="none"
-                  d="M686 448 C688 448 692 448 694 448 C870 448 871 917 1047 917 C1049 917 1053 917 1055 917"
+                  d="M366 378 C368 378 372 378 374 378 C453 378 548 457 627 457 C629 457 633 457 635 457"
                   clip-path="url(#clipPath42)" fill-rule="evenodd"/>
         </g>
     </g>

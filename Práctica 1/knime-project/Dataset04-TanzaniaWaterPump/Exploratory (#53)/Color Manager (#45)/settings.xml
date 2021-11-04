@@ -6,16 +6,16 @@
         <entry key="memory_policy" type="xstring" value="CacheSmallInMemory"/>
     </config>
     <config key="model">
-        <entry key="selected_column" type="xstring" value="PCA dimension 0"/>
+        <entry key="selected_column" type="xstring" value="Target Class"/>
         <entry key="is_nominal" type="xboolean" value="false"/>
-        <entry key="min_color" type="xint" value="-65536"/>
-        <entry key="max_color" type="xint" value="-16776961"/>
+        <entry key="min_color" type="xint" value="-15273417"/>
+        <entry key="max_color" type="xint" value="-3165711"/>
     </config>
     <config key="nodeAnnotation">
         <entry key="text" type="xstring" value="Coloreamos según%%00010la clase"/>
         <entry key="bgcolor" type="xint" value="16777215"/>
-        <entry key="x-coordinate" type="xint" value="1239"/>
-        <entry key="y-coordinate" type="xint" value="677"/>
+        <entry key="x-coordinate" type="xint" value="1499"/>
+        <entry key="y-coordinate" type="xint" value="679"/>
         <entry key="width" type="xint" value="162"/>
         <entry key="height" type="xint" value="38"/>
         <entry key="alignment" type="xstring" value="CENTER"/>
@@ -55,14 +55,14 @@
             <entry key="index" type="xint" value="1"/>
             <entry key="port_spec_class" type="xstring" value="org.knime.core.data.DataTableSpec"/>
             <entry key="port_object_class" type="xstring" value="org.knime.core.node.BufferedDataTable"/>
-            <entry key="port_object_summary" type="xstring" value="Rows: 55083, Cols: 5"/>
+            <entry key="port_object_summary" type="xstring" value="Rows: 25800, Cols: 5"/>
             <entry key="port_dir_location" type="xstring" value="port_1"/>
         </config>
         <config key="port_2">
             <entry key="index" type="xint" value="2"/>
             <entry key="port_spec_class" type="xstring" value="org.knime.core.data.DataTableSpec"/>
             <entry key="port_object_class" type="xstring" value="org.knime.core.node.port.viewproperty.ColorHandlerPortObject"/>
-            <entry key="port_object_summary" type="xstring" value="Coloring on &quot;PCA dimension 0&quot;"/>
+            <entry key="port_object_summary" type="xstring" value="Coloring on &quot;Target Class&quot;"/>
             <entry key="port_spec_location" type="xstring" value="spec/spec.zip"/>
             <entry key="port_object_location" type="xstring" value="object/portobject.zip"/>
             <entry key="port_dir_location" type="xstring" value="port_2"/>
@@ -70,6 +70,6 @@
     </config>
     <config key="filestores">
         <entry key="file_store_location" type="xstring" isnull="true" value=""/>
-        <entry key="file_store_id" type="xstring" value="2c9cbff1-3c61-4d36-bb91-ce5c34a9afeb"/>
+        <entry key="file_store_id" type="xstring" value="bebda1eb-9cda-4947-a4fa-765e3c7ea432"/>
     </config>
 </config>

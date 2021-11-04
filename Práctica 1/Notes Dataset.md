@@ -154,14 +154,15 @@
 
 ## 04: Tanzania Water Pump
 
-
 - Tenemos demasiadas columnas. Podemos decidir con un árbol de decisión cuáles son las variables más relevantes
 - Las variables nominales tienen demasiados valores para las salidas
+- Longitud y latitud tienen demasiados valores únicos
 1. Variables muy correladas linealmente entre ellas
     - Hay variables que están muy correladas dos a dos
     - `extraction_type{...}` tres variables muy correladas dos a dos
     - `management{_grou}`: dos variables muy correladas
     - Y más ejemplos que son del tipo `algo{_subclases}`
+    - Tenemos 40 atributos, así que uso las correlaciones lineales para borrar algunos de estos atributos
 2. Missing values
     - Si borro los missing values me quedo con la mitad de las filas, por tanto esto no es una buena solución
     - La primera opción que contemplo es usar interpolación lineal para los valores más usados y el valor más frecuente para strings

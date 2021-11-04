@@ -15,8 +15,8 @@
             {
                 "id": "org.knime.base.node.stats.viz.extended.ExtendedStatisticsNodeFactory#Statistics",
                 "nrexecs": 61,
-                "nrfails": 2,
-                "exectime": 484659,
+                "nrfails": 3,
+                "exectime": 593831,
                 "nrcreated": 3,
                 "successor": "n/a"
             },
@@ -754,14 +754,14 @@
             "nrcreated": 0
         }
     },
-    "uptime": 2809840,
+    "uptime": 2765407,
     "workflowsOpened": 1,
     "remoteWorkflowsOpened": 0,
     "workflowsImported": 0,
     "workflowsExported": 0,
-    "launches": 39,
+    "launches": 40,
     "lastApplicationID": "org.knime.product.KNIME_APPLICATION",
-    "timeSinceLastStart": 26570,
+    "timeSinceLastStart": 1032532,
     "crashes": 5,
-    "properlyShutDown": true
+    "properlyShutDown": false
 }

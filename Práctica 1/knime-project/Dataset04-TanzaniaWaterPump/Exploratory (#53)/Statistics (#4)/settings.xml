@@ -89,7 +89,7 @@
             <entry key="SettingsModelID" type="xstring" value="SMID_integer"/>
             <entry key="EnabledStatus" type="xboolean" value="true"/>
         </config>
-        <entry key="num_nominal-values_output" type="xint" value="10000"/>
+        <entry key="num_nominal-values_output" type="xint" value="50000"/>
         <config key="enable HiLite_Internals">
             <entry key="SettingsModelID" type="xstring" value="SMID_boolean"/>
             <entry key="EnabledStatus" type="xboolean" value="true"/>
@@ -134,7 +134,7 @@
     <entry key="state" type="xstring" value="EXECUTED"/>
     <config key="nodecontainer_message">
         <entry key="type" type="xstring" value="WARNING"/>
-        <entry key="message" type="xstring" value="Maximum number of unique possible values (10000) exceeds for column(s): &quot;longitude&quot;,&quot;latitude&quot;,&quot;wpt_name&quot;,&quot;subvillage&quot;"/>
+        <entry key="message" type="xstring" value="Maximum number of unique possible values (50000) exceeds for column(s): &quot;longitude&quot;,&quot;latitude&quot;"/>
     </config>
     <entry key="factory" type="xstring" value="org.knime.base.node.stats.viz.extended.ExtendedStatisticsNodeFactory"/>
     <entry key="node-name" type="xstring" value="Statistics"/>
@@ -169,12 +169,12 @@
             <entry key="index" type="xint" value="3"/>
             <entry key="port_spec_class" type="xstring" value="org.knime.core.data.DataTableSpec"/>
             <entry key="port_object_class" type="xstring" value="org.knime.core.node.BufferedDataTable"/>
-            <entry key="port_object_summary" type="xstring" value="Rows: 2646, Cols: 120"/>
+            <entry key="port_object_summary" type="xstring" value="Rows: 35005, Cols: 120"/>
             <entry key="port_dir_location" type="xstring" value="port_3"/>
         </config>
     </config>
     <config key="filestores">
         <entry key="file_store_location" type="xstring" isnull="true" value=""/>
-        <entry key="file_store_id" type="xstring" value="66ebe763-f0ca-4459-8fd8-af770919cfdb"/>
+        <entry key="file_store_id" type="xstring" value="356fc4cc-bdda-4455-94f1-9dbadb4176cd"/>
     </config>
 </config>

@@ -38,38 +38,17 @@
             <config key="lower_bound">
                 <entry key="datacell" type="xstring" value="org.knime.core.data.def.DoubleCell"/>
                 <config key="org.knime.core.data.def.DoubleCell">
-                    <entry key="DoubleCell" type="xdouble" value="-529.782224804534"/>
+                    <entry key="DoubleCell" type="xdouble" value="-534.7836148875116"/>
                 </config>
             </config>
             <config key="upper_bound">
                 <entry key="datacell" type="xstring" value="org.knime.core.data.def.DoubleCell"/>
                 <config key="org.knime.core.data.def.DoubleCell">
-                    <entry key="DoubleCell" type="xdouble" value="249460.9083789766"/>
+                    <entry key="DoubleCell" type="xdouble" value="249458.70427472144"/>
                 </config>
             </config>
         </config>
         <config key="column_properties"/>
-        <config key="color_handler">
-            <entry key="color_model_class" type="xstring" value="org.knime.core.data.property.ColorModelRange"/>
-            <config key="color_model">
-                <entry key="lower_value" type="xdouble" value="-529.782224804534"/>
-                <entry key="upper_value" type="xdouble" value="249460.9083789766"/>
-                <config key="lower_color">
-                    <entry key="array-size" type="xint" value="4"/>
-                    <entry key="0" type="xint" value="255"/>
-                    <entry key="1" type="xint" value="0"/>
-                    <entry key="2" type="xint" value="0"/>
-                    <entry key="3" type="xint" value="255"/>
-                </config>
-                <config key="upper_color">
-                    <entry key="array-size" type="xint" value="4"/>
-                    <entry key="0" type="xint" value="0"/>
-                    <entry key="1" type="xint" value="0"/>
-                    <entry key="2" type="xint" value="255"/>
-                    <entry key="3" type="xint" value="255"/>
-                </config>
-            </config>
-        </config>
         <config key="meta_data"/>
     </config>
     <config key="column_spec_3">
@@ -84,13 +63,13 @@
             <config key="lower_bound">
                 <entry key="datacell" type="xstring" value="org.knime.core.data.def.DoubleCell"/>
                 <config key="org.knime.core.data.def.DoubleCell">
-                    <entry key="DoubleCell" type="xdouble" value="-5802.939919731647"/>
+                    <entry key="DoubleCell" type="xdouble" value="-5610.642803747272"/>
                 </config>
             </config>
             <config key="upper_bound">
                 <entry key="datacell" type="xstring" value="org.knime.core.data.def.DoubleCell"/>
                 <config key="org.knime.core.data.def.DoubleCell">
-                    <entry key="DoubleCell" type="xdouble" value="1503.276591084419"/>
+                    <entry key="DoubleCell" type="xdouble" value="1485.3437016673417"/>
                 </config>
             </config>
         </config>
@@ -120,6 +99,27 @@
             </config>
         </config>
         <config key="column_properties"/>
+        <config key="color_handler">
+            <entry key="color_model_class" type="xstring" value="org.knime.core.data.property.ColorModelRange"/>
+            <config key="color_model">
+                <entry key="lower_value" type="xdouble" value="0.0"/>
+                <entry key="upper_value" type="xdouble" value="1.0"/>
+                <config key="lower_color">
+                    <entry key="array-size" type="xint" value="4"/>
+                    <entry key="0" type="xint" value="22"/>
+                    <entry key="1" type="xint" value="242"/>
+                    <entry key="2" type="xint" value="55"/>
+                    <entry key="3" type="xint" value="255"/>
+                </config>
+                <config key="upper_color">
+                    <entry key="array-size" type="xint" value="4"/>
+                    <entry key="0" type="xint" value="207"/>
+                    <entry key="1" type="xint" value="177"/>
+                    <entry key="2" type="xint" value="241"/>
+                    <entry key="3" type="xint" value="255"/>
+                </config>
+            </config>
+        </config>
         <config key="meta_data"/>
     </config>
 </config>
