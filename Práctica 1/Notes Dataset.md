@@ -174,6 +174,7 @@
         - Quito `quality_group` y me quedo con `water_quality`
         - Quito `quantity_group` y me quedo con `quantity`
     - Con esto paso de 40 columnas a 28 columnas
+    - Mostramos el análisis exploratorio de datos tras borrar las columnas que no nos interesan
 2. Missing values
     - Si borro los missing values me quedo con la mitad de las filas, por tanto esto no es una buena solución
     - La primera opción que contemplo es usar interpolación lineal para los valores más usados y el valor más frecuente para strings
@@ -181,6 +182,8 @@
     - Las clases de salida están desbalanceada: 3200 funcionales, 22000 no funcionales
     - Por eso, hacemos **SMOTE** y, de nuevo, comparamos los resultados obtenidos
 4. Outliers
+    - Tenemos muchos outliers así que tenemos que borrarlos usando `3*IQR`
+    - Incluso tenemos muchos *outliers* después de filtrar las filas
 5. Comprobar que cross validation funciona
 6. Comprobar que no haya algoritmos en Cross Validation con resultados catastróficos (esto demuestra algún fallo concreto en el problema)
 7. Comprobar que la curva ROC se visualiza correctamente
