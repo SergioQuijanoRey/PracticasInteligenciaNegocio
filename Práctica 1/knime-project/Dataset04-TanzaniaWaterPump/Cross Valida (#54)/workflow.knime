@@ -244,7 +244,7 @@
             <config key="ui_settings">
                 <config key="extrainfo.node.bounds">
                     <entry key="array-size" type="xint" value="4"/>
-                    <entry key="0" type="xint" value="1684"/>
+                    <entry key="0" type="xint" value="1745"/>
                     <entry key="1" type="xint" value="657"/>
                     <entry key="2" type="xint" value="188"/>
                     <entry key="3" type="xint" value="70"/>
