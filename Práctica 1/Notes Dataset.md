@@ -140,6 +140,7 @@
     - SVM funciona muy mal:
         - SVM sin normalización con 10% de los datos
         - SVM con normalización directamente no lo ejecutamos
+        - En el siguiente [enlace](https://forum.knime.com/t/can-svm-learner-runtime-be-improved/27366/2) se muestra que el equipo de desarrolladores saben que funcionan mal
 6. Comprobar que no haya algoritmos en Cross Validation con resultados catastróficos (esto demuestra algún fallo concreto en el problema)
     - Por lo ya comentado, SVM tiene resultados realmente malos
     - El resto de algoritmos funcionan bien
@@ -186,6 +187,9 @@
     - Incluso tenemos muchos *outliers* después de filtrar las filas
 5. Comprobar que cross validation funciona
     - Support Vector Machine, en sus dos variantes, tarda muchísimo en ejecutar
+    - Hago `partitioning` para que SVM funcione en un tiempo razonable
+    - Uso también la implementación de *WEKA* para este *SVM*
+    - En el siguiente [enlace](https://forum.knime.com/t/can-svm-learner-runtime-be-improved/27366/2) se muestra que el equipo de desarrolladores saben que funcionan mal
 6. Comprobar que no haya algoritmos en Cross Validation con resultados catastróficos (esto demuestra algún fallo concreto en el problema)
 7. Comprobar que la curva ROC se visualiza correctamente
 8. Ajustar los valores para un par de parámetros
