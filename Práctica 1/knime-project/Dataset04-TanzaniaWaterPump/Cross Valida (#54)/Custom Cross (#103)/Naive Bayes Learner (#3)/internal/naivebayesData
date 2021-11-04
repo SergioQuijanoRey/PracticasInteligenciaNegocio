@@ -1,0 +1,1845 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns="http://www.knime.org/2008/09/XMLConfig" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.knime.org/2008/09/XMLConfig http://www.knime.org/XMLConfig_2008_09.xsd" key="naivebayesDataModel">
+    <entry key="ClassColumnName" type="xstring" value="Target Class"/>
+    <config key="ClassColumnType">
+        <entry key="cell_class" type="xstring" value="org.knime.core.data.def.StringCell"/>
+        <entry key="is_null" type="xboolean" value="false"/>
+    </config>
+    <entry key="skipMissingVals" type="xboolean" value="false"/>
+    <entry key="Threshold" type="xdouble" value="1.0E-4"/>
+    <config key="SkippedAttributes">
+        <entry key="SkippedAttributesCounter" type="xint" value="9"/>
+        <config key="SkippedAttributeData_0">
+            <entry key="attributeName" type="xstring" value="date_recorded"/>
+            <entry key="type" type="xstring" value="NominalModel"/>
+            <entry key="skipMissingVals" type="xboolean" value="false"/>
+            <entry key="numberOfMissingValues" type="xint" value="0"/>
+            <entry key="invalidCause" type="xstring" value="Too many values"/>
+            <config key="data">
+                <entry key="maxNoOfAttrs" type="xlong" value="20"/>
+                <entry key="noOfClasses" type="xlong" value="2"/>
+                <config key="attributeValues">
+                    <entry key="array-size" type="xint" value="20"/>
+                    <entry key="0" type="xstring" value="25/02/2013"/>
+                    <entry key="1" type="xstring" value="13/07/2011"/>
+                    <entry key="2" type="xstring" value="13/03/2011"/>
+                    <entry key="3" type="xstring" value="01/10/2012"/>
+                    <entry key="4" type="xstring" value="09/10/2012"/>
+                    <entry key="5" type="xstring" value="03/11/2012"/>
+                    <entry key="6" type="xstring" value="03/08/2011"/>
+                    <entry key="7" type="xstring" value="14/10/2012"/>
+                    <entry key="8" type="xstring" value="15/03/2013"/>
+                    <entry key="9" type="xstring" value="04/08/2011"/>
+                    <entry key="10" type="xstring" value="04/09/2011"/>
+                    <entry key="11" type="xstring" value="21/01/2013"/>
+                    <entry key="12" type="xstring" value="11/07/2011"/>
+                    <entry key="13" type="xstring" value="16/03/2013"/>
+                    <entry key="14" type="xstring" value="23/03/2011"/>
+                    <entry key="15" type="xstring" value="16/03/2011"/>
+                    <entry key="16" type="xstring" value="11/03/2011"/>
+                    <entry key="17" type="xstring" value="28/03/2013"/>
+                    <entry key="18" type="xstring" value="16/07/2011"/>
+                    <entry key="19" type="xstring" value="27/03/2011"/>
+                </config>
+                <config key="classValueData_0">
+                    <entry key="classValue" type="xstring" value="functional"/>
+                    <entry key="noOfRows" type="xlong" value="14"/>
+                    <entry key="MissingValCounter" type="xlong" value="0"/>
+                    <config key="attributeValues">
+                        <entry key="array-size" type="xint" value="14"/>
+                        <entry key="0" type="xstring" value="21/01/2013"/>
+                        <entry key="1" type="xstring" value="13/07/2011"/>
+                        <entry key="2" type="xstring" value="27/03/2011"/>
+                        <entry key="3" type="xstring" value="25/02/2013"/>
+                        <entry key="4" type="xstring" value="11/03/2011"/>
+                        <entry key="5" type="xstring" value="11/07/2011"/>
+                        <entry key="6" type="xstring" value="23/03/2011"/>
+                        <entry key="7" type="xstring" value="15/03/2013"/>
+                        <entry key="8" type="xstring" value="04/08/2011"/>
+                        <entry key="9" type="xstring" value="13/03/2011"/>
+                        <entry key="10" type="xstring" value="16/03/2011"/>
+                        <entry key="11" type="xstring" value="14/10/2012"/>
+                        <entry key="12" type="xstring" value="16/03/2013"/>
+                        <entry key="13" type="xstring" value="03/08/2011"/>
+                    </config>
+                    <config key="attributeCounter">
+                        <entry key="array-size" type="xint" value="14"/>
+                        <entry key="0" type="xlong" value="1"/>
+                        <entry key="1" type="xlong" value="1"/>
+                        <entry key="2" type="xlong" value="1"/>
+                        <entry key="3" type="xlong" value="1"/>
+                        <entry key="4" type="xlong" value="1"/>
+                        <entry key="5" type="xlong" value="1"/>
+                        <entry key="6" type="xlong" value="1"/>
+                        <entry key="7" type="xlong" value="1"/>
+                        <entry key="8" type="xlong" value="1"/>
+                        <entry key="9" type="xlong" value="1"/>
+                        <entry key="10" type="xlong" value="1"/>
+                        <entry key="11" type="xlong" value="1"/>
+                        <entry key="12" type="xlong" value="1"/>
+                        <entry key="13" type="xlong" value="1"/>
+                    </config>
+                </config>
+                <config key="classValueData_1">
+                    <entry key="classValue" type="xstring" value="non functional"/>
+                    <entry key="noOfRows" type="xlong" value="6"/>
+                    <entry key="MissingValCounter" type="xlong" value="0"/>
+                    <config key="attributeValues">
+                        <entry key="array-size" type="xint" value="6"/>
+                        <entry key="0" type="xstring" value="28/03/2013"/>
+                        <entry key="1" type="xstring" value="16/07/2011"/>
+                        <entry key="2" type="xstring" value="09/10/2012"/>
+                        <entry key="3" type="xstring" value="03/11/2012"/>
+                        <entry key="4" type="xstring" value="04/09/2011"/>
+                        <entry key="5" type="xstring" value="01/10/2012"/>
+                    </config>
+                    <config key="attributeCounter">
+                        <entry key="array-size" type="xint" value="6"/>
+                        <entry key="0" type="xlong" value="1"/>
+                        <entry key="1" type="xlong" value="1"/>
+                        <entry key="2" type="xlong" value="1"/>
+                        <entry key="3" type="xlong" value="1"/>
+                        <entry key="4" type="xlong" value="1"/>
+                        <entry key="5" type="xlong" value="1"/>
+                    </config>
+                </config>
+            </config>
+        </config>
+        <config key="SkippedAttributeData_1">
+            <entry key="attributeName" type="xstring" value="wpt_name"/>
+            <entry key="type" type="xstring" value="NominalModel"/>
+            <entry key="skipMissingVals" type="xboolean" value="false"/>
+            <entry key="numberOfMissingValues" type="xint" value="0"/>
+            <entry key="invalidCause" type="xstring" value="Too many values"/>
+            <config key="data">
+                <entry key="maxNoOfAttrs" type="xlong" value="20"/>
+                <entry key="noOfClasses" type="xlong" value="2"/>
+                <config key="attributeValues">
+                    <entry key="array-size" type="xint" value="20"/>
+                    <entry key="0" type="xstring" value="Kwa Mahundi"/>
+                    <entry key="1" type="xstring" value="Shuleni"/>
+                    <entry key="2" type="xstring" value="Tajiri"/>
+                    <entry key="3" type="xstring" value="Kwa Ngomho"/>
+                    <entry key="4" type="xstring" value="Tushirikiane"/>
+                    <entry key="5" type="xstring" value="Kwa Ramadhan Musa"/>
+                    <entry key="6" type="xstring" value="Kwapeto"/>
+                    <entry key="7" type="xstring" value="Pamba"/>
+                    <entry key="8" type="xstring" value="Kwa John Izack Mmari"/>
+                    <entry key="9" type="xstring" value="Kwa Juvenal Ching'Ombe"/>
+                    <entry key="10" type="xstring" value="Kwa Rose Chaula"/>
+                    <entry key="11" type="xstring" value="Kamsasa"/>
+                    <entry key="12" type="xstring" value="Kwawilliam"/>
+                    <entry key="13" type="xstring" value="Kwa Willium Kinda"/>
+                    <entry key="14" type="xstring" value="Ngosi"/>
+                    <entry key="15" type="xstring" value="Kituo Cha Maziwa"/>
+                    <entry key="16" type="xstring" value="none"/>
+                    <entry key="17" type="xstring" value="Sekondari"/>
+                    <entry key="18" type="xstring" value="Office Ya Kijiji"/>
+                    <entry key="19" type="xstring" value="Tangi"/>
+                </config>
+                <config key="classValueData_0">
+                    <entry key="classValue" type="xstring" value="functional"/>
+                    <entry key="noOfRows" type="xlong" value="14"/>
+                    <entry key="MissingValCounter" type="xlong" value="0"/>
+                    <config key="attributeValues">
+                        <entry key="array-size" type="xint" value="14"/>
+                        <entry key="0" type="xstring" value="Kwa John Izack Mmari"/>
+                        <entry key="1" type="xstring" value="Kwa Willium Kinda"/>
+                        <entry key="2" type="xstring" value="Kwa Mahundi"/>
+                        <entry key="3" type="xstring" value="Kwapeto"/>
+                        <entry key="4" type="xstring" value="none"/>
+                        <entry key="5" type="xstring" value="Kituo Cha Maziwa"/>
+                        <entry key="6" type="xstring" value="Pamba"/>
+                        <entry key="7" type="xstring" value="Tangi"/>
+                        <entry key="8" type="xstring" value="Kwa Juvenal Ching'Ombe"/>
+                        <entry key="9" type="xstring" value="Kwawilliam"/>
+                        <entry key="10" type="xstring" value="Shuleni"/>
+                        <entry key="11" type="xstring" value="Ngosi"/>
+                        <entry key="12" type="xstring" value="Tajiri"/>
+                        <entry key="13" type="xstring" value="Kamsasa"/>
+                    </config>
+                    <config key="attributeCounter">
+                        <entry key="array-size" type="xint" value="14"/>
+                        <entry key="0" type="xlong" value="1"/>
+                        <entry key="1" type="xlong" value="1"/>
+                        <entry key="2" type="xlong" value="1"/>
+                        <entry key="3" type="xlong" value="1"/>
+                        <entry key="4" type="xlong" value="1"/>
+                        <entry key="5" type="xlong" value="1"/>
+                        <entry key="6" type="xlong" value="1"/>
+                        <entry key="7" type="xlong" value="1"/>
+                        <entry key="8" type="xlong" value="1"/>
+                        <entry key="9" type="xlong" value="1"/>
+                        <entry key="10" type="xlong" value="1"/>
+                        <entry key="11" type="xlong" value="1"/>
+                        <entry key="12" type="xlong" value="1"/>
+                        <entry key="13" type="xlong" value="1"/>
+                    </config>
+                </config>
+                <config key="classValueData_1">
+                    <entry key="classValue" type="xstring" value="non functional"/>
+                    <entry key="noOfRows" type="xlong" value="6"/>
+                    <entry key="MissingValCounter" type="xlong" value="0"/>
+                    <config key="attributeValues">
+                        <entry key="array-size" type="xint" value="6"/>
+                        <entry key="0" type="xstring" value="Office Ya Kijiji"/>
+                        <entry key="1" type="xstring" value="Sekondari"/>
+                        <entry key="2" type="xstring" value="Kwa Rose Chaula"/>
+                        <entry key="3" type="xstring" value="Tushirikiane"/>
+                        <entry key="4" type="xstring" value="Kwa Ramadhan Musa"/>
+                        <entry key="5" type="xstring" value="Kwa Ngomho"/>
+                    </config>
+                    <config key="attributeCounter">
+                        <entry key="array-size" type="xint" value="6"/>
+                        <entry key="0" type="xlong" value="1"/>
+                        <entry key="1" type="xlong" value="1"/>
+                        <entry key="2" type="xlong" value="1"/>
+                        <entry key="3" type="xlong" value="1"/>
+                        <entry key="4" type="xlong" value="1"/>
+                        <entry key="5" type="xlong" value="1"/>
+                    </config>
+                </config>
+            </config>
+        </config>
+        <config key="SkippedAttributeData_2">
+            <entry key="attributeName" type="xstring" value="subvillage"/>
+            <entry key="type" type="xstring" value="NominalModel"/>
+            <entry key="skipMissingVals" type="xboolean" value="false"/>
+            <entry key="numberOfMissingValues" type="xint" value="0"/>
+            <entry key="invalidCause" type="xstring" value="Too many values"/>
+            <config key="data">
+                <entry key="maxNoOfAttrs" type="xlong" value="20"/>
+                <entry key="noOfClasses" type="xlong" value="2"/>
+                <config key="attributeValues">
+                    <entry key="array-size" type="xint" value="20"/>
+                    <entry key="0" type="xstring" value="Majengo"/>
+                    <entry key="1" type="xstring" value="Kyanyamisa"/>
+                    <entry key="2" type="xstring" value="Moa/Mwereme"/>
+                    <entry key="3" type="xstring" value="Ishinabulandi"/>
+                    <entry key="4" type="xstring" value="Nyawishi Center"/>
+                    <entry key="5" type="xstring" value="Imalauduki"/>
+                    <entry key="6" type="xstring" value="Mkonomre"/>
+                    <entry key="7" type="xstring" value="Nkilifa"/>
+                    <entry key="8" type="xstring" value="Omarini"/>
+                    <entry key="9" type="xstring" value="Tunzi"/>
+                    <entry key="10" type="xstring" value="Yeriko"/>
+                    <entry key="11" type="xstring" value="Msasa"/>
+                    <entry key="12" type="xstring" value="Chakahaya"/>
+                    <entry key="13" type="xstring" value="Merali"/>
+                    <entry key="14" type="xstring" value="Karume"/>
+                    <entry key="15" type="xstring" value="Kudipera"/>
+                    <entry key="16" type="xstring" value="Lupanga A"/>
+                    <entry key="17" type="xstring" value="Afya"/>
+                    <entry key="18" type="xstring" value="Ndanganyika"/>
+                    <entry key="19" type="xstring" value="Baura"/>
+                </config>
+                <config key="classValueData_0">
+                    <entry key="classValue" type="xstring" value="functional"/>
+                    <entry key="noOfRows" type="xlong" value="14"/>
+                    <entry key="MissingValCounter" type="xlong" value="0"/>
+                    <config key="attributeValues">
+                        <entry key="array-size" type="xint" value="14"/>
+                        <entry key="0" type="xstring" value="Kudipera"/>
+                        <entry key="1" type="xstring" value="Moa/Mwereme"/>
+                        <entry key="2" type="xstring" value="Tunzi"/>
+                        <entry key="3" type="xstring" value="Baura"/>
+                        <entry key="4" type="xstring" value="Majengo"/>
+                        <entry key="5" type="xstring" value="Kyanyamisa"/>
+                        <entry key="6" type="xstring" value="Omarini"/>
+                        <entry key="7" type="xstring" value="Merali"/>
+                        <entry key="8" type="xstring" value="Chakahaya"/>
+                        <entry key="9" type="xstring" value="Mkonomre"/>
+                        <entry key="10" type="xstring" value="Nkilifa"/>
+                        <entry key="11" type="xstring" value="Karume"/>
+                        <entry key="12" type="xstring" value="Lupanga A"/>
+                        <entry key="13" type="xstring" value="Msasa"/>
+                    </config>
+                    <config key="attributeCounter">
+                        <entry key="array-size" type="xint" value="14"/>
+                        <entry key="0" type="xlong" value="1"/>
+                        <entry key="1" type="xlong" value="1"/>
+                        <entry key="2" type="xlong" value="1"/>
+                        <entry key="3" type="xlong" value="1"/>
+                        <entry key="4" type="xlong" value="1"/>
+                        <entry key="5" type="xlong" value="1"/>
+                        <entry key="6" type="xlong" value="1"/>
+                        <entry key="7" type="xlong" value="1"/>
+                        <entry key="8" type="xlong" value="1"/>
+                        <entry key="9" type="xlong" value="1"/>
+                        <entry key="10" type="xlong" value="1"/>
+                        <entry key="11" type="xlong" value="1"/>
+                        <entry key="12" type="xlong" value="1"/>
+                        <entry key="13" type="xlong" value="1"/>
+                    </config>
+                </config>
+                <config key="classValueData_1">
+                    <entry key="classValue" type="xstring" value="non functional"/>
+                    <entry key="noOfRows" type="xlong" value="6"/>
+                    <entry key="MissingValCounter" type="xlong" value="0"/>
+                    <config key="attributeValues">
+                        <entry key="array-size" type="xint" value="6"/>
+                        <entry key="0" type="xstring" value="Afya"/>
+                        <entry key="1" type="xstring" value="Nyawishi Center"/>
+                        <entry key="2" type="xstring" value="Yeriko"/>
+                        <entry key="3" type="xstring" value="Ishinabulandi"/>
+                        <entry key="4" type="xstring" value="Ndanganyika"/>
+                        <entry key="5" type="xstring" value="Imalauduki"/>
+                    </config>
+                    <config key="attributeCounter">
+                        <entry key="array-size" type="xint" value="6"/>
+                        <entry key="0" type="xlong" value="1"/>
+                        <entry key="1" type="xlong" value="1"/>
+                        <entry key="2" type="xlong" value="1"/>
+                        <entry key="3" type="xlong" value="1"/>
+                        <entry key="4" type="xlong" value="1"/>
+                        <entry key="5" type="xlong" value="1"/>
+                    </config>
+                </config>
+            </config>
+        </config>
+        <config key="SkippedAttributeData_3">
+            <entry key="attributeName" type="xstring" value="ward"/>
+            <entry key="type" type="xstring" value="NominalModel"/>
+            <entry key="skipMissingVals" type="xboolean" value="false"/>
+            <entry key="numberOfMissingValues" type="xint" value="0"/>
+            <entry key="invalidCause" type="xstring" value="Too many values"/>
+            <config key="data">
+                <entry key="maxNoOfAttrs" type="xlong" value="20"/>
+                <entry key="noOfClasses" type="xlong" value="2"/>
+                <config key="attributeValues">
+                    <entry key="array-size" type="xint" value="20"/>
+                    <entry key="0" type="xstring" value="Ngorika"/>
+                    <entry key="1" type="xstring" value="Nyakasimbi"/>
+                    <entry key="2" type="xstring" value="Moa"/>
+                    <entry key="3" type="xstring" value="Samuye"/>
+                    <entry key="4" type="xstring" value="Chambo"/>
+                    <entry key="5" type="xstring" value="Itetemia"/>
+                    <entry key="6" type="xstring" value="Kaisho"/>
+                    <entry key="7" type="xstring" value="Busilili"/>
+                    <entry key="8" type="xstring" value="Siha Kaskazini"/>
+                    <entry key="9" type="xstring" value="Mkowe"/>
+                    <entry key="10" type="xstring" value="Usuka"/>
+                    <entry key="11" type="xstring" value="Mkigo"/>
+                    <entry key="12" type="xstring" value="Nyaishozi"/>
+                    <entry key="13" type="xstring" value="Siha Kati"/>
+                    <entry key="14" type="xstring" value="Dabalo"/>
+                    <entry key="15" type="xstring" value="Chalinze"/>
+                    <entry key="16" type="xstring" value="Lupanga"/>
+                    <entry key="17" type="xstring" value="Oltrumet"/>
+                    <entry key="18" type="xstring" value="Katumbasongwe"/>
+                    <entry key="19" type="xstring" value="Mnenia"/>
+                </config>
+                <config key="classValueData_0">
+                    <entry key="classValue" type="xstring" value="functional"/>
+                    <entry key="noOfRows" type="xlong" value="14"/>
+                    <entry key="MissingValCounter" type="xlong" value="0"/>
+                    <config key="attributeValues">
+                        <entry key="array-size" type="xint" value="14"/>
+                        <entry key="0" type="xstring" value="Nyaishozi"/>
+                        <entry key="1" type="xstring" value="Chalinze"/>
+                        <entry key="2" type="xstring" value="Mnenia"/>
+                        <entry key="3" type="xstring" value="Nyakasimbi"/>
+                        <entry key="4" type="xstring" value="Kaisho"/>
+                        <entry key="5" type="xstring" value="Mkowe"/>
+                        <entry key="6" type="xstring" value="Dabalo"/>
+                        <entry key="7" type="xstring" value="Siha Kaskazini"/>
+                        <entry key="8" type="xstring" value="Lupanga"/>
+                        <entry key="9" type="xstring" value="Ngorika"/>
+                        <entry key="10" type="xstring" value="Mkigo"/>
+                        <entry key="11" type="xstring" value="Siha Kati"/>
+                        <entry key="12" type="xstring" value="Busilili"/>
+                        <entry key="13" type="xstring" value="Moa"/>
+                    </config>
+                    <config key="attributeCounter">
+                        <entry key="array-size" type="xint" value="14"/>
+                        <entry key="0" type="xlong" value="1"/>
+                        <entry key="1" type="xlong" value="1"/>
+                        <entry key="2" type="xlong" value="1"/>
+                        <entry key="3" type="xlong" value="1"/>
+                        <entry key="4" type="xlong" value="1"/>
+                        <entry key="5" type="xlong" value="1"/>
+                        <entry key="6" type="xlong" value="1"/>
+                        <entry key="7" type="xlong" value="1"/>
+                        <entry key="8" type="xlong" value="1"/>
+                        <entry key="9" type="xlong" value="1"/>
+                        <entry key="10" type="xlong" value="1"/>
+                        <entry key="11" type="xlong" value="1"/>
+                        <entry key="12" type="xlong" value="1"/>
+                        <entry key="13" type="xlong" value="1"/>
+                    </config>
+                </config>
+                <config key="classValueData_1">
+                    <entry key="classValue" type="xstring" value="non functional"/>
+                    <entry key="noOfRows" type="xlong" value="6"/>
+                    <entry key="MissingValCounter" type="xlong" value="0"/>
+                    <config key="attributeValues">
+                        <entry key="array-size" type="xint" value="6"/>
+                        <entry key="0" type="xstring" value="Chambo"/>
+                        <entry key="1" type="xstring" value="Katumbasongwe"/>
+                        <entry key="2" type="xstring" value="Samuye"/>
+                        <entry key="3" type="xstring" value="Itetemia"/>
+                        <entry key="4" type="xstring" value="Usuka"/>
+                        <entry key="5" type="xstring" value="Oltrumet"/>
+                    </config>
+                    <config key="attributeCounter">
+                        <entry key="array-size" type="xint" value="6"/>
+                        <entry key="0" type="xlong" value="1"/>
+                        <entry key="1" type="xlong" value="1"/>
+                        <entry key="2" type="xlong" value="1"/>
+                        <entry key="3" type="xlong" value="1"/>
+                        <entry key="4" type="xlong" value="1"/>
+                        <entry key="5" type="xlong" value="1"/>
+                    </config>
+                </config>
+            </config>
+        </config>
+        <config key="SkippedAttributeData_4">
+            <entry key="attributeName" type="xstring" value="funder"/>
+            <entry key="type" type="xstring" value="NominalModel"/>
+            <entry key="skipMissingVals" type="xboolean" value="false"/>
+            <entry key="numberOfMissingValues" type="xint" value="0"/>
+            <entry key="invalidCause" type="xstring" value="Too many values"/>
+            <config key="data">
+                <entry key="maxNoOfAttrs" type="xlong" value="20"/>
+                <entry key="noOfClasses" type="xlong" value="2"/>
+                <config key="attributeValues">
+                    <entry key="array-size" type="xint" value="20"/>
+                    <entry key="0" type="xstring" value="Lottery Club"/>
+                    <entry key="1" type="xstring" value="Action In A"/>
+                    <entry key="2" type="xstring" value="Mkinga Distric Coun"/>
+                    <entry key="3" type="xstring" value="Dwsp"/>
+                    <entry key="4" type="xstring" value="Rwssp"/>
+                    <entry key="5" type="xstring" value="Wateraid"/>
+                    <entry key="6" type="xstring" value="Isingiro Ho"/>
+                    <entry key="7" type="xstring" value="World Vision"/>
+                    <entry key="8" type="xstring" value="Lawatefuka Water Supply"/>
+                    <entry key="9" type="xstring" value="Rudep"/>
+                    <entry key="10" type="xstring" value="Unicef"/>
+                    <entry key="11" type="xstring" value="African Development Bank"/>
+                    <entry key="12" type="xstring" value="Hesawa"/>
+                    <entry key="13" type="xstring" value="Water"/>
+                    <entry key="14" type="xstring" value="Private Individual"/>
+                    <entry key="15" type="xstring" value="Undp"/>
+                    <entry key="16" type="xstring" value="Not Known"/>
+                    <entry key="17" type="xstring" value="Danida"/>
+                    <entry key="18" type="xstring" value="Kirde"/>
+                    <entry key="19" type="xstring" value="Government Of Tanzania"/>
+                </config>
+                <config key="classValueData_0">
+                    <entry key="classValue" type="xstring" value="functional"/>
+                    <entry key="noOfRows" type="xlong" value="14"/>
+                    <entry key="MissingValCounter" type="xlong" value="0"/>
+                    <config key="attributeValues">
+                        <entry key="array-size" type="xint" value="13"/>
+                        <entry key="0" type="xstring" value="Water"/>
+                        <entry key="1" type="xstring" value="Private Individual"/>
+                        <entry key="2" type="xstring" value="World Vision"/>
+                        <entry key="3" type="xstring" value="Lottery Club"/>
+                        <entry key="4" type="xstring" value="Kirde"/>
+                        <entry key="5" type="xstring" value="Mkinga Distric Coun"/>
+                        <entry key="6" type="xstring" value="Lawatefuka Water Supply"/>
+                        <entry key="7" type="xstring" value="Undp"/>
+                        <entry key="8" type="xstring" value="Action In A"/>
+                        <entry key="9" type="xstring" value="Hesawa"/>
+                        <entry key="10" type="xstring" value="Isingiro Ho"/>
+                        <entry key="11" type="xstring" value="Rudep"/>
+                        <entry key="12" type="xstring" value="African Development Bank"/>
+                    </config>
+                    <config key="attributeCounter">
+                        <entry key="array-size" type="xint" value="13"/>
+                        <entry key="0" type="xlong" value="1"/>
+                        <entry key="1" type="xlong" value="1"/>
+                        <entry key="2" type="xlong" value="1"/>
+                        <entry key="3" type="xlong" value="1"/>
+                        <entry key="4" type="xlong" value="1"/>
+                        <entry key="5" type="xlong" value="1"/>
+                        <entry key="6" type="xlong" value="2"/>
+                        <entry key="7" type="xlong" value="1"/>
+                        <entry key="8" type="xlong" value="1"/>
+                        <entry key="9" type="xlong" value="1"/>
+                        <entry key="10" type="xlong" value="1"/>
+                        <entry key="11" type="xlong" value="1"/>
+                        <entry key="12" type="xlong" value="1"/>
+                    </config>
+                </config>
+                <config key="classValueData_1">
+                    <entry key="classValue" type="xstring" value="non functional"/>
+                    <entry key="noOfRows" type="xlong" value="7"/>
+                    <entry key="MissingValCounter" type="xlong" value="0"/>
+                    <config key="attributeValues">
+                        <entry key="array-size" type="xint" value="7"/>
+                        <entry key="0" type="xstring" value="Dwsp"/>
+                        <entry key="1" type="xstring" value="Rwssp"/>
+                        <entry key="2" type="xstring" value="Government Of Tanzania"/>
+                        <entry key="3" type="xstring" value="Danida"/>
+                        <entry key="4" type="xstring" value="Not Known"/>
+                        <entry key="5" type="xstring" value="Wateraid"/>
+                        <entry key="6" type="xstring" value="Unicef"/>
+                    </config>
+                    <config key="attributeCounter">
+                        <entry key="array-size" type="xint" value="7"/>
+                        <entry key="0" type="xlong" value="1"/>
+                        <entry key="1" type="xlong" value="1"/>
+                        <entry key="2" type="xlong" value="1"/>
+                        <entry key="3" type="xlong" value="1"/>
+                        <entry key="4" type="xlong" value="1"/>
+                        <entry key="5" type="xlong" value="1"/>
+                        <entry key="6" type="xlong" value="1"/>
+                    </config>
+                </config>
+            </config>
+        </config>
+        <config key="SkippedAttributeData_5">
+            <entry key="attributeName" type="xstring" value="lga"/>
+            <entry key="type" type="xstring" value="NominalModel"/>
+            <entry key="skipMissingVals" type="xboolean" value="false"/>
+            <entry key="numberOfMissingValues" type="xint" value="0"/>
+            <entry key="invalidCause" type="xstring" value="Too many values"/>
+            <config key="data">
+                <entry key="maxNoOfAttrs" type="xlong" value="20"/>
+                <entry key="noOfClasses" type="xlong" value="2"/>
+                <config key="attributeValues">
+                    <entry key="array-size" type="xint" value="20"/>
+                    <entry key="0" type="xstring" value="Simanjiro"/>
+                    <entry key="1" type="xstring" value="Karagwe"/>
+                    <entry key="2" type="xstring" value="Mkinga"/>
+                    <entry key="3" type="xstring" value="Shinyanga Rural"/>
+                    <entry key="4" type="xstring" value="Kahama"/>
+                    <entry key="5" type="xstring" value="Tabora Urban"/>
+                    <entry key="6" type="xstring" value="Maswa"/>
+                    <entry key="7" type="xstring" value="Siha"/>
+                    <entry key="8" type="xstring" value="Sumbawanga Rural"/>
+                    <entry key="9" type="xstring" value="Njombe"/>
+                    <entry key="10" type="xstring" value="Kigoma Rural"/>
+                    <entry key="11" type="xstring" value="Chamwino"/>
+                    <entry key="12" type="xstring" value="Bagamoyo"/>
+                    <entry key="13" type="xstring" value="Ludewa"/>
+                    <entry key="14" type="xstring" value="Arusha Rural"/>
+                    <entry key="15" type="xstring" value="Kyela"/>
+                    <entry key="16" type="xstring" value="Kondoa"/>
+                    <entry key="17" type="xstring" value="Kibondo"/>
+                    <entry key="18" type="xstring" value="Moshi Rural"/>
+                    <entry key="19" type="xstring" value="Singida Rural"/>
+                </config>
+                <config key="classValueData_0">
+                    <entry key="classValue" type="xstring" value="functional"/>
+                    <entry key="noOfRows" type="xlong" value="15"/>
+                    <entry key="MissingValCounter" type="xlong" value="0"/>
+                    <config key="attributeValues">
+                        <entry key="array-size" type="xint" value="12"/>
+                        <entry key="0" type="xstring" value="Chamwino"/>
+                        <entry key="1" type="xstring" value="Sumbawanga Rural"/>
+                        <entry key="2" type="xstring" value="Moshi Rural"/>
+                        <entry key="3" type="xstring" value="Maswa"/>
+                        <entry key="4" type="xstring" value="Ludewa"/>
+                        <entry key="5" type="xstring" value="Bagamoyo"/>
+                        <entry key="6" type="xstring" value="Mkinga"/>
+                        <entry key="7" type="xstring" value="Kigoma Rural"/>
+                        <entry key="8" type="xstring" value="Kondoa"/>
+                        <entry key="9" type="xstring" value="Simanjiro"/>
+                        <entry key="10" type="xstring" value="Siha"/>
+                        <entry key="11" type="xstring" value="Karagwe"/>
+                    </config>
+                    <config key="attributeCounter">
+                        <entry key="array-size" type="xint" value="12"/>
+                        <entry key="0" type="xlong" value="1"/>
+                        <entry key="1" type="xlong" value="1"/>
+                        <entry key="2" type="xlong" value="1"/>
+                        <entry key="3" type="xlong" value="1"/>
+                        <entry key="4" type="xlong" value="1"/>
+                        <entry key="5" type="xlong" value="1"/>
+                        <entry key="6" type="xlong" value="1"/>
+                        <entry key="7" type="xlong" value="1"/>
+                        <entry key="8" type="xlong" value="1"/>
+                        <entry key="9" type="xlong" value="1"/>
+                        <entry key="10" type="xlong" value="2"/>
+                        <entry key="11" type="xlong" value="3"/>
+                    </config>
+                </config>
+                <config key="classValueData_1">
+                    <entry key="classValue" type="xstring" value="non functional"/>
+                    <entry key="noOfRows" type="xlong" value="9"/>
+                    <entry key="MissingValCounter" type="xlong" value="0"/>
+                    <config key="attributeValues">
+                        <entry key="array-size" type="xint" value="8"/>
+                        <entry key="0" type="xstring" value="Kahama"/>
+                        <entry key="1" type="xstring" value="Singida Rural"/>
+                        <entry key="2" type="xstring" value="Kyela"/>
+                        <entry key="3" type="xstring" value="Tabora Urban"/>
+                        <entry key="4" type="xstring" value="Kibondo"/>
+                        <entry key="5" type="xstring" value="Njombe"/>
+                        <entry key="6" type="xstring" value="Shinyanga Rural"/>
+                        <entry key="7" type="xstring" value="Arusha Rural"/>
+                    </config>
+                    <config key="attributeCounter">
+                        <entry key="array-size" type="xint" value="8"/>
+                        <entry key="0" type="xlong" value="1"/>
+                        <entry key="1" type="xlong" value="1"/>
+                        <entry key="2" type="xlong" value="1"/>
+                        <entry key="3" type="xlong" value="1"/>
+                        <entry key="4" type="xlong" value="1"/>
+                        <entry key="5" type="xlong" value="1"/>
+                        <entry key="6" type="xlong" value="2"/>
+                        <entry key="7" type="xlong" value="1"/>
+                    </config>
+                </config>
+            </config>
+        </config>
+        <config key="SkippedAttributeData_6">
+            <entry key="attributeName" type="xstring" value="scheme_name"/>
+            <entry key="type" type="xstring" value="NominalModel"/>
+            <entry key="skipMissingVals" type="xboolean" value="false"/>
+            <entry key="numberOfMissingValues" type="xint" value="0"/>
+            <entry key="invalidCause" type="xstring" value="Too many values"/>
+            <config key="data">
+                <entry key="maxNoOfAttrs" type="xlong" value="20"/>
+                <entry key="noOfClasses" type="xlong" value="2"/>
+                <config key="attributeValues">
+                    <entry key="array-size" type="xint" value="20"/>
+                    <entry key="0" type="xstring" value="Nyumba ya mungu pipe scheme"/>
+                    <entry key="1" type="xstring" value="None"/>
+                    <entry key="2" type="xstring" value="Zingibali"/>
+                    <entry key="3" type="xstring" value="BL Bondeni"/>
+                    <entry key="4" type="xstring" value="wanging'ombe water supply s"/>
+                    <entry key="5" type="xstring" value="Quick wins Program"/>
+                    <entry key="6" type="xstring" value="BL Mwakikoti"/>
+                    <entry key="7" type="xstring" value="Chalinze wate"/>
+                    <entry key="8" type="xstring" value="UNDP"/>
+                    <entry key="9" type="xstring" value="Ngana water supplied scheme"/>
+                    <entry key="10" type="xstring" value="Itun"/>
+                    <entry key="11" type="xstring" value="Kirua kahe pumping water trust"/>
+                    <entry key="12" type="xstring" value="K"/>
+                    <entry key="13" type="xstring" value="SHIMASA"/>
+                    <entry key="14" type="xstring" value="Shirimatunda Water Supply"/>
+                    <entry key="15" type="xstring" value="Laela group water Supp"/>
+                    <entry key="16" type="xstring" value="Makwale water supplied sche"/>
+                    <entry key="17" type="xstring" value="Kirua kahe gravity water supply trust"/>
+                    <entry key="18" type="xstring" value="Olgilai pipe line"/>
+                    <entry key="19" type="xstring" value="Mabula mountains spr"/>
+                </config>
+                <config key="classValueData_0">
+                    <entry key="classValue" type="xstring" value="functional"/>
+                    <entry key="noOfRows" type="xlong" value="20"/>
+                    <entry key="MissingValCounter" type="xlong" value="0"/>
+                    <config key="attributeValues">
+                        <entry key="array-size" type="xint" value="14"/>
+                        <entry key="0" type="xstring" value="Kirua kahe gravity water supply trust"/>
+                        <entry key="1" type="xstring" value="UNDP"/>
+                        <entry key="2" type="xstring" value="Chalinze wate"/>
+                        <entry key="3" type="xstring" value="Makwale water supplied sche"/>
+                        <entry key="4" type="xstring" value="Quick wins Program"/>
+                        <entry key="5" type="xstring" value="Itun"/>
+                        <entry key="6" type="xstring" value="Mabula mountains spr"/>
+                        <entry key="7" type="xstring" value="Zingibali"/>
+                        <entry key="8" type="xstring" value="BL Bondeni"/>
+                        <entry key="9" type="xstring" value="BL Mwakikoti"/>
+                        <entry key="10" type="xstring" value="None"/>
+                        <entry key="11" type="xstring" value="Kirua kahe pumping water trust"/>
+                        <entry key="12" type="xstring" value="Shirimatunda Water Supply"/>
+                        <entry key="13" type="xstring" value="Nyumba ya mungu pipe scheme"/>
+                    </config>
+                    <config key="attributeCounter">
+                        <entry key="array-size" type="xint" value="14"/>
+                        <entry key="0" type="xlong" value="1"/>
+                        <entry key="1" type="xlong" value="1"/>
+                        <entry key="2" type="xlong" value="1"/>
+                        <entry key="3" type="xlong" value="1"/>
+                        <entry key="4" type="xlong" value="1"/>
+                        <entry key="5" type="xlong" value="1"/>
+                        <entry key="6" type="xlong" value="1"/>
+                        <entry key="7" type="xlong" value="1"/>
+                        <entry key="8" type="xlong" value="1"/>
+                        <entry key="9" type="xlong" value="1"/>
+                        <entry key="10" type="xlong" value="7"/>
+                        <entry key="11" type="xlong" value="1"/>
+                        <entry key="12" type="xlong" value="1"/>
+                        <entry key="13" type="xlong" value="1"/>
+                    </config>
+                </config>
+                <config key="classValueData_1">
+                    <entry key="classValue" type="xstring" value="non functional"/>
+                    <entry key="noOfRows" type="xlong" value="12"/>
+                    <entry key="MissingValCounter" type="xlong" value="0"/>
+                    <config key="attributeValues">
+                        <entry key="array-size" type="xint" value="7"/>
+                        <entry key="0" type="xstring" value="Olgilai pipe line"/>
+                        <entry key="1" type="xstring" value="Ngana water supplied scheme"/>
+                        <entry key="2" type="xstring" value="K"/>
+                        <entry key="3" type="xstring" value="SHIMASA"/>
+                        <entry key="4" type="xstring" value="None"/>
+                        <entry key="5" type="xstring" value="wanging'ombe water supply s"/>
+                        <entry key="6" type="xstring" value="Laela group water Supp"/>
+                    </config>
+                    <config key="attributeCounter">
+                        <entry key="array-size" type="xint" value="7"/>
+                        <entry key="0" type="xlong" value="1"/>
+                        <entry key="1" type="xlong" value="1"/>
+                        <entry key="2" type="xlong" value="1"/>
+                        <entry key="3" type="xlong" value="1"/>
+                        <entry key="4" type="xlong" value="6"/>
+                        <entry key="5" type="xlong" value="1"/>
+                        <entry key="6" type="xlong" value="1"/>
+                    </config>
+                </config>
+            </config>
+        </config>
+        <config key="SkippedAttributeData_7">
+            <entry key="attributeName" type="xstring" value="installer"/>
+            <entry key="type" type="xstring" value="NominalModel"/>
+            <entry key="skipMissingVals" type="xboolean" value="false"/>
+            <entry key="numberOfMissingValues" type="xint" value="0"/>
+            <entry key="invalidCause" type="xstring" value="Too many values"/>
+            <config key="data">
+                <entry key="maxNoOfAttrs" type="xlong" value="20"/>
+                <entry key="noOfClasses" type="xlong" value="2"/>
+                <config key="attributeValues">
+                    <entry key="array-size" type="xint" value="20"/>
+                    <entry key="0" type="xstring" value="World vision"/>
+                    <entry key="1" type="xstring" value="Artisan"/>
+                    <entry key="2" type="xstring" value="DWE"/>
+                    <entry key="3" type="xstring" value="DWSP"/>
+                    <entry key="4" type="xstring" value="Water Aid"/>
+                    <entry key="5" type="xstring" value="Lawatefuka water sup"/>
+                    <entry key="6" type="xstring" value="Water"/>
+                    <entry key="7" type="xstring" value="WU"/>
+                    <entry key="8" type="xstring" value="Not known"/>
+                    <entry key="9" type="xstring" value="Central government"/>
+                    <entry key="10" type="xstring" value="World Vision"/>
+                    <entry key="11" type="xstring" value="MUWSA"/>
+                    <entry key="12" type="xstring" value="KKKT _ Konde and DWE"/>
+                    <entry key="13" type="xstring" value="Olgilai village community"/>
+                    <entry key="14" type="xstring" value="KKKT"/>
+                    <entry key="15" type="xstring" value="Adra /Community"/>
+                    <entry key="16" type="xstring" value="SEMA"/>
+                    <entry key="17" type="xstring" value="SHIPO"/>
+                    <entry key="18" type="xstring" value="HESAWA"/>
+                    <entry key="19" type="xstring" value="RWE"/>
+                </config>
+                <config key="classValueData_0">
+                    <entry key="classValue" type="xstring" value="functional"/>
+                    <entry key="noOfRows" type="xlong" value="24"/>
+                    <entry key="MissingValCounter" type="xlong" value="0"/>
+                    <config key="attributeValues">
+                        <entry key="array-size" type="xint" value="12"/>
+                        <entry key="0" type="xstring" value="Water"/>
+                        <entry key="1" type="xstring" value="SEMA"/>
+                        <entry key="2" type="xstring" value="SHIPO"/>
+                        <entry key="3" type="xstring" value="RWE"/>
+                        <entry key="4" type="xstring" value="DWE"/>
+                        <entry key="5" type="xstring" value="World vision"/>
+                        <entry key="6" type="xstring" value="Lawatefuka water sup"/>
+                        <entry key="7" type="xstring" value="MUWSA"/>
+                        <entry key="8" type="xstring" value="KKKT _ Konde and DWE"/>
+                        <entry key="9" type="xstring" value="KKKT"/>
+                        <entry key="10" type="xstring" value="Artisan"/>
+                        <entry key="11" type="xstring" value="WU"/>
+                    </config>
+                    <config key="attributeCounter">
+                        <entry key="array-size" type="xint" value="12"/>
+                        <entry key="0" type="xlong" value="1"/>
+                        <entry key="1" type="xlong" value="1"/>
+                        <entry key="2" type="xlong" value="1"/>
+                        <entry key="3" type="xlong" value="1"/>
+                        <entry key="4" type="xlong" value="9"/>
+                        <entry key="5" type="xlong" value="3"/>
+                        <entry key="6" type="xlong" value="2"/>
+                        <entry key="7" type="xlong" value="1"/>
+                        <entry key="8" type="xlong" value="1"/>
+                        <entry key="9" type="xlong" value="1"/>
+                        <entry key="10" type="xlong" value="2"/>
+                        <entry key="11" type="xlong" value="1"/>
+                    </config>
+                </config>
+                <config key="classValueData_1">
+                    <entry key="classValue" type="xstring" value="non functional"/>
+                    <entry key="noOfRows" type="xlong" value="19"/>
+                    <entry key="MissingValCounter" type="xlong" value="0"/>
+                    <config key="attributeValues">
+                        <entry key="array-size" type="xint" value="9"/>
+                        <entry key="0" type="xstring" value="DWSP"/>
+                        <entry key="1" type="xstring" value="World Vision"/>
+                        <entry key="2" type="xstring" value="Adra /Community"/>
+                        <entry key="3" type="xstring" value="DWE"/>
+                        <entry key="4" type="xstring" value="Central government"/>
+                        <entry key="5" type="xstring" value="Water Aid"/>
+                        <entry key="6" type="xstring" value="Not known"/>
+                        <entry key="7" type="xstring" value="HESAWA"/>
+                        <entry key="8" type="xstring" value="Olgilai village community"/>
+                    </config>
+                    <config key="attributeCounter">
+                        <entry key="array-size" type="xint" value="9"/>
+                        <entry key="0" type="xlong" value="1"/>
+                        <entry key="1" type="xlong" value="1"/>
+                        <entry key="2" type="xlong" value="1"/>
+                        <entry key="3" type="xlong" value="11"/>
+                        <entry key="4" type="xlong" value="1"/>
+                        <entry key="5" type="xlong" value="1"/>
+                        <entry key="6" type="xlong" value="1"/>
+                        <entry key="7" type="xlong" value="1"/>
+                        <entry key="8" type="xlong" value="1"/>
+                    </config>
+                </config>
+            </config>
+        </config>
+        <config key="SkippedAttributeData_8">
+            <entry key="attributeName" type="xstring" value="region"/>
+            <entry key="type" type="xstring" value="NominalModel"/>
+            <entry key="skipMissingVals" type="xboolean" value="false"/>
+            <entry key="numberOfMissingValues" type="xint" value="0"/>
+            <entry key="invalidCause" type="xstring" value="Too many values"/>
+            <config key="data">
+                <entry key="maxNoOfAttrs" type="xlong" value="20"/>
+                <entry key="noOfClasses" type="xlong" value="2"/>
+                <config key="attributeValues">
+                    <entry key="array-size" type="xint" value="20"/>
+                    <entry key="0" type="xstring" value="Manyara"/>
+                    <entry key="1" type="xstring" value="Kagera"/>
+                    <entry key="2" type="xstring" value="Tanga"/>
+                    <entry key="3" type="xstring" value="Shinyanga"/>
+                    <entry key="4" type="xstring" value="Tabora"/>
+                    <entry key="5" type="xstring" value="Kilimanjaro"/>
+                    <entry key="6" type="xstring" value="Rukwa"/>
+                    <entry key="7" type="xstring" value="Iringa"/>
+                    <entry key="8" type="xstring" value="Kigoma"/>
+                    <entry key="9" type="xstring" value="Dodoma"/>
+                    <entry key="10" type="xstring" value="Pwani"/>
+                    <entry key="11" type="xstring" value="Arusha"/>
+                    <entry key="12" type="xstring" value="Mbeya"/>
+                    <entry key="13" type="xstring" value="Singida"/>
+                    <entry key="14" type="xstring" value="Mara"/>
+                    <entry key="15" type="xstring" value="Mwanza"/>
+                    <entry key="16" type="xstring" value="Lindi"/>
+                    <entry key="17" type="xstring" value="Morogoro"/>
+                    <entry key="18" type="xstring" value="Dar es Salaam"/>
+                    <entry key="19" type="xstring" value="Ruvuma"/>
+                </config>
+                <config key="classValueData_0">
+                    <entry key="classValue" type="xstring" value="functional"/>
+                    <entry key="noOfRows" type="xlong" value="81"/>
+                    <entry key="MissingValCounter" type="xlong" value="0"/>
+                    <config key="attributeValues">
+                        <entry key="array-size" type="xint" value="18"/>
+                        <entry key="0" type="xstring" value="Arusha"/>
+                        <entry key="1" type="xstring" value="Kagera"/>
+                        <entry key="2" type="xstring" value="Iringa"/>
+                        <entry key="3" type="xstring" value="Mwanza"/>
+                        <entry key="4" type="xstring" value="Shinyanga"/>
+                        <entry key="5" type="xstring" value="Ruvuma"/>
+                        <entry key="6" type="xstring" value="Singida"/>
+                        <entry key="7" type="xstring" value="Mara"/>
+                        <entry key="8" type="xstring" value="Morogoro"/>
+                        <entry key="9" type="xstring" value="Rukwa"/>
+                        <entry key="10" type="xstring" value="Kigoma"/>
+                        <entry key="11" type="xstring" value="Pwani"/>
+                        <entry key="12" type="xstring" value="Dar es Salaam"/>
+                        <entry key="13" type="xstring" value="Mbeya"/>
+                        <entry key="14" type="xstring" value="Kilimanjaro"/>
+                        <entry key="15" type="xstring" value="Tanga"/>
+                        <entry key="16" type="xstring" value="Manyara"/>
+                        <entry key="17" type="xstring" value="Dodoma"/>
+                    </config>
+                    <config key="attributeCounter">
+                        <entry key="array-size" type="xint" value="18"/>
+                        <entry key="0" type="xlong" value="9"/>
+                        <entry key="1" type="xlong" value="10"/>
+                        <entry key="2" type="xlong" value="6"/>
+                        <entry key="3" type="xlong" value="2"/>
+                        <entry key="4" type="xlong" value="7"/>
+                        <entry key="5" type="xlong" value="1"/>
+                        <entry key="6" type="xlong" value="4"/>
+                        <entry key="7" type="xlong" value="1"/>
+                        <entry key="8" type="xlong" value="4"/>
+                        <entry key="9" type="xlong" value="1"/>
+                        <entry key="10" type="xlong" value="5"/>
+                        <entry key="11" type="xlong" value="2"/>
+                        <entry key="12" type="xlong" value="1"/>
+                        <entry key="13" type="xlong" value="12"/>
+                        <entry key="14" type="xlong" value="8"/>
+                        <entry key="15" type="xlong" value="3"/>
+                        <entry key="16" type="xlong" value="3"/>
+                        <entry key="17" type="xlong" value="2"/>
+                    </config>
+                </config>
+                <config key="classValueData_1">
+                    <entry key="classValue" type="xstring" value="non functional"/>
+                    <entry key="noOfRows" type="xlong" value="75"/>
+                    <entry key="MissingValCounter" type="xlong" value="0"/>
+                    <config key="attributeValues">
+                        <entry key="array-size" type="xint" value="19"/>
+                        <entry key="0" type="xstring" value="Arusha"/>
+                        <entry key="1" type="xstring" value="Iringa"/>
+                        <entry key="2" type="xstring" value="Kagera"/>
+                        <entry key="3" type="xstring" value="Mwanza"/>
+                        <entry key="4" type="xstring" value="Shinyanga"/>
+                        <entry key="5" type="xstring" value="Ruvuma"/>
+                        <entry key="6" type="xstring" value="Singida"/>
+                        <entry key="7" type="xstring" value="Mara"/>
+                        <entry key="8" type="xstring" value="Morogoro"/>
+                        <entry key="9" type="xstring" value="Rukwa"/>
+                        <entry key="10" type="xstring" value="Kigoma"/>
+                        <entry key="11" type="xstring" value="Pwani"/>
+                        <entry key="12" type="xstring" value="Mbeya"/>
+                        <entry key="13" type="xstring" value="Kilimanjaro"/>
+                        <entry key="14" type="xstring" value="Tabora"/>
+                        <entry key="15" type="xstring" value="Tanga"/>
+                        <entry key="16" type="xstring" value="Lindi"/>
+                        <entry key="17" type="xstring" value="Manyara"/>
+                        <entry key="18" type="xstring" value="Dodoma"/>
+                    </config>
+                    <config key="attributeCounter">
+                        <entry key="array-size" type="xint" value="19"/>
+                        <entry key="0" type="xlong" value="7"/>
+                        <entry key="1" type="xlong" value="4"/>
+                        <entry key="2" type="xlong" value="9"/>
+                        <entry key="3" type="xlong" value="2"/>
+                        <entry key="4" type="xlong" value="7"/>
+                        <entry key="5" type="xlong" value="1"/>
+                        <entry key="6" type="xlong" value="5"/>
+                        <entry key="7" type="xlong" value="3"/>
+                        <entry key="8" type="xlong" value="1"/>
+                        <entry key="9" type="xlong" value="5"/>
+                        <entry key="10" type="xlong" value="3"/>
+                        <entry key="11" type="xlong" value="3"/>
+                        <entry key="12" type="xlong" value="8"/>
+                        <entry key="13" type="xlong" value="3"/>
+                        <entry key="14" type="xlong" value="5"/>
+                        <entry key="15" type="xlong" value="5"/>
+                        <entry key="16" type="xlong" value="1"/>
+                        <entry key="17" type="xlong" value="1"/>
+                        <entry key="18" type="xlong" value="2"/>
+                    </config>
+                </config>
+            </config>
+        </config>
+    </config>
+    <config key="AttributeModelSection">
+        <entry key="AttributeModelCounter" type="xint" value="19"/>
+        <config key="AttributeModelData_0">
+            <entry key="attributeName" type="xstring" value="amount_tsh"/>
+            <entry key="type" type="xstring" value="NumericalModel"/>
+            <entry key="skipMissingVals" type="xboolean" value="false"/>
+            <entry key="numberOfMissingValues" type="xint" value="0"/>
+            <entry key="invalidCause" type="xstring" isnull="true" value=""/>
+            <config key="data">
+                <entry key="noOfClasses" type="xlong" value="2"/>
+                <config key="classValueData_0">
+                    <entry key="classValue" type="xstring" value="functional"/>
+                    <entry key="MissingValCounter" type="xlong" value="0"/>
+                    <entry key="noOfRows" type="xlong" value="17001"/>
+                    <entry key="mean" type="xdouble" value="4.744853243926815"/>
+                    <entry key="sd" type="xdouble" value="12.639152055648927"/>
+                </config>
+                <config key="classValueData_1">
+                    <entry key="classValue" type="xstring" value="non functional"/>
+                    <entry key="MissingValCounter" type="xlong" value="0"/>
+                    <entry key="noOfRows" type="xlong" value="13823"/>
+                    <entry key="mean" type="xdouble" value="2.082558055414878"/>
+                    <entry key="sd" type="xdouble" value="9.01331843354199"/>
+                </config>
+            </config>
+        </config>
+        <config key="AttributeModelData_1">
+            <entry key="attributeName" type="xstring" value="gps_height"/>
+            <entry key="type" type="xstring" value="NumericalModel"/>
+            <entry key="skipMissingVals" type="xboolean" value="false"/>
+            <entry key="numberOfMissingValues" type="xint" value="0"/>
+            <entry key="invalidCause" type="xstring" isnull="true" value=""/>
+            <config key="data">
+                <entry key="noOfClasses" type="xlong" value="2"/>
+                <config key="classValueData_0">
+                    <entry key="classValue" type="xstring" value="functional"/>
+                    <entry key="MissingValCounter" type="xlong" value="0"/>
+                    <entry key="noOfRows" type="xlong" value="17001"/>
+                    <entry key="mean" type="xdouble" value="628.8093641550553"/>
+                    <entry key="sd" type="xdouble" value="707.6536906919622"/>
+                </config>
+                <config key="classValueData_1">
+                    <entry key="classValue" type="xstring" value="non functional"/>
+                    <entry key="MissingValCounter" type="xlong" value="0"/>
+                    <entry key="noOfRows" type="xlong" value="13823"/>
+                    <entry key="mean" type="xdouble" value="561.0181581422249"/>
+                    <entry key="sd" type="xdouble" value="654.4926413629108"/>
+                </config>
+            </config>
+        </config>
+        <config key="AttributeModelData_2">
+            <entry key="attributeName" type="xstring" value="longitude"/>
+            <entry key="type" type="xstring" value="NumericalModel"/>
+            <entry key="skipMissingVals" type="xboolean" value="false"/>
+            <entry key="numberOfMissingValues" type="xint" value="0"/>
+            <entry key="invalidCause" type="xstring" isnull="true" value=""/>
+            <config key="data">
+                <entry key="noOfClasses" type="xlong" value="2"/>
+                <config key="classValueData_0">
+                    <entry key="classValue" type="xstring" value="functional"/>
+                    <entry key="MissingValCounter" type="xlong" value="0"/>
+                    <entry key="noOfRows" type="xlong" value="17001"/>
+                    <entry key="mean" type="xdouble" value="34.88561108212684"/>
+                    <entry key="sd" type="xdouble" value="2.361817311069873"/>
+                </config>
+                <config key="classValueData_1">
+                    <entry key="classValue" type="xstring" value="non functional"/>
+                    <entry key="MissingValCounter" type="xlong" value="0"/>
+                    <entry key="noOfRows" type="xlong" value="13823"/>
+                    <entry key="mean" type="xdouble" value="34.79328578574985"/>
+                    <entry key="sd" type="xdouble" value="2.480027752796275"/>
+                </config>
+            </config>
+        </config>
+        <config key="AttributeModelData_3">
+            <entry key="attributeName" type="xstring" value="latitude"/>
+            <entry key="type" type="xstring" value="NumericalModel"/>
+            <entry key="skipMissingVals" type="xboolean" value="false"/>
+            <entry key="numberOfMissingValues" type="xint" value="0"/>
+            <entry key="invalidCause" type="xstring" isnull="true" value=""/>
+            <config key="data">
+                <entry key="noOfClasses" type="xlong" value="2"/>
+                <config key="classValueData_0">
+                    <entry key="classValue" type="xstring" value="functional"/>
+                    <entry key="MissingValCounter" type="xlong" value="0"/>
+                    <entry key="noOfRows" type="xlong" value="17001"/>
+                    <entry key="mean" type="xdouble" value="-5.145389958219534"/>
+                    <entry key="sd" type="xdouble" value="2.6087875405143746"/>
+                </config>
+                <config key="classValueData_1">
+                    <entry key="classValue" type="xstring" value="non functional"/>
+                    <entry key="MissingValCounter" type="xlong" value="0"/>
+                    <entry key="noOfRows" type="xlong" value="13823"/>
+                    <entry key="mean" type="xdouble" value="-5.45226607288647"/>
+                    <entry key="sd" type="xdouble" value="2.714961827741393"/>
+                </config>
+            </config>
+        </config>
+        <config key="AttributeModelData_4">
+            <entry key="attributeName" type="xstring" value="num_private"/>
+            <entry key="type" type="xstring" value="NumericalModel"/>
+            <entry key="skipMissingVals" type="xboolean" value="false"/>
+            <entry key="numberOfMissingValues" type="xint" value="0"/>
+            <entry key="invalidCause" type="xstring" isnull="true" value=""/>
+            <config key="data">
+                <entry key="noOfClasses" type="xlong" value="2"/>
+                <config key="classValueData_0">
+                    <entry key="classValue" type="xstring" value="functional"/>
+                    <entry key="MissingValCounter" type="xlong" value="0"/>
+                    <entry key="noOfRows" type="xlong" value="17001"/>
+                    <entry key="mean" type="xdouble" value="0.0"/>
+                    <entry key="sd" type="xdouble" value="1.0E-4"/>
+                </config>
+                <config key="classValueData_1">
+                    <entry key="classValue" type="xstring" value="non functional"/>
+                    <entry key="MissingValCounter" type="xlong" value="0"/>
+                    <entry key="noOfRows" type="xlong" value="13823"/>
+                    <entry key="mean" type="xdouble" value="0.0"/>
+                    <entry key="sd" type="xdouble" value="1.0E-4"/>
+                </config>
+            </config>
+        </config>
+        <config key="AttributeModelData_5">
+            <entry key="attributeName" type="xstring" value="region_code"/>
+            <entry key="type" type="xstring" value="NumericalModel"/>
+            <entry key="skipMissingVals" type="xboolean" value="false"/>
+            <entry key="numberOfMissingValues" type="xint" value="0"/>
+            <entry key="invalidCause" type="xstring" isnull="true" value=""/>
+            <config key="data">
+                <entry key="noOfClasses" type="xlong" value="2"/>
+                <config key="classValueData_0">
+                    <entry key="classValue" type="xstring" value="functional"/>
+                    <entry key="MissingValCounter" type="xlong" value="0"/>
+                    <entry key="noOfRows" type="xlong" value="17001"/>
+                    <entry key="mean" type="xdouble" value="11.097876595494405"/>
+                    <entry key="sd" type="xdouble" value="6.587676254345257"/>
+                </config>
+                <config key="classValueData_1">
+                    <entry key="classValue" type="xstring" value="non functional"/>
+                    <entry key="MissingValCounter" type="xlong" value="0"/>
+                    <entry key="noOfRows" type="xlong" value="13823"/>
+                    <entry key="mean" type="xdouble" value="11.24546046444334"/>
+                    <entry key="sd" type="xdouble" value="6.21291866323939"/>
+                </config>
+            </config>
+        </config>
+        <config key="AttributeModelData_6">
+            <entry key="attributeName" type="xstring" value="population"/>
+            <entry key="type" type="xstring" value="NumericalModel"/>
+            <entry key="skipMissingVals" type="xboolean" value="false"/>
+            <entry key="numberOfMissingValues" type="xint" value="0"/>
+            <entry key="invalidCause" type="xstring" isnull="true" value=""/>
+            <config key="data">
+                <entry key="noOfClasses" type="xlong" value="2"/>
+                <config key="classValueData_0">
+                    <entry key="classValue" type="xstring" value="functional"/>
+                    <entry key="MissingValCounter" type="xlong" value="0"/>
+                    <entry key="noOfRows" type="xlong" value="17001"/>
+                    <entry key="mean" type="xdouble" value="100.95764955002649"/>
+                    <entry key="sd" type="xdouble" value="164.87222994286748"/>
+                </config>
+                <config key="classValueData_1">
+                    <entry key="classValue" type="xstring" value="non functional"/>
+                    <entry key="MissingValCounter" type="xlong" value="0"/>
+                    <entry key="noOfRows" type="xlong" value="13823"/>
+                    <entry key="mean" type="xdouble" value="100.08290530275642"/>
+                    <entry key="sd" type="xdouble" value="163.79258065296742"/>
+                </config>
+            </config>
+        </config>
+        <config key="AttributeModelData_7">
+            <entry key="attributeName" type="xstring" value="public_meeting"/>
+            <entry key="type" type="xstring" value="NominalModel"/>
+            <entry key="skipMissingVals" type="xboolean" value="false"/>
+            <entry key="numberOfMissingValues" type="xint" value="0"/>
+            <entry key="invalidCause" type="xstring" isnull="true" value=""/>
+            <config key="data">
+                <entry key="maxNoOfAttrs" type="xlong" value="20"/>
+                <entry key="noOfClasses" type="xlong" value="2"/>
+                <config key="attributeValues">
+                    <entry key="array-size" type="xint" value="2"/>
+                    <entry key="0" type="xstring" value="True"/>
+                    <entry key="1" type="xstring" value="False"/>
+                </config>
+                <config key="classValueData_0">
+                    <entry key="classValue" type="xstring" value="functional"/>
+                    <entry key="noOfRows" type="xlong" value="17001"/>
+                    <entry key="MissingValCounter" type="xlong" value="0"/>
+                    <config key="attributeValues">
+                        <entry key="array-size" type="xint" value="2"/>
+                        <entry key="0" type="xstring" value="True"/>
+                        <entry key="1" type="xstring" value="False"/>
+                    </config>
+                    <config key="attributeCounter">
+                        <entry key="array-size" type="xint" value="2"/>
+                        <entry key="0" type="xlong" value="15652"/>
+                        <entry key="1" type="xlong" value="1349"/>
+                    </config>
+                </config>
+                <config key="classValueData_1">
+                    <entry key="classValue" type="xstring" value="non functional"/>
+                    <entry key="noOfRows" type="xlong" value="13823"/>
+                    <entry key="MissingValCounter" type="xlong" value="0"/>
+                    <config key="attributeValues">
+                        <entry key="array-size" type="xint" value="2"/>
+                        <entry key="0" type="xstring" value="True"/>
+                        <entry key="1" type="xstring" value="False"/>
+                    </config>
+                    <config key="attributeCounter">
+                        <entry key="array-size" type="xint" value="2"/>
+                        <entry key="0" type="xlong" value="12127"/>
+                        <entry key="1" type="xlong" value="1696"/>
+                    </config>
+                </config>
+            </config>
+        </config>
+        <config key="AttributeModelData_8">
+            <entry key="attributeName" type="xstring" value="recorded_by"/>
+            <entry key="type" type="xstring" value="NominalModel"/>
+            <entry key="skipMissingVals" type="xboolean" value="false"/>
+            <entry key="numberOfMissingValues" type="xint" value="0"/>
+            <entry key="invalidCause" type="xstring" isnull="true" value=""/>
+            <config key="data">
+                <entry key="maxNoOfAttrs" type="xlong" value="20"/>
+                <entry key="noOfClasses" type="xlong" value="2"/>
+                <config key="attributeValues">
+                    <entry key="array-size" type="xint" value="1"/>
+                    <entry key="0" type="xstring" value="GeoData Consultants Ltd"/>
+                </config>
+                <config key="classValueData_0">
+                    <entry key="classValue" type="xstring" value="functional"/>
+                    <entry key="noOfRows" type="xlong" value="17001"/>
+                    <entry key="MissingValCounter" type="xlong" value="0"/>
+                    <config key="attributeValues">
+                        <entry key="array-size" type="xint" value="1"/>
+                        <entry key="0" type="xstring" value="GeoData Consultants Ltd"/>
+                    </config>
+                    <config key="attributeCounter">
+                        <entry key="array-size" type="xint" value="1"/>
+                        <entry key="0" type="xlong" value="17001"/>
+                    </config>
+                </config>
+                <config key="classValueData_1">
+                    <entry key="classValue" type="xstring" value="non functional"/>
+                    <entry key="noOfRows" type="xlong" value="13823"/>
+                    <entry key="MissingValCounter" type="xlong" value="0"/>
+                    <config key="attributeValues">
+                        <entry key="array-size" type="xint" value="1"/>
+                        <entry key="0" type="xstring" value="GeoData Consultants Ltd"/>
+                    </config>
+                    <config key="attributeCounter">
+                        <entry key="array-size" type="xint" value="1"/>
+                        <entry key="0" type="xlong" value="13823"/>
+                    </config>
+                </config>
+            </config>
+        </config>
+        <config key="AttributeModelData_9">
+            <entry key="attributeName" type="xstring" value="permit"/>
+            <entry key="type" type="xstring" value="NominalModel"/>
+            <entry key="skipMissingVals" type="xboolean" value="false"/>
+            <entry key="numberOfMissingValues" type="xint" value="0"/>
+            <entry key="invalidCause" type="xstring" isnull="true" value=""/>
+            <config key="data">
+                <entry key="maxNoOfAttrs" type="xlong" value="20"/>
+                <entry key="noOfClasses" type="xlong" value="2"/>
+                <config key="attributeValues">
+                    <entry key="array-size" type="xint" value="2"/>
+                    <entry key="0" type="xstring" value="True"/>
+                    <entry key="1" type="xstring" value="False"/>
+                </config>
+                <config key="classValueData_0">
+                    <entry key="classValue" type="xstring" value="functional"/>
+                    <entry key="noOfRows" type="xlong" value="17001"/>
+                    <entry key="MissingValCounter" type="xlong" value="0"/>
+                    <config key="attributeValues">
+                        <entry key="array-size" type="xint" value="2"/>
+                        <entry key="0" type="xstring" value="True"/>
+                        <entry key="1" type="xstring" value="False"/>
+                    </config>
+                    <config key="attributeCounter">
+                        <entry key="array-size" type="xint" value="2"/>
+                        <entry key="0" type="xlong" value="12447"/>
+                        <entry key="1" type="xlong" value="4554"/>
+                    </config>
+                </config>
+                <config key="classValueData_1">
+                    <entry key="classValue" type="xstring" value="non functional"/>
+                    <entry key="noOfRows" type="xlong" value="13823"/>
+                    <entry key="MissingValCounter" type="xlong" value="0"/>
+                    <config key="attributeValues">
+                        <entry key="array-size" type="xint" value="2"/>
+                        <entry key="0" type="xstring" value="True"/>
+                        <entry key="1" type="xstring" value="False"/>
+                    </config>
+                    <config key="attributeCounter">
+                        <entry key="array-size" type="xint" value="2"/>
+                        <entry key="0" type="xlong" value="9496"/>
+                        <entry key="1" type="xlong" value="4327"/>
+                    </config>
+                </config>
+            </config>
+        </config>
+        <config key="AttributeModelData_10">
+            <entry key="attributeName" type="xstring" value="construction_year"/>
+            <entry key="type" type="xstring" value="NumericalModel"/>
+            <entry key="skipMissingVals" type="xboolean" value="false"/>
+            <entry key="numberOfMissingValues" type="xint" value="0"/>
+            <entry key="invalidCause" type="xstring" isnull="true" value=""/>
+            <config key="data">
+                <entry key="noOfClasses" type="xlong" value="2"/>
+                <config key="classValueData_0">
+                    <entry key="classValue" type="xstring" value="functional"/>
+                    <entry key="MissingValCounter" type="xlong" value="0"/>
+                    <entry key="noOfRows" type="xlong" value="17001"/>
+                    <entry key="mean" type="xdouble" value="1115.4807952473402"/>
+                    <entry key="sd" type="xdouble" value="993.8625087766117"/>
+                </config>
+                <config key="classValueData_1">
+                    <entry key="classValue" type="xstring" value="non functional"/>
+                    <entry key="MissingValCounter" type="xlong" value="0"/>
+                    <entry key="noOfRows" type="xlong" value="13823"/>
+                    <entry key="mean" type="xdouble" value="1114.059321420819"/>
+                    <entry key="sd" type="xdouble" value="989.0280232939253"/>
+                </config>
+            </config>
+        </config>
+        <config key="AttributeModelData_11">
+            <entry key="attributeName" type="xstring" value="extraction_type"/>
+            <entry key="type" type="xstring" value="NominalModel"/>
+            <entry key="skipMissingVals" type="xboolean" value="false"/>
+            <entry key="numberOfMissingValues" type="xint" value="0"/>
+            <entry key="invalidCause" type="xstring" isnull="true" value=""/>
+            <config key="data">
+                <entry key="maxNoOfAttrs" type="xlong" value="20"/>
+                <entry key="noOfClasses" type="xlong" value="2"/>
+                <config key="attributeValues">
+                    <entry key="array-size" type="xint" value="18"/>
+                    <entry key="0" type="xstring" value="gravity"/>
+                    <entry key="1" type="xstring" value="submersible"/>
+                    <entry key="2" type="xstring" value="swn 80"/>
+                    <entry key="3" type="xstring" value="nira/tanira"/>
+                    <entry key="4" type="xstring" value="india mark ii"/>
+                    <entry key="5" type="xstring" value="ksb"/>
+                    <entry key="6" type="xstring" value="other"/>
+                    <entry key="7" type="xstring" value="mono"/>
+                    <entry key="8" type="xstring" value="windmill"/>
+                    <entry key="9" type="xstring" value="afridev"/>
+                    <entry key="10" type="xstring" value="other - rope pump"/>
+                    <entry key="11" type="xstring" value="other - swn 81"/>
+                    <entry key="12" type="xstring" value="india mark iii"/>
+                    <entry key="13" type="xstring" value="cemo"/>
+                    <entry key="14" type="xstring" value="climax"/>
+                    <entry key="15" type="xstring" value="walimi"/>
+                    <entry key="16" type="xstring" value="other - play pump"/>
+                    <entry key="17" type="xstring" value="other - mkulima/shinyanga"/>
+                </config>
+                <config key="classValueData_0">
+                    <entry key="classValue" type="xstring" value="functional"/>
+                    <entry key="noOfRows" type="xlong" value="17001"/>
+                    <entry key="MissingValCounter" type="xlong" value="0"/>
+                    <config key="attributeValues">
+                        <entry key="array-size" type="xint" value="16"/>
+                        <entry key="0" type="xstring" value="other - play pump"/>
+                        <entry key="1" type="xstring" value="other"/>
+                        <entry key="2" type="xstring" value="windmill"/>
+                        <entry key="3" type="xstring" value="submersible"/>
+                        <entry key="4" type="xstring" value="other - rope pump"/>
+                        <entry key="5" type="xstring" value="india mark ii"/>
+                        <entry key="6" type="xstring" value="cemo"/>
+                        <entry key="7" type="xstring" value="nira/tanira"/>
+                        <entry key="8" type="xstring" value="india mark iii"/>
+                        <entry key="9" type="xstring" value="mono"/>
+                        <entry key="10" type="xstring" value="swn 80"/>
+                        <entry key="11" type="xstring" value="gravity"/>
+                        <entry key="12" type="xstring" value="other - swn 81"/>
+                        <entry key="13" type="xstring" value="walimi"/>
+                        <entry key="14" type="xstring" value="ksb"/>
+                        <entry key="15" type="xstring" value="afridev"/>
+                    </config>
+                    <config key="attributeCounter">
+                        <entry key="array-size" type="xint" value="16"/>
+                        <entry key="0" type="xlong" value="17"/>
+                        <entry key="1" type="xlong" value="619"/>
+                        <entry key="2" type="xlong" value="32"/>
+                        <entry key="3" type="xlong" value="1313"/>
+                        <entry key="4" type="xlong" value="157"/>
+                        <entry key="5" type="xlong" value="598"/>
+                        <entry key="6" type="xlong" value="39"/>
+                        <entry key="7" type="xlong" value="3314"/>
+                        <entry key="8" type="xlong" value="25"/>
+                        <entry key="9" type="xlong" value="638"/>
+                        <entry key="10" type="xlong" value="929"/>
+                        <entry key="11" type="xlong" value="8212"/>
+                        <entry key="12" type="xlong" value="53"/>
+                        <entry key="13" type="xlong" value="8"/>
+                        <entry key="14" type="xlong" value="481"/>
+                        <entry key="15" type="xlong" value="566"/>
+                    </config>
+                </config>
+                <config key="classValueData_1">
+                    <entry key="classValue" type="xstring" value="non functional"/>
+                    <entry key="noOfRows" type="xlong" value="13823"/>
+                    <entry key="MissingValCounter" type="xlong" value="0"/>
+                    <config key="attributeValues">
+                        <entry key="array-size" type="xint" value="18"/>
+                        <entry key="0" type="xstring" value="other - play pump"/>
+                        <entry key="1" type="xstring" value="other"/>
+                        <entry key="2" type="xstring" value="windmill"/>
+                        <entry key="3" type="xstring" value="submersible"/>
+                        <entry key="4" type="xstring" value="india mark ii"/>
+                        <entry key="5" type="xstring" value="other - rope pump"/>
+                        <entry key="6" type="xstring" value="cemo"/>
+                        <entry key="7" type="xstring" value="nira/tanira"/>
+                        <entry key="8" type="xstring" value="other - mkulima/shinyanga"/>
+                        <entry key="9" type="xstring" value="india mark iii"/>
+                        <entry key="10" type="xstring" value="mono"/>
+                        <entry key="11" type="xstring" value="swn 80"/>
+                        <entry key="12" type="xstring" value="gravity"/>
+                        <entry key="13" type="xstring" value="climax"/>
+                        <entry key="14" type="xstring" value="other - swn 81"/>
+                        <entry key="15" type="xstring" value="walimi"/>
+                        <entry key="16" type="xstring" value="ksb"/>
+                        <entry key="17" type="xstring" value="afridev"/>
+                    </config>
+                    <config key="attributeCounter">
+                        <entry key="array-size" type="xint" value="18"/>
+                        <entry key="0" type="xlong" value="35"/>
+                        <entry key="1" type="xlong" value="3028"/>
+                        <entry key="2" type="xlong" value="25"/>
+                        <entry key="3" type="xlong" value="1068"/>
+                        <entry key="4" type="xlong" value="456"/>
+                        <entry key="5" type="xlong" value="93"/>
+                        <entry key="6" type="xlong" value="27"/>
+                        <entry key="7" type="xlong" value="1316"/>
+                        <entry key="8" type="xlong" value="2"/>
+                        <entry key="9" type="xlong" value="7"/>
+                        <entry key="10" type="xlong" value="1038"/>
+                        <entry key="11" type="xlong" value="772"/>
+                        <entry key="12" type="xlong" value="5158"/>
+                        <entry key="13" type="xlong" value="20"/>
+                        <entry key="14" type="xlong" value="62"/>
+                        <entry key="15" type="xlong" value="7"/>
+                        <entry key="16" type="xlong" value="392"/>
+                        <entry key="17" type="xlong" value="317"/>
+                    </config>
+                </config>
+            </config>
+        </config>
+        <config key="AttributeModelData_12">
+            <entry key="attributeName" type="xstring" value="management"/>
+            <entry key="type" type="xstring" value="NominalModel"/>
+            <entry key="skipMissingVals" type="xboolean" value="false"/>
+            <entry key="numberOfMissingValues" type="xint" value="0"/>
+            <entry key="invalidCause" type="xstring" isnull="true" value=""/>
+            <config key="data">
+                <entry key="maxNoOfAttrs" type="xlong" value="20"/>
+                <entry key="noOfClasses" type="xlong" value="2"/>
+                <config key="attributeValues">
+                    <entry key="array-size" type="xint" value="12"/>
+                    <entry key="0" type="xstring" value="vwc"/>
+                    <entry key="1" type="xstring" value="other"/>
+                    <entry key="2" type="xstring" value="wug"/>
+                    <entry key="3" type="xstring" value="water board"/>
+                    <entry key="4" type="xstring" value="wua"/>
+                    <entry key="5" type="xstring" value="private operator"/>
+                    <entry key="6" type="xstring" value="water authority"/>
+                    <entry key="7" type="xstring" value="parastatal"/>
+                    <entry key="8" type="xstring" value="company"/>
+                    <entry key="9" type="xstring" value="unknown"/>
+                    <entry key="10" type="xstring" value="other - school"/>
+                    <entry key="11" type="xstring" value="trust"/>
+                </config>
+                <config key="classValueData_0">
+                    <entry key="classValue" type="xstring" value="functional"/>
+                    <entry key="noOfRows" type="xlong" value="17001"/>
+                    <entry key="MissingValCounter" type="xlong" value="0"/>
+                    <config key="attributeValues">
+                        <entry key="array-size" type="xint" value="12"/>
+                        <entry key="0" type="xstring" value="parastatal"/>
+                        <entry key="1" type="xstring" value="trust"/>
+                        <entry key="2" type="xstring" value="other"/>
+                        <entry key="3" type="xstring" value="wua"/>
+                        <entry key="4" type="xstring" value="vwc"/>
+                        <entry key="5" type="xstring" value="private operator"/>
+                        <entry key="6" type="xstring" value="wug"/>
+                        <entry key="7" type="xstring" value="other - school"/>
+                        <entry key="8" type="xstring" value="company"/>
+                        <entry key="9" type="xstring" value="water board"/>
+                        <entry key="10" type="xstring" value="water authority"/>
+                        <entry key="11" type="xstring" value="unknown"/>
+                    </config>
+                    <config key="attributeCounter">
+                        <entry key="array-size" type="xint" value="12"/>
+                        <entry key="0" type="xlong" value="673"/>
+                        <entry key="1" type="xlong" value="19"/>
+                        <entry key="2" type="xlong" value="298"/>
+                        <entry key="3" type="xlong" value="668"/>
+                        <entry key="4" type="xlong" value="10429"/>
+                        <entry key="5" type="xlong" value="802"/>
+                        <entry key="6" type="xlong" value="2219"/>
+                        <entry key="7" type="xlong" value="10"/>
+                        <entry key="8" type="xlong" value="185"/>
+                        <entry key="9" type="xlong" value="1240"/>
+                        <entry key="10" type="xlong" value="315"/>
+                        <entry key="11" type="xlong" value="143"/>
+                    </config>
+                </config>
+                <config key="classValueData_1">
+                    <entry key="classValue" type="xstring" value="non functional"/>
+                    <entry key="noOfRows" type="xlong" value="13823"/>
+                    <entry key="MissingValCounter" type="xlong" value="0"/>
+                    <config key="attributeValues">
+                        <entry key="array-size" type="xint" value="12"/>
+                        <entry key="0" type="xstring" value="parastatal"/>
+                        <entry key="1" type="xstring" value="trust"/>
+                        <entry key="2" type="xstring" value="wua"/>
+                        <entry key="3" type="xstring" value="other"/>
+                        <entry key="4" type="xstring" value="vwc"/>
+                        <entry key="5" type="xstring" value="private operator"/>
+                        <entry key="6" type="xstring" value="wug"/>
+                        <entry key="7" type="xstring" value="other - school"/>
+                        <entry key="8" type="xstring" value="company"/>
+                        <entry key="9" type="xstring" value="water board"/>
+                        <entry key="10" type="xstring" value="water authority"/>
+                        <entry key="11" type="xstring" value="unknown"/>
+                    </config>
+                    <config key="attributeCounter">
+                        <entry key="array-size" type="xint" value="12"/>
+                        <entry key="0" type="xlong" value="360"/>
+                        <entry key="1" type="xlong" value="15"/>
+                        <entry key="2" type="xlong" value="320"/>
+                        <entry key="3" type="xlong" value="170"/>
+                        <entry key="4" type="xlong" value="10313"/>
+                        <entry key="5" type="xlong" value="302"/>
+                        <entry key="6" type="xlong" value="1223"/>
+                        <entry key="7" type="xlong" value="56"/>
+                        <entry key="8" type="xlong" value="324"/>
+                        <entry key="9" type="xlong" value="236"/>
+                        <entry key="10" type="xlong" value="298"/>
+                        <entry key="11" type="xlong" value="206"/>
+                    </config>
+                </config>
+            </config>
+        </config>
+        <config key="AttributeModelData_13">
+            <entry key="attributeName" type="xstring" value="payment"/>
+            <entry key="type" type="xstring" value="NominalModel"/>
+            <entry key="skipMissingVals" type="xboolean" value="false"/>
+            <entry key="numberOfMissingValues" type="xint" value="0"/>
+            <entry key="invalidCause" type="xstring" isnull="true" value=""/>
+            <config key="data">
+                <entry key="maxNoOfAttrs" type="xlong" value="20"/>
+                <entry key="noOfClasses" type="xlong" value="2"/>
+                <config key="attributeValues">
+                    <entry key="array-size" type="xint" value="7"/>
+                    <entry key="0" type="xstring" value="pay per bucket"/>
+                    <entry key="1" type="xstring" value="never pay"/>
+                    <entry key="2" type="xstring" value="unknown"/>
+                    <entry key="3" type="xstring" value="other"/>
+                    <entry key="4" type="xstring" value="pay monthly"/>
+                    <entry key="5" type="xstring" value="pay when scheme fails"/>
+                    <entry key="6" type="xstring" value="pay annually"/>
+                </config>
+                <config key="classValueData_0">
+                    <entry key="classValue" type="xstring" value="functional"/>
+                    <entry key="noOfRows" type="xlong" value="17001"/>
+                    <entry key="MissingValCounter" type="xlong" value="0"/>
+                    <config key="attributeValues">
+                        <entry key="array-size" type="xint" value="7"/>
+                        <entry key="0" type="xstring" value="pay monthly"/>
+                        <entry key="1" type="xstring" value="pay when scheme fails"/>
+                        <entry key="2" type="xstring" value="pay per bucket"/>
+                        <entry key="3" type="xstring" value="other"/>
+                        <entry key="4" type="xstring" value="pay annually"/>
+                        <entry key="5" type="xstring" value="never pay"/>
+                        <entry key="6" type="xstring" value="unknown"/>
+                    </config>
+                    <config key="attributeCounter">
+                        <entry key="array-size" type="xint" value="7"/>
+                        <entry key="0" type="xlong" value="1061"/>
+                        <entry key="1" type="xlong" value="1247"/>
+                        <entry key="2" type="xlong" value="3707"/>
+                        <entry key="3" type="xlong" value="302"/>
+                        <entry key="4" type="xlong" value="290"/>
+                        <entry key="5" type="xlong" value="7958"/>
+                        <entry key="6" type="xlong" value="2436"/>
+                    </config>
+                </config>
+                <config key="classValueData_1">
+                    <entry key="classValue" type="xstring" value="non functional"/>
+                    <entry key="noOfRows" type="xlong" value="13823"/>
+                    <entry key="MissingValCounter" type="xlong" value="0"/>
+                    <config key="attributeValues">
+                        <entry key="array-size" type="xint" value="7"/>
+                        <entry key="0" type="xstring" value="pay when scheme fails"/>
+                        <entry key="1" type="xstring" value="pay monthly"/>
+                        <entry key="2" type="xstring" value="pay per bucket"/>
+                        <entry key="3" type="xstring" value="other"/>
+                        <entry key="4" type="xstring" value="pay annually"/>
+                        <entry key="5" type="xstring" value="never pay"/>
+                        <entry key="6" type="xstring" value="unknown"/>
+                    </config>
+                    <config key="attributeCounter">
+                        <entry key="array-size" type="xint" value="7"/>
+                        <entry key="0" type="xlong" value="748"/>
+                        <entry key="1" type="xlong" value="498"/>
+                        <entry key="2" type="xlong" value="1405"/>
+                        <entry key="3" type="xlong" value="204"/>
+                        <entry key="4" type="xlong" value="90"/>
+                        <entry key="5" type="xlong" value="8225"/>
+                        <entry key="6" type="xlong" value="2653"/>
+                    </config>
+                </config>
+            </config>
+        </config>
+        <config key="AttributeModelData_14">
+            <entry key="attributeName" type="xstring" value="water_quality"/>
+            <entry key="type" type="xstring" value="NominalModel"/>
+            <entry key="skipMissingVals" type="xboolean" value="false"/>
+            <entry key="numberOfMissingValues" type="xint" value="0"/>
+            <entry key="invalidCause" type="xstring" isnull="true" value=""/>
+            <config key="data">
+                <entry key="maxNoOfAttrs" type="xlong" value="20"/>
+                <entry key="noOfClasses" type="xlong" value="2"/>
+                <config key="attributeValues">
+                    <entry key="array-size" type="xint" value="8"/>
+                    <entry key="0" type="xstring" value="soft"/>
+                    <entry key="1" type="xstring" value="salty"/>
+                    <entry key="2" type="xstring" value="milky"/>
+                    <entry key="3" type="xstring" value="unknown"/>
+                    <entry key="4" type="xstring" value="fluoride"/>
+                    <entry key="5" type="xstring" value="coloured"/>
+                    <entry key="6" type="xstring" value="salty abandoned"/>
+                    <entry key="7" type="xstring" value="fluoride abandoned"/>
+                </config>
+                <config key="classValueData_0">
+                    <entry key="classValue" type="xstring" value="functional"/>
+                    <entry key="noOfRows" type="xlong" value="17001"/>
+                    <entry key="MissingValCounter" type="xlong" value="0"/>
+                    <config key="attributeValues">
+                        <entry key="array-size" type="xint" value="8"/>
+                        <entry key="0" type="xstring" value="salty"/>
+                        <entry key="1" type="xstring" value="fluoride abandoned"/>
+                        <entry key="2" type="xstring" value="fluoride"/>
+                        <entry key="3" type="xstring" value="salty abandoned"/>
+                        <entry key="4" type="xstring" value="coloured"/>
+                        <entry key="5" type="xstring" value="soft"/>
+                        <entry key="6" type="xstring" value="unknown"/>
+                        <entry key="7" type="xstring" value="milky"/>
+                    </config>
+                    <config key="attributeCounter">
+                        <entry key="array-size" type="xint" value="8"/>
+                        <entry key="0" type="xlong" value="1191"/>
+                        <entry key="1" type="xlong" value="3"/>
+                        <entry key="2" type="xlong" value="103"/>
+                        <entry key="3" type="xlong" value="67"/>
+                        <entry key="4" type="xlong" value="148"/>
+                        <entry key="5" type="xlong" value="14992"/>
+                        <entry key="6" type="xlong" value="174"/>
+                        <entry key="7" type="xlong" value="323"/>
+                    </config>
+                </config>
+                <config key="classValueData_1">
+                    <entry key="classValue" type="xstring" value="non functional"/>
+                    <entry key="noOfRows" type="xlong" value="13823"/>
+                    <entry key="MissingValCounter" type="xlong" value="0"/>
+                    <config key="attributeValues">
+                        <entry key="array-size" type="xint" value="8"/>
+                        <entry key="0" type="xstring" value="salty"/>
+                        <entry key="1" type="xstring" value="fluoride abandoned"/>
+                        <entry key="2" type="xstring" value="fluoride"/>
+                        <entry key="3" type="xstring" value="salty abandoned"/>
+                        <entry key="4" type="xstring" value="coloured"/>
+                        <entry key="5" type="xstring" value="soft"/>
+                        <entry key="6" type="xstring" value="milky"/>
+                        <entry key="7" type="xstring" value="unknown"/>
+                    </config>
+                    <config key="attributeCounter">
+                        <entry key="array-size" type="xint" value="8"/>
+                        <entry key="0" type="xlong" value="1290"/>
+                        <entry key="1" type="xlong" value="7"/>
+                        <entry key="2" type="xlong" value="20"/>
+                        <entry key="3" type="xlong" value="51"/>
+                        <entry key="4" type="xlong" value="114"/>
+                        <entry key="5" type="xlong" value="11093"/>
+                        <entry key="6" type="xlong" value="247"/>
+                        <entry key="7" type="xlong" value="1001"/>
+                    </config>
+                </config>
+            </config>
+        </config>
+        <config key="AttributeModelData_15">
+            <entry key="attributeName" type="xstring" value="quantity"/>
+            <entry key="type" type="xstring" value="NominalModel"/>
+            <entry key="skipMissingVals" type="xboolean" value="false"/>
+            <entry key="numberOfMissingValues" type="xint" value="0"/>
+            <entry key="invalidCause" type="xstring" isnull="true" value=""/>
+            <config key="data">
+                <entry key="maxNoOfAttrs" type="xlong" value="20"/>
+                <entry key="noOfClasses" type="xlong" value="2"/>
+                <config key="attributeValues">
+                    <entry key="array-size" type="xint" value="5"/>
+                    <entry key="0" type="xstring" value="enough"/>
+                    <entry key="1" type="xstring" value="seasonal"/>
+                    <entry key="2" type="xstring" value="dry"/>
+                    <entry key="3" type="xstring" value="insufficient"/>
+                    <entry key="4" type="xstring" value="unknown"/>
+                </config>
+                <config key="classValueData_0">
+                    <entry key="classValue" type="xstring" value="functional"/>
+                    <entry key="noOfRows" type="xlong" value="17001"/>
+                    <entry key="MissingValCounter" type="xlong" value="0"/>
+                    <config key="attributeValues">
+                        <entry key="array-size" type="xint" value="5"/>
+                        <entry key="0" type="xstring" value="seasonal"/>
+                        <entry key="1" type="xstring" value="insufficient"/>
+                        <entry key="2" type="xstring" value="dry"/>
+                        <entry key="3" type="xstring" value="enough"/>
+                        <entry key="4" type="xstring" value="unknown"/>
+                    </config>
+                    <config key="attributeCounter">
+                        <entry key="array-size" type="xint" value="5"/>
+                        <entry key="0" type="xlong" value="1513"/>
+                        <entry key="1" type="xlong" value="4355"/>
+                        <entry key="2" type="xlong" value="121"/>
+                        <entry key="3" type="xlong" value="10885"/>
+                        <entry key="4" type="xlong" value="127"/>
+                    </config>
+                </config>
+                <config key="classValueData_1">
+                    <entry key="classValue" type="xstring" value="non functional"/>
+                    <entry key="noOfRows" type="xlong" value="13823"/>
+                    <entry key="MissingValCounter" type="xlong" value="0"/>
+                    <config key="attributeValues">
+                        <entry key="array-size" type="xint" value="5"/>
+                        <entry key="0" type="xstring" value="seasonal"/>
+                        <entry key="1" type="xstring" value="insufficient"/>
+                        <entry key="2" type="xstring" value="dry"/>
+                        <entry key="3" type="xstring" value="enough"/>
+                        <entry key="4" type="xstring" value="unknown"/>
+                    </config>
+                    <config key="attributeCounter">
+                        <entry key="array-size" type="xint" value="5"/>
+                        <entry key="0" type="xlong" value="882"/>
+                        <entry key="1" type="xlong" value="3482"/>
+                        <entry key="2" type="xlong" value="3647"/>
+                        <entry key="3" type="xlong" value="5435"/>
+                        <entry key="4" type="xlong" value="377"/>
+                    </config>
+                </config>
+            </config>
+        </config>
+        <config key="AttributeModelData_16">
+            <entry key="attributeName" type="xstring" value="source"/>
+            <entry key="type" type="xstring" value="NominalModel"/>
+            <entry key="skipMissingVals" type="xboolean" value="false"/>
+            <entry key="numberOfMissingValues" type="xint" value="0"/>
+            <entry key="invalidCause" type="xstring" isnull="true" value=""/>
+            <config key="data">
+                <entry key="maxNoOfAttrs" type="xlong" value="20"/>
+                <entry key="noOfClasses" type="xlong" value="2"/>
+                <config key="attributeValues">
+                    <entry key="array-size" type="xint" value="10"/>
+                    <entry key="0" type="xstring" value="dam"/>
+                    <entry key="1" type="xstring" value="rainwater harvesting"/>
+                    <entry key="2" type="xstring" value="other"/>
+                    <entry key="3" type="xstring" value="machine dbh"/>
+                    <entry key="4" type="xstring" value="shallow well"/>
+                    <entry key="5" type="xstring" value="spring"/>
+                    <entry key="6" type="xstring" value="river"/>
+                    <entry key="7" type="xstring" value="hand dtw"/>
+                    <entry key="8" type="xstring" value="lake"/>
+                    <entry key="9" type="xstring" value="unknown"/>
+                </config>
+                <config key="classValueData_0">
+                    <entry key="classValue" type="xstring" value="functional"/>
+                    <entry key="noOfRows" type="xlong" value="17001"/>
+                    <entry key="MissingValCounter" type="xlong" value="0"/>
+                    <config key="attributeValues">
+                        <entry key="array-size" type="xint" value="10"/>
+                        <entry key="0" type="xstring" value="spring"/>
+                        <entry key="1" type="xstring" value="dam"/>
+                        <entry key="2" type="xstring" value="other"/>
+                        <entry key="3" type="xstring" value="rainwater harvesting"/>
+                        <entry key="4" type="xstring" value="machine dbh"/>
+                        <entry key="5" type="xstring" value="river"/>
+                        <entry key="6" type="xstring" value="hand dtw"/>
+                        <entry key="7" type="xstring" value="shallow well"/>
+                        <entry key="8" type="xstring" value="lake"/>
+                        <entry key="9" type="xstring" value="unknown"/>
+                    </config>
+                    <config key="attributeCounter">
+                        <entry key="array-size" type="xint" value="10"/>
+                        <entry key="0" type="xlong" value="5587"/>
+                        <entry key="1" type="xlong" value="149"/>
+                        <entry key="2" type="xlong" value="63"/>
+                        <entry key="3" type="xlong" value="976"/>
+                        <entry key="4" type="xlong" value="2660"/>
+                        <entry key="5" type="xlong" value="2482"/>
+                        <entry key="6" type="xlong" value="200"/>
+                        <entry key="7" type="xlong" value="4779"/>
+                        <entry key="8" type="xlong" value="87"/>
+                        <entry key="9" type="xlong" value="18"/>
+                    </config>
+                </config>
+                <config key="classValueData_1">
+                    <entry key="classValue" type="xstring" value="non functional"/>
+                    <entry key="noOfRows" type="xlong" value="13823"/>
+                    <entry key="MissingValCounter" type="xlong" value="0"/>
+                    <config key="attributeValues">
+                        <entry key="array-size" type="xint" value="10"/>
+                        <entry key="0" type="xstring" value="spring"/>
+                        <entry key="1" type="xstring" value="dam"/>
+                        <entry key="2" type="xstring" value="other"/>
+                        <entry key="3" type="xstring" value="rainwater harvesting"/>
+                        <entry key="4" type="xstring" value="machine dbh"/>
+                        <entry key="5" type="xstring" value="river"/>
+                        <entry key="6" type="xstring" value="hand dtw"/>
+                        <entry key="7" type="xstring" value="shallow well"/>
+                        <entry key="8" type="xstring" value="lake"/>
+                        <entry key="9" type="xstring" value="unknown"/>
+                    </config>
+                    <config key="attributeCounter">
+                        <entry key="array-size" type="xint" value="10"/>
+                        <entry key="0" type="xlong" value="3391"/>
+                        <entry key="1" type="xlong" value="269"/>
+                        <entry key="2" type="xlong" value="50"/>
+                        <entry key="3" type="xlong" value="401"/>
+                        <entry key="4" type="xlong" value="3001"/>
+                        <entry key="5" type="xlong" value="1695"/>
+                        <entry key="6" type="xlong" value="226"/>
+                        <entry key="7" type="xlong" value="4427"/>
+                        <entry key="8" type="xlong" value="348"/>
+                        <entry key="9" type="xlong" value="15"/>
+                    </config>
+                </config>
+            </config>
+        </config>
+        <config key="AttributeModelData_17">
+            <entry key="attributeName" type="xstring" value="waterpoint_type"/>
+            <entry key="type" type="xstring" value="NominalModel"/>
+            <entry key="skipMissingVals" type="xboolean" value="false"/>
+            <entry key="numberOfMissingValues" type="xint" value="0"/>
+            <entry key="invalidCause" type="xstring" isnull="true" value=""/>
+            <config key="data">
+                <entry key="maxNoOfAttrs" type="xlong" value="20"/>
+                <entry key="noOfClasses" type="xlong" value="2"/>
+                <config key="attributeValues">
+                    <entry key="array-size" type="xint" value="7"/>
+                    <entry key="0" type="xstring" value="communal standpipe multiple"/>
+                    <entry key="1" type="xstring" value="communal standpipe"/>
+                    <entry key="2" type="xstring" value="hand pump"/>
+                    <entry key="3" type="xstring" value="improved spring"/>
+                    <entry key="4" type="xstring" value="other"/>
+                    <entry key="5" type="xstring" value="cattle trough"/>
+                    <entry key="6" type="xstring" value="dam"/>
+                </config>
+                <config key="classValueData_0">
+                    <entry key="classValue" type="xstring" value="functional"/>
+                    <entry key="noOfRows" type="xlong" value="17001"/>
+                    <entry key="MissingValCounter" type="xlong" value="0"/>
+                    <config key="attributeValues">
+                        <entry key="array-size" type="xint" value="7"/>
+                        <entry key="0" type="xstring" value="hand pump"/>
+                        <entry key="1" type="xstring" value="dam"/>
+                        <entry key="2" type="xstring" value="other"/>
+                        <entry key="3" type="xstring" value="cattle trough"/>
+                        <entry key="4" type="xstring" value="improved spring"/>
+                        <entry key="5" type="xstring" value="communal standpipe multiple"/>
+                        <entry key="6" type="xstring" value="communal standpipe"/>
+                    </config>
+                    <config key="attributeCounter">
+                        <entry key="array-size" type="xint" value="7"/>
+                        <entry key="0" type="xlong" value="5722"/>
+                        <entry key="1" type="xlong" value="2"/>
+                        <entry key="2" type="xlong" value="550"/>
+                        <entry key="3" type="xlong" value="49"/>
+                        <entry key="4" type="xlong" value="397"/>
+                        <entry key="5" type="xlong" value="1105"/>
+                        <entry key="6" type="xlong" value="9176"/>
+                    </config>
+                </config>
+                <config key="classValueData_1">
+                    <entry key="classValue" type="xstring" value="non functional"/>
+                    <entry key="noOfRows" type="xlong" value="13823"/>
+                    <entry key="MissingValCounter" type="xlong" value="0"/>
+                    <config key="attributeValues">
+                        <entry key="array-size" type="xint" value="6"/>
+                        <entry key="0" type="xstring" value="hand pump"/>
+                        <entry key="1" type="xstring" value="other"/>
+                        <entry key="2" type="xstring" value="cattle trough"/>
+                        <entry key="3" type="xstring" value="improved spring"/>
+                        <entry key="4" type="xstring" value="communal standpipe multiple"/>
+                        <entry key="5" type="xstring" value="communal standpipe"/>
+                    </config>
+                    <config key="attributeCounter">
+                        <entry key="array-size" type="xint" value="6"/>
+                        <entry key="0" type="xlong" value="3312"/>
+                        <entry key="1" type="xlong" value="3027"/>
+                        <entry key="2" type="xlong" value="23"/>
+                        <entry key="3" type="xlong" value="101"/>
+                        <entry key="4" type="xlong" value="1824"/>
+                        <entry key="5" type="xlong" value="5536"/>
+                    </config>
+                </config>
+            </config>
+        </config>
+        <config key="AttributeModelData_18">
+            <entry key="attributeName" type="xstring" value="Target Class"/>
+            <entry key="type" type="xstring" value="ClassModel"/>
+            <entry key="skipMissingVals" type="xboolean" value="false"/>
+            <entry key="numberOfMissingValues" type="xint" value="0"/>
+            <entry key="invalidCause" type="xstring" isnull="true" value=""/>
+            <config key="data">
+                <entry key="totalNoOfRecords" type="xlong" value="30824"/>
+                <entry key="maxNoOfClassValues" type="xlong" value="20"/>
+                <config key="classValues">
+                    <entry key="array-size" type="xint" value="2"/>
+                    <entry key="0" type="xstring" value="functional"/>
+                    <entry key="1" type="xstring" value="non functional"/>
+                </config>
+                <config key="classRecordCounter">
+                    <entry key="array-size" type="xint" value="2"/>
+                    <entry key="0" type="xlong" value="17001"/>
+                    <entry key="1" type="xlong" value="13823"/>
+                </config>
+            </config>
+        </config>
+    </config>
+</config>
