@@ -129,7 +129,7 @@
                 <path d="M1418 153 L1495 153 L1495 164 L1418 164 L1418 153 Z"/>
             </clipPath>
             <clipPath clipPathUnits="userSpaceOnUse" id="clipPath39">
-                <path d="M-1 -1 L2301 -1 L2301 1188 L-1 1188 L-1 -1 Z"/>
+                <path d="M-1 -1 L2523 -1 L2523 1188 L-1 1188 L-1 -1 Z"/>
             </clipPath>
         </defs>
         <g font-size="14" fill="white" font-family="&apos;JetBrains Mono&apos;"
@@ -755,16 +755,16 @@ C5MF0LpbaCn+gKns1VPY0ghGQtKXuPSV6QeHGdDjZ0FRBnTN3X8c32NplhsBEvB+
            text-rendering="optimizeLegibility"
            font-family="&apos;JetBrains Mono&apos;" stroke="rgb(150,150,150)">
             <path fill="none"
-                  d="M447 447 C449 447 453 447 455 447 C560 447 703 457 808 457 C810 457 814 457 816 457"
-                  clip-path="url(#clipPath39)" fill-rule="evenodd"/>
-            <path fill="none"
-                  d="M447 447 C449 447 453 447 455 447 C771 447 1152 157 1468 157 C1470 157 1474 157 1476 157"
-                  clip-path="url(#clipPath39)" fill-rule="evenodd"/>
-            <path fill="none"
                   d="M127 377 C129 377 133 377 135 377 C347 377 596 158 808 158 C810 158 814 158 816 158"
                   clip-path="url(#clipPath39)" fill-rule="evenodd"/>
+            <path clip-path="url(#clipPath39)" fill="none" fill-rule="evenodd"
+                  d="M447 448 C449 448 453 448 455 448 C560 448 703 457 808 457 C810 457 814 457 816 457"
+                  stroke="rgb(75,75,75)" stroke-width="2"/>
             <path fill="none"
-                  d="M447 447 C449 447 453 447 455 447 C631 447 632 917 808 917 C810 917 814 917 816 917"
+                  d="M447 448 C449 448 453 448 455 448 C631 448 632 917 808 917 C810 917 814 917 816 917"
+                  clip-path="url(#clipPath39)" fill-rule="evenodd"/>
+            <path fill="none"
+                  d="M447 448 C449 448 453 448 455 448 C771 448 1152 157 1468 157 C1470 157 1474 157 1476 157"
                   clip-path="url(#clipPath39)" fill-rule="evenodd"/>
             <path fill="none"
                   d="M127 377 C129 377 133 377 135 377 C214 377 309 457 388 457 C390 457 394 457 396 457"
