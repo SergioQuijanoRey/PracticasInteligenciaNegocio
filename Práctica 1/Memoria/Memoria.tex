@@ -95,7 +95,7 @@
 %===================================================================================================
 
 % Para realizar las citas de forma corta
-\newcommand{\customcite}[1]{\emph{"\ref{#1}. \nameref{#1}"}}
+\newcommand{\customcite}[1]{\emph{``\ref{#1}. \nameref{#1}''}}
 
 % Metadatos del documento
 %===================================================================================================
@@ -106,7 +106,8 @@
 \author{
     {Sergio Quijano Rey - 72103503k}\\
     {sergioquijano@correo.ugr.es} \\
-    {5º Doble Grado Ingeniería Informática y Matemáticas}
+    {5º Doble Grado Ingeniería Informática y Matemáticas} \\
+    {Grupo de prácticas 1}
 }
 
 \date{\today}
@@ -140,14 +141,111 @@ En esta sección hablaremos de cada uno de los problemas abordados, tratando las
 
 \subsection{Información general}
 
-En todas las partes en las que necesitemos usar números aleatorios, usaremos la semilla 123456789 para poder reproducir bajo las mismas condiciones los experimentos y para que las comparaciones entre los distintos algoritmos sean lo más justas posible.
+En todas las partes en las que necesitemos usar números aleatorios, usaremos la semilla $123456789$ para poder reproducir bajo las mismas condiciones los experimentos y para que las comparaciones entre los distintos algoritmos sean lo más justas posible. En los siguientes sub-apartados, introduciremos los distintos problemas a tratar, sus características y problemas que puedan plantear.
 
-\subsection{\emph{Heart Failure Prediction}}
+En todos los \emph{datasets} hemos usado la misma estructura jerárquica apoyándonos en los metanodos de \lstinline{KNIME}. Esta estructura busca una mayor limpieza en el \emph{``código''}. Dicha estructura se va a ir vislumbrando a lo largo de las secciones de estas memorias, donde incluiremos capturas de pantalla de los distintos \emph{workflows} desarrollados.
 
-% TODO -- los enlaces deben ser clicables
-En primer lugar, la fuente original del \emph{dataset} se puede encontrar en \url{https://www.kaggle.com/fedesoriano/heart-failure-prediction}. Aunque podemos estar trabajando con un \emph{dataset} ligeramente modificado por los profesores de la asignatura.
+\pagebreak
 
-Analizando los datos con \lstinline{KNIME}, como explicaremos más adelante, vemos que tenemos 12 columnas (una por cada una de las características del \emph{datasets}). Además, tenemos \emph{missing values} en la característica \emph{Cholesterol}. Además, estos \emph{missing values} están marcados con un cero en el valor. Así que los pasamos a \emph{missing values} propios de \emph{KNIME} del siguiente modo: pasando esta columna a \lstinline{string}, cambiando el \lstinline{string} '0` al \lstinline{string} 'missing value`. Recuperamos el valor entero y con ello, generamos los \emph{missing values} correspondientes
+\subsection{\emph{Heart Failure Prediction}} \label{intro_dataset01:seccion}
+
+% dimensiones, tipos de variables, desbalanceo de clases, existencia de valores perdidos
+
+En primer lugar, la fuente original del \emph{dataset} se puede encontrar en \cite{heart_disease_dataset:online}. Aunque podemos estar trabajando con un \emph{dataset} ligeramente modificado por los profesores de la asignatura, al igual que con el resto de \emph{datasets} que estudiaremos en esta práctica.
+
+En la propia página de la que se obtiene el dataset \cite{heart_disease_dataset:online}, se especifica que la tarea a resolver para este \emph{dataset} es \emph{``Create a model to assess the likelihood of a possible heart disease event. This can be used to help hospitals in assessing the severity of patients with cardiovascular diseases''}. Es decir, nuestra tarea es generar un modelo de clasificación para predecir, con los datos de entrada dados, si un paciente puede desarrollar algún problema de tipo cardiaco.
+
+En el siguiente apartado, pasamos a comentar las particularidades de este \emph{dataset}, información que hemos extraído con el análisis exploratorio hecho en \lstinline{KNIME}:
+
+\subsubsection{Análisis Exploratorio de los Datos}
+
+Realizamos un pequeño \emph{Análisis Exploratorio Inicial} (\emph{EDA}) de los datos usando las herramientas que nos proporciona \lstinline{KNIME}.
+
+Como ya comentábamos en \customcite{intro_dataset01:seccion}, buscamos predecir si una persona tendrá problemas de tipo cardiaco. Por tanto, la variable de salida con la que vamos a trabajar es \lstinline{HeartDisease}. Consideraremos, por su mayor relevancia, como clase positiva, a la clase $1$.
+
+Lo primero que vemos es que tenemos $12$ variables ($11$ variables de entrada más la variable de salida) y $918$ filas (y por tanto, $918$ ejemplos).
+
+El \emph{workflow} de mayor nivel, para este primer \emph{dataset}, se muestra en la siguiente figura:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.8 \textwidth]{workflow_dataset01}
+    \caption{\emph{Workflow} de más alto nivel para el primer \emph{dataset}}
+\end{figure}
+
+La parte que ahora nos interesa es la de Análisis Exploratorio de Datos, que mostramos en la siguiente figura:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.8 \textwidth]{eda_workflow_dataset01}
+    \caption{\emph{Workflow} de Análisis Exploratorio de Datos para el primer \emph{dataset}}
+\end{figure}
+
+Empezamos con el nodo de estadísticas, que nos muestra que tenemos $410$ ejemplos para la clase de salida $0$ y $508$ para la clase $1$. Por tanto tenemos un ligero desbalanceo ($44.66\%$ para la clase $0$ y $55.34\%$ para la clase $1$), pero en este \emph{dataset} no vamos a tratar dicho desbalanceo. En futuros \emph{datasets} nos vamos a encontrar con clases mucho más desbalanceadas.
+
+Dentro del anterior nodo vemos las distribuciones de las otras variables con las que trabajamos, sin llegar a conclusiones de gran relevancia, salvo razonamientos del tipo hay una característica que predomina en un valor sobre el otro valor en la población, o la población tiene una distribución de la variable normal o con cierta asimetría hacia un lado. Ejemplo de característica que predomina se muestra en la siguiente figura:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.8 \textwidth]{dataset01_var_predominante}
+    \caption{Distribución de la variable sexo. A izquierda, los hombres. A la derecha, las mujeres. Es claro que tenemos muchos más hombres que mujeres en nuestra población.}
+    \label{variable_predominante:imagen}
+\end{figure}
+
+Esta información puede ser utilizada de forma experta en nuestros sistemas automáticos. Sin embargo, por una cuestión de tiempo, no realizamos un ajuste tan a fondo de los modelos que vamos a generar (sobre todo teniendo en cuenta que practicar esto para los cuatro \emph{datasets} es inviable. En otros \emph{datasets} realizaremos una selección de variables usando otras técnicas).
+
+Ejemplo de una distribución con cierta asimetría se muestra a continuación:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.6 \textwidth]{dataset01_var_asimetrica}
+    \caption{Distribución de la variable \lstinline{RestingBP}. Podemos ver claramente cómo se acumula más hacia la derecha.}
+\end{figure}
+
+De nuevo, esta información es interesante para plantear los modelos de aprendizaje automático de una forma mucho más concienzuda, pero por la extensión de la práctica en técnicas y aspectos a tener en cuenta, no entramos en detalle en este aspecto.
+
+Lo siguiente que hacemos en el Análisis Exploratorio de Datos es mostrar la matriz de correlaciones lineales, que presentamos a continuación:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.8 \textwidth]{dataset01_correlaciones}
+    \caption{Matriz de correlaciones lineales. Un color azul significa correlación lineal positiva, y un color rojo significa correlación lineal negativa.}
+\end{figure}
+
+Vemos algunas variables correladas. Las más interesantes son el grupo que forman las variables \lstinline{MaxHR} \lstinline{ExerciseAngina}, \lstinline{Oldpeak}, \lstinline{ST_Slope} y la variable de salida \lstinline{HeartDisease}. Sabiendo que estas variables están muy correladas, y que una de ellas es la variable de salida, podríamos probar a construir los modelos predictivos en base a este grupo de variables. Por tanto, estamos justificando el interés de que, más adelante, probemos a eliminar ciertas filas empleando esta matriz de correlaciones, y ver cómo afecta esto al rendimiento de nuestros modelos.
+
+Mostramos ahora los \emph{boxplots} de algunas variables, para ver que tenemos ciertos valores \emph{outliers}:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.9 \textwidth]{dataset01_boxplots}
+    \caption{\emph{Boxplots} de algunas de las variables con las que trabajamos. Queda claro que tenemos \emph{outliers} (sabiendo que están alejados de la media más de 3 veces la desviación típica). Por tanto, tendremos que tratar de alguna forma estos \emph{outliers}}
+\end{figure}
+
+También hacemos \emph{plots} de todas las combinaciones posibles entre dos variables, obteniendo la siguiente gráfica:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.9 \textwidth]{dataset01_combinaciones}
+    \caption{Gráficas de todas las posibles combinaciones de dos variables de nuestro dataset}
+\end{figure}
+
+De nuevo, como ya comentábamos para \customcite{variable_predominante:imagen}, podemos extraer de esta gráfica algunas conclusiones sobre la distribución de las variables y algunas relaciones que, por simpleza del problema y por falta de tiempo, no vamos a incluir en nuestro modelo.
+
+En último lugar, probamos a aplicar \emph{PCA} al \emph{dataset} para obtener solo dos variables de entrada junto con la variable de salida, buscando sacar alguna información de alto nivel del problema. Esta técnica busca transformar el conjunto de datos con nuevas variables, de modo que estas variables no estén correlacionadas entre sí manteniendo el máximo posible de la varianza del conjunto de datos original. Este procedimiento se apoya en la descomposición en valores propios de la matriz de covarianzas \cite{pca:online}. Mostramos las dos variables obtenidas usando \emph{PCA}, coloreando cada punto del plano $2D$ según a la clase a la que pertenecen:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.9 \textwidth]{dataset01_pca}
+    \caption{Resultado de aplicar \emph{PCA} en dos dimensiones, coloreando cada punto según la clase a la que pertenecen}
+\end{figure}
+
+Los resultados obtenidos no nos invitan a usar \emph{PCA} para usarlo como base a modelos de aprendizaje automático. Sin embargo es interesante que se ha obtenido una línea a la izquierda con clara predominancia de la clase representada por el color azul, mientras que a la derecha se obtiene un \emph{clúster} ligeramente circular donde los datos de las dos clases están mezclados sin un patrón claro (quizás la clase roja tiene mayor predominancia en la parte superior). Estamos seguros de que aplicando \emph{PCA} con dimensiones mayores obtendríamos un buen \emph{performance} en los modelos de aprendizaje automático. Pero como para otros \emph{datasets} es más interesante aplicar esta técnica, lo dejamos para más adelante.
+
+En último lugar, tratamos los \textbf{\emph{missing values}}. En el \emph{workflow} de más alto nivel, hacemos una primera aproximación al tratamiento de los \emph{missing values}. Tratamos de borrar todas las filas que contengan \emph{missing values}, pero no borramos ninguna fila. En un principio pensamos que no tenemos \emph{missing values} en este \emph{dataset}. Sin embargo, explorando la colección de datos comprobamos el siguiente hecho: la variable \lstinline{Cholesterol} contiene \emph{missing values} codificados con el valor $0$. Para tratar estos \emph{missing values}, en \emph{Cross Validation} los marcaremos como tal, y los trataremos convenientemente en cada nodo de validación (para evitar hacer \emph{data snooping}). Entraremos en detalles más adelante.
+
+% TODO -- explicar este proceso en Cross Validation
+% Analizando los datos con \lstinline{KNIME}, como explicaremos más adelante, vemos que tenemos 12 columnas (una por cada una de las características del \emph{datasets}). Además, tenemos \emph{missing values} en la característica \emph{Cholesterol}. Además, estos \emph{missing values} están marcados con un cero en el valor. Así que los pasamos a \emph{missing values} propios de \emph{KNIME} del siguiente modo: pasando esta columna a \lstinline{string}, cambiando el \lstinline{string} '0` al \lstinline{string} 'missing value`. Recuperamos el valor entero y con ello, generamos los \emph{missing values} correspondientes
 
 \pagebreak
 
