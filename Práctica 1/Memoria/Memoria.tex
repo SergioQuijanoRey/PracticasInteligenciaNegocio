@@ -14,7 +14,7 @@
 
 % Paquete para incluir imagenes
 \usepackage{graphicx}
-\graphicspath{ {./Imagenes/} }
+\graphicspath{ {./images/} }
 
 % Para fijar las imagenes en la posicion deseada
 \usepackage{float}
@@ -49,6 +49,9 @@
 % Para la bibliografia
 % Sin esto, los enlaces de la bibliografia dan un error de compilacion
 \usepackage{url}
+
+% Para que se puedan clicar los enlaces
+\usepackage{hyperref}
 
 % Para mostrar graficas de dos imagenes, cada una con su caption, y con un caption comun
 \usepackage{subcaption}
@@ -87,6 +90,12 @@
 
 % Para mostrar las matrices
 \usepackage{amsmath}
+
+% Funciones de latex personalizadas
+%===================================================================================================
+
+% Para realizar las citas de forma corta
+\newcommand{\customcite}[1]{\emph{"\ref{#1}. \nameref{#1}"}}
 
 % Metadatos del documento
 %===================================================================================================
