@@ -91,9 +91,6 @@
 % Para mostrar las matrices
 \usepackage{amsmath}
 
-% Para redondear las posiciones decimales en tablas
-\usepackage{siunitx}
-
 % Funciones de latex personalizadas
 %===================================================================================================
 
@@ -466,20 +463,98 @@ En primer lugar, mostramos la tabla que resume todos los resultados obtenidos tr
     \resizebox{1.05\textwidth}{!}{
     \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|}
         \hline
-        row ID&TruePositives&FalsePositives&TrueNegatives&FalseNegatives&Recall&Precision&Sensitivity&Specificity&F-measure&AUC&Accuracy&G-Mean \\
+        Algo Name&TP&FP&TN&FN&Recall&Precision&Sensitivity&Specificity&F-measure&AUC&Accuracy&G-Mean\\
         \hline
         Naive Bayes&212&106&247&79&0.73&0.67&0.73&0.70&0.70&0.92&0.71&0.71 \\
         Neural Net&212&42&179&48&0.82&0.83&0.82&0.81&0.82&0.88&0.81&0.81 \\
         Support Vector Machine&6&1&352&285&0.02&0.86&0.02&1.00&0.04&1&0.56&0.14 \\
+        Support Vector Machine + Normalization&141&33&332&195&0.42&0.81&0.42&0.91&0.55&1&0.67&0.62 \\
         K-NN&155&161&192&136&0.53&0.49&0.53&0.54&0.51&0.72&0.54&0.54 \\
         AdaBoost&208&102&251&83&0.71&0.67&0.71&0.71&0.69&0.92&0.71&0.71 \\
-        Support Vector Machine + Normalization&141&33&332&195&0.42&0.81&0.42&0.91&0.55&1&0.67&0.62 \\
         Random Forest&215&107&246&76&0.74&0.67&0.74&0.70&0.70&0.92&0.72&0.72 \\
         \hline
     \end{tabular}}
 \end{center}
     \caption{Resultados de \emph{Cross Validation}, para los distintos algoritmos estudiados, en el primer \emph{dataset}}
 \end{table}
+
+Mostramos ahora una tabla con las medidas de complejidad de cada uno de los algoritmos estudiados
+
+\begin{table}[H]
+\begin{center}
+    % \resizebox{1.05\textwidth}{!}{
+    \begin{tabular}{|c|c|}
+        \hline
+        Algo Name & Medida de Complejidad \\
+        \hline
+        Naive Bayes& 20 valores únicos por atributo \\
+        Neural Net & 1 hidden layer, 10 neuronas \\
+        Support Vector Machine& Kernel RBF $\sigma = 2.0$ \\
+        Support Vector Machine + Normalization& Kernel RBF $\sigma = 2.0$ \\
+        K-NN& 10 vecinos \\
+        AdaBoost& 10 iteraciones \\
+        Random Forest& 50 árboles, profundidad no acotada \\
+        \hline
+    \end{tabular}
+% }
+\end{center}
+    \caption{Medidas de complejidad de los algoritmos considerados}
+\end{table}
+
+\pagebreak
+
+\subsubsection{Mostrando las curvas ROC obtenidas}
+
+En todos los algoritmos, hemos tomado las probabilidades de clasificación, con las que hemos mostrado las curvas ROC para la clase positiva. Estas curvas las mostramos tanto de forma individual como de forma conjunta. Empezamos mostrando la gráfica con todas las curvas ROC agrupadas:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.8 \textwidth]{dataset01_allroc}
+    \caption{Todas las curvas ROC de los algoritmos estudiados}
+    \label{workflow_general:imagen}
+\end{figure}
+
+Algunos algoritmos se muestran de forma correcta. Es el caso de Naive Bayes, Random Forest, AdaBoost y K-NN. Los otros tres algoritmos (SVM en sus dos variantes y la red neuronal) se muestran de forma incorrecta. Esto se explica porque estos algoritmos no tratan de la misma forma los \emph{missing values}, en muchos casos ignorándolos. Por tanto, obtenemos dos tipos de tablas que juntar, un tipo con todas las filas originales, y otro tipo de tabla en la que faltan algunas filas. Por tanto la visualización no es correcta. Es por esto que mostramos a continuación todas las curvas de forma individual:
+
+\begin{figure}[H]
+    \centering
+
+    \begin{subfigure}[b]{0.4 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{dataset01_roc_nn}
+        \caption{Curva ROC para Redes Neuronales}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.4 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{dataset01_roc_naivebayes}
+        \caption{Curva ROC para Naive Bayes}
+    \end{subfigure}
+
+    \begin{subfigure}[b]{0.4 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{dataset01_roc_svm}
+        \caption{Curva ROC para SVM}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.4 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{dataset01_roc_svmnormalizacion}
+        \caption{Curva ROC para SVM con normalización}
+    \end{subfigure}
+
+    \begin{subfigure}[b]{0.4 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{dataset01_roc_knn}
+        \caption{Curva ROC para K-NN}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.4 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{dataset01_roc_randomforest}
+        \caption{Curva ROC para Random Forest}
+    \end{subfigure}
+
+    \begin{subfigure}[b]{0.4 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{dataset01_roc_adaboost}
+        \caption{Curva ROC para Adaboost}
+    \end{subfigure}
+
+    \caption{Todas las curvas ROC para el primer \emph{dataset}, mostradas de forma individual}
+\end{figure}
+
+Con esta visualización sí que se pueden extraer más conclusiones sobre el comportamiento de los algoritmos, como desarrollaremos más adelante.
 
 \pagebreak
 
