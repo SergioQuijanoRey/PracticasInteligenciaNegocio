@@ -247,7 +247,7 @@ El nodo que usamos para realizar esta comprobación sobre los \emph{missing valu
 
 \pagebreak
 
-\section{Resultados Obtenidos}
+\section{Resultados Obtenidos} \label{resultados_brutos:seccion}
 
 \subsection{Consideraciones iniciales} \label{cv_consideraciones:seccion}
 
@@ -543,7 +543,7 @@ Algunos algoritmos se muestran de forma correcta. Es el caso de Naive Bayes, Ran
     \end{subfigure}
     \begin{subfigure}[b]{0.4 \textwidth}
         \includegraphics[width = 0.9 \textwidth]{dataset01_roc_randomforest}
-        \caption{Curva ROC para Random Forest}
+        \caption{Curva ROC para Random Fores}
     \end{subfigure}
 
     \begin{subfigure}[b]{0.4 \textwidth}
@@ -555,6 +555,139 @@ Algunos algoritmos se muestran de forma correcta. Es el caso de Naive Bayes, Ran
 \end{figure}
 
 Con esta visualización sí que se pueden extraer más conclusiones sobre el comportamiento de los algoritmos, como desarrollaremos más adelante.
+
+\pagebreak
+
+\section{Análisis de resultados}
+
+En la anterior sección, \customcite{resultados_brutos:seccion}, hemos mostrados los resultados obtenidos. Estos resultados han sido las tablas con las distintas métricas recolectadas, las medidas de complejidad de los algoritmos, y las distintas curvas ROC obtenidas. En base a esto, y a la siguiente tabla comparativa, realizaremos un análisis de los algoritmos obtenidos:
+
+% TODO -- incluir tabla con las medias de los datos
+% TODO -- realizar un análisis de los resultados obtenidos
+
+\pagebreak
+
+\section{Configuración de los algoritmos}
+
+\subsection{Consideraciones iniciales}
+
+Por cada \emph{dataset}, hemos seleccionado dos de los mejores modelos para ese problema, y hemos realizado un ajuste de los parámetros de forma iterativa buscando la máxima eficacia de los modelos considerados. Por tanto, desarrollaremos una sección para cada \emph{dataset} en el que realizaremos este estudio. Añadiremos también una sección para desarrollar algunas conclusiones finales sobre todos los ajustes realizados.
+
+Observar que estamos optimizando la métrica \emph{accuracy}, que como sabemos de teoría, tiene ciertos problemas y no es del todo representativa de la eficacia real de los modelos obtenidos. Sin embargo, esto ha sido así porque, para el nodo \emph{Parameter Optimization Loop End}, tenemos que pasar una métrica por \emph{flow variable}, como es posible hacer con el \emph{scorer}. Sin embargo esto no ha sido posible usando un nodo \emph{math formula}, por lo que nos hemos conformado con ajustar el \emph{accuracy} (mala métrica) a través de un proceso iterativo metódico (buena forma de proceder). En otro \emph{software} sería sencillo cambiar esta optimización para ajustar una mejor medida como \emph{G-Mean} siguiendo la misma filosofía.
+
+En este caso, no estamos usando \emph{Cross Validation} para obtener las métricas. En su lugar, estamos dividiendo el conjunto de datos en 2 particiones, una para \emph{training} ($70\%$) y otra para \emph{test} ($30\%$). Con esto calculamos las métricas sobre el conjunto de \emph{test}. Esta decisión ha sido tomada con el objetivo de reducir los tiempos de cómputo, que ya son elevados por la forma de proceder modificando los valores de los parámetros de forma iterativa.
+
+Al igual que hemos hecho previamente, vamos a ser completamente explícitos en \customcite{optim_dataset01:seccion}, y en los siguientes \emph{datasets}, para evitar ser repetitivos, solo incluiremos las diferencias respecto a lo desarrollado anteriormente y los resultados concretos obtenidos para ese \emph{dataset}. Por ejemplo, solo mostramos todas las capturas de los \emph{workflows} en \customcite{optim_dataset01:seccion}.
+
+\pagebreak
+
+\subsection{\emph{Heart Failure Prediction}} \label{optim_dataset01:seccion}
+
+Para este \emph{dataset}, elegimos optimizar \emph{Random Forest} y la red neuronal simple. Mostramos el \emph{workflow} global en el que ajustamos los dos modelos:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.8 \textwidth]{dataset01_optim_gobal}
+    \caption{\emph{Workflow} global para ajustar los dos algoritmos elegidos}
+\end{figure}
+
+Ahora mostramos la optimización que realizamos, en cada uno de los dos modelos:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.8 \textwidth]{dataset01_optim_first}
+    \caption{\emph{Workflow} para ajustar \emph{Random Forest}}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.8 \textwidth]{dataset01_optim_second}
+    \caption{\emph{Workflow} para ajustar Redes Neuronales Simples}
+\end{figure}
+
+Una vez mostrado esto, a continuación tenemos las tablas obtenidas del proceso de optimización:
+
+\begin{table}[H]
+\begin{center}
+    \begin{tabular}{|c|c|}
+        \hline
+        Number of trees&Objective value \\
+        \hline
+        10&0.837               \\
+        20&0.841               \\
+        30&0.859               \\
+        40&0.862               \\
+        50&0.859               \\
+        60&0.848               \\
+        70&0.851               \\
+        80&0.855                \\
+        90&0.859               \\
+        100&0.862              \\
+        110&0.862              \\
+        120&0.859              \\
+        130&0.862              \\
+        140&0.862              \\
+        \textbf{150}&\textbf{0.866}              \\
+        \hline
+    \end{tabular}
+\end{center}
+    \caption{Optimización para \emph{Random Forest}, ajustando el número de árboles}
+\end{table}
+
+En este caso, vemos que el \emph{accuracy} crece de forma más o menos monótona conforme aumentamos el número de árboles que conforman el bosque. Por tanto, obtenemos el mejor resultado en el valor más alto de número de árboles, y lo lógico sería continuar aumentando dicho valor y ver cómo evoluciona la métrica estudiada. Pero como ya hemos comentado, estamos usando como métrica el \emph{accuracy}, que no es una métrica del todo fiable, y por tanto decidimos no aumentar este valor en \emph{pro} de obtener un modelo más simple y, por tanto, potencialmente mucho más generalizable.
+
+\begin{table}[H]
+\begin{center}
+    \begin{tabular}{|c|c|c|}
+        \hline
+        Neurons per h.layer&Hidden Layers&Objective value \\
+        \hline
+        10&1&0.446 \\
+        20&1&0.446 \\
+        \textbf{30}&\textbf{1}&\textbf{0.554} \\
+        40&1&0.446 \\
+        50&1&0.511 \\
+        60&1&0.522 \\
+        70&1&0.551 \\
+        80&1&0.464 \\
+        90&1&0.446 \\
+        100&1&0.554 \\
+        10&2&0.554 \\
+        20&2&0.551 \\
+        30&2&0.554 \\
+        40&2&0.446 \\
+        50&2&0.446 \\
+        60&2&0.446 \\
+        70&2&0.406 \\
+        80&2&0.554 \\
+        90&2&0.388 \\
+        100&2&0.554 \\
+        10&3&0.446 \\
+        20&3&0.493 \\
+        30&3&0.446 \\
+        40&3&0.554 \\
+        50&3&0.446 \\
+        60&3&0.554 \\
+        70&3&0.471 \\
+        80&3&0.554 \\
+        90&3&0.446 \\
+        100&3&0.446 \\
+        \hline
+
+    \end{tabular}
+\end{center}
+    \caption{Optimización para \emph{Random Forest}, ajustando el número de árboles}
+\end{table}
+
+En este caso, obtenemos los mejores resultados para 30 neuronas y una única capa oculta. Esto lo que nos muestra es que los mejores resultados no los estamos obteniendo con un modelo más potente, sino con uno más simple con menor capacidad de sobreajustar.
+
+Hay que tener en cuenta que las redes neuronales de \lstinline{KNIME} son muy simples, y dan muy poco de sí. Para poder trabajar con modelos más potentes de redes neuronales (más capas ocultas con más neuronas por capa), necesitamos \textbf{técnicas de regularización}. Por ejemplo, no podemos establecer una regularización tipo \emph{weight decay}. Tampoco podemos usar \emph{dropout} para paliar el sobreajuste. Y con ello, es lógico que modelos más simples generen mejores resultados en \emph{test}, por su menor capacidad de sobreajuste.
+
+\pagebreak
+
+\subsection{Conclusiones finales}
+
+% TODO -- hacer estas conclusiones con las configuraciones de los cuatro algoritmos
 
 \pagebreak
 
