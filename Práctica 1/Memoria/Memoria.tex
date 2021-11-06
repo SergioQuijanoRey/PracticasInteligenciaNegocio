@@ -245,9 +245,6 @@ En último lugar, tratamos los \textbf{\emph{missing values}}. En el \emph{workf
 
 El nodo que usamos para realizar esta comprobación sobre los \emph{missing values} se muestra en el \emph{workflow} general que aparece en \customcite{workflow_general:imagen}.
 
-% TODO -- explicar este proceso en Cross Validation
-% Analizando los datos con \lstinline{KNIME}, como explicaremos más adelante, vemos que tenemos 12 columnas (una por cada una de las características del \emph{datasets}). Además, tenemos \emph{missing values} en la característica \emph{Cholesterol}. Además, estos \emph{missing values} están marcados con un cero en el valor. Así que los pasamos a \emph{missing values} propios de \emph{KNIME} del siguiente modo: pasando esta columna a \lstinline{string}, cambiando el \lstinline{string} '0` al \lstinline{string} 'missing value`. Recuperamos el valor entero y con ello, generamos los \emph{missing values} correspondientes
-
 \pagebreak
 
 \section{Resultados Obtenidos}
@@ -272,9 +269,13 @@ Pensamos que con estos modelos tenemos una variedad suficiente para comparar en 
 
 En este proceso, usaremos un nodo al que llamamos \emph{Custom Cross Validation}. Este nodo tiene la misma base que el nodo de \lstinline{KNIME} \emph{Cross Validation}. Sin embargo, añadimos dos nodos, uno para preprocesar el \emph{fold} de entrenamiento y otro para aplicar dicho preprocesado al \emph{test}, sin hacer \emph{data snooping}. Es decir, las operaciones se calculan y aplican con \emph{training}, y se aplican en \emph{test} \textbf{usando el cálculo realizado sobre \emph{training}}.
 
+En \customcite{heart_failure_cross_validation:seccion} mostraremos de forma extensa los distintos \emph{workflows} que componen nuestras siete validaciones cruzadas. Sin embargo, para los siguientes \emph{datasets} no repetiremos el mismo proceso, para evitar ser demasiado repetitivos y extensos. Solo mostraremos aquellas partes en las que haya diferencias con lo mostrado en \customcite{heart_failure_cross_validation:seccion} y con los \emph{datasets} desarrollados previamente.
+
 \pagebreak
 
-\subsection{Heart Failure Prediction}
+\subsection{Heart Failure Prediction} \label{heart_failure_cross_validation:seccion}
+
+\subsubsection{\emph{Workflows} empleados para \emph{Cross Validation}}
 
 En primer lugar, tenemos un \emph{metanodo} para encapsular todo el trabajo con los 7 algoritmos que hemos considerado. Este \emph{metanodo} se mostraba en el \emph{workflow} más general en \customcite{workflow_general:imagen}. Dentro de este nodo para \emph{Cross Validation} tenemos la siguiente estructura:
 
@@ -307,6 +308,19 @@ Mostramos ahora el nodo para preprocesamiento en \emph{training}:
     \centering
     \includegraphics[width = 0.9 \textwidth]{dataset01_cv_pretraining}
     \caption{Preprocesamiento de los datos del \emph{fold} de \emph{training}}
+\end{figure}
+
+En esta figura se muestran dos partes fundamentales del procesamiento en este \emph{dataset}. La primera es que, como ya comentábamos, tenemos \emph{missing values} en la columna \lstinline{Cholesterol} marcados con el valor 0. \lstinline{KNIME} no detecta esto como \emph{missing values}, así que empleamos el nodo \emph{Create Missing Values} para marcarlos como tal.
+
+En segundo lugar, tratamos los \emph{outliers} para intentar reducir algo el ruido. Para ello, borramos aquellos valores que distan de la media más de tres veces la desviación típica (fundamentándonos en las propiedades de una distribución normal, en la que la mayoría de los datos están en el intervalo $[\mu - \sigma, \mu + \sigma]$ \cite{intervalos_normal:online}).
+
+Mostramos el nodo \emph{Create Missing Values} para dejar claro el proceso que hemos descrito previamente:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.9 \textwidth]{dataset01_cv_createmissingvalues}
+    \caption{Nodo que usamos para crear los \emph{Missing Values} que \lstinline{KNIME} no detecta}
+    \label{pretest:imagen}
 \end{figure}
 
 Mostramos ahora el nodo para preprocesamiento en \emph{test}:
@@ -406,13 +420,43 @@ Dentro del nodo de \emph{Custom Cross Validation} lo que hacemos es, de nuevo as
     \caption{Nodo de \emph{Cross Validation} para \emph{K-NN}}
 \end{figure}
 
-% TODO -- hacer lo mismo con Naive Bayes y Random Forest, que es lo que me falta
-% TODO -- comentar en las consideraciones de esta seccion que esto solo lo hacemos en este dataset. En el resto de datasets solo mostramos los nodos si hemos realizado cambios respecto a esto
-% TODO -- comentar que estamos borrando outliers con 3IQR en el nodo de preprocesamiento!!
+Mostramos ahora el preprocesado general para \emph{Naive Bayes}. En este caso, no estamos realizando ningún preprocesado general:
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.9 \textwidth]{dataset01_cv_pregeneral_naivebayes}
+    \caption{Preprocesado general previo a probar \emph{Naive Bayes}. En este caso no estamos realizando ningún tipo de preprocesado previo a \emph{Custom Cross Validation}}
+\end{figure}
 
+Mostramos lo que hacemos dentro del nodo \emph{Custom Cross Validation}. No realizamos ningún preprocesado adicional además de los que ya hemos comentado previamente. La salida la pasamos a valores numéricos, para que el nodo \lstinline{X-Aggregator} pueda trabajar correctamente:
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.9 \textwidth]{dataset01_cv_naivebayes}
+    \caption{Nodo de \emph{Cross Validation} para \emph{Naive Bayes}}
+\end{figure}
 
+Terminamos esta sección mostrando el proceso para Random Forest. De nuevo, no realizamos un preprocesado previo general para aplicar el algoritmo, como se muestra a continuación:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.9 \textwidth]{dataset01_cv_pregeneral_randomforest}
+    \caption{Preprocesado general previo a probar \emph{Random Forest}. En este caso tampoco estamos realizando ningún tipo de preprocesado previo a \emph{Custom Cross Validation}}
+\end{figure}
+
+Y de nuevo, nos encontramos con la misma situación dentro de \emph{Custom Cross Validation}. Simplemente pasamos a variable numérica la salida para que funcione bien el nodo de \lstinline{X-Aggregator}. Mostramos esto en la siguiente figura:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.9 \textwidth]{dataset01_cv_randomforest}
+    \caption{Nodo de \emph{Cross Validation} para \emph{Random Forest}}
+\end{figure}
+
+\pagebreak
+
+\subsubsection{Mostrando los resultados obtenidos}
+
+En primer lugar, mostramos la tabla que resume todos los resultados obtenidos tras el proceso de \emph{Cross Validation}:
 
 \pagebreak
 
