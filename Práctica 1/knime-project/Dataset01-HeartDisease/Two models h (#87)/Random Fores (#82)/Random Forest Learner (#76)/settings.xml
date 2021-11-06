@@ -80,7 +80,7 @@
         <entry key="x-coordinate" type="xint" value="819"/>
         <entry key="y-coordinate" type="xint" value="499"/>
         <entry key="width" type="xint" value="162"/>
-        <entry key="height" type="xint" value="40"/>
+        <entry key="height" type="xint" value="38"/>
         <entry key="alignment" type="xstring" value="CENTER"/>
         <entry key="borderSize" type="xint" value="0"/>
         <entry key="borderColor" type="xint" value="16777215"/>

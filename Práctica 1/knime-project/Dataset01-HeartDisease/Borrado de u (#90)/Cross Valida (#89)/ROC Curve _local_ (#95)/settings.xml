@@ -41,10 +41,6 @@
     </config>
     <entry key="customDescription" type="xstring" isnull="true" value=""/>
     <entry key="state" type="xstring" value="EXECUTED"/>
-    <config key="nodecontainer_message">
-        <entry key="type" type="xstring" value="WARNING"/>
-        <entry key="message" type="xstring" value="Table contains missing values."/>
-    </config>
     <entry key="factory" type="xstring" value="org.knime.base.node.viz.roc.ROCNodeFactory"/>
     <entry key="node-name" type="xstring" value="ROC Curve (local)"/>
     <entry key="node-bundle-name" type="xstring" value="KNIME Base Nodes"/>
@@ -70,6 +66,6 @@
     </config>
     <config key="filestores">
         <entry key="file_store_location" type="xstring" isnull="true" value=""/>
-        <entry key="file_store_id" type="xstring" value="a8ce32f3-7b64-4aac-b39f-26dd032312a0"/>
+        <entry key="file_store_id" type="xstring" value="11b3714b-ded4-4e39-ae61-7aa0f9676f19"/>
     </config>
 </config>

@@ -209,6 +209,7 @@ Lo siguiente que hacemos en el Análisis Exploratorio de Datos es mostrar la mat
     \centering
     \includegraphics[width = 0.8 \textwidth]{dataset01_correlaciones}
     \caption{Matriz de correlaciones lineales. Un color azul significa correlación lineal positiva, y un color rojo significa correlación lineal negativa.}
+    \label{dataset01_correlaciones:imagen}
 \end{figure}
 
 Vemos algunas variables correladas. Las más interesantes son el grupo que forman las variables \lstinline{MaxHR} \lstinline{ExerciseAngina}, \lstinline{Oldpeak}, \lstinline{ST_Slope} y la variable de salida \lstinline{HeartDisease}. Sabiendo que estas variables están muy correladas, y que una de ellas es la variable de salida, podríamos probar a construir los modelos predictivos en base a este grupo de variables. Por tanto, estamos justificando el interés de que, más adelante, probemos a eliminar ciertas filas empleando esta matriz de correlaciones, y ver cómo afecta esto al rendimiento de nuestros modelos.
@@ -688,6 +689,97 @@ Hay que tener en cuenta que las redes neuronales de \lstinline{KNIME} son muy si
 \subsection{Conclusiones finales}
 
 % TODO -- hacer estas conclusiones con las configuraciones de los cuatro algoritmos
+
+\pagebreak
+
+\section{Procesado de datos}
+
+\subsection{Consideraciones iniciales}
+
+Desarrollaremos distintos apartados para cada uno de los \emph{datasets}. En vista de los análisis previos para cada \emph{dataset}, tomaremos ciertas decisiones de procesado buscando mejorar el rendimiento de los modelos planteados. Compararemos dicho rendimiento antes y después del procesado, lo que nos permitirá extraer ciertas conclusiones sobre la técnica empleada, sobre el comportamiento de los algoritmos o sobre el problema en sí.
+
+\subsection{\emph{Heart Failure Prediction}}
+
+Como hemos estudiado en \customcite{dataset01_correlaciones:imagen}, tenemos variables que están muy correladas entre sí. Así que para mejorar este \emph{dataset}, decidimos borrar algunas variables que estén altamente correladas con otras, para ver si conseguimos obtener mejores resultados o, al menos, mantener el mismo rendimiento con menos variables, y por tanto, con modelos más sencillos.
+
+Podríamos haber aplicado otras técnicas. \emph{PCA} ya se demostró poco efectivo (al menos con dos dimensiones) en el análisis exploratorio de datos, pues no proporcionaba una buena distribución de datos. Además tenemos muy pocas variables como para necesitar un método automático de reducción de dimensionalidad (es factible seleccionar las variables manualmente). Tampoco tenemos un desbalanceo excesivo de las clases como para aplicar una técnica como \emph{SMOTE}. Son estas las razones por las que nos decantamos por un procesado de los datos tan básico de los datos (que ya de por sí son básicos).
+
+Este procesado de los datos se realiza del siguiente modo:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.8 \textwidth]{dataset01_extra_general}
+    \caption{\emph{Workflow} de más alto nivel para el procesado de los datos}
+\end{figure}
+
+Mostramos el contenido de este nodo:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.8 \textwidth]{dataset01_extra_concreto}
+    \caption{\emph{Workflow} de más alto nivel para el procesado de los datos}
+\end{figure}
+
+En este nodo nos quedamos solo con las variables \lstinline{MaxHR}, \lstinline{ExerciseAngina}, \lstinline{Oldpeak}, \lstinline{ST_Slope} y la variable de salida (decisión justificada por lo que comentábamos en el \emph{EDA} para este \emph{dataset}).
+
+Además, tenemos que adaptar los nodos de \emph{Custom Cross Validation}. Como no estamos usando la variable \lstinline{Cholesterol}, no tenemos que crear los \emph{missing values}, porque ya no tenemos. Este es el cambio que realizamos en todos los nodos de \emph{Custom Cross Validation}.
+
+Los resultados obtenidos tras aplicar \emph{Cross Validation} tras esta transformación son los siguientes:
+
+% TODO -- arreglar esta tabla
+\begin{table}[H]
+\begin{center}
+    \resizebox{1.05\textwidth}{!}{
+    \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+        \hline
+        Algo Name & TruePositives & FalsePositives & TrueNegatives & FalseNegatives & Recall & Precision & Sensitivity & Specificity & F-measure & Area Under Curve & Accuracy & G-Mean \\
+        \hline
+        Naive Bayes & 328 & 135 & 314 & 140 & 0.701 & 0.708 & 0.701 & 0.699 & 0.705 & 0.559 & 0.700 & 0.700 \\
+        Neural Net & 431 & 86 & 324 & 76 & 0.850 & 0.834 & 0.850 & 0.790 & 0.842 & 0.880 & 0.823 & 0.820 \\
+        Support Vector Machine & 421 & 102 & 308 & 86 & 0.830 & 0.805 & 0.830 & 0.751 & 0.817 & 1 & 0.795 & 0.790 \\
+        K-NN & 151 & 268 & 142 & 356 & 0.298 & 0.360 & 0.298 & 0.346 & 0.326 & 0.828 & 0.320 & 0.321 \\
+        AdaBoost & 388 & 87 & 362 & 80 & 0.829 & 0.817 & 0.829 & 0.806 & 0.823 & 0.565 & 0.818 & 0.818 \\
+        Support Vector Machine + Normalization & 429 & 93 & 317 & 78 & 0.846 & 0.822 & 0.846 & 0.773 & 0.834 & 1 & 0.814 & 0.809 \\
+        Random Forest & 314 & 128 & 321 & 154 & 0.671 & 0.710 & 0.671 & 0.715 & 0.690 & 0.576 & 0.692 & 0.693 \\
+        \hline
+    \end{tabular}}
+\end{center}
+    \caption{Resultados de \emph{Cross Validation}, para los distintos algoritmos estudiados, en el primer \emph{dataset}, tras realizar la selección de variables}
+\end{table}
+
+Aunque ya hemos mostrado esta tabla previamente, mostramos por claridad la tabla de \emph{Cross Validation} obtenida sin el procesado de los datos, para que sea más sencillo realizar la comparación:
+
+\begin{table}[H]
+\begin{center}
+    \resizebox{1.05\textwidth}{!}{
+    \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+        \hline
+        Algo Name&TP&FP&TN&FN&Recall&Precision&Sensitivity&Specificity&F-measure&AUC&Accuracy&G-Mean\\
+        \hline
+        Naive Bayes&212&106&247&79&0.73&0.67&0.73&0.70&0.70&0.92&0.71&0.71 \\
+        Neural Net&212&42&179&48&0.82&0.83&0.82&0.81&0.82&0.88&0.81&0.81 \\
+        Support Vector Machine&6&1&352&285&0.02&0.86&0.02&1.00&0.04&1&0.56&0.14 \\
+        Support Vector Machine + Normalization&141&33&332&195&0.42&0.81&0.42&0.91&0.55&1&0.67&0.62 \\
+        K-NN&155&161&192&136&0.53&0.49&0.53&0.54&0.51&0.72&0.54&0.54 \\
+        AdaBoost&208&102&251&83&0.71&0.67&0.71&0.71&0.69&0.92&0.71&0.71 \\
+        Random Forest&215&107&246&76&0.74&0.67&0.74&0.70&0.70&0.92&0.72&0.72 \\
+        \hline
+    \end{tabular}}
+\end{center}
+    \caption{Resultados de \emph{Cross Validation}, para los distintos algoritmos estudiados, en el primer \emph{dataset}, \textbf{sin aplicar el procesado de datos}}
+\end{table}
+
+\subsubsection{Conclusiones}
+
+% TODO -- escribir conclusiones para este procesado de datos
+
+
+
+\pagebreak
+
+\section{Interpretación de los resultados}
+
+\subsection{\emph{Heart Failure Prediction}}
 
 \pagebreak
 
