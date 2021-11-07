@@ -1020,11 +1020,11 @@ rkJggg==" xlink:actuate="onLoad"/>
             <line clip-path="url(#clipPath47)" fill="none" x1="2047" x2="2055"
                   y1="157" y2="157"/>
             <line clip-path="url(#clipPath47)" fill="none" x1="726" x2="734"
-                  y1="447" y2="447" stroke="rgb(75,75,75)" stroke-width="2"/>
+                  y1="447" y2="447"/>
             <line clip-path="url(#clipPath47)" fill="none" x1="734" x2="1087"
-                  y1="447" y2="457" stroke="rgb(75,75,75)" stroke-width="2"/>
+                  y1="447" y2="457"/>
             <line clip-path="url(#clipPath47)" fill="none" x1="1087" x2="1095"
-                  y1="457" y2="457" stroke="rgb(75,75,75)" stroke-width="2"/>
+                  y1="457" y2="457"/>
         </g>
     </g>
 </svg>
