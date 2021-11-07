@@ -81,7 +81,7 @@
                 "nrexecs": 222,
                 "nrfails": 0,
                 "exectime": 15117,
-                "nrcreated": 4,
+                "nrcreated": 5,
                 "successor": "org.knime.js.base.node.viz.decisiontree.classification.DecisionTreeViewNodeFactory#Decision Tree View"
             },
             {
@@ -102,9 +102,9 @@
             },
             {
                 "id": "org.knime.base.node.mine.scorer.accuracy.AccuracyScorer2NodeFactory#Scorer",
-                "nrexecs": 2202,
+                "nrexecs": 2203,
                 "nrfails": 0,
-                "exectime": 28527,
+                "exectime": 28557,
                 "nrcreated": 3,
                 "successor": "org.knime.optimization.internal.node.parameter.loopend.LoopEndParOptNodeFactory#Parameter Optimization Loop End"
             },
@@ -750,10 +750,10 @@
             },
             {
                 "id": "org.knime.base.node.io.filehandling.csv.writer.CSVWriter2NodeFactory#CSV Writer",
-                "nrexecs": 9,
+                "nrexecs": 10,
                 "nrfails": 0,
-                "exectime": 259,
-                "nrcreated": 5,
+                "exectime": 261,
+                "nrcreated": 6,
                 "successor": "n/a"
             },
             {
@@ -778,14 +778,14 @@
             "nrcreated": 0
         }
     },
-    "uptime": 3253522,
+    "uptime": 3296239,
     "workflowsOpened": 1,
     "remoteWorkflowsOpened": 0,
     "workflowsImported": 0,
     "workflowsExported": 0,
     "launches": 49,
     "lastApplicationID": "org.knime.product.KNIME_APPLICATION",
-    "timeSinceLastStart": 3517475,
+    "timeSinceLastStart": 5610652,
     "crashes": 7,
     "properlyShutDown": false
 }

@@ -295,6 +295,7 @@ Mostramos ahora la matriz de correlaciones lineales:
     \centering
     \includegraphics[width = 0.6\textwidth]{dataset02_eda_correlaciones}
     \caption{Matriz de correlaciones lineales. Un color azul significa correlación lineal positiva, y un color rojo significa correlación lineal negativa}
+    \label{dataset02_eda_correlaciones:imagen}
 \end{figure}
 
 Era de esperar la correlación entre la anchura y altura de píxeles (los móviles suelen guardar unos \emph{aspect ratio} fijados), pero esto no nos es del todo útil, salvo para eliminar una columna, lo que no parece que vaya a tener un impacto enorme. También tenemos la misma correlación con las medidas en la unidad \lstinline{sc_h, sc_w}, y de nuevo nos encontramos en la misma situación.
@@ -1147,7 +1148,7 @@ Los resultados obtenidos del \emph{scorer} se muestran en la siguiente tabla:
     \caption{Resultados de entrenar \emph{K-NN}, con 10 vecinos, en el conjunto de datos tras el procesado}
 \end{table}
 
-\subsubsection{Conclusiones}
+\subsubsection{Conclusiones} \label{dataset02_procesado_conclusiones:seccion}
 
 En \customcite{dataset02_optim_knn:tabla} conseguíamos, tras un ajuste, un \emph{accuracy} de $\approx 0.94$. Tras este procesado, y sin ajuste alguno, obtenemos un \emph{accuracy} de $0.818$.
 
@@ -1191,6 +1192,25 @@ Esta visualización la realizamos añadiendo lo siguiente al nodo de procesado d
 En segundo lugar, ha sido crítico percatarnos de la existencia de \emph{missing values} que \lstinline{KNIME} no ha detectado. Esto nos ha permitido ignorar ciertas filas en el proceso de entrenamiento. Si no hubiésemos hecho esto, habríamos obtenido un modelo que explota datos sobre \emph{missing values} de forma \emph{"tramposa"}, produciendo un modelo mucho más frágil y por tanto, menos generalizable. Esto porque hacer esto es equivalente a seleccionar los \emph{missing values} y tratarlos asignando una variable constante arbitraria. Hemos visto en la teoría de esta asignatura que esta forma de proceder no es buena.
 
 En definitiva, un dataset que ya de por sí era sencillo (solo 11 variables de entrada), hemos conseguido trabajarlo para emplear todavía menos variables conservando (es más, mejorando) las medidas de rendimiento de nuestros modelos generados.
+
+\pagebreak
+
+\subsection{Mobile Price Classification}
+
+Como pasaba en el anterior \emph{dataset}, la observación más directa y relevante viene a partir del procesamiento de datos. Hemos conseguido reducir un problema con 20 variables de entrada a un problema con 2 variables de entrada empleando \emph{PCA}, y con un modelo de aprendizaje automático simple como \emph{K-NN}. Como ya hemos mencionado en \customcite{dataset02_procesado_conclusiones:seccion}, esto es relevante por dos motivos. El primero, porque estamos reduciendo un problema de 20 variables de entrada a solo dos variables. Con ello, estamos reduciendo la estructura del problema a tratar a una mucho más sencilla, y con ello podremos entrenar e inferir modelos de una forma mucho más rápida, con una capacidad de generalización mucho más alta. En segundo lugar, es relevante que un modelo simple como \emph{K-NN} logre unos resultados tan buenos, simplemente regularizando adecuadamente el modelo entrenado.
+
+Como hacíamos en el primer \emph{dataset}, exploramos algo más la estructura del problema usando árboles de decisión. Mostramos los primeros niveles, que nos muestran las variables más relevantes (pues producen las subdivisiones con menor diversidad) en nuestro \emph{dataset}:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.8 \textwidth]{dataset01_dt_viz}
+    \caption{Árbol de decisión construido sobre todo el conjunto de datos. Solo mostramos los primeros niveles}
+\end{figure}
+
+Vemos que claraemnte la variable \lstinline{ram} tiene un peso enorme a la hora de construir el clasificador. Esto ya lo sospechábamos por lo que hemos comentado en \customcite{dataset02_eda_correlaciones:imagen}.
+
+Por tanto, hemos comenzado con un \emph{dataset} relativamente complicado, conteniendo 20 variables. Y trabajando los datos y resultados obtenidos, hemos logrado conseguir reducir el problema a uno brutalmente más sencillo, en el que usando 2 variables hemos obtenido resultados muy buenos. Además, hemos escogido reducirlo a solo 2 variables por la facilidad que otorga en la visualización. Si usásemos 3 variables, seguramente obtendríamos unos modelos con un rendimiento todavía mucho más bueno, manteniendo una gran simplicidad en el modelo.
+
 
 \pagebreak
 
