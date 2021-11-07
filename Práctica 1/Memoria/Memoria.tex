@@ -899,6 +899,84 @@ Además, por problemas con el nodo \lstinline{Parameter Optimization Loop}, no p
 
 \pagebreak
 
+\subsection{Mobile Price Classification}
+
+Para este \emph{dataset}, elegimos optimizar \emph{Random Forest} por los buenos resultados que nos ha dado, y \emph{K-NN}. Tanto el \emph{workflow} global como el \emph{workflow} para \emph{Random Forest} no han cambiado sustancialmente, así que no mostramos capturas de pantalla para estos dos \emph{workflows}. El \emph{workflow} para \emph{K-NN} se muestra en la siguiente figura:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.8 \textwidth]{dataset02_optim_knn}
+    \caption{\emph{Workflow} para ajustar \emph{K-NN}}
+\end{figure}
+
+Mostramos la tabla obtenida en la optimización para \emph{Random Forest}:
+
+\begin{table}[H]
+\begin{center}
+    \begin{tabular}{|c|c|}
+        \hline
+        Number of trees & Objective value \\
+        \hline
+        10 & 0.805 \\
+        20 & 0.843 \\
+        30 & 0.872 \\
+        \textbf{40} & \textbf{0.877} \\
+        50 & 0.870 \\
+        60 & 0.868 \\
+        70 & 0.867 \\
+        80 & 0.868 \\
+        90 & 0.865 \\
+        100 & 0.875 \\
+        110 & 0.873 \\
+        120 & 0.875 \\
+        130 & 0.873 \\
+        140 & 0.868 \\
+        150 & 0.870 \\
+        \hline
+    \end{tabular}
+\end{center}
+    \caption{Optimización para \emph{Random Forest}, ajustando el número de árboles}
+\end{table}
+
+Obtenemos los mejores resultados con una cantidad de árboles por cada \emph{forest} modesta, por debajo del valor por defecto que nos da \lstinline{KNIME}. A diferencia del \emph{dataset} anterior, esta vez no tenemos ese crecimiento monótono en el \emph{accuracy}, y para este caso, queda claro que en ocasiones es mejor un modelo más simple, por tanto menos potente, pero con mejor capacidad de generalización.
+
+Mostramos ahora los resultados para la optimización de \emph{K-NN}:
+
+\begin{table}[H]
+\begin{center}
+    \begin{tabular}{|c|c|}
+        \hline
+        Number of neighbours & Objective value \\
+        \hline
+        1 & 0.908 \\
+        2 & 0.908 \\
+        3 & 0.923 \\
+        4 & 0.925 \\
+        5 & 0.933 \\
+        6 & 0.937 \\
+        7 & 0.945 \\
+        8 & 0.940 \\
+        9 & 0.945 \\
+        10 & 0.942 \\
+        11 & 0.943 \\
+        12 & 0.947 \\
+        13 & 0.947 \\
+        \textbf{14} & \textbf{0.948} \\
+        15 & 0.947 \\
+        \hline
+    \end{tabular}
+\end{center}
+    \caption{Optimización para \emph{K-NN}, ajustando el número de vecinos considerados para la clasificación}
+\end{table}
+
+En este caso, estamos ajustando el número de vecinos considerados. Al aumentar este parámetro, no estamos aumentando la complejidad del modelo. Estamos aumentando la regularización que aplica al modelo. Al considerar más vecinos, suavizamos las fronteras generadas, y por tanto reducimos algo la capacidad de sobreajuste de nuestro modelo.
+
+Con ello, estamos viendo que nuestro modelo se beneficia enormemente de la regularización aplicada. Regularización que, en general, hemos echado de menos en las herramientas que \lstinline{KNIME} pone a nuestra disposición.
+
+Además, cabe resaltar los buenos resultados que obtenemos en \emph{accuracy}. Al tener cuatro clases perfectamente balanceadas, este buen \emph{accuracy} no puede explicarse por un clasificado constante o algún problema de esta índole. Y por tanto, podemos asegurar que estamos obteniendo un modelo de muy buen rendimiento.
+
+\pagebreak
+
 \subsection{Conclusiones finales}
 
 % TODO -- hacer estas conclusiones con las configuraciones de los cuatro algoritmos
