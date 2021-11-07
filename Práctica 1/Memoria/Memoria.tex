@@ -1411,6 +1411,75 @@ Estamos perdiendo aproximadamente un $0.13$ de \emph{accuracy} para el caso conc
 
 \pagebreak
 
+\subsection{Bank Marketing}
+
+En el análisis exploratorio de datos hemos visto que el principal problema que tenemos es el gran desbalanceo de las clases. También, en el ajuste de los parámetros de dos algoritmos, hemos visto que no hemos variado apenas el \emph{accuracy} debido al desbalanceo de las clases.
+
+Es por esto que decidimos aplicar \lstinline{SMOTE} \cite{smote:online}, con el objetivo de tener las clases más balanceadas y, en consecuencias, generar modelos con mejor rendimiento.
+
+En este caso, el proceso que tenemos que realizar es muy sencillo. Simplemente usamos el nodo que nos proporciona \lstinline{KNIME} para aplicar \lstinline{SMOTE} y usamos el mismo nodo de \emph{Custom Cross Validation} sobre todos los algoritmos para generar los resultados. Mostramos este \emph{workflow} a continuación:
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width = 0.8 \textwidth]{dataset03_procesado_workflow}
+    \caption{\emph{Workflow} para balancear las clases}
+\end{figure}
+
+
+Con esto, los resultados obtenidos tras el procesado de datos son los siguientes:
+
+\begin{table}[H]
+\begin{center}
+    \resizebox{1.05\textwidth}{!}{
+    \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+        \hline
+        Algo Name&TP&FP&TN&FN&Recall&Precision&Sensitivity&Specificity&F-measure&AUC&Accuracy&G-Mean\\
+        \hline
+        Naive Bayes & 12999 & 6361 & 24740 & 9042 & 0.590 & 0.671 & 0.590 & 0.795 & 0.628 & 0.841 & 0.710 & 0.685 \\
+        Neural Net & 14534 & 3088 & 16524 & 1491 & 0.907 & 0.825 & 0.907 & 0.843 & 0.864 & 0.939 & 0.872 & 0.874 \\
+        Support Vector Machine & 29 & 2 & 971 & 761 & 0.037 & 0.935 & 0.037 & 0.998 & 0.071 & 0.761 & 0.567 & 0.191 \\
+        K-NN & 17070 & 390 & 15635 & 2542 & 0.870 & 0.978 & 0.870 & 0.976 & 0.921 & 0.971 & 0.918 & 0.922 \\
+        AdaBoost & 19586 & 3870 & 27231 & 2455 & 0.889 & 0.835 & 0.889 & 0.876 & 0.861 & 0.953 & 0.881 & 0.882 \\
+        Random Forest & 21525 & 1774 & 29327 & 516 & 0.977 & 0.924 & 0.977 & 0.943 & 0.949 & 0.995 & 0.957 & 0.960 \\
+        \hline
+    \end{tabular}}
+\end{center}
+    \caption{Resultados de \emph{Cross Validation} tras aplicar \lstinline{SMOTE}}
+\end{table}
+
+Aunque mostramos los resultados de \emph{Custom Cross Validation} sin procesar previamente, volvemos a mostrar la tabla para facilitar la comparación de los dos ambientes al lector:
+
+\begin{table}[H]
+\begin{center}
+    \resizebox{1.05\textwidth}{!}{
+    \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+        \hline
+        Algo Name&TP&FP&TN&FN&Recall&Precision&Sensitivity&Specificity&F-measure&AUC&Accuracy&G-Mean\\
+        \hline
+        Naive Bayes & 1668 & 4684 & 26324 & 902 & 0.649 & 0.263 & 0.649 & 0.849 & 0.374 & 0.864 & 0.834 & 0.742 \\
+        Neural Net & 529 & 356 & 18886 & 1296 & 0.290 & 0.598 & 0.290 & 0.981 & 0.390 & 0.928 & 0.922 & 0.533 \\
+        Support Vector Machine & 0 & 0 & 2918 & 288 & 0 & ?? & 0 & 1 & ?? & 0.843 & 0.910 & 0 \\
+        K-NN & 18866 & 1406 & 419 & 376 & 0.980 & 0.931 & 0.980 & 0.230 & 0.955 & 0.879 & 0.915 & 0.474 \\
+        AdaBoost & 663 & 522 & 30486 & 1907 & 0.258 & 0.559 & 0.258 & 0.983 & 0.353 & 0.927 & 0.928 & 0.504 \\
+        Random Forest & 824 & 582 & 30426 & 1746 & 0.321 & 0.586 & 0.321 & 0.981 & 0.414 & 0.936 & 0.931 & 0.561 \\
+        \hline
+    \end{tabular}}
+\end{center}
+    \caption{Resultados de \emph{Cross Validation}, para los distintos algoritmos estudiados, en el tercer \emph{dataset}, sin aplicar el balanceo de las clases}
+\end{table}
+
+\subsubsection{Conclusiones}
+
+La primera diferencia que observamos es que, tras balancear las clases, los resultados en \emph{SVM} ya no tienen valores \emph{??}, aunque el modelo obtenido es muy malo comparado al resto.
+
+En segundo lugar, es claro que hemos obtenido modelos con un \emph{accuracy} menor que su modelo correspondiente en el \emph{dataset} sin procesar. Sin embargo, los valores de \emph{G-Mean} han aumentado enormemente (salvo \emph{Naive Bayes} que empeora un poco, y la red neuronal de la que hablamos más adelante). De hecho, los modelos con mayor aumento en \emph{G-Mean} son \emph{SVM}, \emph{K-NN}, \emph{AdaBoost} y \emph{Random Forest}.
+
+La red neuronal es la que mayor decrecimiento tiene en \emph{G-Mean}. Pensamos que el motivo de esto puede ser que \lstinline{SMOTE} haya generado datos sintéticos no lo suficientemente buenos para la red neuronal. Estos modelos tienen una capacidad enorme de sobreajuste, por lo que malos datos sintéticos dan más oportunidades a la red para realizar un sobreajuste duro de los datos. Además esto se puede ver empeorado con el hecho de que \lstinline{KNIME} no nos permite especificar ninguna medida de regularización, por lo que es muy difícil controlar el sobreajuste en este modelo.
+
+Salvando este problema con un modelo concreto de \lstinline{KNIME}, queda claro que el balanceo de las clases ha provocado que nuestros modelos tengan un rendimiento mucho mayor. Además, también ha dejado de manifiesto que la métrica de \emph{accuracy} es insuficiente, pues hemos visto que ha descendido a pesar de que los modelos ahora trabajen mejor con el problema.
+
+\pagebreak
+
 \section{Interpretación de los resultados}
 
 \subsection{Consideraciones iniciales}
