@@ -362,7 +362,7 @@ En \customcite{heart_failure_cross_validation:seccion} mostraremos de forma exte
 
 \subsection{Heart Failure Prediction} \label{heart_failure_cross_validation:seccion}
 
-\subsubsection{\emph{Workflows} empleados para \emph{Cross Validation}}
+\subsubsection{\emph{Workflows} empleados para \emph{Cross Validation}} \label{dataset01_capturas_cv:seccion}
 
 En primer lugar, tenemos un \emph{metanodo} para encapsular todo el trabajo con los 7 algoritmos que hemos considerado. Este \emph{metanodo} se mostraba en el \emph{workflow} más general en \customcite{workflow_general:imagen}. Dentro de este nodo para \emph{Cross Validation} tenemos la siguiente estructura:
 
@@ -650,6 +650,32 @@ Con esta visualización sí que se pueden extraer más conclusiones sobre el com
 % TODO -- tenemos que comentar como hemos hecho la adaptacion multiclase
 
 \subsubsection{\emph{Workflows} empleados para \emph{Cross Validation}}
+
+Como ya hemos comentado previamente, no vamos a mostrar capturas de pantalla de los \emph{workflows} de cada \emph{Custom Cross Validation} para cada algoritmo. Esto pues las diferencias respecto al \emph{dataset} anterior son mínimas. Consideramos, por tanto, que es mucho más interesante que solo mostremos las diferencias con respecto lo desarrollado previamente.
+
+Un \textbf{problema fundamental} con el que nos encontramos es que tenemos un problema de clasificación multiclase. Se nos presentan las siguientes posibles soluciones:
+
+\begin{enumerate}
+    \item Trabajar este problema con \lstinline{KNIME}. Para los algoritmos que trabajan directamente con clasificación multiclase, solo hace falta recopilar las métricas y curvas ROC clase por clase. En los algoritmos que no trabajan con multiclase, realizar alguna adaptación (como \emph{One vs All}) usando \emph{loops}
+    \item Realizar una adaptación incorrecta pero que simplifica nuestro trabajo. Colapsar las cuatro clases en solo dos clases. Es decir, los datos de la clase 2 tomarlos como datos de la clase 1, y los datos de la clase 4 tomarlos como datos de la clase 3. Con ello tenemos un problema de clasificación binaria que ya hemos trabajado.
+    \item Trabajar con \lstinline{KNIME} como lo hemos hecho antes, y solo considerar la clase 1 como clase positiva. Intentar usar directamente los algoritmos sin realizar adaptaciones, y descartar aquellos que no funcionen.
+\end{enumerate}
+
+En un primer momento, consideramos la primera posibilidad por ser la más correcta. Sin embargo, suponía demasiada carga de trabajo trabajar las tablas en \lstinline{KNIME}, y no nos daba tiempo. Y más fundamentalmente, no hemos encontrado de realizar la adaptación \emph{One vs All} en \lstinline{KNIME}. Se puede hacer con los nodos de voto y haciendo \emph{loops}, pero en ningún caso hemos conseguido que esto funcione.
+
+La segunda opción la hemos descartado. Quizá sea más correcta (dentro de la gran simplificación que hacemos del problema) que la tercera. Sin embargo, el interés de este \emph{dataset} es precisamente trabajar con un problema multiclase, y con esa aproximación perdemos la oportunidad de realizar todos los análisis respecto a este aspecto.
+
+La tercera opción, que es la que hemos seguido, dista mucho de ser perfecta. Sin embargo, nos permite extraer conclusiones sobre el factor multiclase. Indicaremos así las carencias que tiene \lstinline{KNIME} para trabajar de forma eficiente con problemas multiclase, y los problemas que tienen ciertos algoritmos con clasificación que no sea binaria. Además, también podremos discutir sobre la información que nos dan ciertas métricas respecto a tener más de una clase.
+
+Por tanto, al seguir este proceder, no hemos realizado ningún cambio sustancial en los \emph{workflows} que ya hemos mostrado en \customcite{dataset01_capturas_cv:seccion}.
+
+\pagebreak
+
+\subsubsection{Mostrando los resultados obtenidos}
+
+\pagebreak
+
+\subsubsection{Mostrando las curvas ROC obtenidas}
 
 \pagebreak
 
