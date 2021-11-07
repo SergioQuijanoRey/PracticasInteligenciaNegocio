@@ -832,6 +832,15 @@ Para ver la relevancia de estas variables, entrenamos un árbol de decisión con
 
 Con esto queda clara la relevancia de las variables. En primer lugar tenemos a la variable \lstinline{ST_Slope}, que es la que permite una mayor división del \emph{dataset} en \emph{subdatasets} con menor diversidad. En segundo lugar, tenemos la variable \lstinline{Oldpeak}, y para terminar la variable \lstinline{MaxHR}.
 
+Esta visualización la realizamos añadiendo lo siguiente al nodo de procesado de datos, que hemos mostrado previamente en esta memoria de prácticas:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.5 \textwidth]{dataset01_tree_exploratorio_nodo}
+    \caption{Mostramos el añadido al nodo de procesado de datos, para poder mostrar gráficamente el árbol de decisión que nos da información sobre la relevancia de las variables}
+\end{figure}
+
+
 En definitiva, un dataset que ya de por sí era sencillo (solo 11 variables de entrada), hemos conseguido trabajarlo para emplear todavía menos variables conservando (es más, mejorando) las medidas de rendimiento de nuestros modelos generados.
 
 \pagebreak
