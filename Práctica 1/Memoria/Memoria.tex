@@ -606,6 +606,8 @@ Ahora mostramos la optimización que realizamos, en cada uno de los dos modelos:
     \caption{\emph{Workflow} para ajustar Redes Neuronales Simples}
 \end{figure}
 
+En ambos casos estamos usando el nodo \lstinline{Parameter Optimization Loop}. Para trabajar con este nodo, especificamos los parámetros que queremos optimizar, los rangos y los \emph{steps} que tomar. Además, optimizamos usando la opción de fuerza bruta, pues estamos probando con pocas combinaciones de parámetros, por lo que nos podemos permitir este proceder. Una vez hecho esto, especificamos a nuestro modelo que use en cada iteración estos parámetros, usando para ello \emph{flow variables}.
+
 Una vez mostrado esto, a continuación tenemos las tablas obtenidas del proceso de optimización:
 
 \begin{table}[H]
@@ -677,12 +679,14 @@ En este caso, vemos que el \emph{accuracy} crece de forma más o menos monótona
 
     \end{tabular}
 \end{center}
-    \caption{Optimización para \emph{Random Forest}, ajustando el número de árboles}
+    \caption{Optimización para \emph{Redes Neuronales Simples}, ajustando el número de capas ocultas y el número de neuronas por capa oculta}
 \end{table}
 
 En este caso, obtenemos los mejores resultados para 30 neuronas y una única capa oculta. Esto lo que nos muestra es que los mejores resultados no los estamos obteniendo con un modelo más potente, sino con uno más simple con menor capacidad de sobreajustar.
 
 Hay que tener en cuenta que las redes neuronales de \lstinline{KNIME} son muy simples, y dan muy poco de sí. Para poder trabajar con modelos más potentes de redes neuronales (más capas ocultas con más neuronas por capa), necesitamos \textbf{técnicas de regularización}. Por ejemplo, no podemos establecer una regularización tipo \emph{weight decay}. Tampoco podemos usar \emph{dropout} para paliar el sobreajuste. Y con ello, es lógico que modelos más simples generen mejores resultados en \emph{test}, por su menor capacidad de sobreajuste.
+
+Además, por problemas con el nodo \lstinline{Parameter Optimization Loop}, no podemos tratar los \emph{missing values} ni normalizar las variables sin que esto provoque fallos que no sabemos resolver. Por esto, obtenemos resultados peores que los mostrados previamente para \emph{Custom Cross Validation}. Sin embargo, la metodología y el ajuste es correcto. Sería cuestión de encontrar el fallo que nos da \lstinline{KNIME} y solucionarlo, o emplear otro \emph{Software} para este ajuste.
 
 \pagebreak
 
@@ -840,6 +844,7 @@ Esta visualización la realizamos añadiendo lo siguiente al nodo de procesado d
     \caption{Mostramos el añadido al nodo de procesado de datos, para poder mostrar gráficamente el árbol de decisión que nos da información sobre la relevancia de las variables}
 \end{figure}
 
+En segundo lugar, ha sido crítico percatarnos de la existencia de \emph{missing values} que \lstinline{KNIME} no ha detectado. Esto nos ha permitido ignorar ciertas filas en el proceso de entrenamiento. Si no hubiésemos hecho esto, habríamos obtenido un modelo que explota datos sobre \emph{missing values} de forma \emph{"tramposa"}, produciendo un modelo mucho más frágil y por tanto, menos generalizable. Esto porque hacer esto es equivalente a seleccionar los \emph{missing values} y tratarlos asignando una variable constante arbitraria. Hemos visto en la teoría de esta asignatura que esta forma de proceder no es buena.
 
 En definitiva, un dataset que ya de por sí era sencillo (solo 11 variables de entrada), hemos conseguido trabajarlo para emplear todavía menos variables conservando (es más, mejorando) las medidas de rendimiento de nuestros modelos generados.
 
