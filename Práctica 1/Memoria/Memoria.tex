@@ -1533,13 +1533,19 @@ Vemos que claramente la variable \lstinline{ram} tiene un peso enorme a la hora 
 
 Por tanto, hemos comenzado con un \emph{dataset} relativamente complicado, conteniendo 20 variables. Y trabajando los datos y resultados obtenidos, hemos logrado conseguir reducir el problema a uno brutalmente más sencillo, en el que usando 2 variables hemos obtenido resultados muy buenos. Además, hemos escogido reducirlo a solo 2 variables por la facilidad que otorga en la visualización. Si usásemos 3 variables, seguramente obtendríamos unos modelos con un rendimiento todavía mucho más bueno, manteniendo una gran simplicidad en el modelo.
 
-
 \pagebreak
 
-\subsection{Interpretación global de todos los problemas estudiados}
+\subsection{Bank Marketing}
 
+En este \emph{dataset} podríamos, como hemos hecho con los dos \emph{datasets} previos, estudiar la relevancia de las variables a través de visualizar un árbol de decisión, o estudiar qué pasaría si quitásemos algunas variables mirando la matriz de correlaciones. Sin embargo, no lo hacemos. Ya hemos hecho un estudio de este tipo dos veces y, aunque pudiera ser también interesante para este problema, sería repetitivo y no añadiría nada nuevo.
 
-% TODO -- escribir esto
+Sin embargo, sí que es interesante comentar es lo aprendido sobre el balanceo de las clases. En el análisis exploratorio de datos hemos visto que teníamos un grave desbalanceo en la variable de salida. A pesar de esto, hemos aplicado (pues así está especificado en el guión de prácticas) \emph{Cross Validation} sin solventar este problema. Como consecuencia, hemos obtenido modelos con un \emph{accuracy} demasiado optimista, que se aprovechaba de este desbalanceo (un \emph{baseline} que siempre clasificase dando como salida la clase mayoritaria obtendría un \emph{accuracy} muy alto).
+
+Cuando hemos aplicado \emph{SMOTE} para balancear algo las clases, en general, hemos obtenido modelos con un \emph{accuracy} menor, pero con un mayor \emph{G-Mean}, que es una medida más fiel del rendimiento de nuestros modelos. Por tanto hemos sacrificado algo de \emph{accuracy} por un mejor rendimiento real.
+
+Otro fenómeno que ha pasado es que hemos podido ejecutar \emph{SVM} sin dar resultados constantes, como pasaba antes de realizar el balanceo de las clases. Además, el tiempo de ejecución tanto para el entrenamiento como para la inferencia ha sido mucho menor, fruto de este balanceo.
+
+Por tanto, queda claro que en cualquier problema de análisis y procesado de datos que involucre clasificación es fundamental tratar con cuidado el problema que supone trabajar con clases desbalanceadas.
 
 \pagebreak
 

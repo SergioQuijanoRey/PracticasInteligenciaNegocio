@@ -750,10 +750,10 @@
             },
             {
                 "id": "org.knime.base.node.io.filehandling.csv.writer.CSVWriter2NodeFactory#CSV Writer",
-                "nrexecs": 11,
-                "nrfails": 0,
-                "exectime": 262,
-                "nrcreated": 8,
+                "nrexecs": 14,
+                "nrfails": 1,
+                "exectime": 390,
+                "nrcreated": 9,
                 "successor": "n/a"
             },
             {
@@ -778,14 +778,14 @@
             "nrcreated": 0
         }
     },
-    "uptime": 3398573,
+    "uptime": 3437288,
     "workflowsOpened": 1,
     "remoteWorkflowsOpened": 0,
     "workflowsImported": 0,
     "workflowsExported": 0,
     "launches": 49,
     "lastApplicationID": "org.knime.product.KNIME_APPLICATION",
-    "timeSinceLastStart": 10625021,
+    "timeSinceLastStart": 12522022,
     "crashes": 7,
     "properlyShutDown": false
 }
