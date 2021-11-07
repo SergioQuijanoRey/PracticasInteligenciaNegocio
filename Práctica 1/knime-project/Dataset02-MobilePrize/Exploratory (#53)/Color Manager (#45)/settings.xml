@@ -6,11 +6,10 @@
         <entry key="memory_policy" type="xstring" value="CacheSmallInMemory"/>
     </config>
     <config key="model">
-        <entry key="palette_option" type="xstring" value="custom_set"/>
         <entry key="selected_column" type="xstring" value="Target Class"/>
         <entry key="is_nominal" type="xboolean" value="false"/>
         <entry key="min_color" type="xint" value="-65536"/>
-        <entry key="max_color" type="xint" value="-16776961"/>
+        <entry key="max_color" type="xint" value="-10027162"/>
     </config>
     <config key="nodeAnnotation">
         <entry key="text" type="xstring" value="Coloreamos según%%00010la clase"/>
@@ -71,6 +70,6 @@
     </config>
     <config key="filestores">
         <entry key="file_store_location" type="xstring" isnull="true" value=""/>
-        <entry key="file_store_id" type="xstring" value="2da302a7-c6c7-4ac9-bcbd-a1abd5770a1f"/>
+        <entry key="file_store_id" type="xstring" value="626e6157-68ac-46e6-930b-164df58c6e11"/>
     </config>
 </config>

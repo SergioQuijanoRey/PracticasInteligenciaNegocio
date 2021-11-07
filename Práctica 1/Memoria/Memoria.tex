@@ -248,6 +248,92 @@ El nodo que usamos para realizar esta comprobación sobre los \emph{missing valu
 
 \pagebreak
 
+\subsection{Mobile Price Classification}
+
+En primer lugar, la fuente original del \emph{dataset} se puede encontrar en \cite{mobile_dataset:online}. De nuevo, podemos estar trabajando con un dataset ligeramente modificado por los profesores de la asignatura.
+
+Según \cite{mobile_dataset:online}, la tarea a resolver es: \emph{``In this problem you do not have to predict actual price but a price range indicating how high the price is''} para un cliente que quiere hacer la competencia a grandes compañías fabricantes de dispositivos móviles. Por lo tanto, tenemos que generar modelos que sean capaces de predecir dicho rango de precios.
+
+En el siguiente apartado pasamos a comentar las particularidades de este \emph{dataset}, particularidades que hemos extraído del \emph{EDA} realizado sobre el conjunto de datos.
+
+
+\subsubsection{Análisis Exploratorio de los datos}
+
+Estamos usando el mismo \emph{workflow} para el \emph{EDA} que en el \emph{dataset} anterior, así que no mostramos las capturas de los \emph{workflows} de nuevo, sino que mostramos directamente los resultados, que es lo verdaderamente novedoso respecto al \emph{dataset} anterior.
+
+El primer problema que nos encontramos es que tenemos cuatro clases, en vez de dos clases. Por tanto, ya no estamos en un problema de clasificación binaria. Comentaremos más adelante, en \customcite{mobile_price_cross_validation:seccion}, cómo hemos trabajado este problema. Ahora mismo, en el \emph{EDA}, este paso a clasificación multiclase no nos supone ningún problema.
+
+La primera diferencia en los \emph{workflows} con el \emph{dataset} anterior es que estamos haciendo un \emph{rename} de la clase positiva (que en nuestro caso consideramos la clase con valor 1, por los motivos que se explican en \customcite{mobile_price_cross_validation:seccion}), para que en \emph{datasets} posteriores tengamos que realizar los mínimos cambios posibles en los distintos \emph{worflows}. Este cambio de nombre se muestra enla siguiente figura:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.5\textwidth]{dataset02_positive_rename}
+    \caption{Cambiamos el nombre de la clase positiva al principio de todo nuestros procesos. Esto lo hacemos para que en los siguientes \emph{datasets} tengamos que hacer los mínimos cambios posibles.}
+\end{figure}
+
+Lo primero que merece la pena comentar es que tenemos 20 variables de entrada, y una variable de salida. En nuestro \emph{dataset} tenemos 2000 ejemplos, lo que ya supone un tamaño bastante más grande con respecto al \emph{dataset} anterior.
+
+En el nodo de estadísticas nos fijamos primeramente en la variable de salida. La siguiente figura muestra que tenemos un balanceo perfecto entre las cuatro clases consideradas:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.6\textwidth]{dataset02_eda_balanced}
+    \caption{Las cuatro clases de salida están perfectamente balanceadas, con 500 ejemplos por cada clase}
+\end{figure}
+
+Para el resto de variables, podemos ver las distribuciones de los datos según cada variable, pero no sacamos conclusiones de utilidad. Las distribuciones son bastante normales, como se muestra en la siguiente figura:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.9\textwidth]{dataset02_eda_distribuciones}
+    \caption{Las distribuciones según cada variable son bastante normales. Tenemos distribuciones prácticamente uniformes, decrecientes, \ldots No sabemos cómo podríamos explotar esta información.}
+\end{figure}
+
+Mostramos ahora la matriz de correlaciones lineales:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.6\textwidth]{dataset02_eda_correlaciones}
+    \caption{Matriz de correlaciones lineales. Un color azul significa correlación lineal positiva, y un color rojo significa correlación lineal negativa}
+\end{figure}
+
+Era de esperar la correlación entre la anchura y altura de píxeles (los móviles suelen guardar unos \emph{aspect ratio} fijados), pero esto no nos es del todo útil, salvo para eliminar una columna, lo que no parece que vaya a tener un impacto enorme. También tenemos la misma correlación con las medidas en la unidad \lstinline{sc_h, sc_w}, y de nuevo nos encontramos en la misma situación.
+
+Lo que sí que es realmente interesante es que la variable que representa la memoria \emph{RAM} correla mucho ($0.917$) con la variable de salida. Por tanto, podemos decir, adelantándonos a lo que comentaremos más adelante, que la memoria \emph{RAM} es un factor decisivo para fijar el precio de un móvil.
+
+Mostramos ahora los \emph{boxplots} de algunas variables:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.8\textwidth]{dataset02_eda_boxplots}
+    \caption{\emph{Boxplots} de algunas variables}
+\end{figure}
+
+Queda claro que en este caso también tenemos bastantes \emph{outliers} fijándonos solo en información unidimensional (variable a variable). Por tanto seguiremos borrando \emph{outliers} usando el criterio $3\cdot IQR$.
+
+Mostramos ahora la gráfica de combinar algunas variables dos a dos, sin obtener resultados relevantes, como ya nos ha pasado previamente. Elegimos las variables que mostramos quitando aquellas que mostraban información del todo irrelevante, al menos según nuestra interpretación de esta gráfica:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.9\textwidth]{dataset02_eda_combinaciones}
+    \caption{Gráfica de todas las posibles combinaciones de dos variables de nuestro dataset}
+\end{figure}
+
+En último lugar, aplicamos \emph{PCA} para reducir nuestro conjunto de datos a tener dos variables de entrada y la variable de salida. Al igual que hacíamos en el \emph{dataset} anterior, mostramos los resultados visualmente, donde el color indica la clase a la que pertenece cada punto:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.8\textwidth]{dataset02_eda_pca}
+    \caption{Resultado de aplicar \emph{PCA} en dos dimensiones, coloreando cada punto según la clase
+a la que pertenecen}
+\end{figure}
+
+Para este \emph{dataset} obtenemos un resultado muy interesante tras aplicar \emph{PCA}. Gracias al coloreado vemos que los puntos tras transformarse se distribuyen de forma más o menos continua, en un gradiente que va en diagonal decreciente. Esto nos hace pensar que esta transformación, que pasa de 20 variables de entrada a únicamente 2, es útil para considerarse como paso previo a la generación de nuestros modelos de aprendizaje automático.
+
+En último lugar, vemos que no tenemos \emph{missing values} en el \emph{dataset}. El nodo que borra las filas que contienen algún \emph{missing value} deja el \emph{dataset} con las mismas filas, y por tanto no detecta ningún \emph{missing value}.
+
+\pagebreak
+
 \section{Resultados Obtenidos} \label{resultados_brutos:seccion}
 
 \subsection{Consideraciones iniciales} \label{cv_consideraciones:seccion}
@@ -556,6 +642,14 @@ Algunos algoritmos se muestran de forma correcta. Es el caso de Naive Bayes, Ran
 \end{figure}
 
 Con esta visualización sí que se pueden extraer más conclusiones sobre el comportamiento de los algoritmos, como desarrollaremos más adelante.
+
+\pagebreak
+
+\subsection{Mobile Price Classification} \label{mobile_price_cross_validation:seccion}
+
+% TODO -- tenemos que comentar como hemos hecho la adaptacion multiclase
+
+\subsubsection{\emph{Workflows} empleados para \emph{Cross Validation}}
 
 \pagebreak
 
