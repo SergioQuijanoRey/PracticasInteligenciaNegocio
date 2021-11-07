@@ -1040,6 +1040,114 @@ De nuevo, la gráfica conjunta es demasiado mala como para extraer información 
 
 \pagebreak
 
+\subsection{Tanzania Water Pump}
+
+\subsubsection{\emph{Workflows} empleados para \emph{Cross Validation}}
+
+En este caso, tenemos el mismo \emph{workflow} que en el \emph{dataset} anterior. Solo realizamos tres cambios:
+
+\begin{itemize}
+    \item Para las dos variantes de \emph{SVM}, usamos los nodos de \emph{Weka}. De otro modo era imposible ejecutar los algoritmos en un tiempo razonable
+    \item Volvemos a usar el truco del \emph{partitioning} para \emph{SVM}, solo que esta vez nos quedamos con el $80\%$ de los datos (una cantidad mucho más decente que en el caso anterior)
+    \item Por tanto, esta vez sí que consideramos \emph{SVM} con normalización
+\end{itemize}
+
+A estas alturas no tiene demasiado sentido que mostremos capturas de pantalla de estos cambios, pues ya hemos desarrollado ampliamente la estructura de nuestros \emph{workflows} a lo largo de esta memoria.
+
+\subsubsection{Mostrando los resultados obtenidos}
+
+En la siguiente tabla mostramos los resultados agregados:
+
+\begin{table}[H]
+\begin{center}
+    \resizebox{1.05\textwidth}{!}{
+    \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+        \hline
+        Algo Name & TruePositives & FalsePositives & TrueNegatives & FalseNegatives & Recall & Precision & Sensitivity & Specificity & F-measure & Area Under Curve & Accuracy & G-Mean \\
+        \hline
+        Naive Bayes & 11016 & 3675 & 17601 & 6262 & 0.638 & 0.750 & 0.638 & 0.827 & 0.689 & 0.802 & 0.742 & 0.726 \\
+        Neural Net & 5671 & 2103 & 11269 & 3649 & 0.608 & 0.729 & 0.608 & 0.843 & 0.664 & 0.801 & 0.747 & 0.716 \\
+        Support Vector Machine & 44 & 10 & 4962 & 2645 & 0.016 & 0.815 & 0.016 & 0.998 & 0.032 & 0.507 & 0.653 & 0.128 \\
+        K-NN & 5744 & 2859 & 9674 & 4410 & 0.566 & 0.668 & 0.566 & 0.772 & 0.612 & 0.714 & 0.680 & 0.661 \\
+        AdaBoost & 4413 & 2206 & 10331 & 5742 & 0.435 & 0.667 & 0.435 & 0.824 & 0.526 & 0.676 & 0.650 & 0.598 \\
+        Support Vector Machine + Normalization & 1153 & 382 & 4590 & 1536 & 0.429 & 0.751 & 0.429 & 0.923 & 0.546 & 0.676 & 0.750 & 0.629 \\
+        Random Forest & 6078 & 2417 & 10120 & 4077 & 0.599 & 0.715 & 0.599 & 0.807 & 0.652 & 0.747 & 0.714 & 0.695 \\
+        \hline
+    \end{tabular}}
+\end{center}
+    \caption{Resultados de \emph{Cross Validation}, para los distintos algoritmos estudiados, en el cuarto \emph{dataset}}
+\end{table}
+
+Mostramos a continuación la tabla con la complejidad de los modelos generados:
+
+\begin{table}[H]
+\begin{center}
+    % \resizebox{1.05\textwidth}{!}{
+    \begin{tabular}{|c|c|}
+        \hline
+        Algo Name & Medida de Complejidad \\
+        \hline
+        Naive Bayes& 20 valores únicos por atributo \\
+        Neural Net & 1 hidden layer, 10 neuronas \\
+        Support Vector Machine& Kernel RBF $\sigma = 2.0$ \\
+        Support Vector Machine + Normalization& Kernel RBF $\sigma = 2.0$ \\
+        K-NN& 10 vecinos \\
+        AdaBoost& 10 iteraciones \\
+        Random Forest& 50 árboles, profundidad no acotada \\
+        \hline
+    \end{tabular}
+% }
+\end{center}
+    \caption{Medidas de complejidad de los algoritmos considerados}
+\end{table}
+
+\pagebreak
+
+\subsubsection{Mostrando las curvas ROC obtenidas}
+
+Mostramos, de nuevo, las curvas de forma indiviudal:
+
+\begin{figure}[H]
+    \centering
+
+    \begin{subfigure}[b]{0.4 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{dataset04_roc_nn}
+        \caption{Curva ROC para Redes Neuronales}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.4 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{dataset04_roc_naivebayes}
+        \caption{Curva ROC para Naive Bayes}
+    \end{subfigure}
+
+    \begin{subfigure}[b]{0.4 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{dataset04_roc_svm}
+        \caption{Curva ROC para SVM}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.4 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{dataset04_roc_svmnormalizacion}
+        \caption{Curva ROC para SVM con normalización}
+    \end{subfigure}
+
+    \begin{subfigure}[b]{0.4 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{dataset04_roc_knn}
+        \caption{Curva ROC para K-NN}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.4 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{dataset04_roc_randomforest}
+        \caption{Curva ROC para Random Fores}
+    \end{subfigure}
+
+    \begin{subfigure}[b]{0.4 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{dataset04_roc_adaboost}
+        \caption{Curva ROC para Adaboost}
+    \end{subfigure}
+
+    \caption{Todas las curvas ROC para el primer \emph{dataset}, mostradas de forma individual}
+\end{figure}
+
+
+\pagebreak
+
 \section{Análisis de resultados}
 
 En la anterior sección, \customcite{resultados_brutos:seccion}, hemos mostrados los resultados obtenidos. Estos resultados han sido las tablas con las distintas métricas recolectadas, las medidas de complejidad de los algoritmos, y las distintas curvas ROC obtenidas. En base a esto, y a la siguiente tabla comparativa, realizaremos un análisis de los algoritmos obtenidos:
