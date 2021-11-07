@@ -335,6 +335,72 @@ En último lugar, vemos que no tenemos \emph{missing values} en el \emph{dataset
 
 \pagebreak
 
+\subsection{\emph{Bank Marketing}}
+
+De nuevo, empezamos mostrando la fuente original de \emph{dataset}, que se puede encontrar en \cite{bank_marketing_source:online}. En este caso estamos trabajando con un \emph{dataset} del conocido repositorio \emph{UCI}, y no con \emph{Kaggle} como hemos hecho con los \emph{datasets} previos. En la fuente del \emph{dataset} \cite{bank_marketing_source:online} se dice que el objetivo es: \emph{``The classification goal is to predict if the client will subscribe (yes/no) a term deposit (variable y)''}.
+
+\subsubsection{Análisis Exploratorio de los Datos}
+
+Como ya hemos comentado, el objetivo es predecir si un cliente se suscribirá (salida \emph{yes}) o no (salida \emph{no}). Estamos por tanto ante un problema de clasificación binaria.
+
+Lo primero que vemos es que tenemos 21 columnas (20 variables de entrada y una de salida) y 41188 ejemplos. Por tanto, estamos ante un problema con unas dimensionalidades mucho mayores que las que hemos trabajado hasta ahora.
+
+Comenzamos mostrando la distribución de la variable de salida:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.9 \textwidth]{dataset03_eda_balanceo}
+    \caption{Distribución de la variable de salida}
+\end{figure}
+
+Visualmente, queda claro que tenemos un desbalanceo enorme. La salidas \emph{no} tiene 36548 ejemplos. La salida \emph{yes}, por tanto, tiene 4640 ejemplos. Tenemos por tanto solo un $11.27\%$ de ejemplos para la clase positiva (\emph{yes}).
+
+Como ya hemos repetido anteriormente, las distribuciones de otras variables no nos dan pistas relevantes sobre cómo podemos atacar el problema que se nos presenta:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.9 \textwidth]{dataset03_eda_distribuciones}
+    \caption{Distribuciones de algunas variables de entrada. No sabemos cómo explotar esta información en el problema que estamos estudiando.}
+\end{figure}
+
+Consideramos ahora la matriz de correlaciones, que hasta ahora ha sido uno de los puntos clave en este análisis exploratorio de datos:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.9 \textwidth]{dataset03_eda_correlaciones}
+    \caption{Matriz de correlaciones lineales. Un color azul significa correlación lineal positiva, y un color rojo significa correlación lineal negativa}
+\end{figure}
+
+Para comenzar, ninguna variable está excesivamente correlada con la variable de salida, así que no nos podemos aprovechar de esto como hemos hecho anteriormente. Sí que tenemos conjuntos de variables que están correladas entre sí, pro ejemplo \lstinline{Emp.var.rate} y \lstinline{cons.price.idx}, o \lstinline{housing} y \lstinline{loan}. Sin embargo, en este \emph{dataset} concreto que presenta otro tipo de problema (el desbalanceo que ya hemos visto), vamos a emplear otras técnicas de procesado de datos.
+
+Mostramos ahora los \emph{boxplots} de algunas variables:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.9 \textwidth]{dataset03_eda_boxplot}
+    \caption{\emph{Boxplots} de algunas de las variables del \emph{dataset}}
+\end{figure}
+
+Claramente hay variables con demasiados \emph{outliers}, por ejemplo \lstinline{duration}. Por tanto, seguimos usando el criterio $3 \cdot IQR$ que llevamos usando toda la práctica para intentar paliar el efecto de estos valores atípicos.
+
+El \emph{plot} de las parejas de variables ha sido tan inútil durante toda la práctica que esta vez no lo mostramos. Se puede consultar en \lstinline{KNIME} expandiendo el nodo correspondiente, pero no hemos sido capaces de extraer información relevante de esta gráfica conjunta.
+
+En último lugar, mostramos el resultado de aplicar \emph{PCA} para obtener solo dos variables de entrada. El resultado, coloreado según la clase de salida, se muestra en la siguiente figura:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.9 \textwidth]{dataset03_eda_pca}
+    \caption{Resultado de aplicar \emph{PCA} en dos dimensiones, coloreando cada punto según la clase a la que pertenece}
+\end{figure}
+
+Con esta transformación hemos creado dos \emph{clusters} afilados claramente separados. Sin embargo, las dos clases de salida están mezcladas en estos dos \emph{clusters}, y por tanto parece que en este problema \emph{PCA} no va a ser una técnica útil.
+
+Como hemos hecho previamente, borramos aquellas filas que contengan \emph{missing values}. Como el nodo de \lstinline{KNIME} no borra ninguna fila, podemos afirmar que al menos \lstinline{KNIME} no ha detectado ningún \emph{missing value}.
+
+Es destacable comentar que, según lo que indica \cite{bank_marketing_source:online}, hay variables que tienen valores especiales. Por ejemplo, un valor de $999$ en \lstinline{pdays} indica que el cliente no ha sido previamente contactado. Si tuviésemos el tiempo y herramientas necesarias, esto habría que tratarlo de una mejor forma. Por ejemplo, añadiendo una variable adicional que sea un \emph{flag} de este hecho. Sin embargo esto tampoco es óptimo. Por tanto, hay que tener esto en cuenta en el rendimiento de nuestros modelos.
+
+\pagebreak
+
 \section{Resultados Obtenidos} \label{resultados_brutos:seccion}
 
 \subsection{Consideraciones iniciales} \label{cv_consideraciones:seccion}
