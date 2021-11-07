@@ -257,7 +257,7 @@ Según \cite{mobile_dataset:online}, la tarea a resolver es: \emph{``In this pro
 En el siguiente apartado pasamos a comentar las particularidades de este \emph{dataset}, particularidades que hemos extraído del \emph{EDA} realizado sobre el conjunto de datos.
 
 
-\subsubsection{Análisis Exploratorio de los datos}
+\subsubsection{Análisis Exploratorio de los datos} \label{dataset02_eda:seccion}
 
 Estamos usando el mismo \emph{workflow} para el \emph{EDA} que en el \emph{dataset} anterior, así que no mostramos las capturas de los \emph{workflows} de nuevo, sino que mostramos directamente los resultados, que es lo verdaderamente novedoso respecto al \emph{dataset} anterior.
 
@@ -967,6 +967,7 @@ Mostramos ahora los resultados para la optimización de \emph{K-NN}:
     \end{tabular}
 \end{center}
     \caption{Optimización para \emph{K-NN}, ajustando el número de vecinos considerados para la clasificación}
+    \label{dataset02_optim_knn:tabla}
 \end{table}
 
 En este caso, estamos ajustando el número de vecinos considerados. Al aumentar este parámetro, no estamos aumentando la complejidad del modelo. Estamos aumentando la regularización que aplica al modelo. Al considerar más vecinos, suavizamos las fronteras generadas, y por tanto reducimos algo la capacidad de sobreajuste de nuestro modelo.
@@ -1098,6 +1099,62 @@ A pesar de esto último, no olvidar que \emph{SVM} con normalización también s
 
 \pagebreak
 
+\subsection{Mobile Price Classification}
+
+Como hemos comentado en \customcite{dataset02_eda:seccion}, aplicar \emph{PCA} resultando en solo dos variables de entrada parecía muy prometedor. Así que hemos aplicado esto a nuestro \emph{dataset}, y luego hemos comparado con el rendimiento de un algoritmo en concreto.
+
+La estructura general se muestra en el siguiente \emph{workflow}:
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width = 0.8 \textwidth]{dataset02_bonus_general}
+    \caption{\emph{Workflow} general aplicado para el procesado de datos}
+\end{figure}
+
+Aplicamos \emph{PCA} de la forma correcta. Para ello separamos en \emph{training} y \emph{test}. Realizamos los cálculos de \emph{PCA} sobre \emph{training}, y los aplicamos a \emph{training}. Con esos cálculos, aplicamos \emph{PCA} a test. Esto es importante para evitar hacer \emph{data snooping}. Esto se muestra en el siguiente \emph{workflow}:
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width = 0.8 \textwidth]{dataset02_bonus_pca}
+    \caption{\emph{Workflow} para aplicar \emph{PCA} de forma correcta}
+\end{figure}
+
+Con esto, usamos \emph{k-NN} para realizar las predicciones. Ya hemos visto que este algoritmo bien empleado puede obtener resultados realmente buenos. Mostramos este \emph{workflow}:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.8 \textwidth]{dataset02_bonus_evaluacionknn}
+    \caption{Evaluando el procesado de los datos usando un modelo de aprendizaje automático concreto}
+\end{figure}
+
+Los resultados obtenidos del \emph{scorer} se muestran en la siguiente tabla:
+
+\begin{table}[H]
+\begin{center}
+    \resizebox{1.05\textwidth}{!}{
+    \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+        \hline
+        Classification Class & TruePositives & FalsePositives & TrueNegatives & FalseNegatives & Recall & Precision & Sensitivity & Specificity & F-measure & Accuracy & Cohen's kappa \\
+        \hline
+        1 & 116 & 41 & 409 & 34 & 0.773 & 0.739 & 0.773 & 0.909 & 0.756 &  & \\
+        2 & 109 & 38 & 412 & 41 & 0.727 & 0.741 & 0.727 & 0.916 & 0.734 &  & \\
+        3 & 134 & 18 & 432 & 16 & 0.893 & 0.882 & 0.893 & 0.960 & 0.887 &  & \\
+        0 & 132 & 12 & 438 & 18 & 0.880 & 0.917 & 0.880 & 0.973 & 0.898 &  & \\
+        Overall &  &  &  &  &  &  &  &  &  & 0.818 & 0.758 \\
+        \hline
+    \end{tabular}}
+\end{center}
+    \caption{Resultados de entrenar \emph{K-NN}, con 10 vecinos, en el conjunto de datos tras el procesado}
+\end{table}
+
+\subsubsection{Conclusiones}
+
+En \customcite{dataset02_optim_knn:tabla} conseguíamos, tras un ajuste, un \emph{accuracy} de $\approx 0.94$. Tras este procesado, y sin ajuste alguno, obtenemos un \emph{accuracy} de $0.818$.
+
+Esto es realmente sorprendente por dos motivos. El primero y más obvio es que estamos reduciendo toda la información del \emph{dataset} a solamente dos variables. De 20 variables de entradad hemos pasado a solamente utilizar 2 variables, una reducción $x10$, lo cual de por sí ya es muy relevante. El segundo motivo es que estamos obteniendo resultados realmente buenos con un modelo realmente simple, como es \emph{K-NN}.
+
+Estamos perdiendo aproximadamente un $0.13$ de \emph{accuracy} para el caso concreto de \emph{K-NN}. Sin embargo, estamos simplificando el problema de forma masiva manteniendo un \emph{accuracy} muy decente. El único problema que le vemos a este procedimiento es que perdemos la interpretabilidad en el momento en que colapsamos todo el \emph{dataset} a dos variables continuas. Sin embargo, la simplificación es innegable. Y lo que ello conlleva: modelos más rápidos de entrenar, más rápidos en inferencia y mucho más generalizables.
+
 \pagebreak
 
 \section{Interpretación de los resultados}
@@ -1114,10 +1171,10 @@ Como comentábamos previamente, las variables fundamentales que han aportado tod
 
 Para ver la relevancia de estas variables, entrenamos un árbol de decisión con el \emph{dataset} procesado y mostramos dicho árbol de forma gráfica, en la siguiente figura:
 
-\begin{figure}[H]
+\begin{figure}[h]
     \centering
     \includegraphics[width = 0.5 \textwidth]{dataset01_tree_exploratorio}
-    \caption{\emph{Decision Tree} entrenado sobre todo el \emph{dataset} tras aplicar el procesado anteriormente descrito}
+    \caption{\emph{decision tree} entrenado sobre todo el \emph{dataset} tras aplicar el procesado anteriormente descrito}
     \label{workflow_general:imagen}
 \end{figure}
 

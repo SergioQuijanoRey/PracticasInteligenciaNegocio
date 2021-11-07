@@ -71,6 +71,7 @@
 - **Bonus**: hemos aplicado PCA para el proceso de aprendizaje
     - Además aplicamos PCA de forma correcta
     - Es decir, separamos en training y test, calculamos sobre training y aplicamos esto tanto en training como en test
+- **El ajuste de parametros de KNN es muy bueno**
 1. Variables Correladas
     - Memoria RAM muy correlada con la variable de salida
     - Los dos valores para los píxeles están muy correlados entre sí, como era de esperar

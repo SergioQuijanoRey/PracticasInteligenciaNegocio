@@ -302,9 +302,9 @@
             },
             {
                 "id": "org.knime.base.node.mine.knn.KnnNodeFactory2#K Nearest Neighbor",
-                "nrexecs": 576,
+                "nrexecs": 577,
                 "nrfails": 3,
-                "exectime": 495355,
+                "exectime": 495580,
                 "nrcreated": 5,
                 "successor": "org.knime.base.node.meta.xvalidation.AggregateOutputNodeFactory#X-Aggregator"
             },
@@ -750,9 +750,9 @@
             },
             {
                 "id": "org.knime.base.node.io.filehandling.csv.writer.CSVWriter2NodeFactory#CSV Writer",
-                "nrexecs": 6,
+                "nrexecs": 9,
                 "nrfails": 0,
-                "exectime": 57,
+                "exectime": 259,
                 "nrcreated": 5,
                 "successor": "n/a"
             },
@@ -778,14 +778,14 @@
             "nrcreated": 0
         }
     },
-    "uptime": 3217066,
+    "uptime": 3253522,
     "workflowsOpened": 1,
     "remoteWorkflowsOpened": 0,
     "workflowsImported": 0,
     "workflowsExported": 0,
     "launches": 49,
     "lastApplicationID": "org.knime.product.KNIME_APPLICATION",
-    "timeSinceLastStart": 1731176,
+    "timeSinceLastStart": 3517475,
     "crashes": 7,
     "properlyShutDown": false
 }
