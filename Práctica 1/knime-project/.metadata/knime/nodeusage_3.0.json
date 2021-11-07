@@ -30,9 +30,9 @@
             },
             {
                 "id": "org.knime.base.node.preproc.colconvert.numbertostring2.NumberToString2NodeFactory#Number To String",
-                "nrexecs": 2961,
+                "nrexecs": 2982,
                 "nrfails": 0,
-                "exectime": 75737,
+                "exectime": 81753,
                 "nrcreated": 23,
                 "successor": "org.knime.ext.weka37.predictor3.WekaPredictorNodeFactory#Weka Predictor (3.7)"
             },
@@ -54,9 +54,9 @@
             },
             {
                 "id": "org.knime.base.node.preproc.filter.column.DataColumnSpecFilterNodeFactory#Column Filter",
-                "nrexecs": 7154,
+                "nrexecs": 7175,
                 "nrfails": 0,
-                "exectime": 2823,
+                "exectime": 2833,
                 "nrcreated": 9,
                 "successor": "org.knime.base.node.preproc.colconvert.numbertostring2.NumberToString2NodeFactory#Number To String"
             },
@@ -102,9 +102,9 @@
             },
             {
                 "id": "org.knime.base.node.mine.scorer.accuracy.AccuracyScorer2NodeFactory#Scorer",
-                "nrexecs": 2256,
+                "nrexecs": 2277,
                 "nrfails": 0,
-                "exectime": 38884,
+                "exectime": 39675,
                 "nrcreated": 3,
                 "successor": "org.knime.optimization.internal.node.parameter.loopend.LoopEndParOptNodeFactory#Parameter Optimization Loop End"
             },
@@ -230,17 +230,17 @@
             },
             {
                 "id": "org.knime.base.node.mine.neural.mlp2.MLPPredictorNodeFactory#MultiLayerPerceptron Predictor",
-                "nrexecs": 822,
+                "nrexecs": 843,
                 "nrfails": 7,
-                "exectime": 80726,
+                "exectime": 83739,
                 "nrcreated": 1,
                 "successor": "org.knime.base.node.meta.xvalidation.AggregateOutputNodeFactory#X-Aggregator"
             },
             {
                 "id": "org.knime.base.node.mine.neural.rprop.RPropNodeFactory2#RProp MLP Learner",
-                "nrexecs": 828,
+                "nrexecs": 849,
                 "nrfails": 27,
-                "exectime": 4453108,
+                "exectime": 4827549,
                 "nrcreated": 1,
                 "successor": "org.knime.base.node.mine.neural.mlp2.MLPPredictorNodeFactory#MultiLayerPerceptron Predictor"
             },
@@ -318,9 +318,9 @@
             },
             {
                 "id": "org.knime.base.node.preproc.rounddouble.RoundDoubleNodeFactory#Round Double",
-                "nrexecs": 326,
+                "nrexecs": 347,
                 "nrfails": 0,
-                "exectime": 13815,
+                "exectime": 18305,
                 "nrcreated": 1,
                 "successor": "NodeContainer"
             },
@@ -350,9 +350,9 @@
             },
             {
                 "id": "org.knime.base.node.preproc.columnappend2.ColumnAppender2NodeFactory#Column Appender",
-                "nrexecs": 1591,
+                "nrexecs": 1612,
                 "nrfails": 8,
-                "exectime": 49189,
+                "exectime": 56524,
                 "nrcreated": 10,
                 "successor": "org.knime.base.node.preproc.partition.PartitionNodeFactory#Partitioning"
             },
@@ -366,9 +366,9 @@
             },
             {
                 "id": "org.knime.base.node.preproc.rename.RenameNodeFactory#Column Rename",
-                "nrexecs": 920,
+                "nrexecs": 941,
                 "nrfails": 0,
-                "exectime": 464,
+                "exectime": 475,
                 "nrcreated": 9,
                 "successor": "NodeContainer"
             },
@@ -486,9 +486,9 @@
             },
             {
                 "id": "org.knime.base.node.preproc.double2int2.DoubleToIntNodeFactory#Double To Int",
-                "nrexecs": 318,
+                "nrexecs": 339,
                 "nrfails": 0,
-                "exectime": 9780,
+                "exectime": 14372,
                 "nrcreated": 1,
                 "successor": "org.knime.base.node.preproc.colconvert.numbertostring2.NumberToString2NodeFactory#Number To String"
             },
@@ -662,17 +662,17 @@
             },
             {
                 "id": "org.knime.optimization.internal.node.parameter.loopstart.LoopStartParOptNodeFactory#Parameter Optimization Loop Start",
-                "nrexecs": 1654,
+                "nrexecs": 1674,
                 "nrfails": 0,
-                "exectime": 1730,
+                "exectime": 1737,
                 "nrcreated": 2,
                 "successor": "org.knime.base.node.mine.neural.rprop.RPropNodeFactory2#RProp MLP Learner"
             },
             {
                 "id": "org.knime.optimization.internal.node.parameter.loopend.LoopEndParOptNodeFactory#Parameter Optimization Loop End",
-                "nrexecs": 1633,
+                "nrexecs": 1654,
                 "nrfails": 1,
-                "exectime": 838,
+                "exectime": 849,
                 "nrcreated": 2,
                 "successor": "NodeContainer"
             },
@@ -727,8 +727,8 @@
             {
                 "id": "org.knime.base.node.mine.smote.SmoteNodeFactory#SMOTE",
                 "nrexecs": 2,
-                "nrfails": 3,
-                "exectime": 742448,
+                "nrfails": 4,
+                "exectime": 4229491,
                 "nrcreated": 2,
                 "successor": "NodeContainer"
             },
@@ -750,9 +750,9 @@
             },
             {
                 "id": "org.knime.base.node.io.filehandling.csv.writer.CSVWriter2NodeFactory#CSV Writer",
-                "nrexecs": 16,
+                "nrexecs": 18,
                 "nrfails": 1,
-                "exectime": 476,
+                "exectime": 478,
                 "nrcreated": 11,
                 "successor": "n/a"
             },
@@ -778,14 +778,14 @@
             "nrcreated": 0
         }
     },
-    "uptime": 3543905,
+    "uptime": 3604633,
     "workflowsOpened": 1,
     "remoteWorkflowsOpened": 0,
     "workflowsImported": 0,
     "workflowsExported": 0,
     "launches": 49,
     "lastApplicationID": "org.knime.product.KNIME_APPLICATION",
-    "timeSinceLastStart": 17746251,
+    "timeSinceLastStart": 20721927,
     "crashes": 7,
-    "properlyShutDown": false
+    "properlyShutDown": true
 }

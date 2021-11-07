@@ -800,8 +800,6 @@ Con esta visualización sí que se pueden extraer más conclusiones sobre el com
 
 \subsection{Mobile Price Classification} \label{mobile_price_cross_validation:seccion}
 
-% TODO -- tenemos que comentar como hemos hecho la adaptacion multiclase
-
 \subsubsection{\emph{Workflows} empleados para \emph{Cross Validation}} \label{dataset02_decision:seccion}
 
 Como ya hemos comentado previamente, no vamos a mostrar capturas de pantalla de los \emph{workflows} de cada \emph{Custom Cross Validation} para cada algoritmo. Esto pues las diferencias respecto al \emph{dataset} anterior son mínimas. Consideramos, por tanto, que es mucho más interesante que solo mostremos las diferencias con respecto lo desarrollado previamente.
@@ -1150,10 +1148,87 @@ Mostramos, de nuevo, las curvas de forma indiviudal:
 
 \section{Análisis de resultados}
 
-En la anterior sección, \customcite{resultados_brutos:seccion}, hemos mostrados los resultados obtenidos. Estos resultados han sido las tablas con las distintas métricas recolectadas, las medidas de complejidad de los algoritmos, y las distintas curvas ROC obtenidas. En base a esto, y a la siguiente tabla comparativa, realizaremos un análisis de los algoritmos obtenidos:
+En la anterior sección, \customcite{resultados_brutos:seccion}, hemos mostrados los resultados obtenidos. Estos resultados han sido las tablas con las distintas métricas recolectadas, las medidas de complejidad de los algoritmos, y las distintas curvas ROC obtenidas. En base a esto, y a la siguiente tabla comparativa, realizaremos un análisis de los algoritmos obtenidos. En la siguiente tabla, usamos como medida base \emph{G-Mean}, pues como veremos a lo largo de esta memoria, es una medida mucho más representativa que \emph{accuracy}. También, es una medida lo suficientemente representativa como para ser considerada por sí sola.
 
-% TODO -- incluir tabla con las medias de los datos
-% TODO -- realizar un análisis de los resultados obtenidos
+\begin{table}[H]
+\begin{center}
+    \resizebox{1.05\textwidth}{!}{
+    \begin{tabular}{|c|c|c|c|c|c|c|}
+        \hline
+        G-Mean & Dataset 01 & Dataset 02 & Dataset 03 & Dataset 04 & Valor Medio & Desv. Tipica \\
+        \hline
+        Naive Bayes & 0.710 & 0.841 & 0.742 & 0.726 & 0.755 & 0.059 \\
+        Neural Net & 0.810 & & 0.533 & 0.716 & 0.686 & 0.141 \\
+        Support Vector Machine & 0.140 & 0 &  & 0.128 & 0.089 & 0.078 \\
+        Support Vector Machine + Normalization & 0.620 & 0.329 & 0 & 0.661 & 0.403 & 0.306 \\
+        K-NN & 0.540 & 0.818 & 0.474 & 0.598 & 0.608 & 0.149 \\
+        AdaBoost & 0.710 & 0.535 & 0.504 & 0.629 & 0.595 & 0.094 \\
+        Random Forest & 0.720 & 0.801 & 0.561 & 0.695 & 0.694 & 0.100 \\
+        \hline
+    \end{tabular}}
+\end{center}
+    \caption{Resumen de los resultados obtenidos con los distintos modelos, en los disntintos \emph{datasets}. Usamos como métrica base \emph{G-Mean}}
+    \label{tabla_resultados:tabla}
+\end{table}
+
+Como ya hemos comentado, los valores que están vacíos se deben a operaciones no definidas (por ejemplo, intentar dividiro por cero).
+
+Empezamos ordenando los algoritmos por el valor medio de \emph{G-Mean}, de menor a mayor, obteniendo:
+
+\begin{enumerate}
+    \item Support Vector Machine
+    \item Support Vector Machine + Normalization
+    \item AdaBoost
+    \item K-NN
+    \item Neural Net
+    \item Random Forest
+    \item Naive Bayes
+\end{enumerate}
+
+Nos sorprende que \emph{SVM} en sus dos variantes haya sido el peor algoritmo considerado. Esto se puede explicar porque la implementación de \lstinline{KNIME} no sea del todo buena. O más probablemente, que no hayamos ajustado correctamente los parámetros que definen el aprendizaje del modelo. A pesar de esto, en \customcite{tabla_resultados:tabla} podemos ver el gran impacto que tiene la normalización, pasando de un valor medio de $0.09$ a $0.403$. Lo mismo es aplicable a \emph{K-NN}. Aunque sin haber aplicado normalización en todos los \emph{datasets} ha obtenido resultados realmente buenos.
+
+No nos sorprende que \emph{Random Forest} sea el segundo mejor algoritmo en media. Por su naturaleza, es de esperar que obtenga resultados de alta calidad, y además, de forma consistente en distintas situaciones.
+
+Sí que sorprende que \emph{Naive Bayes} haya sido el mejor algoritmo en media. Pensábamos que no iba a ser capaz de obtener buenos resultados consistentemente por la hipótesis de independencia en las variables. Pensábamos que en algún \emph{dataset} iba a funcionar mal por estas correlaciones entre variables. Sin embargo, gracias a la complejidad de los datos con los que hemos trabajado, el que teóricamente esta hipótesis pueda fallar no afecta demasiado al rendimiento del modelo aprendido.
+
+El siguiente modelo también era de esperar. Las redes neuronales son conocidas por su gran capacidad de ajuste en multitud de escenarios. Sin embargo no han obtenido resultados excelentes. Como ya hemos comentado, \lstinline{KNIME} no nos proporciona muchas opciones para definir estos modelos. Echamos especialmente de menos opciones como:
+
+\begin{itemize}
+    \item Mejor definición de la arquitectura. Poder definir el número de neuronas en la salida. Poder definir las funciones de activación. Por ejemplo, en la salida, $n$ neuronas donde $n$ es el número de clases con las que trabajamos, y aplicar una función \emph{sofmax} para elegir la clase que damos como salida de clasificación. Esto permitiría trabajar cómodamente con problemas multiclase. También sería interesante disponer de \emph{batch normalization} para mejorar el rendimiento de la red.
+    \item Definir medidas de regularización como por ejemplo \emph{weight decay}, para evitar que nuestra red tenga \emph{overfitting}
+    \item Definir regularizaciones más avanzadas como por ejemplo \emph{dropout}
+    \item O incluso poder definir arquitecturas avanzadas, como \emph{skip connections} para montar una arquitectura tipo \emph{ResNet}, que ha demostrado ser muy eficaz
+\end{itemize}
+
+Sabemos que esto se puede hacer con la extensión de \lstinline{Keras}, pero no hemos sido capaces de configurarla de forma correcta.
+
+\emph{K-NN} ha quedado en la mitad del \emph{ranking}. Esto era de esperar. Es un algoritmo simple, y por ello en general no obtiene grandes resultados. Sin embargo, por su simplicidad, es muy generalizable y se adapta a variedad de situaciones. Y es por ello que era de esperar que quedase en un puesto medio. Es un algoritmo en general ni muy bueno ni muy malo.
+
+Sin embargo es destacable el buen rendimiento que alcanza en \customcite{knn_buenos_resultados:seccion}. Por tanto, no podemos descartar que este modelo simple pueda tener resultados realmente buenos.
+
+Nos sorprende que \emph{AdaBoost} haya quedado en la parte baja de la tabla. Incluso por debajo de \emph{k-NN}. La explicación más razonable a este hecho es que no hayamos ajustado de forma efectiva los parámetros que definen este modelo.
+
+Ordenamos ahora los algoritmos según la desviación típica, de menor a mayor:
+
+\begin{enumerate}
+    \item Naive Bayes
+    \item Support Vector Machine
+    \item AdaBoost
+    \item Random Forest
+    \item Neural Net
+    \item K-NN
+    \item Support Vector Machine + Normalization
+\end{enumerate}
+
+De nuevo, sorprende lo bien que funciona \emph{Naive Bayes}. Es el modelo que mejor valor de \emph{G-mean} obtiene y, además, el más estable.
+
+Es curioso el caso de \emph{SVM}. Sin normalización es de los más estables, pero con normalización es el más inestable. Cuando es estable, es porque es un mal algoritmo de forma consistente. Y al ser inestable con normalización, vemos que el algoritmo es malo salvo en casos concretos en los que obtiene buenos resultados.
+
+\emph{AdaBoost} es malo de forma estable, así que esto no nos da más información que lo que ya sospechábamos: tenemos que estar ajustando de forma ineficiente los parámetros que definen el modelo.
+
+Por su naturaleza de \emph{ensemble}, era de esperar que \emph{Random Forest} sea un algoritmo estable. Aunque esté a mitad del \emph{ranking}, notar que solo \emph{Naive Bayes} es un buen algoritmo que además sea estable (es irrelevante que tengamos malos algoritmos de forma consistente).
+
+Tampoco sorprende que las redes neuronales sean inestables por lo que ya hemos comentado. En los casos que tengamos sobreajuste, obtendremos malos resultados. Con \lstinline{KNIME} no hemos conseguido introducir medidas efectivas de regularización.
 
 \pagebreak
 
@@ -1786,7 +1861,7 @@ En definitiva, un dataset que ya de por sí era sencillo (solo 11 variables de e
 
 \pagebreak
 
-\subsection{Mobile Price Classification}
+\subsection{Mobile Price Classification} \label{knn_buenos_resultados:seccion}
 
 Como pasaba en el anterior \emph{dataset}, la observación más directa y relevante viene a partir del procesamiento de datos. Hemos conseguido reducir un problema con 20 variables de entrada a un problema con 2 variables de entrada empleando \emph{PCA}, y con un modelo de aprendizaje automático simple como \emph{K-NN}. Como ya hemos mencionado en \customcite{dataset02_procesado_conclusiones:seccion}, esto es relevante por dos motivos. El primero, porque estamos reduciendo un problema de 20 variables de entrada a solo dos variables. Con ello, estamos reduciendo la estructura del problema a tratar a una mucho más sencilla, y con ello podremos entrenar e inferir modelos de una forma mucho más rápida, con una capacidad de generalización mucho más alta. En segundo lugar, es relevante que un modelo simple como \emph{K-NN} logre unos resultados tan buenos, simplemente regularizando adecuadamente el modelo entrenado.
 

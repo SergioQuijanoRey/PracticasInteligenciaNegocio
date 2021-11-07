@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg stroke-dasharray="none" shape-rendering="auto"
      xmlns="http://www.w3.org/2000/svg" font-family="&apos;Dialog&apos;"
-     width="2992" text-rendering="auto" fill-opacity="1"
+     width="2990" text-rendering="auto" fill-opacity="1"
      contentScriptType="text/ecmascript" color-interpolation="auto"
      color-rendering="auto" preserveAspectRatio="xMidYMid meet" font-size="12"
      fill="black" xmlns:xlink="http://www.w3.org/1999/xlink" stroke="black"
@@ -66,7 +66,7 @@
                 <path d="M2510 199 L2584 199 L2584 220 L2510 220 L2510 199 Z"/>
             </clipPath>
             <clipPath clipPathUnits="userSpaceOnUse" id="clipPath18">
-                <path d="M2655 186 L2993 186 L2993 245 L2655 245 L2655 186 Z"/>
+                <path d="M2656 186 L2991 186 L2991 245 L2656 245 L2656 186 Z"/>
             </clipPath>
             <clipPath clipPathUnits="userSpaceOnUse" id="clipPath19">
                 <path d="M53 337 L154 337 L154 359 L53 359 L53 337 Z"/>
@@ -177,7 +177,7 @@
                 <path d="M2831 154 L2903 154 L2903 165 L2831 165 L2831 154 Z"/>
             </clipPath>
             <clipPath clipPathUnits="userSpaceOnUse" id="clipPath55">
-                <path d="M-1 -1 L4292 -1 L4292 1188 L-1 1188 L-1 -1 Z"/>
+                <path d="M-1 -1 L3899 -1 L3899 1188 L-1 1188 L-1 -1 Z"/>
             </clipPath>
         </defs>
         <g font-size="14" fill="white" font-family="&apos;JetBrains Mono&apos;"
@@ -301,11 +301,11 @@
                   y="421" clip-path="url(#clipPath16)" fill="black"
                   stroke="none" xml:space="preserve">con los que vamos a trabajar</text><text x="2511"
                   y="216" clip-path="url(#clipPath17)" fill="black"
-                  stroke="none" xml:space="preserve">Node 99</text><text x="2728"
+                  stroke="none" xml:space="preserve">Node 99</text><text x="2729"
                   y="203" clip-path="url(#clipPath18)" fill="black"
-                  stroke="none" xml:space="preserve">Aplicamos el mismo CV</text><text x="2719"
+                  stroke="none" xml:space="preserve">Aplicamos el mismo CV</text><text x="2720"
                   y="222" clip-path="url(#clipPath18)" fill="black"
-                  stroke="none" xml:space="preserve">para el dataset después</text><text x="2656"
+                  stroke="none" xml:space="preserve">para el dataset después</text><text x="2657"
                   y="241" clip-path="url(#clipPath18)" fill="black"
                   stroke="none" xml:space="preserve">de realizar el balanceo de las clases</text><text x="54"
                   y="354" clip-path="url(#clipPath19)" fill="black"
@@ -377,15 +377,16 @@ AADhvucPJbgFY3M3FzIAAAAASUVORK5CYII=" xlink:actuate="onLoad"/>
                    xlink:show="embed" xlink:type="simple"
                    clip-path="url(#clipPath21)" preserveAspectRatio="none"
                    font-weight="normal" height="16" x="0" y="0"
-                   xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABX0lEQVR42qVTzUrD
-QBD+Jl1rDj358wxSvEhEfQPFu/oIVg/6BB4aj4JXaXwEFTyKD+BBisWLiOAbiDkV
-TdOk6+xuUjaKTcQvZMhuvpmdnfmGYEE+oYHYvYHEGi+nrF9DEO5RjzZpEX3bh8bO
-D+4urzp6T+KF7fUI9aFDsYMRtni9oGj87NFydF4IkDkH/PkOiCZ5/bdx4AvUaAep
-7DXmgeSZt2Y5SCsPUtNpp+KOv0Pyojk/iD9y57Q3Iyn8PPYvIdW+HyQn7ZY44MO2
-24fJqX8GTm/g3ppMRBOVoHmU+cHhd1Xd2U57EjRP1Uj5ZQEE2yv8BYYvkBtIerTv
-XRpA8w3NBCC5xFZn4byGopAyd+DnPZifHSO0SFSfgaNfHb7D6CLJa9BVIjF9Lofm
-GVF1TYDpaEMrzIikAjRPst96JSUWTs6VCLlP3qAzeRZUq1S1VcHKZqEwjUZhK1Wn
-8d/4AmSylsd4KZ0LAAAAAElFTkSuQmCC" xlink:actuate="onLoad"/>
+                   xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABiElEQVR42mNgGGjA
+SIri00+1DP8zMK0FMln+/2eYaS5zpZWJWM1ADUxAtBLIVARiWUZGhjSQONEGnH6u
+3QCklJGEfhJtwLnnhqIM/xnTkdT/Avp9NojBAiLOPNOW+/efseE/w/8bD6W0esMY
+V/9FNuDPv9/LgJQYwj8Mt0ykr/TAXQDUvBFIJTIyMrYoPr++cdX/UGaY2hPPdNyA
+lCWSeR+Y/v9LAYbBf7gLgEAEajIrUNRF4dn1DcBA8zvA4MDM9OzNFKAMN1LEHTKR
+vXYSxmOBxuU1oEZpaLSyA7Hrqee6q7j+v7kPZKsgaX728w9DArL3wF7g+vDfF0id
+B7sBAtgZ///3BUqmwNMKI8NvYFz22cpffo9hgLb21V9MjOy2QEVXkOTYgaYJIgXc
+bVPpK33oMQQPrFm9z3+nF8su/P//rz/QIDE0dZ8Y//0PluZ//RTdAJR0YCJ19hs7
+C5MF0LpbaCn+gKns1VPY0ghGQtKXuPSV6QeHGdDjZ0FRBnTN3X8c32NplhsBEvB+
+/elUcvwAAAAASUVORK5CYII=" xlink:actuate="onLoad"/>
             <polygon clip-path="url(#clipPath27)"
                      points=" 1797 155 1806 159 1797 164" stroke="none"/>
             <text xml:space="preserve" x="1743" y="433"
@@ -603,16 +604,15 @@ AADhvucPJbgFY3M3FzIAAAAASUVORK5CYII=" xlink:actuate="onLoad"/>
                    xlink:show="embed" xlink:type="simple"
                    clip-path="url(#clipPath21)" preserveAspectRatio="none"
                    font-weight="normal" height="16" x="0" y="0"
-                   xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABiElEQVR42mNgGGjA
-SIri00+1DP8zMK0FMln+/2eYaS5zpZWJWM1ADUxAtBLIVARiWUZGhjSQONEGnH6u
-3QCklJGEfhJtwLnnhqIM/xnTkdT/Avp9NojBAiLOPNOW+/efseE/w/8bD6W0esMY
-V/9FNuDPv9/LgJQYwj8Mt0ykr/TAXQDUvBFIJTIyMrYoPr++cdX/UGaY2hPPdNyA
-lCWSeR+Y/v9LAYbBf7gLgEAEajIrUNRF4dn1DcBA8zvA4MDM9OzNFKAMN1LEHTKR
-vXYSxmOBxuU1oEZpaLSyA7Hrqee6q7j+v7kPZKsgaX728w9DArL3wF7g+vDfF0id
-B7sBAtgZ///3BUqmwNMKI8NvYFz22cpffo9hgLb21V9MjOy2QEVXkOTYgaYJIgXc
-bVPpK33oMQQPrFm9z3+nF8su/P//rz/QIDE0dZ8Y//0PluZ//RTdAJR0YCJ19hs7
-C5MF0LpbaCn+gKns1VPY0ghGQtKXuPSV6QeHGdDjZ0FRBnTN3X8c32NplhsBEvB+
-/elUcvwAAAAASUVORK5CYII=" xlink:actuate="onLoad"/>
+                   xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABX0lEQVR42qVTzUrD
+QBD+Jl1rDj358wxSvEhEfQPFu/oIVg/6BB4aj4JXaXwEFTyKD+BBisWLiOAbiDkV
+TdOk6+xuUjaKTcQvZMhuvpmdnfmGYEE+oYHYvYHEGi+nrF9DEO5RjzZpEX3bh8bO
+D+4urzp6T+KF7fUI9aFDsYMRtni9oGj87NFydF4IkDkH/PkOiCZ5/bdx4AvUaAep
+7DXmgeSZt2Y5SCsPUtNpp+KOv0Pyojk/iD9y57Q3Iyn8PPYvIdW+HyQn7ZY44MO2
+24fJqX8GTm/g3ppMRBOVoHmU+cHhd1Xd2U57EjRP1Uj5ZQEE2yv8BYYvkBtIerTv
+XRpA8w3NBCC5xFZn4byGopAyd+DnPZifHSO0SFSfgaNfHb7D6CLJa9BVIjF9Lofm
+GVF1TYDpaEMrzIikAjRPst96JSUWTs6VCLlP3qAzeRZUq1S1VcHKZqEwjUZhK1Wn
+8d/4AmSylsd4KZ0LAAAAAElFTkSuQmCC" xlink:actuate="onLoad"/>
             <polygon clip-path="url(#clipPath48)"
                      points=" 1237 335 1246 339 1237 344" stroke="none"/>
             <text xml:space="preserve" x="2518" y="133"
@@ -651,6 +651,17 @@ wCZJ3mUVry+vmM1mstvZcN+BOtrQlj65syM4okU/LSUQhiG6XTfjwCbs9XpJAWW3
 x16YseMZdck40oe+qyAHudSzpTMbDIZotVprx1B2uej27BheLI0hp6bz2M4dw3Sl
 jcVGkruA8+n7vpR1INHT6PLHRcTEo/4E/b737TbkE9wsktgQmiDekvKLLahW8Sd3
 I9NSe3Ml5QAAAABJRU5ErkJggg==" xlink:actuate="onLoad"/>
+            <image xmlns:xlink="http://www.w3.org/1999/xlink"
+                   transform="matrix(1,0,0,1,2535,183)" width="16"
+                   xlink:show="embed" xlink:type="simple"
+                   clip-path="url(#clipPath33)" preserveAspectRatio="none"
+                   font-weight="normal" height="16" x="0" y="0"
+                   xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAx0lEQVR42mNgwAN+
+X1f6D8L41DDhkvhzx+k/w583DCAMZpNqwP/vZ1DY/z5u+U+0AX9uW2Mo/veqnXgX
+/P9xmSgxrAYg286q+wmM8bmMiVibcMmhGPDnlineKMOmBsWA/z9vEtKPoYaJFNux
+qWWEp7rLfEQbAALMsvMYmARCGJkgJhpj1YweC6jpog3ihb/vlvz///M2A6ng/887
+EC/8uWX0H8YhFTCyqzAw/f/1kIFcANILDsTfV8X/M/z7TppuJk4GJrEKBgAgKmoq
+KCZEfQAAAABJRU5ErkJggg==" xlink:actuate="onLoad"/>
             <polygon clip-path="url(#clipPath50)"
                      points=" 2518 155 2527 159 2518 164" stroke="none"/>
             <polygon clip-path="url(#clipPath51)"
@@ -782,11 +793,11 @@ qJDwQ/8AAAAASUVORK5CYII=" xlink:actuate="onLoad"/>
                   y="421" clip-path="url(#clipPath16)" stroke="none"
                   font-weight="normal" xml:space="preserve">con los que vamos a trabajar</text><text x="2511"
                   y="216" clip-path="url(#clipPath17)" stroke="none"
-                  font-weight="normal" xml:space="preserve">Node 99</text><text x="2728"
+                  font-weight="normal" xml:space="preserve">Node 99</text><text x="2729"
                   y="203" clip-path="url(#clipPath18)" stroke="none"
-                  font-weight="normal" xml:space="preserve">Aplicamos el mismo CV</text><text x="2719"
+                  font-weight="normal" xml:space="preserve">Aplicamos el mismo CV</text><text x="2720"
                   y="222" clip-path="url(#clipPath18)" stroke="none"
-                  font-weight="normal" xml:space="preserve">para el dataset después</text><text x="2656"
+                  font-weight="normal" xml:space="preserve">para el dataset después</text><text x="2657"
                   y="241" clip-path="url(#clipPath18)" stroke="none"
                   font-weight="normal" xml:space="preserve">de realizar el balanceo de las clases</text><text xml:space="preserve"
                   x="54" y="354" clip-path="url(#clipPath19)" stroke="none">CSV Reader</text><image xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -851,15 +862,16 @@ AADhvucPJbgFY3M3FzIAAAAASUVORK5CYII=" xlink:actuate="onLoad"/>
                    xlink:show="embed" xlink:type="simple"
                    clip-path="url(#clipPath21)" preserveAspectRatio="none"
                    font-weight="normal" height="16" x="0" y="0"
-                   xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABX0lEQVR42qVTzUrD
-QBD+Jl1rDj358wxSvEhEfQPFu/oIVg/6BB4aj4JXaXwEFTyKD+BBisWLiOAbiDkV
-TdOk6+xuUjaKTcQvZMhuvpmdnfmGYEE+oYHYvYHEGi+nrF9DEO5RjzZpEX3bh8bO
-D+4urzp6T+KF7fUI9aFDsYMRtni9oGj87NFydF4IkDkH/PkOiCZ5/bdx4AvUaAep
-7DXmgeSZt2Y5SCsPUtNpp+KOv0Pyojk/iD9y57Q3Iyn8PPYvIdW+HyQn7ZY44MO2
-24fJqX8GTm/g3ppMRBOVoHmU+cHhd1Xd2U57EjRP1Uj5ZQEE2yv8BYYvkBtIerTv
-XRpA8w3NBCC5xFZn4byGopAyd+DnPZifHSO0SFSfgaNfHb7D6CLJa9BVIjF9Lofm
-GVF1TYDpaEMrzIikAjRPst96JSUWTs6VCLlP3qAzeRZUq1S1VcHKZqEwjUZhK1Wn
-8d/4AmSylsd4KZ0LAAAAAElFTkSuQmCC" xlink:actuate="onLoad"/>
+                   xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABiElEQVR42mNgGGjA
+SIri00+1DP8zMK0FMln+/2eYaS5zpZWJWM1ADUxAtBLIVARiWUZGhjSQONEGnH6u
+3QCklJGEfhJtwLnnhqIM/xnTkdT/Avp9NojBAiLOPNOW+/efseE/w/8bD6W0esMY
+V/9FNuDPv9/LgJQYwj8Mt0ykr/TAXQDUvBFIJTIyMrYoPr++cdX/UGaY2hPPdNyA
+lCWSeR+Y/v9LAYbBf7gLgEAEajIrUNRF4dn1DcBA8zvA4MDM9OzNFKAMN1LEHTKR
+vXYSxmOBxuU1oEZpaLSyA7Hrqee6q7j+v7kPZKsgaX728w9DArL3wF7g+vDfF0id
+B7sBAtgZ///3BUqmwNMKI8NvYFz22cpffo9hgLb21V9MjOy2QEVXkOTYgaYJIgXc
+bVPpK33oMQQPrFm9z3+nF8su/P//rz/QIDE0dZ8Y//0PluZ//RTdAJR0YCJ19hs7
+C5MF0LpbaCn+gKns1VPY0ghGQtKXuPSV6QeHGdDjZ0FRBnTN3X8c32NplhsBEvB+
+/elUcvwAAAAASUVORK5CYII=" xlink:actuate="onLoad"/>
             <polygon clip-path="url(#clipPath27)"
                      points=" 1797 155 1806 159 1797 164" stroke="none"/>
             <text xml:space="preserve" x="1743" y="433"
@@ -1077,16 +1089,15 @@ AADhvucPJbgFY3M3FzIAAAAASUVORK5CYII=" xlink:actuate="onLoad"/>
                    xlink:show="embed" xlink:type="simple"
                    clip-path="url(#clipPath21)" preserveAspectRatio="none"
                    font-weight="normal" height="16" x="0" y="0"
-                   xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABiElEQVR42mNgGGjA
-SIri00+1DP8zMK0FMln+/2eYaS5zpZWJWM1ADUxAtBLIVARiWUZGhjSQONEGnH6u
-3QCklJGEfhJtwLnnhqIM/xnTkdT/Avp9NojBAiLOPNOW+/efseE/w/8bD6W0esMY
-V/9FNuDPv9/LgJQYwj8Mt0ykr/TAXQDUvBFIJTIyMrYoPr++cdX/UGaY2hPPdNyA
-lCWSeR+Y/v9LAYbBf7gLgEAEajIrUNRF4dn1DcBA8zvA4MDM9OzNFKAMN1LEHTKR
-vXYSxmOBxuU1oEZpaLSyA7Hrqee6q7j+v7kPZKsgaX728w9DArL3wF7g+vDfF0id
-B7sBAtgZ///3BUqmwNMKI8NvYFz22cpffo9hgLb21V9MjOy2QEVXkOTYgaYJIgXc
-bVPpK33oMQQPrFm9z3+nF8su/P//rz/QIDE0dZ8Y//0PluZ//RTdAJR0YCJ19hs7
-C5MF0LpbaCn+gKns1VPY0ghGQtKXuPSV6QeHGdDjZ0FRBnTN3X8c32NplhsBEvB+
-/elUcvwAAAAASUVORK5CYII=" xlink:actuate="onLoad"/>
+                   xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABX0lEQVR42qVTzUrD
+QBD+Jl1rDj358wxSvEhEfQPFu/oIVg/6BB4aj4JXaXwEFTyKD+BBisWLiOAbiDkV
+TdOk6+xuUjaKTcQvZMhuvpmdnfmGYEE+oYHYvYHEGi+nrF9DEO5RjzZpEX3bh8bO
+D+4urzp6T+KF7fUI9aFDsYMRtni9oGj87NFydF4IkDkH/PkOiCZ5/bdx4AvUaAep
+7DXmgeSZt2Y5SCsPUtNpp+KOv0Pyojk/iD9y57Q3Iyn8PPYvIdW+HyQn7ZY44MO2
+24fJqX8GTm/g3ppMRBOVoHmU+cHhd1Xd2U57EjRP1Uj5ZQEE2yv8BYYvkBtIerTv
+XRpA8w3NBCC5xFZn4byGopAyd+DnPZifHSO0SFSfgaNfHb7D6CLJa9BVIjF9Lofm
+GVF1TYDpaEMrzIikAjRPst96JSUWTs6VCLlP3qAzeRZUq1S1VcHKZqEwjUZhK1Wn
+8d/4AmSylsd4KZ0LAAAAAElFTkSuQmCC" xlink:actuate="onLoad"/>
             <polygon clip-path="url(#clipPath48)"
                      points=" 1237 335 1246 339 1237 344" stroke="none"/>
             <text xml:space="preserve" x="2518" y="133"
@@ -1125,6 +1136,17 @@ wCZJ3mUVry+vmM1mstvZcN+BOtrQlj65syM4okU/LSUQhiG6XTfjwCbs9XpJAWW3
 x16YseMZdck40oe+qyAHudSzpTMbDIZotVprx1B2uej27BheLI0hp6bz2M4dw3Sl
 jcVGkruA8+n7vpR1INHT6PLHRcTEo/4E/b737TbkE9wsktgQmiDekvKLLahW8Sd3
 I9NSe3Ml5QAAAABJRU5ErkJggg==" xlink:actuate="onLoad"/>
+            <image xmlns:xlink="http://www.w3.org/1999/xlink"
+                   transform="matrix(1,0,0,1,2535,183)" width="16"
+                   xlink:show="embed" xlink:type="simple"
+                   clip-path="url(#clipPath33)" preserveAspectRatio="none"
+                   font-weight="normal" height="16" x="0" y="0"
+                   xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAx0lEQVR42mNgwAN+
+X1f6D8L41DDhkvhzx+k/w583DCAMZpNqwP/vZ1DY/z5u+U+0AX9uW2Mo/veqnXgX
+/P9xmSgxrAYg286q+wmM8bmMiVibcMmhGPDnlineKMOmBsWA/z9vEtKPoYaJFNux
+qWWEp7rLfEQbAALMsvMYmARCGJkgJhpj1YweC6jpog3ihb/vlvz///M2A6ng/887
+EC/8uWX0H8YhFTCyqzAw/f/1kIFcANILDsTfV8X/M/z7TppuJk4GJrEKBgAgKmoq
+KCZEfQAAAABJRU5ErkJggg==" xlink:actuate="onLoad"/>
             <polygon clip-path="url(#clipPath50)"
                      points=" 2518 155 2527 159 2518 164" stroke="none"/>
             <polygon clip-path="url(#clipPath51)"
@@ -1170,28 +1192,28 @@ qJDwQ/8AAAAASUVORK5CYII=" xlink:actuate="onLoad"/>
            text-rendering="optimizeLegibility"
            font-family="&apos;JetBrains Mono&apos;" stroke="rgb(150,150,150)">
             <path fill="none"
-                  d="M365 379 C367 379 371 379 373 379 C802 379 1358 158 1787 158 C1789 158 1793 158 1795 158"
-                  clip-path="url(#clipPath55)" fill-rule="evenodd"/>
-            <path fill="none"
-                  d="M686 447 C688 447 692 447 694 447 C799 447 942 458 1047 458 C1049 458 1053 458 1055 458"
-                  clip-path="url(#clipPath55)" fill-rule="evenodd"/>
-            <path fill="none"
-                  d="M2567 158 C2569 158 2573 158 2575 158 C2638 158 2724 158 2787 158 C2789 158 2793 158 2795 158"
-                  clip-path="url(#clipPath55)" fill-rule="evenodd"/>
-            <path fill="none"
-                  d="M126 379 C128 379 132 379 134 379 C185 379 255 379 306 379 C308 379 312 379 314 379"
-                  clip-path="url(#clipPath55)" fill-rule="evenodd"/>
-            <path fill="none"
                   d="M1105 458 C1107 458 1111 458 1113 458 C1315 458 1585 458 1787 458 C1789 458 1793 458 1795 458"
-                  clip-path="url(#clipPath55)" fill-rule="evenodd"/>
-            <path fill="none"
-                  d="M1105 458 C1107 458 1111 458 1113 458 C1541 458 2080 158 2508 158 C2510 158 2514 158 2516 158"
                   clip-path="url(#clipPath55)" fill-rule="evenodd"/>
             <path fill="none"
                   d="M1105 458 C1107 458 1111 458 1113 458 C1162 458 1177 338 1226 338 C1228 338 1232 338 1234 338"
                   clip-path="url(#clipPath55)" fill-rule="evenodd"/>
             <path fill="none"
+                  d="M365 379 C367 379 371 379 373 379 C802 379 1358 158 1787 158 C1789 158 1793 158 1795 158"
+                  clip-path="url(#clipPath55)" fill-rule="evenodd"/>
+            <path fill="none"
+                  d="M2567 158 C2569 158 2573 158 2575 158 C2638 158 2724 158 2787 158 C2789 158 2793 158 2795 158"
+                  clip-path="url(#clipPath55)" fill-rule="evenodd"/>
+            <path fill="none"
                   d="M365 379 C367 379 371 379 373 379 C452 379 547 458 626 458 C628 458 632 458 634 458"
+                  clip-path="url(#clipPath55)" fill-rule="evenodd"/>
+            <path fill="none"
+                  d="M126 379 C128 379 132 379 134 379 C185 379 255 379 306 379 C308 379 312 379 314 379"
+                  clip-path="url(#clipPath55)" fill-rule="evenodd"/>
+            <path fill="none"
+                  d="M1105 458 C1107 458 1111 458 1113 458 C1541 458 2080 158 2508 158 C2510 158 2514 158 2516 158"
+                  clip-path="url(#clipPath55)" fill-rule="evenodd"/>
+            <path fill="none"
+                  d="M686 447 C688 447 692 447 694 447 C799 447 942 458 1047 458 C1049 458 1053 458 1055 458"
                   clip-path="url(#clipPath55)" fill-rule="evenodd"/>
             <path fill="none"
                   d="M686 447 C688 447 692 447 694 447 C1050 447 1431 917 1787 917 C1789 917 1793 917 1795 917"

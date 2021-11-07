@@ -11,16 +11,6 @@
             <entry key="EnabledStatus" type="xboolean" value="true"/>
         </config>
         <entry key="compute_median" type="xboolean" value="false"/>
-        <config key="num_nominal-values_Internals">
-            <entry key="SettingsModelID" type="xstring" value="SMID_integer"/>
-            <entry key="EnabledStatus" type="xboolean" value="true"/>
-        </config>
-        <entry key="num_nominal-values" type="xint" value="20"/>
-        <config key="num_nominal-values_output_Internals">
-            <entry key="SettingsModelID" type="xstring" value="SMID_integer"/>
-            <entry key="EnabledStatus" type="xboolean" value="true"/>
-        </config>
-        <entry key="num_nominal-values_output" type="xint" value="50000"/>
         <config key="filter_nominal_columns_Internals">
             <entry key="SettingsModelID" type="xstring" value="SMID_columnfilter"/>
             <entry key="EnabledStatus" type="xboolean" value="true"/>
@@ -38,37 +28,37 @@
                 <entry key="6" type="xstring" value="latitude"/>
                 <entry key="7" type="xstring" value="wpt_name"/>
                 <entry key="8" type="xstring" value="num_private"/>
-                <entry key="9" type="xstring" value="basin"/>
-                <entry key="10" type="xstring" value="subvillage"/>
-                <entry key="11" type="xstring" value="region"/>
-                <entry key="12" type="xstring" value="region_code"/>
-                <entry key="13" type="xstring" value="district_code"/>
-                <entry key="14" type="xstring" value="lga"/>
-                <entry key="15" type="xstring" value="ward"/>
-                <entry key="16" type="xstring" value="population"/>
-                <entry key="17" type="xstring" value="public_meeting"/>
-                <entry key="18" type="xstring" value="recorded_by"/>
-                <entry key="19" type="xstring" value="scheme_management"/>
-                <entry key="20" type="xstring" value="scheme_name"/>
-                <entry key="21" type="xstring" value="permit"/>
-                <entry key="22" type="xstring" value="construction_year"/>
-                <entry key="23" type="xstring" value="extraction_type"/>
-                <entry key="24" type="xstring" value="extraction_type_group"/>
-                <entry key="25" type="xstring" value="extraction_type_class"/>
-                <entry key="26" type="xstring" value="management"/>
-                <entry key="27" type="xstring" value="management_group"/>
-                <entry key="28" type="xstring" value="payment"/>
-                <entry key="29" type="xstring" value="payment_type"/>
-                <entry key="30" type="xstring" value="water_quality"/>
-                <entry key="31" type="xstring" value="quality_group"/>
-                <entry key="32" type="xstring" value="quantity"/>
-                <entry key="33" type="xstring" value="quantity_group"/>
-                <entry key="34" type="xstring" value="source"/>
-                <entry key="35" type="xstring" value="source_type"/>
-                <entry key="36" type="xstring" value="source_class"/>
-                <entry key="37" type="xstring" value="waterpoint_type"/>
-                <entry key="38" type="xstring" value="waterpoint_type_group"/>
-                <entry key="39" type="xstring" value="Target Class"/>
+                <entry key="9" type="xstring" value="subvillage"/>
+                <entry key="10" type="xstring" value="region"/>
+                <entry key="11" type="xstring" value="region_code"/>
+                <entry key="12" type="xstring" value="lga"/>
+                <entry key="13" type="xstring" value="ward"/>
+                <entry key="14" type="xstring" value="population"/>
+                <entry key="15" type="xstring" value="public_meeting"/>
+                <entry key="16" type="xstring" value="recorded_by"/>
+                <entry key="17" type="xstring" value="scheme_name"/>
+                <entry key="18" type="xstring" value="permit"/>
+                <entry key="19" type="xstring" value="construction_year"/>
+                <entry key="20" type="xstring" value="extraction_type"/>
+                <entry key="21" type="xstring" value="management"/>
+                <entry key="22" type="xstring" value="payment"/>
+                <entry key="23" type="xstring" value="water_quality"/>
+                <entry key="24" type="xstring" value="quantity"/>
+                <entry key="25" type="xstring" value="source"/>
+                <entry key="26" type="xstring" value="waterpoint_type"/>
+                <entry key="27" type="xstring" value="Target Class"/>
+                <entry key="28" type="xstring" value="basin"/>
+                <entry key="29" type="xstring" value="district_code"/>
+                <entry key="30" type="xstring" value="scheme_management"/>
+                <entry key="31" type="xstring" value="extraction_type_group"/>
+                <entry key="32" type="xstring" value="extraction_type_class"/>
+                <entry key="33" type="xstring" value="management_group"/>
+                <entry key="34" type="xstring" value="payment_type"/>
+                <entry key="35" type="xstring" value="quality_group"/>
+                <entry key="36" type="xstring" value="quantity_group"/>
+                <entry key="37" type="xstring" value="source_type"/>
+                <entry key="38" type="xstring" value="source_class"/>
+                <entry key="39" type="xstring" value="waterpoint_type_group"/>
             </config>
             <config key="excluded_names">
                 <entry key="array-size" type="xint" value="0"/>
@@ -90,6 +80,21 @@
                 </config>
             </config>
         </config>
+        <config key="num_nominal-values_Internals">
+            <entry key="SettingsModelID" type="xstring" value="SMID_integer"/>
+            <entry key="EnabledStatus" type="xboolean" value="true"/>
+        </config>
+        <entry key="num_nominal-values" type="xint" value="20"/>
+        <config key="num_nominal-values_output_Internals">
+            <entry key="SettingsModelID" type="xstring" value="SMID_integer"/>
+            <entry key="EnabledStatus" type="xboolean" value="true"/>
+        </config>
+        <entry key="num_nominal-values_output" type="xint" value="50000"/>
+        <config key="enable HiLite_Internals">
+            <entry key="SettingsModelID" type="xstring" value="SMID_boolean"/>
+            <entry key="EnabledStatus" type="xboolean" value="true"/>
+        </config>
+        <entry key="enable HiLite" type="xboolean" value="false"/>
         <config key="image format_Internals">
             <entry key="SettingsModelID" type="xstring" value="SMID_string"/>
             <entry key="EnabledStatus" type="xboolean" value="true"/>
@@ -105,11 +110,6 @@
             <entry key="EnabledStatus" type="xboolean" value="true"/>
         </config>
         <entry key="histogram height" type="xint" value="100"/>
-        <config key="enable HiLite_Internals">
-            <entry key="SettingsModelID" type="xstring" value="SMID_boolean"/>
-            <entry key="EnabledStatus" type="xboolean" value="true"/>
-        </config>
-        <entry key="enable HiLite" type="xboolean" value="false"/>
         <config key="show min max_Internals">
             <entry key="SettingsModelID" type="xstring" value="SMID_boolean"/>
             <entry key="EnabledStatus" type="xboolean" value="true"/>
@@ -131,11 +131,7 @@
         <config key="styles"/>
     </config>
     <entry key="customDescription" type="xstring" isnull="true" value=""/>
-    <entry key="state" type="xstring" value="EXECUTED"/>
-    <config key="nodecontainer_message">
-        <entry key="type" type="xstring" value="WARNING"/>
-        <entry key="message" type="xstring" value="Maximum number of unique possible values (50000) exceeds for column(s): &quot;longitude&quot;,&quot;latitude&quot;"/>
-    </config>
+    <entry key="state" type="xstring" value="CONFIGURED"/>
     <entry key="factory" type="xstring" value="org.knime.base.node.stats.viz.extended.ExtendedStatisticsNodeFactory"/>
     <entry key="node-name" type="xstring" value="Statistics"/>
     <entry key="node-bundle-name" type="xstring" value="KNIME Statistic Nodes"/>
@@ -148,33 +144,24 @@
     <entry key="node-feature-version" type="xstring" value="4.4.0.v202104131324"/>
     <config key="factory_settings"/>
     <entry key="name" type="xstring" value="Statistics"/>
-    <entry key="hasContent" type="xboolean" value="true"/>
+    <entry key="hasContent" type="xboolean" value="false"/>
     <entry key="isInactive" type="xboolean" value="false"/>
     <config key="ports">
         <config key="port_1">
             <entry key="index" type="xint" value="1"/>
-            <entry key="port_spec_class" type="xstring" value="org.knime.core.data.DataTableSpec"/>
-            <entry key="port_object_class" type="xstring" value="org.knime.core.node.BufferedDataTable"/>
-            <entry key="port_object_summary" type="xstring" value="Rows: 8, Cols: 16"/>
-            <entry key="port_dir_location" type="xstring" value="port_1"/>
+            <entry key="port_dir_location" type="xstring" isnull="true" value=""/>
         </config>
         <config key="port_2">
             <entry key="index" type="xint" value="2"/>
-            <entry key="port_spec_class" type="xstring" value="org.knime.core.data.DataTableSpec"/>
-            <entry key="port_object_class" type="xstring" value="org.knime.core.node.BufferedDataTable"/>
-            <entry key="port_object_summary" type="xstring" value="Rows: 28, Cols: 3"/>
-            <entry key="port_dir_location" type="xstring" value="port_2"/>
+            <entry key="port_dir_location" type="xstring" isnull="true" value=""/>
         </config>
         <config key="port_3">
             <entry key="index" type="xint" value="3"/>
-            <entry key="port_spec_class" type="xstring" value="org.knime.core.data.DataTableSpec"/>
-            <entry key="port_object_class" type="xstring" value="org.knime.core.node.BufferedDataTable"/>
-            <entry key="port_object_summary" type="xstring" value="Rows: 35005, Cols: 84"/>
-            <entry key="port_dir_location" type="xstring" value="port_3"/>
+            <entry key="port_dir_location" type="xstring" isnull="true" value=""/>
         </config>
     </config>
     <config key="filestores">
         <entry key="file_store_location" type="xstring" isnull="true" value=""/>
-        <entry key="file_store_id" type="xstring" value="ec556b98-e631-4ce1-8638-9e43eb7e440a"/>
+        <entry key="file_store_id" type="xstring" isnull="true" value=""/>
     </config>
 </config>
