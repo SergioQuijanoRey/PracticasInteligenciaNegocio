@@ -698,7 +698,7 @@ Hay que tener en cuenta que las redes neuronales de \lstinline{KNIME} son muy si
 
 Desarrollaremos distintos apartados para cada uno de los \emph{datasets}. En vista de los análisis previos para cada \emph{dataset}, tomaremos ciertas decisiones de procesado buscando mejorar el rendimiento de los modelos planteados. Compararemos dicho rendimiento antes y después del procesado, lo que nos permitirá extraer ciertas conclusiones sobre la técnica empleada, sobre el comportamiento de los algoritmos o sobre el problema en sí.
 
-\subsection{\emph{Heart Failure Prediction}}
+\subsection{\emph{Heart Failure Prediction}} \label{dataset01_procesado_datos:seccion}
 
 Como hemos estudiado en \customcite{dataset01_correlaciones:imagen}, tenemos variables que están muy correladas entre sí. Así que para mejorar este \emph{dataset}, decidimos borrar algunas variables que estén altamente correladas con otras, para ver si conseguimos obtener mejores resultados o, al menos, mantener el mismo rendimiento con menos variables, y por tanto, con modelos más sencillos.
 
@@ -770,7 +770,7 @@ Aunque ya hemos mostrado esta tabla previamente, mostramos por claridad la tabla
     \label{dataset01_sin_procesado_resultados:seccion}
 \end{table}
 
-\subsubsection{Conclusiones}
+\subsubsection{Conclusiones} \label{dataset01_procesado_datos_conclusiones:seccion}
 
 En base a las dos tablas de resultados anteriores, \customcite{dataset01_procesado_resultados:seccion} y \customcite{dataset01_sin_procesado_resultados:seccion}, realizamos el siguiente análisis.
 
@@ -807,9 +807,39 @@ A pesar de esto último, no olvidar que \emph{SVM} con normalización también s
 
 \pagebreak
 
+\pagebreak
+
 \section{Interpretación de los resultados}
 
+\subsection{Consideraciones iniciales}
+
+Al igual que en otras secciones, desarrollaremos una interpretación de los resultados por cada uno de los problemas enfrentados. Además, realizaremos una interpretación integrando todas las conclusiones individuales desarrolladas para cada uno de los \emph{datasets}.
+
 \subsection{\emph{Heart Failure Prediction}}
+
+La observación más importante y directa para este problema, tras el estudio que hemos desarrollado de este, es la relevancia de las variables que componen el \emph{dataset}. En \customcite{dataset01_procesado_datos:seccion} ha quedado claro que solo con un subconjunto de variables, muy correladas entre sí pero sobre todo correladas con la variable de salida, es más que suficiente para generar modelos con buen rendimiento. Es más, no es que haya sido suficiente, sino que ha sido mejor que considerar todo el conjunto de variables, como se ha demostrado en \customcite{dataset01_procesado_datos_conclusiones:seccion}.
+
+Como comentábamos previamente, las variables fundamentales que han aportado todo el conocimiento necesario para generar los modelos predictivos han sido \lstinline{MaxHR}, \lstinline{ExerciseAngina}, \lstinline{Oldpeak}, \lstinline{ST_Slope}.
+
+Para ver la relevancia de estas variables, entrenamos un árbol de decisión con el \emph{dataset} procesado y mostramos dicho árbol de forma gráfica, en la siguiente figura:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.5 \textwidth]{dataset01_tree_exploratorio}
+    \caption{\emph{Decision Tree} entrenado sobre todo el \emph{dataset} tras aplicar el procesado anteriormente descrito}
+    \label{workflow_general:imagen}
+\end{figure}
+
+Con esto queda clara la relevancia de las variables. En primer lugar tenemos a la variable \lstinline{ST_Slope}, que es la que permite una mayor división del \emph{dataset} en \emph{subdatasets} con menor diversidad. En segundo lugar, tenemos la variable \lstinline{Oldpeak}, y para terminar la variable \lstinline{MaxHR}.
+
+En definitiva, un dataset que ya de por sí era sencillo (solo 11 variables de entrada), hemos conseguido trabajarlo para emplear todavía menos variables conservando (es más, mejorando) las medidas de rendimiento de nuestros modelos generados.
+
+\pagebreak
+
+\subsection{Interpretación global de todos los problemas estudiados}
+
+
+% TODO -- escribir esto
 
 \pagebreak
 
