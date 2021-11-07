@@ -886,6 +886,7 @@ Mostramos los resultados obtenidos tras aplicar los distintos nodos de \emph{Cus
     \end{tabular}}
 \end{center}
     \caption{Resultados de \emph{Cross Validation}, para los distintos algoritmos estudiados, en el tercer \emph{dataset}}
+    \label{dataset03_pca_resultados:tabla}
 \end{table}
 
 De nuevo, y como nos pasaba en el \emph{dataset} anterior, tenemos ciertos valores no definidos que marcamos con un \emph{??}.
@@ -1163,6 +1164,74 @@ Además, cabe resaltar los buenos resultados que obtenemos en \emph{accuracy}. A
 
 \pagebreak
 
+\subsection{Bank Marketing}
+
+En este \emph{dataset} elegimos optimizar los parámetros de los modelos \emph{Random Forest} y \emph{Neural Net}. Ambos modelos han obtenido resultados muy buenos que queremos ajustar al máximo. Ambos modelos ya han sido optimizados previamente, así que mostramos directamente los resultados sin mostrar las capturas de pantalla de los \emph{workflows}. Empezamos con \emph{Random Forest}:
+
+\begin{table}[H]
+\begin{center}
+    \begin{tabular}{|c|c|}
+        \hline
+        Number of trees & Objective value \\
+        \hline
+        10 & 0.890 \\
+        20 & 0.890 \\
+        30 & 0.891 \\
+        40 & 0.891 \\
+        50 & 0.891 \\
+        60 & 0.891 \\
+        70 & 0.891 \\
+        80 & 0.891 \\
+        90 & 0.891 \\
+        100 & 0.892 \\
+        110 & 0.892 \\
+        120 & 0.892 \\
+        130 & 0.892 \\
+        \textbf{140} & \textbf{0.892} \\
+        150 & 0.892 \\
+        \hline
+    \end{tabular}
+\end{center}
+    \caption{Optimización para \emph{Random Forest}, ajustando el número de árboles}
+\end{table}
+
+En este caso, obtenemos un comportamiento curioso. Apenas estamos afectando al \emph{accuracy} modificando los parámetros en el rango en el que nos movemos. Esto puede estar ocasionado por dos motivos:
+
+\begin{itemize}
+    \item Como ya hemos comentado repetidas veces, la medida \emph{accuracy} no es del todo representativa, y se ve muy afectada por problemas como el desbalanceo de clases (que en nuestro \emph{dataset} es crítico)
+    \item Los rangos de valores son muy pequeños como para que generen una diferencia notable
+\end{itemize}
+
+Sin embargo, sabiendo que nuestro \emph{dataset} tiene un importante desbalanceo, nos inclinamos más por la primera hipótesis.
+
+Mostramos ahora los resultados para la optimización de redes neuronales:
+
+\begin{table}[H]
+\begin{center}
+    \begin{tabular}{|c|c|c|}
+        \hline
+        Neurons per layer & Hidden Layers & Objective value \\
+        \hline
+        10 & 1 & 0.914 \\
+        30 & 1 & 0.914 \\
+        50 & 1 & 0.914 \\
+        10 & 2 & 0.914 \\
+        30 & 2 & 0.915 \\
+        50 & 2 & 0.915 \\
+        10 & 3 & 0.913 \\
+        30 & 3 & 0.915 \\
+        50 & 3 & 0.912 \\
+
+        \hline
+    \end{tabular}
+\end{center}
+    \caption{Optimización para \emph{Redes Neuronales}, ajustando el número de capas ocultas y el número de neuronas por capa}
+\end{table}
+
+Aquí también obtenemos el mismo comportamiento. Esto reafirma nuestra sospecha de que el desbalanceo de las clases está dominando la métrica de \emph{accuracy}. Gracias a esto, sabemos que los resultados obtenidos en \customcite{dataset03_pca_resultados:tabla}, en lo que a \emph{accuracy} se refiere, son demasiado optimistas.
+
+\pagebreak
+
 \subsection{Conclusiones finales}
 
 % TODO -- hacer estas conclusiones con las configuraciones de los cuatro algoritmos
@@ -1391,7 +1460,7 @@ Como hacíamos en el primer \emph{dataset}, exploramos algo más la estructura d
     \caption{Árbol de decisión construido sobre todo el conjunto de datos. Solo mostramos los primeros niveles}
 \end{figure}
 
-Vemos que claraemnte la variable \lstinline{ram} tiene un peso enorme a la hora de construir el clasificador. Esto ya lo sospechábamos por lo que hemos comentado en \customcite{dataset02_eda_correlaciones:imagen}.
+Vemos que claramente la variable \lstinline{ram} tiene un peso enorme a la hora de construir el clasificador. Esto ya lo sospechábamos por lo que hemos comentado en \customcite{dataset02_eda_correlaciones:imagen}.
 
 Por tanto, hemos comenzado con un \emph{dataset} relativamente complicado, conteniendo 20 variables. Y trabajando los datos y resultados obtenidos, hemos logrado conseguir reducir el problema a uno brutalmente más sencillo, en el que usando 2 variables hemos obtenido resultados muy buenos. Además, hemos escogido reducirlo a solo 2 variables por la facilidad que otorga en la visualización. Si usásemos 3 variables, seguramente obtendríamos unos modelos con un rendimiento todavía mucho más bueno, manteniendo una gran simplicidad en el modelo.
 
