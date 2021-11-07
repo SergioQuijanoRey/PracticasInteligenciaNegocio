@@ -1739,6 +1739,16 @@ Salvando este problema con un modelo concreto de \lstinline{KNIME}, queda claro 
 
 \pagebreak
 
+\subsection{Tanzania Water Pump}
+
+En este caso, y al igual que hacíamos en el \emph{dataset} anterior, buscamos paliar el problema de desbalanceo de clases. Del mismo modo, usando el nodo de \lstinline{KNIME} para aplicar \lstinline{SMOTE}. Sin embargo, no podemos llevar a cabo este estudio porque \lstinline{KNIME} lanza un problema con el \lstinline{heap} de \lstinline{Java}. Nuestra máquina tiene \lstinline{8GB} que \lstinline{KNIME} consume sin éxito.
+
+Por tanto, no desarrollamos el análisis que hemos realizado en los otros \emph{datasets}. Al haber intentado aplicar el mismo procesamiento, esperábamos obtener unos resultados y conclusiones parecidas. Es decir, modelos con un \emph{accuracy} ligeramente menor, a cambio de un mejor rendimiento real, reflejado en parte por la métrica \emph{G-Mean}.
+
+\lstinline{KNIME} de por sí no ha demostrado trabajar con facilidad con grandes conjuntos de datos. Podríamos intentar resolver estos problemas usando la integración con \emph{Apache Spark}, herramienta de referencia para tareas de \emph{Big Data}. Sin embargo no tenemos tiempo para realizar estas pruebas, y además escapa a los conocimientos de los que disponemos.
+
+\pagebreak
+
 \section{Interpretación de los resultados}
 
 \subsection{Consideraciones iniciales}
@@ -1805,6 +1815,18 @@ Cuando hemos aplicado \emph{SMOTE} para balancear algo las clases, en general, h
 Otro fenómeno que ha pasado es que hemos podido ejecutar \emph{SVM} sin dar resultados constantes, como pasaba antes de realizar el balanceo de las clases. Además, el tiempo de ejecución tanto para el entrenamiento como para la inferencia ha sido mucho menor, fruto de este balanceo.
 
 Por tanto, queda claro que en cualquier problema de análisis y procesado de datos que involucre clasificación es fundamental tratar con cuidado el problema que supone trabajar con clases desbalanceadas.
+
+\pagebreak
+
+\subsection{Tanzania Water Pump}
+
+Como ya hemos comentado, \lstinline{KNIME} ha tenido muchos problemas para trabajar con un \emph{dataset} de estas dimensiones. Para evitar problemas mayores, hemos realizado un filtrado inicial de variables correladas entre sí, que nos ha permitido trabajar sin perder demasiada eficacia en los modelos, en tiempos de ejecución más o menos razonables.
+
+Dicha ineficiencia de \lstinline{KNIME} (y aquí hablamos de \lstinline{KNIME} sin considerar extensiones) se ha vuelto a poner de manifiesto con los nodos de \emph{SVM}. Ha sido completamente necesario emplear la extensión de \emph{Weka} para trabajar medianamente bien, y aún así hemos tenido problemas que hemos intentando resolver reduciendo el \emph{dataset} al $80\%$.
+
+Por tanto, habría sido interesante realizar algunas pruebas con herramientas de \emph{Big Data}, pues precisamente el mayor problema que hemos tenido con este \emph{dataset} ha sido que el gran volumen de datos no nos ha permitido trabajar correctamente el problema.
+
+No hablamos de la importancia de las variables usando algún modelo, porque con los problemas que ya hemos comentado sobre el volumen de datos no hemos sido capaces de aplicar esta información de forma efectiva para reducir la dimensionalidad de nuestro problema.
 
 \pagebreak
 
