@@ -6,10 +6,10 @@
         <entry key="memory_policy" type="xstring" value="CacheSmallInMemory"/>
     </config>
     <config key="model">
-        <entry key="kNN" type="xint" value="5"/>
         <entry key="method" type="xstring" value="oversample_equal"/>
         <entry key="rate" type="xdouble" value="2.0"/>
         <entry key="class" type="xstring" value="Target Class"/>
+        <entry key="kNN" type="xint" value="5"/>
         <entry key="seed" type="xstring" value="123456789"/>
     </config>
     <entry key="customDescription" type="xstring" isnull="true" value=""/>
@@ -39,6 +39,6 @@
     </config>
     <config key="filestores">
         <entry key="file_store_location" type="xstring" isnull="true" value=""/>
-        <entry key="file_store_id" type="xstring" value="99ea4381-a196-4fd3-98d1-bcbdf2590e53"/>
+        <entry key="file_store_id" type="xstring" value="7bf24ace-cb56-4f73-bc39-c133fdd6e544"/>
     </config>
 </config>
