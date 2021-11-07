@@ -401,6 +401,92 @@ Es destacable comentar que, según lo que indica \cite{bank_marketing_source:onl
 
 \pagebreak
 
+\subsection{Tanzania Water Pump}
+
+Para este \emph{dataset}, la fuente original de los datos no es ni \emph{Kaggle} ni \emph{UCI}, sino \emph{DrivenData}, otro famoso repositorio de \emph{datasets}. Los datos originales (los nuestros pueden haber sido ligeramente modificados por los profesores) se encuentran en \cite{tanzania_source:online}.
+
+En la fuente original de los datos \cite{tanzania_source:online}, se dice que el problema a resolver en este \emph{dataset} es: \emph{``Using data from Taarifa and the Tanzanian Ministry of Water, can you predict which pumps are functional, which need some repairs, and which don't work at all?''}. Por tanto, tenemos que conseguir clasificar las fuentes como funcionales o no funcionales. Por ser más relevantes, consideramos como la clase positiva aquella que indica que una fuente \textbf{no} es funcional.
+
+\subsubsection{Análisis Exploratorio de Datos}
+
+Partimos de un \emph{dataset} que tiene x filas y 23123 columnas. Por tanto, estamos trabajando con un \emph{dataset} realmente grande, tanto en altura como anchura. Para tratar de hacer el problema más manejable, elegimos las columnas con las que vamos a trabajar usando la matriz de correlaciones lineales. Dicha matriz de correlaciones se muestra a continuación:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.9 \textwidth]{dataset04_eda_correlaciones}
+    \caption{Matriz de correlaciones lineales. Un color azul significa correlación lineal positiva, y un color rojo significa correlación lineal negativa}
+\end{figure}
+
+El proceso de filtrado se muestra en el siguiente \emph{workflow}:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.9 \textwidth]{dataset04_filtrado_columnas}
+    \caption{Consideramos un árbol de clasificación, y usando la relevancia de las variables, seleccionamos las columnas que vamos a usar}
+\end{figure}
+
+Tras esto realizo el siguiente filtrado:
+
+\begin{itemize}
+    \item Quito \lstinline{extraction_type:_group, class} y me quedo con \lstinline{extraction_type}
+    \item Quito \lstinline{source_:type, class} y me quedo con \lstinline{source}
+    \item Quito \lstinline{waterpoint_type} y me quedo con \lstinline{waterpoint}
+    \item Quito \lstinline{management_group, scheme_managemente} y me quedo con \lstinline{management}
+    \item Quito \lstinline{basin} y me quedo con \lstinline{region}
+    \item Quito \lstinline{district_code} y me quedo con \lstinline{region_code}
+    \item Quito \lstinline{payment_type} y me quedo con \lstinline{payment}
+    \item Quito \lstinline{quality_group} y me quedo con \lstinline{water_quality}
+    \item Quito \lstinline{quantity_group} y me quedo con \lstinline{quantity}
+\end{itemize}
+
+Tras este filtrado, pasamos de tener 40 columnas a tener 28, con lo cual estamos haciendo que el problema sea más manejable. A partir de aquí el \emph{EDA} se realiza sobre el conjunto de datos filtrado. Mostramos de nuevo la matriz de correlaciones:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.7 \textwidth]{dataset04_eda_correlaciones_filtrado}
+    \caption{Matriz de correlaciones lineales tras realizar el filtrado de las variables. Un color azul significa correlación lineal positiva, y un color rojo significa correlación lineal negativa}
+\end{figure}
+
+Con esto queda claro que hemos generado un conjunto de datos más sencillo al tener menos variables de entrada. Además es un \emph{dataset} más ortogonal, es decir, con menos correlaciones entre las variables de entrada.
+
+Mostramos ahora la distribución de la variable de salida:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.4 \textwidth]{dataset04_eda_desbalanceo}
+    \caption{Distribución de la variable de salida}
+\end{figure}
+
+La clase de salida está ligeramente desbalanceada. En otros \emph{dataset} no nos habría preocupado, pero al tener un \emph{dataset} con tantos ejemplos, un ligero desbalanceo relativo puede suponer muchos ejemplos de diferencia. Por tanto, en este caso también aplicaremos \emph{SMOTE} para realizar el balanceo de las clases.
+
+En todos los \emph{datasets} anteriores mostrar la distribución de algunas variables ha sido inútil. Este \emph{dataset} no es la excepción, así que no mostramos dichas distribuciones pues no hemos sido capaces de explotar esa información.
+
+Mostramos los \emph{boxplots} de algunas variables:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.8 \textwidth]{dataset04_eda_boxplot}
+    \caption{\emph{Boxplots} de algunas de las variables con las que trabajamos}
+\end{figure}
+
+Como viene siendo habitual, tenemos algunos \emph{outliers}, que de nuevo tratamos con el criterio $3 \cdot IQR$.
+
+Mostramos ahora el resultado de aplicar \emph{PCA} buscando reducir la dimensionalidad del problema a solo dos variables de entrada:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.8 \textwidth]{dataset04_eda_pca}
+    \caption{Resultado de aplicar \emph{PCA} en dos dimensiones, coloreando cada punto según la clase a la que pertenece}
+\end{figure}
+
+No encontramos ningún patrón interesante que explotar. Cabe también mencionar que, \lstinline{KNIME} con toda la potencia de nuestro equipo, no es capaz de mostrar todos los puntos que componen el \emph{dataset}. Pero aún así hemos probado experimentalmente a entrenar modelos previa aplicación \emph{PCA}, sin resultados satisfactorios.
+
+Para acabar, usamos nuestro nodo que borra las filas con \emph{missing values}. Esto provocaba que borrásemos aproximadamente la mitad de los datos, una pérdida que no nos podemos permitir. Por ello, aplicamos interpolación lineal para los valores numéricos y el valor más frecuente para los valores categóricos.
+
+Sabemos que lo ideal habría sido interpolar estos valores usando predictores entrenados sobre la parte del \emph{dataset} que no tiene \emph{missing values}. Sin embargo, por falta de tiempo, no exploramos este camino y usamos la interpolación simple que ya hemos comentado..
+
+\pagebreak
+
 \section{Resultados Obtenidos} \label{resultados_brutos:seccion}
 
 \subsection{Consideraciones iniciales} \label{cv_consideraciones:seccion}
