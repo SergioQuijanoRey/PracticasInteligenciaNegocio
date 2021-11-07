@@ -1161,7 +1161,7 @@ En la anterior sección, \customcite{resultados_brutos:seccion}, hemos mostrados
 
 \subsection{Consideraciones iniciales}
 
-Por cada \emph{dataset}, hemos seleccionado dos de los mejores modelos para ese problema, y hemos realizado un ajuste de los parámetros de forma iterativa buscando la máxima eficacia de los modelos considerados. Por tanto, desarrollaremos una sección para cada \emph{dataset} en el que realizaremos este estudio. Añadiremos también una sección para desarrollar algunas conclusiones finales sobre todos los ajustes realizados.
+Por cada \emph{dataset}, hemos seleccionado dos de los mejores modelos para ese problema, y hemos realizado un ajuste de los parámetros de forma iterativa buscando la máxima eficacia de los modelos considerados. Por tanto, desarrollaremos una sección para cada \emph{dataset} en el que realizaremos este estudio.
 
 Observar que estamos optimizando la métrica \emph{accuracy}, que como sabemos de teoría, tiene ciertos problemas y no es del todo representativa de la eficacia real de los modelos obtenidos. Sin embargo, esto ha sido así porque, para el nodo \emph{Parameter Optimization Loop End}, tenemos que pasar una métrica por \emph{flow variable}, como es posible hacer con el \emph{scorer}. Sin embargo esto no ha sido posible usando un nodo \emph{math formula}, por lo que nos hemos conformado con ajustar el \emph{accuracy} (mala métrica) a través de un proceso iterativo metódico (buena forma de proceder). En otro \emph{software} sería sencillo cambiar esta optimización para ajustar una mejor medida como \emph{G-Mean} siguiendo la misma filosofía.
 
@@ -1426,9 +1426,74 @@ Aquí también obtenemos el mismo comportamiento. Esto reafirma nuestra sospecha
 
 \pagebreak
 
-\subsection{Conclusiones finales}
+\subsection{Tanzania Water Pump}
 
-% TODO -- hacer estas conclusiones con las configuraciones de los cuatro algoritmos
+En este caso, por ser los algorimtos con mejores resultados, optimizamos una red neuronal simple y a \emph{Naive Bayes}. Los resultados para la red neuronal se muestran a continuación:
+
+\begin{table}[H]
+\begin{center}
+    \begin{tabular}{|c|c|c|}
+        \hline
+        Neurons per layer & Hidden Layers & Objective value \\
+        \hline
+        10 & 1 & 0.740 \\
+        20 & 1 & 0.740 \\
+        30 & 1 & 0.740 \\
+        40 & 1 & 0.740 \\
+        50 & 1 & 0.740 \\
+        60 & 1 & 0.740 \\
+        70 & 1 & 0.740 \\
+        10 & 2 & 0.740 \\
+        20 & 2 & 0.740 \\
+        30 & 2 & 0.740 \\
+        40 & 2 & 0.740 \\
+        50 & 2 & 0.740 \\
+        60 & 2 & 0.740 \\
+        70 & 2 & 0.740 \\
+        10 & 3 & 0.740 \\
+        20 & 3 & 0.740 \\
+        30 & 3 & 0.740 \\
+        40 & 3 & 0.740 \\
+        50 & 3 & 0.740 \\
+        60 & 3 & 0.740 \\
+        70 & 3 & 0.740 \\
+        \hline
+    \end{tabular}
+\end{center}
+    \caption{Optimización para \emph{Redes Neuronales}, ajustando el número de capas ocultas y el número de neuronas por capa}
+\end{table}
+
+Esta ocurriendo lo mismo que pasaba anteriormente. El desbalanceo de las clases hace que nuestro modelo se quede anclado en un \emph{accuracy} que, modificando los parámetros del modelo. No podemos mover. Todo lo comentado al respecto en el \emph{dataset} anterior, aplica en este caso.
+
+Mostramos ahora los resultados de optimizar \emph{Naive Bayes}:
+
+\begin{table}[H]
+\begin{center}
+    \begin{tabular}{|c|c|c|}
+        \hline
+        Maximum Number Nodes & Objective value \\
+        \hline
+        5 & 0.649 \\
+        10 & 0.713 \\
+        15 & 0.731 \\
+        \textbf{20} & \textbf{0.741} \\
+        25 & 0.738 \\
+        30 & 0.738 \\
+        35 & 0.738 \\
+        40 & 0.738 \\
+        45 & 0.738 \\
+        50 & 0.738 \\
+
+        \hline
+    \end{tabular}
+\end{center}
+    \caption{Optimización para \emph{Naive Bayes}:w
+    }
+\end{table}
+
+En este caso ocurre lo mismo que hemos comentado para \emph{K-NN}. Estamos aumentando el nivel de regularización, y no la complejidad del modelo en sí. Y estamos viendo que se obtienen los mejores resultados con una regularización media (es claro que no es conveniente aplicar demasiada regularización, porque esto provoca que tengamos un modelo que generaliza muy bien, pero generaliza unos resultados de por sí muy malos)
+
+Es destacable que este modelo ha evitado el problema que teníamos con redes neuronales. Por tanto pensamos que este es un modelo que trata mejor el problema que supone las clases desbalanceadas.
 
 \pagebreak
 
