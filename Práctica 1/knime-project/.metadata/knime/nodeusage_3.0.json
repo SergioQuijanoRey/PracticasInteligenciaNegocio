@@ -118,9 +118,9 @@
             },
             {
                 "id": "org.knime.js.base.node.viz.plotter.scatterSelectionAppender.ScatterPlotNodeFactory#Scatter Plot",
-                "nrexecs": 73,
+                "nrexecs": 74,
                 "nrfails": 0,
-                "exectime": 80448,
+                "exectime": 80649,
                 "nrcreated": 2,
                 "successor": "n/a"
             },
@@ -753,7 +753,7 @@
                 "nrexecs": 4,
                 "nrfails": 0,
                 "exectime": 8,
-                "nrcreated": 3,
+                "nrcreated": 4,
                 "successor": "n/a"
             },
             {
@@ -778,14 +778,14 @@
             "nrcreated": 0
         }
     },
-    "uptime": 3212280,
+    "uptime": 3183919,
     "workflowsOpened": 1,
     "remoteWorkflowsOpened": 0,
     "workflowsImported": 0,
     "workflowsExported": 0,
-    "launches": 48,
+    "launches": 49,
     "lastApplicationID": "org.knime.product.KNIME_APPLICATION",
-    "timeSinceLastStart": 68884,
+    "timeSinceLastStart": 106951,
     "crashes": 7,
     "properlyShutDown": false
 }

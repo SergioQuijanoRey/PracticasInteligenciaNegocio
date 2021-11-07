@@ -565,7 +565,7 @@ En primer lugar, mostramos la tabla que resume todos los resultados obtenidos tr
     \caption{Resultados de \emph{Cross Validation}, para los distintos algoritmos estudiados, en el primer \emph{dataset}}
 \end{table}
 
-Mostramos ahora una tabla con las medidas de complejidad de cada uno de los algoritmos estudiados
+Mostramos ahora una tabla con las medidas de complejidad de cada uno de los algoritmos estudiados:
 
 \begin{table}[H]
 \begin{center}
@@ -649,7 +649,7 @@ Con esta visualización sí que se pueden extraer más conclusiones sobre el com
 
 % TODO -- tenemos que comentar como hemos hecho la adaptacion multiclase
 
-\subsubsection{\emph{Workflows} empleados para \emph{Cross Validation}}
+\subsubsection{\emph{Workflows} empleados para \emph{Cross Validation}} \label{dataset02_decision:seccion}
 
 Como ya hemos comentado previamente, no vamos a mostrar capturas de pantalla de los \emph{workflows} de cada \emph{Custom Cross Validation} para cada algoritmo. Esto pues las diferencias respecto al \emph{dataset} anterior son mínimas. Consideramos, por tanto, que es mucho más interesante que solo mostremos las diferencias con respecto lo desarrollado previamente.
 
@@ -673,9 +673,98 @@ Por tanto, al seguir este proceder, no hemos realizado ningún cambio sustancial
 
 \subsubsection{Mostrando los resultados obtenidos}
 
+En primer lugar, mostramos la tabla que resume todos los resultados obtenidos tras el proceso de \emph{Cross Validation}:
+
+\begin{table}[H]
+\begin{center}
+    \resizebox{1.05\textwidth}{!}{
+    \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+        \hline
+        Algo Name&TP&FP&TN&FN&Recall&Precision&Sensitivity&Specificity&F-measure&AUC&Accuracy&G-Mean\\
+        \hline
+        Naive Bayes & 283 & 90 & 1064 & 86 & 0.767 & 0.759 & 0.767 & 0.922 & 0.763 & 0.582 & 0.685 & 0.841 \\
+        Neural Net & 0 & 789 & 734 & 0 & ?? & 0 & ?? & 0.482 & ??  & 0.995 & 0 & ?? \\
+        Support Vector Machine & 0 & 0 & 1145 & 378 & 0 & ??  & 0 & 1 & ??  & 0.488 & 0.247 & 0 \\
+        Support Vector Machine + Normalization & 42 & 28 & 1117 & 336 & 0.111 & 0.600 & 0.111 & 0.976 & 0.188 & 0.784 & 0.557 & 0.329 \\
+        K-NN & 275 & 118 & 1036 & 94 & 0.745 & 0.700 & 0.745 & 0.898 & 0.722 & 0.599 & 0.734 & 0.818 \\
+        AdaBoost & 204 & 537 & 608 & 174 & 0.540 & 0.275 & 0.540 & 0.531 & 0.365 & 0.719 & 0.234 & 0.535 \\
+        Random Forest & 266 & 126 & 1028 & 103 & 0.721 & 0.679 & 0.721 & 0.891 & 0.699 & 0.490 & 0.677 & 0.801 \\
+        \hline
+    \end{tabular}}
+\end{center}
+    \caption{Resultados de \emph{Cross Validation}, para los distintos algoritmos estudiados, en el segundo \emph{dataset}}
+\end{table}
+
+Notar que hay valores marcados con \emph{??}. Ciertos algoritmos no han clasificado ningún valor en la clase positiva o ningún valor en la clase no positiva. Por tanto, en algunas métricas se divide por cero, lo que provoca estos valores \emph{??}.
+
+Mostramos ahora una tabla con las medidas de complejidad de cada uno de los algoritmos estudiados:
+
+\begin{table}[H]
+\begin{center}
+    % \resizebox{1.05\textwidth}{!}{
+    \begin{tabular}{|c|c|}
+        \hline
+        Algo Name & Medida de Complejidad \\
+        \hline
+        Naive Bayes& 20 valores únicos por atributo \\
+        Neural Net & 1 hidden layer, 10 neuronas \\
+        Support Vector Machine& Kernel RBF $\sigma = 3.0$ \\
+        Support Vector Machine + Normalization& Kernel RBF $\sigma = 2.0$ \\
+        K-NN& 5 vecinos \\
+        AdaBoost& 10 iteraciones \\
+        Random Forest& 50 árboles, profundidad no acotada \\
+        \hline
+    \end{tabular}
+% }
+\end{center}
+    \caption{Medidas de complejidad de los algoritmos considerados, en el segundo \emph{dataset}}
+\end{table}
+
+En este caso hemos modificado el valor de $\sigma$ para \emph{SVM} no normalizado y el número de vecinos para \emph{K-NN}, respecto el primer \emph{dataset}.
+
 \pagebreak
 
 \subsubsection{Mostrando las curvas ROC obtenidas}
+
+Por la decisión tomada en \customcite{dataset02_decision:seccion}, tenemos algoritmos con resultados catastróficos. Esto hace que la curva \emph{ROC} conjunta muestre comportamiento muy malos, y por ello, no podemos extraer información útil a partir de dicha gráfica conjunta. Por tanto, mostramos directamente las curvas \emph{ROC} individuales:
+
+\begin{figure}[H]
+    \centering
+
+    \begin{subfigure}[b]{0.4 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{dataset02_roc_nn}
+        \caption{Curva ROC para Redes Neuronales}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.4 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{dataset02_roc_naivebayes}
+        \caption{Curva ROC para Naive Bayes}
+    \end{subfigure}
+
+    \begin{subfigure}[b]{0.4 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{dataset02_roc_svm}
+        \caption{Curva ROC para SVM}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.4 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{dataset02_roc_svmnormalizacion}
+        \caption{Curva ROC para SVM con normalización}
+    \end{subfigure}
+
+    \begin{subfigure}[b]{0.4 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{dataset02_roc_knn}
+        \caption{Curva ROC para K-NN}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.4 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{dataset02_roc_randomforest}
+        \caption{Curva ROC para Random Fores}
+    \end{subfigure}
+
+    \begin{subfigure}[b]{0.4 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{dataset02_roc_adaboost}
+        \caption{Curva ROC para Adaboost}
+    \end{subfigure}
+
+    \caption{Todas las curvas ROC para el segundo \emph{dataset}, mostradas de forma individual}
+\end{figure}
 
 \pagebreak
 
