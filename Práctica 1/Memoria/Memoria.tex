@@ -726,7 +726,6 @@ Además, tenemos que adaptar los nodos de \emph{Custom Cross Validation}. Como n
 
 Los resultados obtenidos tras aplicar \emph{Cross Validation} tras esta transformación son los siguientes:
 
-% TODO -- arreglar esta tabla
 \begin{table}[H]
 \begin{center}
     \resizebox{1.05\textwidth}{!}{
@@ -737,14 +736,15 @@ Los resultados obtenidos tras aplicar \emph{Cross Validation} tras esta transfor
         Naive Bayes & 328 & 135 & 314 & 140 & 0.701 & 0.708 & 0.701 & 0.699 & 0.705 & 0.559 & 0.700 & 0.700 \\
         Neural Net & 431 & 86 & 324 & 76 & 0.850 & 0.834 & 0.850 & 0.790 & 0.842 & 0.880 & 0.823 & 0.820 \\
         Support Vector Machine & 421 & 102 & 308 & 86 & 0.830 & 0.805 & 0.830 & 0.751 & 0.817 & 1 & 0.795 & 0.790 \\
+        Support Vector Machine + Normalization & 429 & 93 & 317 & 78 & 0.846 & 0.822 & 0.846 & 0.773 & 0.834 & 1 & 0.814 & 0.809 \\
         K-NN & 151 & 268 & 142 & 356 & 0.298 & 0.360 & 0.298 & 0.346 & 0.326 & 0.828 & 0.320 & 0.321 \\
         AdaBoost & 388 & 87 & 362 & 80 & 0.829 & 0.817 & 0.829 & 0.806 & 0.823 & 0.565 & 0.818 & 0.818 \\
-        Support Vector Machine + Normalization & 429 & 93 & 317 & 78 & 0.846 & 0.822 & 0.846 & 0.773 & 0.834 & 1 & 0.814 & 0.809 \\
         Random Forest & 314 & 128 & 321 & 154 & 0.671 & 0.710 & 0.671 & 0.715 & 0.690 & 0.576 & 0.692 & 0.693 \\
         \hline
     \end{tabular}}
 \end{center}
     \caption{Resultados de \emph{Cross Validation}, para los distintos algoritmos estudiados, en el primer \emph{dataset}, tras realizar la selección de variables}
+    \label{dataset01_procesado_resultados:seccion}
 \end{table}
 
 Aunque ya hemos mostrado esta tabla previamente, mostramos por claridad la tabla de \emph{Cross Validation} obtenida sin el procesado de los datos, para que sea más sencillo realizar la comparación:
@@ -767,13 +767,43 @@ Aunque ya hemos mostrado esta tabla previamente, mostramos por claridad la tabla
     \end{tabular}}
 \end{center}
     \caption{Resultados de \emph{Cross Validation}, para los distintos algoritmos estudiados, en el primer \emph{dataset}, \textbf{sin aplicar el procesado de datos}}
+    \label{dataset01_sin_procesado_resultados:seccion}
 \end{table}
 
 \subsubsection{Conclusiones}
 
-% TODO -- escribir conclusiones para este procesado de datos
+En base a las dos tablas de resultados anteriores, \customcite{dataset01_procesado_resultados:seccion} y \customcite{dataset01_sin_procesado_resultados:seccion}, realizamos el siguiente análisis.
 
+Nos fijaremos en la métrica \emph{G-Mean}, pues es más informativa que le \emph{accuracy}, como ya hemos señalado varias veces a lo largo de esta memoria. En general hemos mejorado significativamente esta métrica quedándonos con menos columnas en comparación a los resultados sin este preprocesado de datos. Esto es claro pues pasamos de tener un \emph{G-Mean} medio de $0.6071$ a tener un \emph{G-Mean} medio de $0.7072$. Por tanto, \textbf{mejoramos el rendimiento generando modelos más sencillos}.
 
+Nos fijamos ahora en las diferencias algoritmo a algoritmo:
+
+\begin{table}[H]
+\begin{center}
+    \begin{tabular}{|c|c|}
+        \hline
+        Algo Name & $procesado - sin\_procesar$ \\
+        \hline
+        Naive Bayes& -0.010 \\
+        Neural Net& 0.010 \\
+        SVM& 0.650 \\
+        SVM Norm& 0.189 \\
+        KNN& -0.219 \\
+        Adaboost& 0.108 \\
+        Random Forest& -0.027 \\
+        \hline
+    \end{tabular}
+\end{center}
+    \caption{Tabla con las diferencias algoritmo a algoritmo, rendimiento del algoritmo tras el procesado menos el rendimiento algoritmo sin el procesado. El rendimiento es \emph{G-Mean}}
+\end{table}
+
+Cuando el algoritmo pierde rendimiento, este empeoramiento es muy pequeño (la peor diferencia es $\approx -0.22$). Por tanto podemos decir que, en esos casos estamos manteniendo el rendimiento con modelos más sencillos. Las mejoras, sin embargo, son más grandes (prácticamente el triple de grandes que los empeoramientos, llegando a $\approx 0.65$). Y todo esto teniendo en cuenta que estamos trabajando con un \emph{dataset} mucho más pequeño y, por tanto, generando modelos mucho más simples, por tanto mucho más generalizables y, cuando el algoritmo lo permite, modelos muchos más interpretables.
+
+El algoritmo más perjudicado ha sido \emph{K-NN}. Esto puede ser debido a que, a diferencia de lo que estamos haciendo más adelante, no estamos normalizando los datos de entrada. Por tanto es más sensible a diferencias de escala en las variables. Y al tener menos variables, este efecto es mucho más crítico. Además, al ser un algoritmo que considera información de forma local, al estar quitando variables en las que mirar en la vecindad, es un algoritmo que pierde mucha información por este procesado.
+
+El algoritmo más beneficiado ha sido \emph{SVM} sin normalización. Es destacable que \emph{SVM} con normalización no se haya beneficiado tanto. Por tanto, y como comentábamos para \emph{K-NN}, las distintas escalas de las variables han tenido mucho que ver en este resultado. Creemos que \emph{SVM} sin normalización estaba sufriendo demasiado por diferencias en escala de alguna de las variables que hemos eliminado. Al eliminar estas variables problemáticas, hemos conseguido que el algoritmo tenga mucho mayor rendimiento.
+
+A pesar de esto último, no olvidar que \emph{SVM} con normalización también se ve beneficiado del procesado. Por tanto, además de haber eliminado variables problemáticas para \emph{SVM} sin normalizar, el procesado es en sí mismo beneficioso para el rendimiento de estos modelos.
 
 \pagebreak
 
