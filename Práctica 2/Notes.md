@@ -5,6 +5,7 @@
 - La documentación oficial de `sklearn` sobre [clustering](https://scikit-learn.org/stable/modules/clustering.html) está muy bien
 - Hay muchas variables que van acompañadas de una variable *FLAG* que indica si el dato es faltante o que en este caso no aplica
     - Esto creo que lo puedo usar para realizar algunos filtrados de los datos
+- No tenemos acceso a las variables que corresponden a las personas: "P<algo>"
 
 # Algoritmos de clustering utilizados
 
