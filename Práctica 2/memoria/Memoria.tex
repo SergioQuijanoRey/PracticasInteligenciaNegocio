@@ -14,7 +14,7 @@
 
 % Paquete para incluir imagenes
 \usepackage{graphicx}
-\graphicspath{ {./images/} }
+\graphicspath{ {./imagenes/} }
 
 % Para fijar las imagenes en la posicion deseada
 \usepackage{float}
@@ -233,15 +233,64 @@ Como ya hemos comentado previamente, realizaremos el siguiente pre-procesado de 
 
 \begin{itemize}
     \item Borrado de las filas que contengan algún valor \lstinline{NaN}
-    \item Borrado de \emph{outliers} usando la regla $3 \cdot IQR$
+    \item Borrado de \emph{outliers} usando la regla $3 \cdot IQR$, variable por variable
     \item Normalización del rango de las variables al intervalo $[0, 1]$
 \end{itemize}
 
 Tras aplicar esto, nos quedamos con un \emph{dataset} de 1947 filas.
 
+\subsection{Análisis Exploratorio de datos}
+
+Comenzamos haciendo un \emph{plot} por pares de variables, que mostramos en la siguiente figura:
+
+\begin{figure}[H]
+    \centering
+
+    \includegraphics[width = 0.9 \textwidth]{stcase01_pairplot}
+    \caption{Gráfico en el que se muestran todas las combinaciones de parejas de variables involucradas en el caso de estudio}
+    \label{stcase01_pairplot:figura}
+\end{figure}
+
+En este gráfico tenemos las distribuciones al poner en un eje una variable y en el otro eje otra variable, considerando todas las parejas posibles. En la diagonal tenemos la distribución de cada variable, por sí sola.
+
+Lo que más llama la atención de este gráfico es que, en la distribución de las comunidades autónomas, hay una comunidad que destaca claramente sobre otras. Esto podría ser porque dicha comunidad autónoma tiene una mayor representación en la encuesta, o no. Por tanto, es necesario visualizar dicha distribución de forma porcentual, considerando como base para el cálculo toda la población.
+
+El resto de distribuciones tienen una forma parecida a la normal, lo que era de esperar. Salvo la distribución del gasto en transporte, donde el gasto mínimo (puede que no sea nulo, pues hemos normalizado las variables al rango $[0, 1]$) destaca sobre el resto de valores, rompiendo con una distribución normal que esperábamos.
+
+Se puede apreciar cierta correlación positiva entre la renta disponible en el hogar y el gasto en vivienda mensual. Pero parece ser una correlación muy débil y que no destaca nada interesante (es lógico que a mayor dinero disponible, generalmente se gaste más en vivienda).
+
+La correlación entre gasto en vivienda y gasto en transporte no parece aportar nada nuevo al estudio que queremos realizar.
+
+Por la naturaleza ordinal del código de la comunidad autónoma, no podemos extraer mucha información al respecto usando esta gráfica y esta variable en concreto.
+
+% TODO -- mostrar el porcentaje de delincuencia
+
+Aprovechamos la sección de exploración de datos de este caso de estudio para realizar la siguiente observación, que tendrá impacto en el resto de casos de estudio. En un primer momento, consideramos usar las variables \lstinline{renta_disponible_total_hogar} y \lstinline{renta_disponible_restado_alquiler}. Sin embargo, como mostramos a continuación, están muy correladas, por lo que no aportan información interesante:
+
+\begin{figure}[H]
+    \centering
+
+    \includegraphics[width = 0.6 \textwidth]{stcase01_correlacion_renta_total_restado}
+    \caption{Gráfico en el que se aprecia claramente la correlación entre la variable \lstinline{renta_disponible_total_hogar} y la variable \lstinline{renta_disponible_restado_alquiler}}
+\end{figure}
+
+Lo mismo ocurre con la variable agregada por nosotros, \lstinline{ingresos_menos_gastos}, y la variable ya presente en los datos originales, \lstinline{renta_disponible_total_hogar}. Esto se muestra claramente en la siguiente gráfica:
+
+\begin{figure}[H]
+    \centering
+
+    \includegraphics[width = 0.6 \textwidth]{stcase01_correlacion_renta_total_mi_variable_agregada}
+    \caption{Gráfico en el que se aprecia claramente la correlación entre la variable \lstinline{renta_disponible_total_hogar} y la variable agregada \lstinline{renta_disponible_restado_alquiler}}
+\end{figure}
+
+Por tanto, no tiene sentido usar ambas variables en un mismo caso de estudio, pues apenas aportan información nueva al problema, debido a la alta correlación entre ambas.
+
+
 \subsection{Resultados de \emph{clustering}}
 
 \subsection{Interpretación de la segmentación}
+
+% TODO -- poco gasto en transporte, como muestra \ref{stcase01_pairplot:figura}
 
 \pagebreak
 
