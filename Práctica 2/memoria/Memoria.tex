@@ -263,7 +263,16 @@ La correlación entre gasto en vivienda y gasto en transporte no parece aportar 
 
 Por la naturaleza ordinal del código de la comunidad autónoma, no podemos extraer mucha información al respecto usando esta gráfica y esta variable en concreto.
 
-% TODO -- mostrar el porcentaje de delincuencia
+Como comentábamos previamente, destaca los picos de ciertas comunidades autónomas en el número de hogares que viven en un entorno de vandalismo. Pero esto puede deberse a diferencias en tamaños de las comunidades. Así que pasamos a mostrar el porcentaje de hogares que viven en entornos con vandalismo, agrupados por comunidades autónomas:
+
+\begin{figure}[H]
+    \centering
+
+    \includegraphics[width = 0.8 \textwidth]{stcase01_porcentajes_vandalismo}
+    \caption{Gráfico con el porcentaje de hogares que viven en entornos con vandalismo, agrupados por comunidades autónomas}
+\end{figure}
+
+En este gráfico podemos ver que, como suponíamos, hay ciertas comunidades autónomas con un porcentaje de hogares en zonas con vandalismo mucho mayores que otras comunidades. Destaca la ciudad autónoma de Melilla, que se distancia de la segunda peor comunidad en esta métrica prácticamente un 10\%. Además, a la vista de estos datos, y sin necesidad de introducir datos externos sobre poblaciones de las comunidades autónomas, parece que las zonas más rurales y con menos concentración de población (Cantabria, Extremadura, Asturias, \ldots) tienen porcentajes de vandalismo significativamente mayor que comunidades más densamente pobladas (Cataluña, Andalucía, Madrid, \ldots). Destacan, saliéndose de lo que acabamos de comentar, las dos ciudades autónomas.
 
 Aprovechamos la sección de exploración de datos de este caso de estudio para realizar la siguiente observación, que tendrá impacto en el resto de casos de estudio. En un primer momento, consideramos usar las variables \lstinline{renta_disponible_total_hogar} y \lstinline{renta_disponible_restado_alquiler}. Sin embargo, como mostramos a continuación, están muy correladas, por lo que no aportan información interesante:
 
