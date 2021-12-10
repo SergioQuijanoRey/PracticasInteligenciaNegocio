@@ -227,6 +227,8 @@ Además, en el \emph{dataframe} que usamos para almacenar estos datos (\lstinlin
 
 Tras el filtrado, obtenemos un \emph{dataset} con 2081 filas (objetos a \emph{clusterizar}) y 5 columnas (4 + 1 para el factor de elevación).
 
+\pagebreak
+
 \subsection{Procesado de los datos}
 
 Como ya hemos comentado previamente, realizaremos el siguiente pre-procesado de los datos:
@@ -238,6 +240,8 @@ Como ya hemos comentado previamente, realizaremos el siguiente pre-procesado de 
 \end{itemize}
 
 Tras aplicar esto, nos quedamos con un \emph{dataset} de 1947 filas.
+
+\pagebreak
 
 \subsection{Análisis Exploratorio de datos}
 
@@ -274,6 +278,39 @@ Como comentábamos previamente, destaca los picos de ciertas comunidades autóno
 
 En este gráfico podemos ver que, como suponíamos, hay ciertas comunidades autónomas con un porcentaje de hogares en zonas con vandalismo mucho mayores que otras comunidades. Destaca la ciudad autónoma de Melilla, que se distancia de la segunda peor comunidad en esta métrica prácticamente un 10\%. Además, a la vista de estos datos, y sin necesidad de introducir datos externos sobre poblaciones de las comunidades autónomas, parece que las zonas más rurales y con menos concentración de población (Cantabria, Extremadura, Asturias, \ldots) tienen porcentajes de vandalismo significativamente mayor que comunidades más densamente pobladas (Cataluña, Andalucía, Madrid, \ldots). Destacan, saliéndose de lo que acabamos de comentar, las dos ciudades autónomas.
 
+A continuación, mostramos el gasto medio en transporte público según si se vive en una zona con vandalismo o no:
+
+\begin{figure}[H]
+    \centering
+
+    \includegraphics[width = 0.6 \textwidth]{stcase01_gasto_tpublico_vandalismo}
+    \caption{Media de gasto en transporte público. A la izquierda, media de gasto en la población que vive en zonas con vandalismo. A la derecha, media de gasto en la población que vive en zonas sin vandalismo}
+\end{figure}
+
+A vista de estos resultados, no podemos sacar conclusiones de interés sobre un comportamiento distinto de las dos poblaciones. La media es prácticamente la misma. Como la media no está siendo lo suficientemente informativa (estamos resumiendo demasiado toda la información de las poblaciones), mostramos las distribuciones de gasto en transporte público en las dos poblaciones:
+
+
+\begin{figure}[H]
+    \centering
+
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{stcase01_gasto_tpublico_distri_presencia}
+        \caption{Distribución del gasto, en zonas \textbf{con presencia de vandalismo}}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{stcase01_gasto_tpublico_distri_nopresencia}
+        \caption{Distribución del gasto, en zonas \textbf{sin presencia de vandalismo}}
+    \end{subfigure}
+
+
+    \caption{Distribuciones de gasto en transporte público de las dos poblaciones estudiadas, según presencia o no de vandalismo en la zona del hogar}
+\end{figure}
+
+
+A raíz de estas dos distribuciones, apenas podemos sacar conclusiones adicionales a simple vista. Ambas distribuciones tienen una forma muy similar, que se diferencia tan solo en que en la población sin presencia de vandalismo supone un mayor número, y por tanto en la gráfica se muestran con mayor granularidad. El hecho de que ambas distribuciones sean prácticamente iguales en forma se ve claramente en las marcas en el eje de las $x$. Podemos ver los picos entorno al gasto 200, 300, 400 y 500. Ademas, toda la distribución hasta que llegamos a gasto 100 es prácticamente idéntica (salvo la granularidad ya comentada).
+
+Por esto, cobra mayor interés estudiar el efecto de usar el gasto en transporte para la clusterización, pues esto puede descubrir patrones que a simple vista no hemos sido capaces de captar.
+
 Aprovechamos la sección de exploración de datos de este caso de estudio para realizar la siguiente observación, que tendrá impacto en el resto de casos de estudio. En un primer momento, consideramos usar las variables \lstinline{renta_disponible_total_hogar} y \lstinline{renta_disponible_restado_alquiler}. Sin embargo, como mostramos a continuación, están muy correladas, por lo que no aportan información interesante:
 
 \begin{figure}[H]
@@ -294,6 +331,7 @@ Lo mismo ocurre con la variable agregada por nosotros, \lstinline{ingresos_menos
 
 Por tanto, no tiene sentido usar ambas variables en un mismo caso de estudio, pues apenas aportan información nueva al problema, debido a la alta correlación entre ambas.
 
+\pagebreak
 
 \subsection{Resultados de \emph{clustering}}
 
