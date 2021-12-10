@@ -257,7 +257,7 @@ Comenzamos haciendo un \emph{plot} por pares de variables, que mostramos en la s
 
 En este gráfico tenemos las distribuciones al poner en un eje una variable y en el otro eje otra variable, considerando todas las parejas posibles. En la diagonal tenemos la distribución de cada variable, por sí sola.
 
-Lo que más llama la atención de este gráfico es que, en la distribución de las comunidades autónomas, hay una comunidad que destaca claramente sobre otras. Esto podría ser porque dicha comunidad autónoma tiene una mayor representación en la encuesta, o no. Por tanto, es necesario visualizar dicha distribución de forma porcentual, considerando como base para el cálculo toda la población.
+Lo que más llama la atención de este gráfico es que, en la distribución de las comunidades autónomas, hay una comunidad que destaca claramente sobre otras. Esto podría ser porque dicha comunidad autónoma tiene una mayor representación en la encuesta, o no. Por tanto, es necesario visualizar dicha distribución de forma porcentual, considerando como base para el cálculo (el valor del denominador para el cálculo del porcentaje) toda la población encuestada de cada comunidad.
 
 El resto de distribuciones tienen una forma parecida a la normal, lo que era de esperar. Salvo la distribución del gasto en transporte, donde el gasto mínimo (puede que no sea nulo, pues hemos normalizado las variables al rango $[0, 1]$) destaca sobre el resto de valores, rompiendo con una distribución normal que esperábamos.
 
@@ -276,7 +276,7 @@ Como comentábamos previamente, destaca los picos de ciertas comunidades autóno
     \caption{Gráfico con el porcentaje de hogares que viven en entornos con vandalismo, agrupados por comunidades autónomas}
 \end{figure}
 
-En este gráfico podemos ver que, como suponíamos, hay ciertas comunidades autónomas con un porcentaje de hogares en zonas con vandalismo mucho mayores que otras comunidades. Destaca la ciudad autónoma de Melilla, que se distancia de la segunda peor comunidad en esta métrica prácticamente un 10\%. Además, a la vista de estos datos, y sin necesidad de introducir datos externos sobre poblaciones de las comunidades autónomas, parece que las zonas más rurales y con menos concentración de población (Cantabria, Extremadura, Asturias, \ldots) tienen porcentajes de vandalismo significativamente mayor que comunidades más densamente pobladas (Cataluña, Andalucía, Madrid, \ldots). Destacan, saliéndose de lo que acabamos de comentar, las dos ciudades autónomas.
+En este gráfico podemos ver que, como suponíamos, hay ciertas comunidades autónomas con un porcentaje de hogares en zonas con vandalismo mucho mayores que otras comunidades. Destaca la ciudad autónoma de Melilla, que se distancia de la segunda peor comunidad según esta métrica prácticamente un 10\%. Además, a la vista de estos datos, y sin necesidad de introducir datos externos sobre poblaciones de las comunidades autónomas, parece que las zonas más rurales y con menos concentración de población (Cantabria, Extremadura, Asturias, \ldots) tienen porcentajes de vandalismo significativamente menor que comunidades más densamente pobladas (Cataluña, Andalucía, Madrid, \ldots). Destacan, saliéndose de lo que acabamos de comentar, las dos ciudades autónomas.
 
 A continuación, mostramos el gasto medio en transporte público según si se vive en una zona con vandalismo o no:
 
@@ -307,11 +307,19 @@ A vista de estos resultados, no podemos sacar conclusiones de interés sobre un 
 \end{figure}
 
 
-A raíz de estas dos distribuciones, apenas podemos sacar conclusiones adicionales a simple vista. Ambas distribuciones tienen una forma muy similar, que se diferencia tan solo en que en la población sin presencia de vandalismo supone un mayor número, y por tanto en la gráfica se muestran con mayor granularidad. El hecho de que ambas distribuciones sean prácticamente iguales en forma se ve claramente en las marcas en el eje de las $x$. Podemos ver los picos entorno al gasto 200, 300, 400 y 500. Ademas, toda la distribución hasta que llegamos a gasto 100 es prácticamente idéntica (salvo la granularidad ya comentada).
+A raíz de estas dos distribuciones, apenas podemos sacar conclusiones adicionales a simple vista. Ambas distribuciones tienen una forma muy similar, que se diferencia tan solo en que en la población sin presencia de vandalismo supone un mayor número, y por tanto en la gráfica se muestran con mayor granularidad. El hecho de que ambas distribuciones sean prácticamente iguales en forma se ve claramente en las marcas en el eje de las $x$. Podemos ver los picos centrados en el gasto 200, 300, 400 y 500. Ademas, toda la distribución hasta que llegamos a gasto 100 es prácticamente idéntica (salvo la granularidad ya comentada).
 
 Por esto, cobra mayor interés estudiar el efecto de usar el gasto en transporte para la clusterización, pues esto puede descubrir patrones que a simple vista no hemos sido capaces de captar.
 
-Aprovechamos la sección de exploración de datos de este caso de estudio para realizar la siguiente observación, que tendrá impacto en el resto de casos de estudio. En un primer momento, consideramos usar las variables \lstinline{renta_disponible_total_hogar} y \lstinline{renta_disponible_restado_alquiler}. Sin embargo, como mostramos a continuación, están muy correladas, por lo que no aportan información interesante:
+Aprovechamos la sección de exploración de datos de este caso de estudio para realizar la siguiente observación, que tendrá impacto en el resto de casos de estudio. En un primer momento, consideramos usar las variables
+
+\lstinline{renta_disponible_total_hogar}
+
+y
+
+\lstinline{renta_disponible_restado_alquiler}.
+
+Sin embargo, como mostramos a continuación, están muy correladas, por lo que no aportan información interesante:
 
 \begin{figure}[H]
     \centering
