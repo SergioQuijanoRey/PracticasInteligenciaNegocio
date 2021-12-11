@@ -486,6 +486,69 @@ El segundo mejor algoritmo en balanceo es el aglomerativo. La naturaleza de dich
 
 Usaremos dos técnicas, \lstinline{PCA} y \lstinline{TSNE}, para realizar visualizaciones de la \emph{clusterización} en dos dimensiones. A continuación mostramos los resultados de \emph{PCA}:
 
+\begin{figure}[H]
+    \centering
+
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{stcase01_pca_kmeans}
+        \caption{K-Means}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{stcase01_pca_aglomerativo}
+        \caption{\emph{Clustering} aglomerativo}
+    \end{subfigure}
+
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{stcase01_pca_birch}
+        \caption{Birch}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{stcase01_pca_dbscan}
+        \caption{DBSCAN}
+    \end{subfigure}
+
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{stcase01_pca_meanshift}
+        \caption{MeanShift}
+    \end{subfigure}
+
+        \caption{Resultados de las clusterizaciones, visualizadas en el espacio generado usando \emph{PCA}}
+\end{figure}
+
+Mostramos ahora los resultados aplicando \emph{tsne}. Esta técnica, aplicada explorando muchos valores de sus parámetros, nos puede dar cierta idea de la topología de los datos con los que se trabajan \cite{tsne:online}. Sin embargo, por falta de tiempo y para evitar una gran extensión en esta memoria, solo mostramos los resultados con unos parámetros fijos:
+
+\begin{figure}[H]
+    \centering
+
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{stcase01_tsne_kmeans}
+        \caption{K-Means}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{stcase01_tsne_aglomerativo}
+        \caption{\emph{Clustering} aglomerativo}
+    \end{subfigure}
+
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{stcase01_tsne_birch}
+        \caption{Birch}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{stcase01_tsne_dbscan}
+        \caption{DBSCAN}
+    \end{subfigure}
+
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{stcase01_tsne_meanshift}
+        \caption{MeanShift}
+    \end{subfigure}
+
+        \caption{Resultados de las clusterizaciones, visualizadas en el espacio generado usando \emph{tsne}}
+\end{figure}
+
+Con estas gráficas podemos sacar poca información adicional respecto a lo que ya hemos comentado previamente. Es claro que los resultados de \emph{DBSCAN} son completamente desastrosos. Visualmente, parece que \emph{K-means} y \emph{Clustering Aglomerativo} son los algoritmos que descubren relaciones más equilibradas y complejas. En el resto de algoritmos, hay cierta dominancia por parte de determinados \emph{clusters} (ie. el cluster 0 en \emph{mean shift}).
+
+En último lugar, no parece que \emph{tsne} haya servido para descubrir ciertas propiedades topológicas del conjunto de datos con el que trabajamos, ni estamos viendo correlaciones entre agrupaciones gracias a \emph{tsne} y nuestros algoritmos de \emph{clusterización}. No podemos concluir nada con esto, pues como ya hemos comentado, no estamos explorando distintas combinaciones de parámetros para \emph{tsne}.
 
 \pagebreak
 
