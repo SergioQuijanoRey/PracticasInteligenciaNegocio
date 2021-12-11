@@ -383,6 +383,8 @@ Antes de mostrar la tabla con las métricas de los algoritmos, mostramos gráfic
 
 
     \caption{Resultados gráficos tras aplicar los distintos algoritmos de \emph{clustering}. Realizamos la misma gráfica \emph{pairplot}, pero coloreando según el \emph{cluster} que hemos asignado}
+    \label{stcase01_resultados_graficos:figure}
+
 \end{figure}
 
 Destacan los malos resultados obtenidos a simple vista por \lstinline{DBSCAN}. Solo logra colocar un punto en un \emph{cluster}, dejando el resto del dataset al otro \emph{cluster} generado. Como veremos más adelante, esta es una forma de lograr un valor de \emph{Silhouette} muy bueno. Por tanto, este ejemplo sirve para motivar el resto de métricas que hemos empleado para evaluar los \emph{cluters}.
@@ -461,11 +463,36 @@ Antes de interpretar los resultados de la tabla \customcite{resultados_stcase01:
     \end{subfigure}
 
     \caption{Gráficas con las distintas métricas que hemos construido}
+    \label{stcase01_metricas_graficas:figure}
 \end{figure}
 
 Con toda esta información, podemos proceder a realizar ciertas conclusiones sobre los algoritmos de \emph{clusterización}.
 
+\pagebreak
 
+\subsection{Interpretación de los resultados de \emph{clustering}}
+
+Lo que más resalta es que en \customcite{stcase01_metricas_graficas:figure} veamos que, fijándonos en \emph{Silhouette}, el mejor algoritmo sea \emph{DBSCAN}, pero que en \customcite{stcase01_resultados_graficos:figure} sea claro que hemos obtenido un resultado desastroso, realizando lo que podría considerarse un \emph{clustering} trivial: un punto en un \emph{cluster} y el resto de puntos en otro \emph{cluster}. Esto es un problema conocido de la métrica \emph{Silhouette}, puede tomar buenos resultados si consigue hacer esto mismo con un punto alejado lo suficientemente del resto (ie. con un outlier). Si nos fijamos en otras métricas, como Calinski o Davies, vemos que \emph{DBSCAN} es el algoritmo con peores resultados. Pero si nos fijamos en nuestra métrica \emph{unbalanced}, es claro lo desastroso del resultado, al ser evidente que tenemos una asignación muy desbalanceada, cercana al peor caso en el que la métrica es cero. Por tanto, estamos viendo con un ejemplo que la métrica Silhouette no es suficiente por sí sola para evaluar la calidad de un algoritmo de clusterización.
+
+Fijándonos en las otras métricas, podemos concluir que los mejores algoritmos son \emph{K-Means}, \emph{Clusterización Aglomerativa} y \emph{BIRCH}. \emph{Mean Shift} no obtiene buenos resultados. Genera un número demasiado elevado de clusters, teniendo una mala métrica de \emph{unbalanced} sin llegar a ser catastrófica. Además, es el algoritmo que más tarda en ejecutarse, sobresaliendo respecto al resto de algoritmos significativamente.
+
+\emph{K-means} obtiene resultados sorprendentemente competitivos, teniendo en cuenta la simplicidad de este algoritmo. Es el algoritmo que mejor balancea la asignación a \emph{clusters}, como era de esperar por la propia naturaleza del algoritmo.
+
+El segundo mejor algoritmo en balanceo es el aglomerativo. La naturaleza de dicho algoritmo también nos hacía sospechar de los buenos resultados respecto de esta métrica. Sin embargo, lo que sí sorprende son los buenos resultados en las otras métricas. Estamos obteniendo resultados muy competitivos con el añadido de disponer una jerarquía que nos da más información sobre el problema.
+
+\pagebreak
+
+\subsection{Visualizando en 2D las clusterizaciones}
+
+Usaremos dos técnicas, \lstinline{PCA} y \lstinline{TSNE}, para realizar visualizaciones de la \emph{clusterización} en dos dimensiones. A continuación mostramos los resultados de \emph{PCA}:
+
+
+\pagebreak
+
+\subsection{Ajuste de los parámetros de los algoritmos}
+
+
+\pagebreak
 
 \subsection{Interpretación de la segmentación}
 
