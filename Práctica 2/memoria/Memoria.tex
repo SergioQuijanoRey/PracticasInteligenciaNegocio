@@ -343,6 +343,130 @@ Por tanto, no tiene sentido usar ambas variables en un mismo caso de estudio, pu
 
 \subsection{Resultados de \emph{clustering}}
 
+Aplicamos \emph{clustering} con los siguientes parámetros:
+
+\begin{enumerate}
+    \item \lstinline{K-means}: total de \emph{clusters} 4
+    \item \lstinline{DBSCAN}: $\epsilon = 0.4$, mínimo de ejemplos 1
+    \item \lstinline{BIRCH}: total de \emph{¢lusters} 4, \emph{threshold} 0.2
+    \item \lstinline{Mean Shift}: banda de 0.2, 1000 iteraciones máximas
+    \item \emph{Clustering} aglomerativo: total de \emph{cluters} 4, técnica \entrecomillado{ward}
+\end{enumerate}
+
+Antes de mostrar la tabla con las métricas de los algoritmos, mostramos gráficamente los resultados obtenidos:
+
+\begin{figure}[H]
+    \centering
+
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{stcase01_resultadografico_kmeans}
+        \caption{\lstinline{K-Means}}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{stcase01_resultadografico_DBSCAN}
+        \caption{\lstinline{DBSCAN}}
+    \end{subfigure}
+
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{stcase01_resultadografico_BIRCH}
+        \caption{\lstinline{BIRCH}}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{stcase01_resultadografico_MEANSHIFT}
+        \caption{\lstinline{Mean-Shift}}
+    \end{subfigure}
+
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{stcase01_resultadografico_AGLOMERATIVO}
+        \caption{\emph{Clustering} aglomerativo}
+    \end{subfigure}
+
+
+    \caption{Resultados gráficos tras aplicar los distintos algoritmos de \emph{clustering}. Realizamos la misma gráfica \emph{pairplot}, pero coloreando según el \emph{cluster} que hemos asignado}
+\end{figure}
+
+Destacan los malos resultados obtenidos a simple vista por \lstinline{DBSCAN}. Solo logra colocar un punto en un \emph{cluster}, dejando el resto del dataset al otro \emph{cluster} generado. Como veremos más adelante, esta es una forma de lograr un valor de \emph{Silhouette} muy bueno. Por tanto, este ejemplo sirve para motivar el resto de métricas que hemos empleado para evaluar los \emph{cluters}.
+
+El resto de algoritmos parece tener resultados bastantes buenos. Quizás destaca algo \emph{Mean Shift}, pues genera demasiados \emph{clusters} para el problema que estamos tratando (concretamente, genera 36 \emph{clusters}). Así que tendremos que vigilar ciertas métricas respecto a este algoritmo, para ver si obtiene buenos resultados según los criterios que hemos introducido.
+
+El resto de \emph{clusters} parecen muy buenos, teniendo resultados bastante parecidos. Fijémonos por ejemplo en los resultados de \emph{BIRCH}. Empezando por las distribuciones de las variables, podemos fijarnos en que ha tomado un \emph{cluster} (el \emph{cluster} con etiqueta 3) con una renta media, un gasto moderado (tanto en hogar como en transporte) y que tiene mucha concentración en ciertas comunidades. De hecho, es el \emph{cluster} que más se concentra por comunidad autónoma. Sería interesante saber cuál es esa comunidad autónoma, pero por cuestiones de tiempo nos conformamos con la información que hemos expuesto. Podemos pensar que esto se debe a que es el \emph{cluster} con mayor número de elementos. Siguiendo en menor medida las tendencias del \emph{cluster} 3, tenemos el \emph{cluster} 2, con la segunda mayor renta y gasto.
+
+El \emph{cluster} 3 es el que más bajo está en el ratio gastos en vivienda / renta disponible, mientras que el \emph{cluster} 1 es el más alto. El \emph{cluster} 0 es el que más gasta en transporte y en vivienda, en relación a la renta total. Por tanto, podemos pensar que el algoritmo de \emph{clusterización} ha encontrado un perfil de persona que gasta mucho en relación a lo que gana.
+
+Con estas visualizaciones y estas apreciaciones sobre los perfiles encontrados, pasamos a mostrar las métricas obtenidas por los algoritmos:
+
+
+\begin{table}[H]
+\begin{center}
+    \resizebox{1.05\textwidth}{!}{
+    \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+        \hline
+        nombre & calinski & davies & elements mean & elements std & time & silhouette & total clusters & unbalanced \\
+
+        \hline
+        kmeans &  735.23 &  1.08 &  486.75 &  240.54 &  0.21 &  0.31 &  4 & 0.92 \\
+        dbscan &  6.78 &  0.35 &  973.50 &  972.50 &  2.23 &  0.51 &  2 & 0.01 \\
+        birch &  550.25 &  1.13 &  486.75 &  399.34 &  0.21 &  0.28 &  4 & 0.78 \\
+        mean shift &  131.13 &  1.08 &  52.62 &  139.62 &  17.18 &  0.17 &  37 & 0.60 \\
+        agglomerative &  552.65 &  1.22 &  486.75 &  359.85 &  0.19 &  0.26 &  4 & 0.83 \\
+    \hline
+    \end{tabular}}
+\end{center}
+\caption{Resultados de los algoritmos según distintas métricas de evaluación}
+    \label{resultados_stcase01:tabla}
+\end{table}
+
+Lo primero que debemos explicar es qué significan ciertas métricas. \emph{elements mean} y \emph{elements std} son la media y desviación típica del número de elementos por \emph{cluster}. \emph{Unbalanced} es una métrica que hemos introducido para mirar el balanceo de la asignación de objetos a \emph{clusters}. Para ello, nos hemos inspirado en la siguiente contestación en un foro \emph{online} \cite{entropy_for_unbalanced:online}.
+
+La idea es bastante básica. Partimos de la conocida entropía, que se usa normalmente para medir la incertidumbre de cierta información:
+
+$$H = - \sum p_i \cdot log_2(p_i)$$
+
+La entropía se hace 0 cuando tenemos solo una clase con todos los datos, es decir, cuando el desbalanceo es el más alto (peor caso). No hay incertidumbre en la información. La entropía se hace máximo cundo el balanceo es perfecto, es decir, cuando distribuimos $n$ elementos en $k$ clases con $\frac{n}{k}$ elementos por cada clase. En cuyo caso, el valor máximo es $H = log(k)$. Para hacer que nuestra métrica esté en el rango $[0, 1]$, normalizamos tal que:
+
+$$unbalanced = \frac{H}{log(k)}$$
+
+Con esto, buscamos que esta métrica tome valores lo más cercanos a 1, para que la distribución en \emph{clusters} no sea un caso extremo (por ejemplo, como ya hemos visto, un punto en un \emph{cluster} y el resto en otro \emph{cluster}).
+
+Antes de interpretar los resultados de la tabla \customcite{resultados_stcase01:tabla}, mostramos las métricas de forma gráfica, pues esto facilitará la comprensión de dichas métricas y el comportamiento de los algoritmos. Decidimos no mostrar las dos gráficas asociadas a las métricas de los elementos, pues es una información que estamos resumiendo en la métrica \emph{unbalanced}.
+
+\begin{figure}[H]
+    \centering
+
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{stcase01_metricagrafica_silhouette}
+        \caption{Silhouette}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{stcase01_metricagrafica_calinski}
+        \caption{Calinski}
+    \end{subfigure}
+
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{stcase01_metricagrafica_davies}
+        \caption{Davies}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{stcase01_metricagrafica_time}
+        \caption{Tiempo de ejecución}
+    \end{subfigure}
+
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{stcase01_metricagrafica_total_clusters}
+        \caption{Número total de clusters}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{stcase01_metricagrafica_total_unbalanced}
+        \caption{Métrica \emph{unbalanced}}
+    \end{subfigure}
+
+    \caption{Gráficas con las distintas métricas que hemos construido}
+\end{figure}
+
+Con toda esta información, podemos proceder a realizar ciertas conclusiones sobre los algoritmos de \emph{clusterización}.
+
+
+
 \subsection{Interpretación de la segmentación}
 
 % TODO -- poco gasto en transporte, como muestra \ref{stcase01_pairplot:figura}
