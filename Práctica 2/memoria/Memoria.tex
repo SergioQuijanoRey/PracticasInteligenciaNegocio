@@ -216,7 +216,7 @@ A partir de este punto ya nos encontramos con las secciones propias a los casos 
 
 \section{Caso de estudio 1}
 
-\subsection{Definición del caso de estudio}
+\subsection{Definición del caso de estudio} \label{stcase01_definicion:seccion}
 
 En este caso de estudio queremos poner nuestra atención en aquellas personas que \textbf{viven en un entorno en el que hay vandalismo}. Para ello usamos la variable \lstinline{vandalismo_en_la_zona}, que se corresponde con el código \lstinline{"HS190"}.
 
@@ -771,6 +771,101 @@ En quinto y último lugar, ha sido notorio los malos resultados obtenidos con \e
 \pagebreak
 
 \section{Caso de estudio 2}
+
+\subsection{Definición del caso de estudio}
+
+En el primer caso de estudio, hemos visto que la presencia de vandalismo o no en el entorno del hogar no influye en los comportamientos de gasto en transporte público. Así que en este caso de estudio, nos centraremos en aquellas \textbf{personas que gastan más en transporte público que un porcentaje de la media}. Concretamente, el 60\% de la media en gasto en transporte público.
+
+En un primer momento queríamos centrarnos en la población que gasta más que la media de la población, pero esto nos dejaba con un \emph{dataset} demasiado pequeño.
+
+Este filtrado lo hacemos usando la siguiente máscara:
+
+\lstinline{df_global[gasto_transporte_publico] >= 0.6 * public_transport_mean}
+
+
+Una vez filtradas las filas que vamos a estudiar, filtramos las variables (columnas) que nos interesan. En concreto, nos quedamos con el gasto en transporte privado, los ingresos mínimos para llegar a fin de mes, el tipo de vivienda y el número de miembros del hogar. Los estudios que queremos hacer usando estas variables son:
+
+
+\begin{itemize}
+    \item Estudiar cómo se relaciona el gasto en transporte privado en relación al gasto en transporte público
+    \item ¿El uso de transporte público esta correlacionado con la dificultad para llegar a fin de mes?
+    \item ¿Un mayor número de miembros en el hogar implica un uso mayor o menor en transporte privado o público?
+\end{itemize}
+
+De nuevo, en el \emph{dataframe} que usamos para almacenar estos datos (\lstinline{df_study_case}), guardamos el factor de elevación, que usaremos para ponderar los ejemplos, en aquellos algoritmos que acepten este parámetro de ponderación.
+
+Tras el filtrado, obtenemos un \emph{dataset} con 2290 filas (objetos a \emph{clusterizar}) y 5 columnas (4 + 1 para el factor de elevación).
+
+\pagebreak
+
+\subsection{Procesado de los datos}
+
+De nuevo, realizaremos el siguiente pre-procesado de los datos:
+
+\begin{itemize}
+    \item Borrado de las filas que contengan algún valor \lstinline{NaN}
+    \item Borrado de \emph{outliers} usando la regla $3 \cdot IQR$, variable por variable
+    \item Normalización del rango de las variables al intervalo $[0, 1]$
+\end{itemize}
+
+Tras aplicar esto, nos quedamos con un \emph{dataset} de 1476 filas.
+
+\pagebreak
+
+\subsection{Análisis Exploratorio de datos}
+
+Comenzamos haciendo el \lstinline{pairplot} de las variables con las que trabajamos:
+
+\begin{figure}[H]
+    \centering
+
+    \includegraphics[width = 0.9 \textwidth]{stcase02_pairplot}
+    \caption{Gráfico en el que se muestran todas las combinaciones de parejas de variables involucradas en el caso de estudio}
+    \label{stcase01_pairplot:figura}
+\end{figure}
+
+En primer lugar, vemos que hay un tipo de vivienda que destaca sobre el resto. Sospechamos que esto no sea relevante, pues seguramente sea el tipo de vivienda predominante sobre el conjunto de toda la población (pisos).
+
+El número de miembros del hogar sigue una distribución parecida a la normal, pero que al lado derecho tiene una caída más grande de lo que veríamos en una distribución propiamente normal. En el subconjunto de la población que estamos estudiando, es realmente difícil dar el paso de un número dado de miembros del hogar a otro. Concretamente, dar el paso de 4 miembros a 5, siendo 4 miembros lo más frecuente en los hogares que estamos estudiando.
+
+Los ingresos mínimos para llegar a fin de mes también parecen seguir en cierta forma una distribución normal. Hay ciertos valores intermedios con apenas frecuencia, que puede ser explicado por la forma en la que contestan las personas (es más común decir que los ingresos mínimos son 1000€ que, por ejemplo, decir que son 1100€).
+
+El gasto en transporte privado sigue la usual forma semejante a una normal cuya parte izquierda es más abrupta, y su cola derecha es más chata, allanándose de forma más suave y continuada.
+
+Por la naturaleza de las variables que hemos escogido, muchas combinaciones de pares de estas no aportan apenas información. Por ejemplo, el par \emph{tipo de vivienda} y \emph{gasto en transporte privado}. Solo parece útil la combinación \emph{ingresos mínimos para llegar a fin de mes} y \emph{gasto en transporte privado}. Ambas parecen estar ligeramente correladas positivamente. Esto no aporta demasiada información, pues es lógico que cuanto más se gaste en transporte privado, mayores serán los ingresos necesarios para llegar a fin de mes, pues la primera variable forma parte de los sumandos que definen la segunda.
+
+Veamos en la siguiente gráfica como se relaciona el gasto en transporte público con el gasto en transporte privado:
+
+\begin{figure}[H]
+    \centering
+
+    \includegraphics[width = 0.4 \textwidth]{stcase02_relacion_transporte_publico_privado}
+    \caption{Gráfica en la que relacionamos el gasto en transporte público con gasto en transporte privado, en la población general de la encuesta}
+\end{figure}
+
+No conseguimos, con esta visualización, obtener conclusiones claras. Por lo tanto, deberemos realizar un estudio más avanzado, apoyándonos en el uso de las herramientas de clusterización.
+
+Del mismo modo que hemos hecho antes, intentamos sacar información comparando el gasto en transporte público con los ingresos mínimos para llegar a fin de mes y el número de componentes del hogar, sin obtener conclusiones definitivas, como mostramos a continuación:
+
+\begin{figure}[H]
+    \centering
+
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{stcase02_relacion_transporte_publico_ingresos_minimos}
+        \caption{Relación con los ingresos mínimos para llegar a fin de mes}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{stcase02_relacion_transporte_publico_miembros_hogar}
+        \caption{Relación con el número de miembros del hogar}
+    \end{subfigure}
+
+    \caption{Relación del gasto en transporte público, respecto a dos variables distintas}
+\end{figure}
+
+Por tanto, está más que motivado el uso de técnicas más avanzadas. En nuestro caso, técnicas basadas en algoritmos de \emph{clusterización}.
+
+
+
 
 \pagebreak
 
