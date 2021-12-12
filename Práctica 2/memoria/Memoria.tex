@@ -755,10 +755,16 @@ En segundo lugar, nuestra sospecha de que la presencia de vandalismo iba a cambi
 
 En tercer lugar, hemos encontrado pares de variables demasiado correladas entre sí, por lo que hemos decidido no usar esos pares de variables en un mismo caso de estudio.
 
-% TODO == seguir escribiendo esto
-En cuarto lugar, comentamos la segmentación general obtenida por los algoritmos.
+En cuarto lugar, comentamos la segmentación general obtenida por los algoritmos. Obtenemos un perfil de hogar mayoritario, en el que la renta y gasto son medios. Se concentran sobre todo en una serie de comunidades autónomas, que sospechamos que son las que mayor parte de la población aportan al conjunto del estado español. Obtenemos otro perfil de hogar, que es el que más gasta respecto a la renta disponible. Esto puede deberse a dos motivos:
 
-En quinto lugar, ha sido notorio los malos resultados obtenidos con \emph{DBSCAN}, incluso explorando los parámetros que definen este modelo. Este mal comportamiento ha sido realmente útil para justificar la insuficiencia de usar ciertas métricas de forma aislada, y la bondad de la métrica \emph{unbalanced} que hemos introducido.
+\begin{enumerate}
+    \item El hogar dispone de una renta alta, pero los gastos son también altos
+    \item El hogar dispone de una renta muy limitada, por lo que, a pesar de gastar poco, los gastos mínimos vitales suponen un gran esfuerzo para el hogar
+\end{enumerate}
+
+También encontramos un perfil de bajo gasto respecto a la renta disponible. Un perfil algo más ahorrador.
+
+En quinto y último lugar, ha sido notorio los malos resultados obtenidos con \emph{DBSCAN}, incluso explorando los parámetros que definen este modelo. Este mal comportamiento ha sido realmente útil para justificar la insuficiencia de usar ciertas métricas de forma aislada, y la bondad de la métrica \emph{unbalanced} que hemos introducido.
 
 \pagebreak
 
