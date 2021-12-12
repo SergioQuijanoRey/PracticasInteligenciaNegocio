@@ -1148,6 +1148,210 @@ En tercer lugar, todos los algoritmos han obtenido resultados competentes. A dif
 
 \section{Caso de estudio 3}
 
+\subsection{Definición del caso de estudio}
+
+En este caso de estudio queremos poner nuestra atención en aquellos \textbf{hogares que poseen alguna vivienda adicional}. Por tanto, esta será la condición que usaremos para filtrar la población general en nuestra población de estudio.
+
+Una vez filtradas las filas que vamos a estudiar, filtramos las variables (columnas) que nos interesan. En concreto, nos quedamos con la capacidad del hogar para llegar a fin de mes, el tipo de vivienda (que ya hemos estudiado en parte previamente), el régimen de tenencia de la vivienda y el número de habitaciones por persona.
+
+Notar que el número de habitaciones por persona es una variable agregada que hemos añadido, computando el cociente entre el número de habitaciones dividido por el número de miembros del hogar.
+
+Además del interés que puede despertar estudiar las variables escogidas, queríamos estudiar el comportamiento de los algoritmos considerados cuando se usan variables no continuas, pero con bastantes valores posibles (por ejemplo, el número de habitaciones por persona).
+
+Notar que estamos centrando gran parte de nuestra atención en el estudio de la población usando características estrechamente relacionadas con la vivienda.
+
+Por tanto, los principales estudios que queremos hacer usando estas variables son:
+
+\begin{itemize}
+    \item ¿Cómo funcionan los algoritmos estudiados cuando se le presentan muchas variables no continuas?
+    \item ¿Puede usarse la vivienda para identificar a segmentos de población de forma efectiva?
+\end{itemize}
+
+De nuevo, en el \emph{dataframe} que usamos para almacenar estos datos (\lstinline{df_study_case}), guardamos el factor de elevación, que usaremos para ponderar los ejemplos, en aquellos algoritmos que acepten este parámetro de ponderación.
+
+Tras el filtrado, obtenemos un \emph{dataset} con 9742 filas (objetos a \emph{clusterizar}) y 5 columnas (4 + 1 para el factor de elevación).
+
+\pagebreak
+
+\subsection{Procesado de los datos}
+
+De nuevo, realizaremos el siguiente pre-procesado de los datos:
+
+\begin{itemize}
+    \item Borrado de las filas que contengan algún valor \lstinline{NaN}
+    \item Borrado de \emph{outliers} usando la regla $3 \cdot IQR$, variable por variable
+    \item Normalización del rango de las variables al intervalo $[0, 1]$
+\end{itemize}
+
+Tras aplicar esto, nos quedamos con un \emph{dataset} de 9536 filas. En este caso, estamos trabajando con un \emph{dataset} mucho más grande que con los dos casos de estudio previo. Esta situación también entrará en juego en el estudio que hagamos de los algoritmos.
+
+\pagebreak
+
+\subsection{Análisis Exploratorio de datos}
+
+Comenzamos haciendo el \lstinline{pairplot} de las variables con las que trabajamos:
+
+\begin{figure}[H]
+    \centering
+
+    \includegraphics[width = 0.9 \textwidth]{stcase03_pairplot}
+    \caption{Gráfico en el que se muestran todas las combinaciones de parejas de variables involucradas en el caso de estudio}
+    \label{stcase01_pairplot:figura}
+\end{figure}
+
+Claramente, no podemos sacar demasiada información de esta gráfica por la naturaleza de las variables con las que trabajamos. Este es, por tanto, un primer inconveniente de trabajar con un \emph{dataset} basado solo en variables categóricas o discretas.
+
+La distribución de la variable \emph{tipo de vivienda} ya ha sido discutida previamente. El resto de distribuciones siguen los patrones típicos que ya hemos comentado. Por ejemplo, la capacidad para llegar a fin de mes y el número de habitaciones por persona siguen una distribución similar a la normal. El régimen de tenencia de vivienda y el tipo de vivienda siguen otro patrón común, en la que la frecuencia varía de forma monótona.
+
+Como ya hemos dicho, de las gráficas por pares de variables apenas podemos tomar información. Los pares con las habitaciones por personas parecen dar algo de información, pero solo reflejan que hay mayor granularidad de la variable en la zona por debajo de 0.5. Y esto ya lo podíamos saber viendo la gráfica de la distribución de las habitaciones por persona. Esta diferencia de granularidad solo refleja las características de las variables con las que hemos hecho el cociente (las variables que forman el cociente son discretas con sus propias distribuciones). Lo importante está en las frecuencias y no en la granularidad en la que se toman los valores.
+
+\pagebreak
+
+\subsection{Resultados de \emph{clustering}} \label{stcase01_parametros:seccion}
+
+Aplicamos \emph{clustering} con los siguientes parámetros:
+
+\begin{enumerate}
+    \item \lstinline{K-means}: total de \emph{clusters} 2
+    \item \lstinline{DBSCAN}: $\epsilon = 0.3$, mínimo de ejemplos 1
+    \item \lstinline{BIRCH}: total de \emph{clusters} 2, \emph{threshold} 0.5
+    \item \lstinline{Mean Shift}: banda de 0.5, 1000 iteraciones máximas
+    \item \emph{Clustering} aglomerativo: total de \emph{cluters} 2, técnica \entrecomillado{ward}
+\end{enumerate}
+
+Antes de mostrar la tabla con las métricas de los algoritmos, mostramos gráficamente los resultados obtenidos:
+
+\begin{figure}[H]
+    \centering
+
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{stcase03_resultadografico_kmeans}
+        \caption{\lstinline{K-Means}}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{stcase03_resultadografico_DBSCAN}
+        \caption{\lstinline{DBSCAN}}
+    \end{subfigure}
+
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{stcase03_resultadografico_BIRCH}
+        \caption{\lstinline{BIRCH}}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{stcase03_resultadografico_MEANSHIFT}
+        \caption{\lstinline{Mean-Shift}}
+    \end{subfigure}
+
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{stcase03_resultadografico_AGLOMERATIVO}
+        \caption{\emph{Clustering} aglomerativo}
+    \end{subfigure}
+
+
+    \caption{Resultados gráficos tras aplicar los distintos algoritmos de \emph{clustering}. Realizamos la misma gráfica \emph{pairplot}, pero coloreando según el \emph{cluster} que hemos asignado}
+    \label{stcase03_resultadosgraficos:figure}
+
+\end{figure}
+
+Por lo mal que funciona el gráfico \lstinline{pairplot} con estas variables, es más complicado realizar una interpretación de los resultados obtenidos. En todos los algoritmos vemos los picos en las distribuciones que ya hemos comentado con anterioridad, y que como también hemos comentado, son un signo positivo de que las variables escogidas sirven para segmentar de forma efectiva la población bajo estudio.
+
+A partir de ahora ponemos nuestra atención en \emph{K-Means}. Destaca la variable tipo de vivienda, que separa perfectamente los dos segmentos de población. Además, es claro que el número de habitaciones por persona es menor en este segmento que en el otro encontrado.
+
+Esto es bastante obvio, pues si escogemos un tipo de vivienda con muchas habitaciones, tenemos un valor de habitaciones por persona bajo. Además, esto puede estar favorecido por el hecho de que el hogar esté compuesto por pocos miembros (por ejemplo, una persona sola o parejas sin hijos, que pueden destinar más dinero a comprar una buena vivienda).
+
+El resto de algoritmos van acorde a lo que acabamos de comentar. El único que se sale de esta tendencia es \emph{DBSCAN} al haber obtenido un número de \emph{clusters} mayor que 2.
+
+
+Con estas visualizaciones y estas apreciaciones sobre los perfiles encontrados, pasamos a mostrar las métricas obtenidas por los algoritmos:
+
+\begin{table}[H]
+\begin{center}
+    \resizebox{1.05\textwidth}{!}{
+    \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+        \hline
+            nombre & calinski & davies & elements mean & elements std & time & silhouette & total clusters & unbalanced \\
+
+        \hline
+
+            kmeans &  4595.52 &  1.25 &  4768.00 &  1751.00 &  1.05 &  0.34 &  2 &  0.90 \\
+            dbscan &  2132.88 &  2.44 &  2384.00 &  1235.69 &  0.53 &  0.17 &  4 &  0.91 \\
+            birch &  4271.04 &  1.33 &  4768.00 &  1483.00 &  0.14 &  0.32 &  2 &  0.93 \\
+            mean shift &  4595.52 &  1.25 &  4768.00 &  1751.00 &  86.54 &  0.34 &  2 &  0.90 \\
+            agglomerative &  3987.63 &  1.32 &  4768.00 &  1931.00 &  3.03 &  0.32 &  2 &  0.88 \\
+
+
+    \hline
+    \end{tabular}}
+\end{center}
+\caption{Resultados de los algoritmos según distintas métricas de evaluación}
+    \label{resultados_stcase01:tabla}
+\end{table}
+
+Antes de interpretar los resultados de la tabla, mostramos las métricas de forma gráfica, pues esto facilitará la comprensión de dichas métricas y el comportamiento de los algoritmos. De nuevo, decidimos no mostrar las dos gráficas asociadas a las métricas de los elementos, pues es una información que estamos resumiendo en la métrica \emph{unbalanced}.
+
+\begin{figure}[H]
+    \centering
+
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{stcase03_metricagrafica_silhouette}
+        \caption{Silhouette}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{stcase03_metricagrafica_calinski}
+        \caption{Calinski}
+    \end{subfigure}
+
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{stcase03_metricagrafica_davies}
+        \caption{Davies}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{stcase03_metricagrafica_time}
+        \caption{Tiempo de ejecución}
+    \end{subfigure}
+
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{stcase03_metricagrafica_total_clusters}
+        \caption{Número total de clusters}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{stcase03_metricagrafica_total_unbalanced}
+        \caption{Métrica \emph{unbalanced}}
+    \end{subfigure}
+
+    \caption{Gráficas con las distintas métricas que hemos construido}
+    \label{stcase03_metricas_graficas:figure}
+\end{figure}
+
+Con toda esta información, podemos proceder a realizar ciertas conclusiones sobre los algoritmos de \emph{clusterización}.
+
+\pagebreak
+
+\subsection{Interpretación de los resultados de \emph{clustering}}
+
+En primer lugar, vemos que todos los algoritmos están prácticamente igual de balanceados. Esto era de esperar pues todos menos \emph{DBSCAN} obtienen prácticamente los mismos resultados. Además, \emph{DBSCAN} es el segundo mejor algoritmo respecto a esta métrica, a pesar de haber encontrado cuatro \emph{clusters} y no solo 2. Esto de por sí es sorprende, pero lo es todavía más cuando tenemos en cuenta todo lo que llevamos comentado de este algoritmo respecto al problema del balanceo.
+
+Sin embargo, cuando nos fijamos en las métricas de \emph{Silhouette} y \emph{Calinski}, vemos que \emph{DBSCAN} ha obtenido resultados significativamente peores que el resto de algoritmos. El resto, por lo que ya hemos comentado (resultados muy parecidos), obtiene métricas muy parecidas unas a otras.
+
+Si nos fijamos en \emph{Silhouette}, vemos que obtenemos resultados mediocres, teniendo en cuenta los resultados que hemos obtenido en los casos de estudio previos. Además, como comentaremos más adelante, hemos usado los mejores parámetros que hemos explorado, en los cinco algoritmos presentados.
+
+Por tanto parece lógico pensar que, efectivamente, los algoritmos de \emph{clusterización} usados funcionan significativamente peor cuando trabajan con variables no continuas.
+
+Respecto a los tiempos de ejecución, \emph{mean shift} sigue siendo el algoritmo que más tarda, con una diferencia muy grande respecto al resto de algoritmos. Esto se ve agravado al estar usando un conjunto de datos mucho más grande que en los casos de estudio previos.
+
+\pagebreak
+
+\subsection{Visualizando en 2D las clusterizaciones}
+
+En esta ocasión no presentaremos visualizaciones en dos dimensiones. Las características del conjunto de datos que ya hemos comentado hacen que no obtengamos visualizaciones interesantes. Por tanto, y por evitar ser repetitivos, no mostramos dichas visualizaciones. Además, hemos presentado en dos ocasiones dichas visualizaciones, y el tipo de información extraída con ello ha sido la misma.
+
+A pesar de esto, el código que muestra estas visualizaciones está disponible en el \emph{Notebook} por si es de interés su consulta.
+
+\pagebreak
+
+\subsection{Ajuste de los parámetros de los algoritmos}
+
+
 \pagebreak
 
 % Bibliografia
