@@ -828,7 +828,7 @@ En primer lugar, vemos que hay un tipo de vivienda que destaca sobre el resto. S
 
 El número de miembros del hogar sigue una distribución parecida a la normal, pero que al lado derecho tiene una caída más grande de lo que veríamos en una distribución propiamente normal. En el subconjunto de la población que estamos estudiando, es realmente difícil dar el paso de un número dado de miembros del hogar a otro. Concretamente, dar el paso de 4 miembros a 5, siendo 4 miembros lo más frecuente en los hogares que estamos estudiando.
 
-Los ingresos mínimos para llegar a fin de mes también parecen seguir en cierta forma una distribución normal. Hay ciertos valores intermedios con apenas frecuencia, que puede ser explicado por la forma en la que contestan las personas (es más común decir que los ingresos mínimos son 1000€ que, por ejemplo, decir que son 1100€).
+Los ingresos mínimos para llegar a fin de mes también parecen seguir en cierta forma una distribución normal. Hay ciertos valores intermedios con apenas frecuencia, que puede ser explicado por la forma en la que contestan las personas (es más común decir que los ingresos mínimos son 1000 EUR que, por ejemplo, decir que son 1100 EUR )
 
 El gasto en transporte privado sigue la usual forma semejante a una normal cuya parte izquierda es más abrupta, y su cola derecha es más chata, allanándose de forma más suave y continuada.
 
@@ -864,6 +864,140 @@ Del mismo modo que hemos hecho antes, intentamos sacar información comparando e
 
 Por tanto, está más que motivado el uso de técnicas más avanzadas. En nuestro caso, técnicas basadas en algoritmos de \emph{clusterización}.
 
+\pagebreak
+
+\subsection{Resultados de \emph{clustering}} \label{stcase01_parametros:seccion}
+
+Aplicamos \emph{clustering} con los siguientes parámetros:
+
+\begin{enumerate}
+    \item \lstinline{K-means}: total de \emph{clusters} 3
+    \item \lstinline{DBSCAN}: $\epsilon = 0.3$, mínimo de ejemplos 5
+    \item \lstinline{BIRCH}: total de \emph{clusters} 3, \emph{threshold} 0.5
+    \item \lstinline{Mean Shift}: banda de 0.4, 1000 iteraciones máximas
+    \item \emph{Clustering} aglomerativo: total de \emph{cluters} 3, técnica \entrecomillado{ward}
+\end{enumerate}
+
+Antes de mostrar la tabla con las métricas de los algoritmos, mostramos gráficamente los resultados obtenidos:
+
+\begin{figure}[H]
+    \centering
+
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{stcase02_resultadografico_kmeans}
+        \caption{\lstinline{K-Means}}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{stcase02_resultadografico_DBSCAN}
+        \caption{\lstinline{DBSCAN}}
+    \end{subfigure}
+
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{stcase02_resultadografico_BIRCH}
+        \caption{\lstinline{BIRCH}}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{stcase02_resultadografico_MEANSHIFT}
+        \caption{\lstinline{Mean-Shift}}
+    \end{subfigure}
+
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{stcase02_resultadografico_AGLOMERATIVO}
+        \caption{\emph{Clustering} aglomerativo}
+    \end{subfigure}
+
+
+    \caption{Resultados gráficos tras aplicar los distintos algoritmos de \emph{clustering}. Realizamos la misma gráfica \emph{pairplot}, pero coloreando según el \emph{cluster} que hemos asignado}
+    \label{stcase02_resultadosgraficos:figure}
+
+\end{figure}
+
+Los algoritmos \emph{K-means} y \emph{Clustering aglomerativo} siguen obteniendo muy buenos resultados (al menos de forma aparente), como en el caso de estudio anterior. Lo más destacable es que ahora \textbf{\emph{DBSCAN} consigue obtener buenos resultados}, más allá de los resultados triviales que generaba en el primer caso de estudio.
+
+Tanto \emph{BIRCH} como \emph{Mean Shift} parecen obtener malos resultados, pues generan únicamente dos \emph{clusters} no muy diferenciados entre sí. A pesar de esto, tendremos que esperar a mirar los valores de las métricas obtenidas para exponer unas conclusiones más contundentes.
+
+Nos centramos en \emph{K-Means}, para estudiar qué perfiles de hogares hemos encontrado. En primer lugar, los picos en las distribuciones asociadas a una única variable nos muestran que la elección de las variables ha sido buena. Esto porque estas variables han determinado en gran medida cómo hemos separado a la población bajo estudio.
+
+Nos fijamos en el único par de variables cuya distribución conjunta nos da información. Vemos que el segmento de etiqueta 2 es el que menos ingresos requiere para llegar a fin de mes. Si nos fijamos en el tipo de vivienda, el segmento 1 es el que monopoliza dos tipos de vivienda, los dos más bajos cuando nos fijamos en la gráfica conjunta con el gasto en transporte privado. Fijándonos de nuevo en el segmento 2, es el que mayor presencia tiene en los dos valores más bajos de número de miembros.
+
+Es claro, por tanto, que el \emph{cluster} etiquetado con valor 2 es aquel con pocos miembros en el hogar, y que por tanto requieren de menos ingresos para llegar a fin de mes. Los otros dos \emph{clusters} restantes se reparten de forma bastante equitativa el espacio respecto al número de miembros del hogar y los ingresos mínimos para llegar a fin de mes.
+
+Con estas visualizaciones y estas apreciaciones sobre los perfiles encontrados, pasamos a mostrar las métricas obtenidas por los algoritmos:
+
+\begin{table}[H]
+\begin{center}
+    \resizebox{1.05\textwidth}{!}{
+    \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+        \hline
+        nombre & calinski & davies & elements mean & elements std & time & silhouette & total clusters & unbalanced \\
+
+        \hline
+
+        kmeans &  861.25 &  1.21 &   492.00 &  123.80 &  0.23 &   0.30 &  3 &  0.97 \\
+        dbscan &  344.66 &  1.65 &   295.20 &  315.75 &  0.06 &   0.20 &  5 &  0.67 \\
+        birch &  959.13 &  0.98 &   738.00 &  420.00 &  0.06 &   0.44 &  2 &  0.75 \\
+        mean shift &  959.15 &  0.98 &   738.00 &  421.00 &  9.80 &   0.44 &  2 &  0.75 \\
+        agglomerative &  725.81 &  1.32 &   492.00 &  89.54 &  0.07 &   0.26 &  3 &  0.98 \\
+
+
+    \hline
+    \end{tabular}}
+\end{center}
+\caption{Resultados de los algoritmos según distintas métricas de evaluación}
+    \label{resultados_stcase01:tabla}
+\end{table}
+
+Antes de interpretar los resultados de la tabla, mostramos las métricas de forma gráfica, pues esto facilitará la comprensión de dichas métricas y el comportamiento de los algoritmos. De nuevo, decidimos no mostrar las dos gráficas asociadas a las métricas de los elementos, pues es una información que estamos resumiendo en la métrica \emph{unbalanced}.
+
+\begin{figure}[H]
+    \centering
+
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{stcase02_metricagrafica_silhouette}
+        \caption{Silhouette}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{stcase02_metricagrafica_calinski}
+        \caption{Calinski}
+    \end{subfigure}
+
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{stcase02_metricagrafica_davies}
+        \caption{Davies}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{stcase02_metricagrafica_time}
+        \caption{Tiempo de ejecución}
+    \end{subfigure}
+
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{stcase02_metricagrafica_total_clusters}
+        \caption{Número total de clusters}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{stcase02_metricagrafica_total_unbalanced}
+        \caption{Métrica \emph{unbalanced}}
+    \end{subfigure}
+
+    \caption{Gráficas con las distintas métricas que hemos construido}
+    \label{stcase02_metricas_graficas:figure}
+\end{figure}
+
+Con toda esta información, podemos proceder a realizar ciertas conclusiones sobre los algoritmos de \emph{clusterización}.
+
+\pagebreak
+
+\subsection{Interpretación de los resultados de \emph{clustering}}
+
+Como ya hemos comentado, lo más destacable es que hemos obtenido un resultado no trivial para el algoritmo \emph{DBSCAN}. Sigue siendo el algoritmo con peor valor de \emph{unbalanced}, pero ahora su valor está cercano al resto. Los dos siguientes algoritmos con mejor balanceo son \emph{mean shift} y \emph{birch}. Pensábamos en un primer momento que iban a tener valores mucho peores, a vista de los resultados expuestos en \customcite{stcase02_resultadosgraficos:figure}. Los dos algoritmos más balanceados, como era de esperar por su naturaleza, son \emph{K-Means} en segundo lugar y \emph{clustering aglomerativo} en primero.
+
+En este caso, todos los algoritmos han generado un rango parecido de total de \emph{clusters}. \emph{K-means} y \emph{clustering aglomerativo} generan los \emph{clusters} que hemos especificado como parámetro. \emph{Birch} y \emph{Mean Shift} generan un \emph{cluster} menos, y \emph{DBSCAN} genera dos \emph{clusters} más.
+
+Si nos fijamos en \emph{Silhouette} y \emph{Calinski}, los dos mejores algoritmos han sido \emph{Birch} y \emph{Mean Shift}, contrario a lo que pensábamos a primera vista (tal y como hemos comentado previamente en esta memoria). Además, estos buenos resultados se apoyan en la métrica \emph{unbalanced} para asegurar que no hemos abusado de \emph{clusterizaciones} extremas o triviales.
+
+En \customcite{stcase02_resultadosgraficos:figure}, los resultados de \emph{Birch} y \emph{Mean Shift} son los más complicados de interpretar, y por tanto pensamos que han trabajado patrones algo más complejos. Aunque sigue existiendo un perfil de pocos miembros en la familia con bajo gasto, y el resto de hogares que no encajan en ese perfil. Por tanto, pensamos que esta división en dos perfiles es robusta, al estar de acuerdo con ella la mayoría de algoritmos estudiados.
+
+\pagebreak
 
 
 
