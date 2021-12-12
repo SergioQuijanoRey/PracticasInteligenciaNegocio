@@ -1073,6 +1073,59 @@ Salvo \emph{K-means} y \emph{Clustering aglomerativo}, obtenemos unas gráficas 
 
 Por no aportar información novedosa (tenemos patrones muy similares a los del primer caso de estudio), no añadimos los gráficos de dendogramas. A pesar de esto, en el \emph{Notebook} se encuentran disponibles para su consulta.
 
+\pagebreak
+
+\subsection{Ajuste de los parámetros de los algoritmos}
+
+En esta sección, decidimos ajustar los parámetros de \emph{Birch} y de \emph{Mean Shift}, al ser los dos algoritmos que mejor resultados han dado.
+
+Empezamos ajustando los parámetros de \emph{Mean Shift}. Los resultados de la exploración sobre estos parámetros se muestra en la siguiente tabla:
+
+\begin{table}[H]
+\begin{center}
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+            bandwidth & silhouette & calinski & unbalanced \\
+        \hline
+            0.30 &  0.21 &  315.31 &  0.69 \\
+            \textbf{0.40} &  \textbf{0.44} &  \textbf{959.15} &  \textbf{0.75} \\
+            0.50 &  -1.00 &  0.00 &  0.00 \\
+            0.60 &  -1.00 &  0.00 &  0.00 \\
+
+        \hline
+    \end{tabular}
+\end{center}
+    \caption{Resultados del ajuste de los parámetros de \emph{Mean Shift}}
+\end{table}
+
+Quedándonos con los valores de \emph{Silhouette}, el mejor \emph{bandwidth} es 0.4. Además, es el que mejores valores produce en el resto de parámetros.
+
+Notar que hemos dejado, a diferencia de otras ocasiones, aquellas combinaciones de parámetros que resultan en resultados triviales. Esto, porque en este caso hemos explorado pocas combinaciones de parámetros, pues como ya hemos visto, este es el algoritmo que más tarda en ejecutarse.
+
+Mostramos ahora el ajuste realizado para los parámetros de \emph{Birch}. Como hacíamos previamente, mostramos solo las configuraciones de los parámetros que no provocan \emph{clusterizaciones} triviales:
+
+\begin{table}[H]
+\begin{center}
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+            threshold & silhouette & calinski & unbalanced \\
+        \hline
+
+            0.10 &  0.26 &  727.01 &  0.94 \\
+            0.20 &  0.23 &  499.84 &  0.70 \\
+            0.30 &  0.38 &  573.93 &  0.61 \\
+            0.40 &  0.28 &  797.12 &  0.91 \\
+            \textbf{0.50} &  \textbf{0.44} &  \textbf{959.13} &  \textbf{0.75} \\
+
+        \hline
+    \end{tabular}
+\end{center}
+    \caption{Resultados del ajuste de los parámetros de \emph{Birch}}
+\end{table}
+
+En este caso, el mejor valor para \emph{Silhouette} no es el mejor valor para \emph{unbalanced}, pero si para \emph{Calinski}. Por tanto podríamos haber definido alguna métrica que ponderase con ciertos pesos ambas métricas, para encontrar un equilibrio entre ambas. Por falta de tiempo no realizamos este estudio.
+
+Notar que en ambos casos, los parámetros aquí encontrados son los que hemos usado previamente para clasificar, evitando tener que repetir la \emph{clusterización} y visualización de los resultados.
 
 \pagebreak
 
