@@ -999,6 +999,84 @@ En \customcite{stcase02_resultadosgraficos:figure}, los resultados de \emph{Birc
 
 \pagebreak
 
+\subsection{Visualizando en 2D las clusterizaciones}
+
+Usaremos \lstinline{TSNE} para realizar visualizaciones de la \emph{clusterización} en dos dimensiones. En este caso, no mostramos los resultados usando \emph{PCA}, pues es redundante y \emph{tsne} nos aporta formas más interesantes:
+
+Mostramos ahora los resultados aplicando \emph{tsne}:
+
+\begin{figure}[H]
+    \centering
+
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{stcase02_tsne_kmeans}
+        \caption{K-Means}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{stcase02_tsne_aglomerativo}
+        \caption{\emph{Clustering} aglomerativo}
+    \end{subfigure}
+
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{stcase02_tsne_birch}
+        \caption{Birch}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{stcase02_tsne_dbscan}
+        \caption{DBSCAN}
+    \end{subfigure}
+
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{stcase02_tsne_meanshift}
+        \caption{MeanShift}
+    \end{subfigure}
+
+        \caption{Resultados de las clusterizaciones, visualizadas en el espacio generado usando \emph{tsne}}
+\end{figure}
+
+Se puede ver que las islas que genera \emph{tsne} tienen cierta correlación con las \emph{clusterizaciones} realizadas por nuestros algoritmos. Esto es realmente relevante, pues \emph{tsne} no tiene información alguna de los algoritmos aplicados, solo de la distribución de los datos de entrada. Más allá de esto, no podemos extraer de esta visualización más información de la que ya hemos desarrollado.
+
+En este caso de estudio, no mostramos la gráfica de los centroides, pues no aporta información relevante sobre el problema que estamos estudiando.
+
+Mostramos las coordenadas paralelas, coloreando con la \emph{clusterización} de cada algoritmo:
+
+\begin{figure}[H]
+    \centering
+
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{stcase02_parallel_coordinates_kmeans}
+        \caption{K-Means}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{stcase02_parallel_coordinates_aglomerativo}
+        \caption{\emph{Clustering} aglomerativo}
+    \end{subfigure}
+
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{stcase02_parallel_coordinates_birch}
+        \caption{Birch}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{stcase02_parallel_coordinates_dbscan}
+        \caption{DBSCAN}
+    \end{subfigure}
+
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{stcase02_parallel_coordinates_meanshift}
+        \caption{MeanShift}
+    \end{subfigure}
+
+    \caption{Gráfica coordenadas paralelas, coloreando con los distintos algoritmos de \emph{clusterización}}
+\end{figure}
+
+Salvo \emph{K-means} y \emph{Clustering aglomerativo}, obtenemos unas gráficas mucho más sencillas que en el primer caso de estudio. Quizás \emph{DBSCAN} se sitúe en un punto intermedio entre sencillez y complejidad respecto a esta gráfica. Esto puede explicarse porque \emph{Birch} y \emph{Mean Shift} han sido los dos algoritmos con menos total de \emph{clusters}, y por ello no muestran mucha complejidad en este tipo de gráfica.
+
+Por no aportar información novedosa (tenemos patrones muy similares a los del primer caso de estudio), no añadimos los gráficos de dendogramas. A pesar de esto, en el \emph{Notebook} se encuentran disponibles para su consulta.
+
+
+\pagebreak
+
+
 
 
 \pagebreak
