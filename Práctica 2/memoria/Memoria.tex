@@ -345,7 +345,7 @@ Por tanto, no tiene sentido usar ambas variables en un mismo caso de estudio, pu
 
 \pagebreak
 
-\subsection{Resultados de \emph{clustering}}
+\subsection{Resultados de \emph{clustering}} \label{stcase01_parametros:seccion}
 
 Aplicamos \emph{clustering} con los siguientes parámetros:
 
@@ -400,7 +400,6 @@ El resto de \emph{clusters} parecen muy buenos, teniendo resultados bastante par
 El \emph{cluster} 3 es el que más bajo está en el ratio gastos en vivienda / renta disponible, mientras que el \emph{cluster} 1 es el más alto. El \emph{cluster} 0 es el que más gasta en transporte y en vivienda, en relación a la renta total. Por tanto, podemos pensar que el algoritmo de \emph{clusterización} ha encontrado un perfil de persona que gasta mucho en relación a lo que gana.
 
 Con estas visualizaciones y estas apreciaciones sobre los perfiles encontrados, pasamos a mostrar las métricas obtenidas por los algoritmos:
-
 
 \begin{table}[H]
 \begin{center}
@@ -554,9 +553,125 @@ Con estas gráficas podemos sacar poca información adicional respecto a lo que 
 
 En último lugar, no parece que \emph{tsne} haya servido para descubrir ciertas propiedades topológicas del conjunto de datos con el que trabajamos, ni estamos viendo correlaciones entre agrupaciones gracias a \emph{tsne} y nuestros algoritmos de \emph{clusterización}. No podemos concluir nada con esto, pues como ya hemos comentado, no estamos explorando distintas combinaciones de parámetros para \emph{tsne}.
 
+Hemos creado también una gráfica en la que mostramos los \emph{clusters} obtenidos de forma simplificada. Para ello, mostramos los centroides con el tamaño proporcional al radio del \emph{cluster} y con el color proporcional al número de elementos del \emph{cluster}. Además, aplicamos \emph{tsne} para realizar esta visualización en dos dimensiones. Los resultados obtenidos son los siguientes:
+
+\begin{figure}[H]
+    \centering
+
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{stcase01_centroides_kmeans}
+        \caption{K-Means}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{stcase01_centroides_aglomerativo}
+        \caption{\emph{Clustering} aglomerativo}
+    \end{subfigure}
+
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{stcase01_centroides_birch}
+        \caption{Birch}
+    \end{subfigure}
+
+        \caption{Gráfica que hemos descrito previamente, para los distintos algoritmos de \emph{clusterización usados en la práctica}}
+\end{figure}
+
+Notar que no se incluyen las gráficas ni de \emph{DBSCAN} ni de \emph{Mean Shift}. Esto porque la clusterización realizada provoca que no podamos computar ciertas métricas (en ambos, tenemos \emph{clusters} con solo un punto).
+
+En los tres algoritmos que podemos visualizar, vemos que hemos acabado con cuatro \emph{clusters} que forman aproximadamente un rombo, con centroides muy parecidos en posición. Aquí también se visualiza que \emph{K-Means} es el algoritmo que mejor distribuye los elementos por \emph{cluster}. Aunque no vamos a entrar en estudiar esto, porque para ello ya hemos discutido nuestra métrica \emph{unbalanced}. Por tanto, parece que salvo pequeñas diferencias, los cuatro algoritmos generan \emph{clusters} aparentemente muy parecidos.
+
+Mostramos las coordenadas paralelas, coloreando con la \emph{clusterización} de cada algoritmo:
+
+\begin{figure}[H]
+    \centering
+
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{stcase01_parallel_coordinates_kmeans}
+        \caption{K-Means}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{stcase01_parallel_coordinates_aglomerativo}
+        \caption{\emph{Clustering} aglomerativo}
+    \end{subfigure}
+
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{stcase01_parallel_coordinates_birch}
+        \caption{Birch}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{stcase01_parallel_coordinates_dbscan}
+        \caption{DBSCAN}
+    \end{subfigure}
+
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{stcase01_parallel_coordinates_meanshift}
+        \caption{MeanShift}
+    \end{subfigure}
+
+    \caption{Gráfica coordenadas paralelas, coloreando con los distintos algoritmos de \emph{clusterización}}
+\end{figure}
+
+Los resultados desastrosos de \emph{DBSCAN} se hacen evidentes de nuevo. El resto de algoritmos, salvo \emph{Mean Shift}, muestran una complejidad similar, aunque los patrones descubiertos sean algo distintos. Sin embargo, \emph{Mean Shift} muestra unos patrones demasiado complejos para el problema que estamos resolviendo, como ya hemos comentado previamente.
+
+Finalizamos este apartado mostrando los dendogramas obtenidos para cada algoritmo de \emph{clusterización}:
+
+\begin{figure}[H]
+    \centering
+
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{stcase01_dendogram_kmeans}
+        \caption{K-Means}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{stcase01_dendogram_aglomerativo}
+        \caption{\emph{Clustering} aglomerativo}
+    \end{subfigure}
+
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{stcase01_dendogram_birch}
+        \caption{Birch}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{stcase01_dendogram_dbscan}
+        \caption{DBSCAN}
+    \end{subfigure}
+
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{stcase01_dendogram_meanshift}
+        \caption{MeanShift}
+    \end{subfigure}
+
+    \caption{Dendograma de los distintos algoritmos de \emph{clusterización}}
+\end{figure}
+
+Se ve a simple vista que \emph{DBSCAN} es demasiado ruidoso, siendo difícil interpretar dicha gráfica. El resto de algoritmos, a simple vista, parecen tener comportamientos similares, incluso \emph{Mean Shift}.
+
 \pagebreak
 
 \subsection{Ajuste de los parámetros de los algoritmos}
+
+En esta sección, decidimos ajustar los parámetros de \emph{K-Means} y de \emph{DBSCAN}. En un primer momento escogemos ajustar \emph{DBSCAN}, obteniendo los parámetros que hemos usado en \customcite{stcase01_parametros:seccion}. Como ya hemos visto, esto provoca obtener unos resultados nefastos. Decidimos dejar estos resultados malos para ilustrar el proceso erróneo que hemos seguido y la necesidad de tener en cuenta métricas más allá de \emph{Silhouette}.
+
+Empezamos ajustando los parámetros de \emph{K-Means}. Los resultados de la exploración sobre estos parámetros se muestra en la siguiente tabla:
+
+\begin{table}[H]
+\begin{center}
+    \resizebox{1.05\textwidth}{!}{
+    \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+        \hline
+        nombre & calinski & davies & elements mean & elements std & time & silhouette & total clusters & unbalanced \\
+
+        \hline
+        kmeans &  735.23 &  1.08 &  486.75 &  240.54 &  0.21 &  0.31 &  4 & 0.92 \\
+        dbscan &  6.78 &  0.35 &  973.50 &  972.50 &  2.23 &  0.51 &  2 & 0.01 \\
+        birch &  550.25 &  1.13 &  486.75 &  399.34 &  0.21 &  0.28 &  4 & 0.78 \\
+        mean shift &  131.13 &  1.08 &  52.62 &  139.62 &  17.18 &  0.17 &  37 & 0.60 \\
+        agglomerative &  552.65 &  1.22 &  486.75 &  359.85 &  0.19 &  0.26 &  4 & 0.83 \\
+    \hline
+    \end{tabular}}
+\end{center}
+\caption{Resultados de los algoritmos según distintas métricas de evaluación}
+    \label{resultados_stcase01:tabla}
+\end{table}
 
 
 \pagebreak
