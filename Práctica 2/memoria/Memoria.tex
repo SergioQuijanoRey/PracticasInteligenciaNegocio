@@ -680,7 +680,7 @@ Fijándonos en el índice de \emph{Silhouette}, nos quedamos con el parámetro 4
 
 Notar que en el código tenemos gráficas para mostrar la evolución de las distintas métricas en base al parámetro. Esto ha sido útil a la hora de explorar los rangos de los parámetros, pero la información es tan sencilla que no tiene sentido que mostremos aquí estos gráficos. Cuando ajustemos los parámetros de \emph{DBSCAN}, mostraremos gráficamente la evolución, pues la información obtenida es algo más compleja.
 
-También es destacable el uso que hacemos de esta información. En todos los algoritmos en los que nos ha hecho fijar el número total de \emph{clusters}, hemos usado este valor. Por tanto, estamos usando esta exploración de parámetros y el algoritmo \emph{K-Means} como un método \emph{data-driven} para fijar los parámetros de otros algoritmos.
+También es destacable el uso que hacemos de esta información. En todos los algoritmos en los que ha sido necesario fijar el número total de \emph{clusters}, hemos usado este valor. Por tanto, estamos usando esta exploración de parámetros y el algoritmo \emph{K-Means} como un método \emph{data-driven} para fijar los parámetros de otros algoritmos.
 
 Mostramos ahora el ajuste realizado para los parámetros de \emph{DBSCAN}. Como se puede ver en el \emph{Notebook}, muchos de estos parámetros provocan obtener un \emph{Silhouette} nulo (al provocar el caso trivial de un único \emph{cluster}). Por simplicidad y claridad, en la siguiente tabla solo mostramos los valores de los parámetros que no provocan esta situación:
 
@@ -712,7 +712,7 @@ Mostramos ahora el ajuste realizado para los parámetros de \emph{DBSCAN}. Como 
     \label{resultados_stcase01:tabla}
 \end{table}
 
-Claramente vemos que, con ninguno de los parámetros explorados que no provoca resultados triviales, no conseguimos realizar una asignación balanceada. Así que lo único que importa en la selección de estos parámetros es el punto que dejamos aislado. Cuanto más alejado esté este punto del resto de puntos, mejores métricas obtendremos.
+Claramente vemos que, con ninguno de los parámetros explorados que no provoca resultados triviales, conseguimos realizar una asignación balanceada. Así que lo único que importa en la selección de estos parámetros es el punto que dejamos aislado. Cuanto más alejado esté este punto del resto de puntos, mejores métricas obtendremos.
 
 Como ya hemos comentado, mostramos gráficamente los resultados de la anterior tabla:
 
@@ -736,7 +736,7 @@ En ambas figuras, un valor más oscuro significa un mejor valor de la métrica. 
 Con esto, podemos concluir que los resultados de \emph{dbscan} son desastrosos, y la exploración de parámetros no ha sido suficiente para encontrar un buen resultado. Creemos que esto podría solventarse con alguna de las siguientes alternativas:
 
 \begin{enumerate}
-    \item Realizar un borrado de \emph{outliers} más intenso, para evitar que \emph{DBSCAN} encuentre esos puntos aislados sobre los que colocar un \emph{cluster}. Sin embargo, a vista de la distribución de datos con la que trabajamos, esto no parece razonable
+    \item Realizar un borrado de \emph{outliers} más intenso, para evitar que \emph{DBSCAN} encuentre esos puntos aislados sobre los que colocar un \emph{cluster}. Sin embargo, a vista de la distribución de datos con la que trabajamos, esto no parece razonable, pues no tenemos una distribución con muchos puntos aislados
     \item Incluir, en la funcionalidad que computa el algoritmo, condiciones para evitar crear esos \emph{clusters} con un único punto aislado. Esto parece lo más adecuado por la flexibilidad y control que aporta, pero supondría re-escribir la funcionalidad de \lstinline{sklearn} o implementar nuestro propio algoritmo de \emph{clusterización} con estas opciones
 \end{enumerate}
 
