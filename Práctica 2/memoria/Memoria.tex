@@ -1327,7 +1327,7 @@ Con toda esta información, podemos proceder a realizar ciertas conclusiones sob
 
 \pagebreak
 
-\subsection{Interpretación de los resultados de \emph{clustering}}
+\subsection{Interpretación de los resultados de \emph{clustering}} \label{stcase03_resultados:seccion}
 
 En primer lugar, vemos que todos los algoritmos están prácticamente igual de balanceados. Esto era de esperar pues todos menos \emph{DBSCAN} obtienen prácticamente los mismos resultados. Además, \emph{DBSCAN} es el segundo mejor algoritmo respecto a esta métrica, a pesar de haber encontrado cuatro \emph{clusters} y no solo 2. Esto de por sí es sorprende, pero lo es todavía más cuando tenemos en cuenta todo lo que llevamos comentado de este algoritmo respecto al problema del balanceo.
 
@@ -1350,6 +1350,40 @@ A pesar de esto, el código que muestra estas visualizaciones está disponible e
 \pagebreak
 
 \subsection{Ajuste de los parámetros de los algoritmos}
+
+En esta ocasión, hemos decidido ajustar los parámetros de los cinco algoritmos con los que estamos trabajando. De esta forma, la comparación entre los algoritmos que hemos hecho en \customcite{stcase03_resultados:seccion} es más justa, pues en todos hemos usado los mejores parámetros que hemos podido encontrar. Para hacer esto, los parámetros encontrados en esta sección son los que hemos aplicado a la hora de calcular las \emph{clusterizaciones} anteriormente.
+
+Como ya hemos explorado este proceso para cuatro algoritmos, y como no aporta nada nuevo al estudio del problema a resolver, solo mostramos los resultados obtenidos para el algoritmo que nos falta, el de \emph{clustering aglomerativo}:
+
+\begin{table}[H]
+\begin{center}
+    \begin{tabular}{|c|c|c|c|c|}
+        \hline
+            Número de clusters & Tipo Enlace & Silhouette & Calinski & unbalanced \\
+        \hline
+
+            \textbf{2} & \textbf{complete} &  \textbf{0.32} &  \textbf{3987.63} &  \textbf{0.88} \\
+            2 & single &  0.27 &  3788.89 &  1.00 \\
+            2 & ward &  0.31 &  3967.61 &  0.87 \\
+            3 & complete &  0.26 &  2831.62 &  0.77 \\
+            3 & single &  0.20 &  2753.31 &  0.91 \\
+            3 & ward &  0.29 &  3692.48 &  0.96 \\
+            4 & complete &  0.24 &  2240.70 &  0.72 \\
+            4 & single &  0.17 &  2132.88 &  0.91 \\
+            4 & ward &  0.29 &  3338.44 &  0.87 \\
+            5 & complete &  0.19 &  2258.26 &  0.85 \\
+            5 & single &  0.16 &  1601.10 &  0.79 \\
+            5 & ward &  0.28 &  3136.34 &  0.90 \\
+
+        \hline
+    \end{tabular}
+\end{center}
+    \caption{Resultados del ajuste de los parámetros de \emph{Clustering Aglomerativo}}
+    \label{resultados_stcase01:tabla}
+\end{table}
+
+Como siempre, nos quedamos con los parámetros que mejor valor de \emph{Silhouette} generan. Tenemos un balanceo muy bueno, a pesar de que no sea el mejor, y por tanto, sabemos que no estamos abusando de resultados triviales que generan buenos valores de \emph{Silhouette}.
+
 
 
 \pagebreak
