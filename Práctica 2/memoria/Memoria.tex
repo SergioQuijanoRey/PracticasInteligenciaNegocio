@@ -278,6 +278,7 @@ Como comentábamos previamente, destaca los picos de ciertas comunidades autóno
 
     \includegraphics[width = 0.8 \textwidth]{stcase01_porcentajes_vandalismo}
     \caption{Gráfico con el porcentaje de hogares que viven en entornos con vandalismo, agrupados por comunidades autónomas}
+    \label{grafica_vandalismo:figure}
 \end{figure}
 
 En este gráfico podemos ver que, como suponíamos, hay ciertas comunidades autónomas con un porcentaje de hogares en zonas con vandalismo mucho mayores que otras comunidades. Destaca la ciudad autónoma de Melilla, que se distancia de la segunda peor comunidad según esta métrica prácticamente un 10\%. Además, a la vista de estos datos, y sin necesidad de introducir datos externos sobre poblaciones de las comunidades autónomas, parece que las zonas más rurales y con menos concentración de población (Cantabria, Extremadura, Asturias, \ldots) tienen porcentajes de vandalismo significativamente menor que comunidades más densamente pobladas (Cataluña, Andalucía, Madrid, \ldots). Destacan, saliéndose de lo que acabamos de comentar, las dos ciudades autónomas.
@@ -289,6 +290,7 @@ A continuación, mostramos el gasto medio en transporte público según si se vi
 
     \includegraphics[width = 0.6 \textwidth]{stcase01_gasto_tpublico_vandalismo}
     \caption{Media de gasto en transporte público. A la izquierda, media de gasto en la población que vive en zonas con vandalismo. A la derecha, media de gasto en la población que vive en zonas sin vandalismo}
+    \label{gasto_tpublico_medio:figure}
 \end{figure}
 
 A vista de estos resultados, no podemos sacar conclusiones de interés sobre un comportamiento distinto de las dos poblaciones. La media es prácticamente la misma. Como la media no está siendo lo suficientemente informativa (estamos resumiendo demasiado toda la información de las poblaciones), mostramos las distribuciones de gasto en transporte público en las dos poblaciones:
@@ -308,6 +310,7 @@ A vista de estos resultados, no podemos sacar conclusiones de interés sobre un 
 
 
     \caption{Distribuciones de gasto en transporte público de las dos poblaciones estudiadas, según presencia o no de vandalismo en la zona del hogar}
+    \label{gasto_tpublico_completo:figure}
 \end{figure}
 
 
@@ -740,12 +743,22 @@ Con esto, podemos concluir que los resultados de \emph{dbscan} son desastrosos, 
     \item Incluir, en la funcionalidad que computa el algoritmo, condiciones para evitar crear esos \emph{clusters} con un único punto aislado. Esto parece lo más adecuado por la flexibilidad y control que aporta, pero supondría re-escribir la funcionalidad de \lstinline{sklearn} o implementar nuestro propio algoritmo de \emph{clusterización} con estas opciones
 \end{enumerate}
 
-
 \pagebreak
 
 \subsection{Interpretación de la segmentación}
 
-% TODO -- poco gasto en transporte, como muestra \ref{stcase01_pairplot:figura}
+En esta sección, resumiremos todas la información que hemos conseguido extraer del caso de estudio. Toda esta información puede consultarse en sus respectivas secciones, más desarrolladas y con el contexto completo que nos ha hecho llegar a estas conclusiones.
+
+En primer lugar, hemos visto en \customcite{grafica_vandalismo:figure}, que la distribución del vandalismo por comunidades es muy desigual (al menos según los datos de esta encuesta).
+
+En segundo lugar, nuestra sospecha de que la presencia de vandalismo iba a cambiar la distribución en el gasto en transporte público no se sostiene, como dejan claras las gráficas \customcite{gasto_tpublico_medio:figure} y \customcite{gasto_tpublico_completo:figure}. Por tanto, a vista de los datos que manejamos, no hay evidencia de que la presencia de vandalismo en la zona influya en el uso del transporte público.
+
+En tercer lugar, hemos encontrado pares de variables demasiado correladas entre sí, por lo que hemos decidido no usar esos pares de variables en un mismo caso de estudio.
+
+% TODO == seguir escribiendo esto
+En cuarto lugar, comentamos la segmentación general obtenida por los algoritmos.
+
+En quinto lugar, ha sido notorio los malos resultados obtenidos con \emph{DBSCAN}, incluso explorando los parámetros que definen este modelo. Este mal comportamiento ha sido realmente útil para justificar la insuficiencia de usar ciertas métricas de forma aislada, y la bondad de la métrica \emph{unbalanced} que hemos introducido.
 
 \pagebreak
 
