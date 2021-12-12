@@ -1133,7 +1133,6 @@ Notar que en ambos casos, los parámetros aquí encontrados son los que hemos us
 
 \subsection{Interpretación de la segmentación}
 
-
 Como hemos hecho para el anterior caso de estudio, resumiremos todas la información que hemos conseguido extraer. Toda esta información puede consultarse en sus respectivas secciones, más desarrolladas y con el contexto completo que nos ha hecho llegar a estas conclusiones.
 
 En primer lugar, no hemos conseguido relacionar, usando gráficas simples, el uso del transporte público ni con la cantidad de ingresos mínimos para llegar a fin de mes ni con el número de miembros del hogar, como se muestra en \customcite{stcase02_relacion_tpublico_tprivado:figure} y en \customcite{stcase02_relacion_tpublico_resto_variables:figure}. Esto ha motivado el estudio posterior que hemos realizado apoyándonos en las \emph{clusterizaciones}.
@@ -1384,7 +1383,23 @@ Como ya hemos explorado este proceso para cuatro algoritmos, y como no aporta na
 
 Como siempre, nos quedamos con los parámetros que mejor valor de \emph{Silhouette} generan. Tenemos un balanceo muy bueno, a pesar de que no sea el mejor, y por tanto, sabemos que no estamos abusando de resultados triviales que generan buenos valores de \emph{Silhouette}.
 
+\pagebreak
 
+\subsection{Interpretación de la segmentación}
+
+Como hemos hecho en los anteriores casos de estudio, resumiremos todas la información que hemos conseguido extraer. Toda esta información puede consultarse en sus respectivas secciones, más desarrolladas y con el contexto completo que nos ha hecho llegar a estas conclusiones.
+
+En primer lugar, el haber usado únicamente variables discretas ha complicado enormemente el extraer información de utilidad a partir del análisis exploratorio de datos. Así que la información sobre el problema que hemos extraído se apoya completamente en la segmentación realizada. Esto nos muestra que esta técnica es una herramienta muy útil para la extracción de información en conjunto de datos \entrecomillado{no preparados de antemano}.
+
+Gracias a dicha segmentación, hemos logrado obtener dos perfiles claros de hogar. Uno en el que tenemos muchas habitaciones por miembro, con un tipo de vivienda muy marcado. Otro segmento, con menos habitaciones por persona y con otro tipo de vivienda.
+
+Es destacable lo bien que ha funcionado la variable \emph{tipo de vivienda} para separar la población en los dos segmentos que hemos comentado. Por otro lado, la variable \emph{capacidad para llegar a fin de mes} no ha servido para realizar una buena separación. Todo lo contrario. En \customcite{stcase03_resultadosgraficos:figure} podemos ver que la clusterización mezcla mucho los elementos respecto a esta variable. Por tanto, podría ser beneficioso eliminar esta variable de nuestro conjunto de datos, mejorando las métricas que hemos usado para evaluar los distintos algoritmos.
+
+De hecho, esto es razonable. Al estar considerando hogares que disponen de una vivienda adicional, parece que la capacidad para llegar a fin de mes no es del todo relevante (aunque estamos seguros de que en muchas ocasiones, a pesar de disponer de viviendas adicionales, el hogar puede pasar apuros económicos, aunque esto no debería ser lo común).
+
+Todos los algoritmos han obtenido resultados mediocres, respecto a los resultados obtenidos en los otros casos de estudio. Además, esto es más grave al tener en cuenta que hemos ajustado los valores de los parámetros para todos los algoritmos.
+
+Esto puede deberse a que las variables no continuas no funcionan demasiado bien con estos algoritmos de clusterización, como sabemos de teoría. Sin embargo, no podemos descartar la hipótesis de que exclusivamente los datos de la vivienda sean suficientes para segmentar a la población de forma efectiva. A pesar de esto, parece más probable que sea un problema de la naturaleza discreta de las variables a que la información de la vivienda sea muy débil respecto a otro tipo de información, como por ejemplo información relativa a la conducta de las personas (si van a cenar fuera de casa, el gasto en transporte, \ldots)
 
 \pagebreak
 
