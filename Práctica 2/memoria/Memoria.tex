@@ -553,7 +553,7 @@ Con estas gráficas podemos sacar poca información adicional respecto a lo que 
 
 En último lugar, no parece que \emph{tsne} haya servido para descubrir ciertas propiedades topológicas del conjunto de datos con el que trabajamos, ni estamos viendo correlaciones entre agrupaciones gracias a \emph{tsne} y nuestros algoritmos de \emph{clusterización}. No podemos concluir nada con esto, pues como ya hemos comentado, no estamos explorando distintas combinaciones de parámetros para \emph{tsne}.
 
-Hemos creado también una gráfica en la que mostramos los \emph{clusters} obtenidos de forma simplificada. Para ello, mostramos los centroides con el tamaño proporcional al radio del \emph{cluster} y con el color proporcional al número de elementos del \emph{cluster}. Además, aplicamos \emph{tsne} para realizar esta visualización en dos dimensiones. Los resultados obtenidos son los siguientes:
+Hemos creado también una gráfica en la que mostramos los \emph{clusters} obtenidos de forma simplificada. Para ello, mostramos los centroides con el tamaño proporcional al radio del \emph{cluster} y con el color proporcional al número de elementos del \emph{cluster}. Estas dos métricas las calculamos nosotros, trabajando directamente con los \lstinline{dataframes}. En algunos algoritmos se puede obtener esta información accediendo a los atributos del clasificador, pero no en todos. Por tanto, decidimos calcular estas métricas manualmente, como acabamos de decir. Además, aplicamos \emph{tsne} para realizar esta visualización en dos dimensiones. Los resultados obtenidos son los siguientes:
 
 \begin{figure}[H]
     \centering
@@ -655,23 +655,90 @@ Empezamos ajustando los parámetros de \emph{K-Means}. Los resultados de la expl
 
 \begin{table}[H]
 \begin{center}
-    \resizebox{1.05\textwidth}{!}{
-    \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+    \begin{tabular}{|c|c|c|c|}
         \hline
-        nombre & calinski & davies & elements mean & elements std & time & silhouette & total clusters & unbalanced \\
-
+        Número clusters & Silhouette & Calinski & unbalanced \\
         \hline
-        kmeans &  735.23 &  1.08 &  486.75 &  240.54 &  0.21 &  0.31 &  4 & 0.92 \\
-        dbscan &  6.78 &  0.35 &  973.50 &  972.50 &  2.23 &  0.51 &  2 & 0.01 \\
-        birch &  550.25 &  1.13 &  486.75 &  399.34 &  0.21 &  0.28 &  4 & 0.78 \\
-        mean shift &  131.13 &  1.08 &  52.62 &  139.62 &  17.18 &  0.17 &  37 & 0.60 \\
-        agglomerative &  552.65 &  1.22 &  486.75 &  359.85 &  0.19 &  0.26 &  4 & 0.83 \\
-    \hline
-    \end{tabular}}
+        1 &  -1.00 &  0.00 &  0.00 \\
+        2 &  0.28 &  714.96 &  0.93 \\
+        3 &  0.29 &  716.87 &  0.94 \\
+        \textbf{4} &  \textbf{0.31} &  \textbf{735.23} &  \textbf{0.92} \\
+        5 &  0.26 &  680.97 &  0.95 \\
+        6 &  0.24 &  629.66 &  0.95 \\
+        7 &  0.25 &  621.86 &  0.95 \\
+        8 &  0.22 &  597.89 &  0.99 \\
+        9 &  0.22 &  560.15 &  0.97 \\
+        10 &  0.23 &  549.51 &  0.97 \\
+        \hline
+    \end{tabular}
 \end{center}
-\caption{Resultados de los algoritmos según distintas métricas de evaluación}
+    \caption{Resultados del ajuste de los parámetros de \emph{K-Means}}
     \label{resultados_stcase01:tabla}
 \end{table}
+
+Fijándonos en el índice de \emph{Silhouette}, nos quedamos con el parámetro 4 \emph{clusters} totales. Además, en la misma tabla podemos ver que esto genera \emph{clusters} bien balanceados.
+
+Notar que en el código tenemos gráficas para mostrar la evolución de las distintas métricas en base al parámetro. Esto ha sido útil a la hora de explorar los rangos de los parámetros, pero la información es tan sencilla que no tiene sentido que mostremos aquí estos gráficos. Cuando ajustemos los parámetros de \emph{DBSCAN}, mostraremos gráficamente la evolución, pues la información obtenida es algo más compleja.
+
+También es destacable el uso que hacemos de esta información. En todos los algoritmos en los que nos ha hecho fijar el número total de \emph{clusters}, hemos usado este valor. Por tanto, estamos usando esta exploración de parámetros y el algoritmo \emph{K-Means} como un método \emph{data-driven} para fijar los parámetros de otros algoritmos.
+
+Mostramos ahora el ajuste realizado para los parámetros de \emph{DBSCAN}. Como se puede ver en el \emph{Notebook}, muchos de estos parámetros provocan obtener un \emph{Silhouette} nulo (al provocar el caso trivial de un único \emph{cluster}). Por simplicidad y claridad, en la siguiente tabla solo mostramos los valores de los parámetros que no provocan esta situación:
+
+
+\begin{table}[H]
+\begin{center}
+    \begin{tabular}{|c|c|c|c|c|}
+        \hline
+            $\epsilon$ & Mín ejemplos & Silhouette & Calinski & unbalanced \\
+        \hline
+
+            0.30 & 1 &  0.44 &  6.20 &  0.01 \\
+            0.30 & 2 &  0.44 &  6.20 &  0.01 \\
+            0.30 & 3 &  0.44 &  6.20 &  0.01 \\
+            0.30 & 4 &  0.44 &  6.20 &  0.01 \\
+            0.30 & 5 &  0.44 &  6.20 &  0.01 \\
+            0.30 & 6 &  0.44 &  6.20 &  0.01 \\
+            \textbf{0.40} & \textbf{1} &  \textbf{0.51} &  \textbf{6.78} &  \textbf{0.01} \\
+            0.40 & 2 &  0.51 &  6.78 &  0.01 \\
+            0.40 & 3 &  0.51 &  6.78 &  0.01 \\
+            0.40 & 4 &  0.51 &  6.78 &  0.01 \\
+            0.40 & 5 &  0.51 &  6.78 &  0.01 \\
+            0.40 & 6 &  0.51 &  6.78 &  0.01 \\
+
+        \hline
+    \end{tabular}
+\end{center}
+    \caption{Resultados del ajuste de los parámetros de \emph{DBSCAN}}
+    \label{resultados_stcase01:tabla}
+\end{table}
+
+Claramente vemos que, con ninguno de los parámetros explorados que no provoca resultados triviales, no conseguimos realizar una asignación balanceada. Así que lo único que importa en la selección de estos parámetros es el punto que dejamos aislado. Cuanto más alejado esté este punto del resto de puntos, mejores métricas obtendremos.
+
+Como ya hemos comentado, mostramos gráficamente los resultados de la anterior tabla:
+
+\begin{figure}[H]
+    \centering
+
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{stcase01_dbscan_explore_silh}
+        \caption{Valor de \emph{Silhouette}}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{stcase01_dbscan_explore_cal}
+        \caption{Valor de \emph{Calinski}}
+    \end{subfigure}
+
+    \caption{\emph{Heatmap} de dos métricas relevantes, variando el valor de $\epsilon$ y el número mínimo de ejemplos}
+\end{figure}
+
+En ambas figuras, un valor más oscuro significa un mejor valor de la métrica. Más interesante que un análisis sobre lo que muestra la gráfica (los valores de $\epsilon$ son los que realmente marcan las métricas, siendo \lstinline{min_samples} irrelevante en este caso concreto), es más interesante destacar lo siguiente. Tanto la métrica \emph{Silhouette} como \emph{Calinski} muestran el mismo patrón. Y por tanto, parecen en parte insuficientes para ser capaces de capturar efectos como los que hemos descrito gracias a la métrica \emph{unbalanced} (\emph{clusterizaciones} triviales).
+
+Con esto, podemos concluir que los resultados de \emph{dbscan} son desastrosos, y la exploración de parámetros no ha sido suficiente para encontrar un buen resultado. Creemos que esto podría solventarse con alguna de las siguientes alternativas:
+
+\begin{enumerate}
+    \item Realizar un borrado de \emph{outliers} más intenso, para evitar que \emph{DBSCAN} encuentre esos puntos aislados sobre los que colocar un \emph{cluster}. Sin embargo, a vista de la distribución de datos con la que trabajamos, esto no parece razonable
+    \item Incluir, en la funcionalidad que computa el algoritmo, condiciones para evitar crear esos \emph{clusters} con un único punto aislado. Esto parece lo más adecuado por la flexibilidad y control que aporta, pero supondría re-escribir la funcionalidad de \lstinline{sklearn} o implementar nuestro propio algoritmo de \emph{clusterización} con estas opciones
+\end{enumerate}
 
 
 \pagebreak
