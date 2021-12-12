@@ -841,6 +841,7 @@ Veamos en la siguiente gráfica como se relaciona el gasto en transporte públic
 
     \includegraphics[width = 0.4 \textwidth]{stcase02_relacion_transporte_publico_privado}
     \caption{Gráfica en la que relacionamos el gasto en transporte público con gasto en transporte privado, en la población general de la encuesta}
+    \label{stcase02_relacion_tpublico_tprivado:figure}
 \end{figure}
 
 No conseguimos, con esta visualización, obtener conclusiones claras. Por lo tanto, deberemos realizar un estudio más avanzado, apoyándonos en el uso de las herramientas de clusterización.
@@ -860,6 +861,7 @@ Del mismo modo que hemos hecho antes, intentamos sacar información comparando e
     \end{subfigure}
 
     \caption{Relación del gasto en transporte público, respecto a dos variables distintas}
+    \label{stcase02_relacion_tpublico_resto_variables:figure}
 \end{figure}
 
 Por tanto, está más que motivado el uso de técnicas más avanzadas. En nuestro caso, técnicas basadas en algoritmos de \emph{clusterización}.
@@ -1129,8 +1131,18 @@ Notar que en ambos casos, los parámetros aquí encontrados son los que hemos us
 
 \pagebreak
 
+\subsection{Interpretación de la segmentación}
 
 
+Como hemos hecho para el anterior caso de estudio, resumiremos todas la información que hemos conseguido extraer. Toda esta información puede consultarse en sus respectivas secciones, más desarrolladas y con el contexto completo que nos ha hecho llegar a estas conclusiones.
+
+En primer lugar, no hemos conseguido relacionar, usando gráficas simples, el uso del transporte público ni con la cantidad de ingresos mínimos para llegar a fin de mes ni con el número de miembros del hogar, como se muestra en \customcite{stcase02_relacion_tpublico_tprivado:figure} y en \customcite{stcase02_relacion_tpublico_resto_variables:figure}. Esto ha motivado el estudio posterior que hemos realizado apoyándonos en las \emph{clusterizaciones}.
+
+En segundo lugar, hemos obtenido dos perfiles claros de hogares. En un segmento, aquellos con pocos miembros en el hogar, con poco gasto y con un perfil de vivienda muy marcado. En un segundo segmento, aquellos con más miembros, gasto y otro tipo de vivienda.
+
+Esto es lógico. Un mayor número de miembros supone un mayor gasto. Además, hay viviendas que están más adecuadas a un número mayor de personas, y por esto el tipo de vivienda ha servido para separar bien los dos segmentos encontrados.
+
+En tercer lugar, todos los algoritmos han obtenido resultados competentes. A diferencia del anterior caos de estudio, \emph{DBSCAN} no ha obtenido resultados desastrosos. Todos los algoritmos han obtenido una segmentación que es acorde con lo que hemos comentado previamente.
 
 \pagebreak
 
