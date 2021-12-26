@@ -8,3 +8,8 @@
 | Nombre Propuesta | Fecha y hora de subida | Posición ocupada | Score Training | Score Test Driven Data | Descripción preprocesado | Descripción Algoritmo | Configuración de parámetros |
 | ---              | ---                    | ---              | ---            | ---                    | ---                      | ---                   | ---                         |
 
+# Por cada subida
+
+- Por cada subida hay que guardar:
+    1. Script de python usado para obtener los resultados de la subid
+    2. Fichero `.csv` con la clasificación que hemos realizado
