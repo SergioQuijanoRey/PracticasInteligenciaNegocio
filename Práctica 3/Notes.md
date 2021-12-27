@@ -5,8 +5,9 @@
 
 # Tabla
 
-| Nombre Propuesta | Fecha y hora de subida | Posición ocupada | Score Training | Score Test Driven Data | Descripción preprocesado | Descripción Algoritmo | Configuración de parámetros |
-| ---              | ---                    | ---              | ---            | ---                    | ---                      | ---                   | ---                         |
+| Nombre Propuesta  | Fecha y hora de subida | Posición ocupada | Score Training | Score Test Driven Data | Descripción incremental                                                                                                                                  | Descripción preprocesado                                                                      | Descripción Algoritmo                                                       | Configuración de parámetros |
+| ---               | ---                    | ---              | ---            | ---                    | ---                                                                                                                                                      | ---                                                                                           | ---                                                                         |                             |
+| Primera Propuesta | 27/12/2021 12:08       | 793              | -              | 0.8182                 | Primer modelo funcional. Hacemos lo mínimo para hacer una submission. No tenemos información sobre los resultados en training. Esto se añadirá más tarde | Nos quedamos solo con las variables numéricas, imputamos los missing values usando la mediana | Regresión logística, entrenando dos modelos para las dos variables objetivo | C = 1, regularización l2    |
 
 # Por cada subida
 
