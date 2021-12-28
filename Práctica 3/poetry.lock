@@ -101,6 +101,23 @@ six = ">=1.9.0"
 webencodings = "*"
 
 [[package]]
+name = "catboost"
+version = "1.0.3"
+description = "Catboost Python Package"
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+graphviz = "*"
+matplotlib = "*"
+numpy = ">=1.16.0"
+pandas = ">=0.24.0"
+plotly = "*"
+scipy = "*"
+six = "*"
+
+[[package]]
 name = "certifi"
 version = "2021.10.8"
 description = "Python package for providing Mozilla's CA Bundle."
@@ -198,6 +215,19 @@ type1 = ["xattr"]
 ufo = ["fs (>=2.2.0,<3)"]
 unicode = ["unicodedata2 (>=13.0.0)"]
 woff = ["zopfli (>=0.1.4)", "brotlicffi (>=0.8.0)", "brotli (>=1.0.1)"]
+
+[[package]]
+name = "graphviz"
+version = "0.19.1"
+description = "Simple Python interface for Graphviz"
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[package.extras]
+dev = ["tox (>=3)", "flake8", "pep8-naming", "wheel", "twine"]
+docs = ["sphinx (>=1.8)", "sphinx-autodoc-typehints", "sphinx-rtd-theme"]
+test = ["pytest (>=6)", "pytest-mock (>=3)", "mock (>=4)", "pytest-cov", "coverage"]
 
 [[package]]
 name = "idna"
@@ -785,6 +815,18 @@ optional = false
 python-versions = ">=3.6"
 
 [[package]]
+name = "plotly"
+version = "5.5.0"
+description = "An open-source, interactive data visualization library for Python"
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[package.dependencies]
+six = "*"
+tenacity = ">=6.2.0"
+
+[[package]]
 name = "prometheus-client"
 version = "0.12.0"
 description = "Python client for the Prometheus monitoring system."
@@ -1042,6 +1084,17 @@ optional = false
 python-versions = ">=3.5"
 
 [[package]]
+name = "tenacity"
+version = "8.0.1"
+description = "Retry code until it succeeds"
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[package.extras]
+doc = ["reno", "sphinx", "tornado (>=4.5)"]
+
+[[package]]
 name = "terminado"
 version = "0.12.1"
 description = "Tornado websocket backend for the Xterm.js Javascript terminal emulator library."
@@ -1159,7 +1212,7 @@ notebook = ">=4.4.1"
 [metadata]
 lock-version = "1.1"
 python-versions = "3.10"
-content-hash = "01b0441b84b7b2730f211bfa7a3682d1d486b494326db58c3b0c542ee7ef451d"
+content-hash = "92256fff41a152d07fc7cb1c55a25479fc822bd307faa44374db9362b5058fe7"
 
 [metadata.files]
 anyio = [
@@ -1212,6 +1265,29 @@ backcall = [
 bleach = [
     {file = "bleach-4.1.0-py2.py3-none-any.whl", hash = "sha256:4d2651ab93271d1129ac9cbc679f524565cc8a1b791909c4a51eac4446a15994"},
     {file = "bleach-4.1.0.tar.gz", hash = "sha256:0900d8b37eba61a802ee40ac0061f8c2b5dee29c1927dd1d233e075ebf5a71da"},
+]
+catboost = [
+    {file = "catboost-1.0.3-cp27-none-macosx_10_6_intel.macosx_10_9_intel.macosx_10_9_x86_64.macosx_10_10_intel.macosx_10_10_x86_64.whl", hash = "sha256:45adf23597e6b03989ab741aaa0759ef13da6f9231c66425c3fc1f9bbaadc1c3"},
+    {file = "catboost-1.0.3-cp27-none-manylinux1_x86_64.whl", hash = "sha256:10b7d1d65f4cd7d5fce1ebbf784eca7527d2c2f70aab5d2ece14e472c116c895"},
+    {file = "catboost-1.0.3-cp27-none-win_amd64.whl", hash = "sha256:8550e66ab659be8c4a3b6bf5824fe5dcd7e6fffd641fc445e90e6d2a254effad"},
+    {file = "catboost-1.0.3-cp310-none-macosx_10_6_intel.macosx_10_9_intel.macosx_10_9_x86_64.macosx_10_10_intel.macosx_10_10_x86_64.whl", hash = "sha256:2f9dbae8e044418274919ae7ba860da81e06e4b5506ff06711d6a21c29f77a89"},
+    {file = "catboost-1.0.3-cp310-none-manylinux1_x86_64.whl", hash = "sha256:d0b04c62523876f8c21f636fd3b4c82950f26115352963017ae820b12b299e80"},
+    {file = "catboost-1.0.3-cp310-none-win_amd64.whl", hash = "sha256:1558734e7a947716f291d9b100d29cbfd298bb26e5ae84c6009fccb344160ad6"},
+    {file = "catboost-1.0.3-cp35-none-macosx_10_6_intel.macosx_10_9_intel.macosx_10_9_x86_64.macosx_10_10_intel.macosx_10_10_x86_64.whl", hash = "sha256:c89b70328b85ae5bf8ae467c960fdf430cbf7eefe86a15a705fbc0e236a0d82a"},
+    {file = "catboost-1.0.3-cp35-none-manylinux1_x86_64.whl", hash = "sha256:5356f7aba3193cb38034e4be362ff1b9d19ba506db3e68a9ebfde99c49fe7890"},
+    {file = "catboost-1.0.3-cp35-none-win_amd64.whl", hash = "sha256:e1db7572879ed8d92b8a1cf66cd0b76fe02ace1752b0b124d216bc6dab4985d2"},
+    {file = "catboost-1.0.3-cp36-none-macosx_10_6_intel.macosx_10_9_intel.macosx_10_9_x86_64.macosx_10_10_intel.macosx_10_10_x86_64.whl", hash = "sha256:6f306857a49b30dbc9f66fbb2e93c868b07aa14e03a48a4c959e8e11a09e643d"},
+    {file = "catboost-1.0.3-cp36-none-manylinux1_x86_64.whl", hash = "sha256:b72e72a859bb47b269fa43d94c9332a177fe27caf920946e21c92590202a86c0"},
+    {file = "catboost-1.0.3-cp36-none-win_amd64.whl", hash = "sha256:7f7571a1a32e1ac0fe3a0e34318ac1d90de2d45761aab2f9a811fe33e119bdbb"},
+    {file = "catboost-1.0.3-cp37-none-macosx_10_6_intel.macosx_10_9_intel.macosx_10_9_x86_64.macosx_10_10_intel.macosx_10_10_x86_64.whl", hash = "sha256:6c661efa6e071885a6b8925465dfc989adcd4e7b62b2647dcd9fba03c75424c6"},
+    {file = "catboost-1.0.3-cp37-none-manylinux1_x86_64.whl", hash = "sha256:657ea6df049d01ce728e6a2930d0b3930549d9a47190375d1cc0f9ba8e5fd221"},
+    {file = "catboost-1.0.3-cp37-none-win_amd64.whl", hash = "sha256:7859c3eacd07093331c8dc16dd5c74f9e6f3ecdf7cc4ac7073db1129029d0e5b"},
+    {file = "catboost-1.0.3-cp38-none-macosx_10_6_intel.macosx_10_9_intel.macosx_10_9_x86_64.macosx_10_10_intel.macosx_10_10_x86_64.whl", hash = "sha256:c435ef13ea0adbfefe68d4426b8d7a22b63f2b02928ca451ae6cce3462e03f1c"},
+    {file = "catboost-1.0.3-cp38-none-manylinux1_x86_64.whl", hash = "sha256:8bb5e2e9c162721d07a138266da8b3ffdd4c120eb77eb3c24cd5549ca4f5ad67"},
+    {file = "catboost-1.0.3-cp38-none-win_amd64.whl", hash = "sha256:054c7c8cf6f3ad4e7507223ca38a4db545f4e97618db1044143bd6980af52a60"},
+    {file = "catboost-1.0.3-cp39-none-macosx_10_6_intel.macosx_10_9_intel.macosx_10_9_x86_64.macosx_10_10_intel.macosx_10_10_x86_64.whl", hash = "sha256:673eb21d714e72cb851521a08375c43f7322c99ef3560f10208e730861cbf6ae"},
+    {file = "catboost-1.0.3-cp39-none-manylinux1_x86_64.whl", hash = "sha256:566e89a919149260c4de75c90ceacae688d066975b2a9cf62aed61208d6b4fde"},
+    {file = "catboost-1.0.3-cp39-none-win_amd64.whl", hash = "sha256:5ca9f375092a656ed5352716f8033b6e08be5a33d2bc03f6cb2f8010c9821d7a"},
 ]
 certifi = [
     {file = "certifi-2021.10.8-py2.py3-none-any.whl", hash = "sha256:d62a0163eb4c2344ac042ab2bdf75399a71a2d8c7d47eac2e2ee91b9d6339569"},
@@ -1319,6 +1395,10 @@ entrypoints = [
 fonttools = [
     {file = "fonttools-4.28.4-py3-none-any.whl", hash = "sha256:9934e3587dd5abf4e7f1d7176bcf0373db3f0ed728edf79791a9d2a7e664aac9"},
     {file = "fonttools-4.28.4.zip", hash = "sha256:581a682a7102a41421e7e484303572c565c1b8e52b1cc9fecd3c159dbe9a02f4"},
+]
+graphviz = [
+    {file = "graphviz-0.19.1-py3-none-any.whl", hash = "sha256:f34088c08be2ec16279dfa9c3b4ff3d1453c5c67597a33e2819b000e18d4c546"},
+    {file = "graphviz-0.19.1.zip", hash = "sha256:09ed0cde452d015fe77c4845a210eb642f28d245f5bc250d4b97808cb8f49078"},
 ]
 idna = [
     {file = "idna-3.3-py3-none-any.whl", hash = "sha256:84d9dd047ffa80596e0f246e2eab0b391788b0503584e8945f2368256d2735ff"},
@@ -1709,6 +1789,10 @@ pillow = [
     {file = "Pillow-8.4.0-pp37-pypy37_pp73-win_amd64.whl", hash = "sha256:244cf3b97802c34c41905d22810846802a3329ddcb93ccc432870243211c79fc"},
     {file = "Pillow-8.4.0.tar.gz", hash = "sha256:b8e2f83c56e141920c39464b852de3719dfbfb6e3c99a2d8da0edf4fb33176ed"},
 ]
+plotly = [
+    {file = "plotly-5.5.0-py2.py3-none-any.whl", hash = "sha256:bc7d19272560f73fe4c2c989c31b00774a35d3a76891fab0b72c17616862d0e0"},
+    {file = "plotly-5.5.0.tar.gz", hash = "sha256:20b8a1a0f0434f9b8d10eb7caa66e947a9a1d698e5a53d40d447bbc0d2ae41f0"},
+]
 prometheus-client = [
     {file = "prometheus_client-0.12.0-py2.py3-none-any.whl", hash = "sha256:317453ebabff0a1b02df7f708efbab21e3489e7072b61cb6957230dd004a0af0"},
     {file = "prometheus_client-0.12.0.tar.gz", hash = "sha256:1b12ba48cee33b9b0b9de64a1047cbd3c5f2d0ab6ebcead7ddda613a750ec3c5"},
@@ -1926,6 +2010,10 @@ six = [
 sniffio = [
     {file = "sniffio-1.2.0-py3-none-any.whl", hash = "sha256:471b71698eac1c2112a40ce2752bb2f4a4814c22a54a3eed3676bc0f5ca9f663"},
     {file = "sniffio-1.2.0.tar.gz", hash = "sha256:c4666eecec1d3f50960c6bdf61ab7bc350648da6c126e3cf6898d8cd4ddcd3de"},
+]
+tenacity = [
+    {file = "tenacity-8.0.1-py3-none-any.whl", hash = "sha256:f78f4ea81b0fabc06728c11dc2a8c01277bfc5181b321a4770471902e3eb844a"},
+    {file = "tenacity-8.0.1.tar.gz", hash = "sha256:43242a20e3e73291a28bcbcacfd6e000b02d3857a9a9fff56b297a27afdc932f"},
 ]
 terminado = [
     {file = "terminado-0.12.1-py3-none-any.whl", hash = "sha256:09fdde344324a1c9c6e610ee4ca165c4bb7f5bbf982fceeeb38998a988ef8452"},
