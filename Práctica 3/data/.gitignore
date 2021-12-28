@@ -2,3 +2,8 @@
 /test_set_features.csv
 /training_set_features.csv
 /training_set_labels.csv
+/test_set_features_cached.npy
+/training_set_features_cached.npy
+/training_set_labels_cached.npy
+/validation_set_features_cached.npy
+/validation_set_labels_cached.npy

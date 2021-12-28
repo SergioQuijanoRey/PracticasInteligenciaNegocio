@@ -1,0 +1,4 @@
+outs:
+- md5: cf7b9eedbb6ea0df3aea1941c81b46ef
+  size: 39100640
+  path: test_set_features_cached.npy
