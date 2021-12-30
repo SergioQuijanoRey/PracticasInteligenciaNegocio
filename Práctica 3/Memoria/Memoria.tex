@@ -252,6 +252,29 @@ Con todo esto, pasamos a desarrollar, propuesta a propuesta, el trabajo desarrol
 
 \subsection{Experimento 1}
 
+En este primer experimento, escribimos el mínimo código para poder hacer una \emph{submission} y familiarizarnos así con la plataforma. Por tanto, y como se puede apreciar en \customcite{resumen_resultados:tabla}, no tenemos información sobre el rendimiento de nuestro modelo en \emph{training}.
+
+Parte de nuestro código lo basamos en el código que \emph{Driven Data} muestra como \emph{benchmark} \cite{datadriven_example:online}, aunque gran parte del código la tomamos de una plantilla nuestra, preparada con las tareas más repetitivas de todo proyecto de \emph{Data Science}. En concreto, tomamos el modelo propuesto en el ejemplo, y el código para realizar la propuesta.
+
+El pre-procesado de los datos es muy básico:
+
+\begin{enumerate}
+    \item Empezamos borrando la columna \lstinline{"respondent_id"}. No nos hace falta, pues el \lstinline{dataframe} ya guarda en su estado interno un identificador para las filas
+    \item Filtramos todas las variables categóricas, solo nos quedamos con las numéricas
+    \item Separamos el conjunto de entrenamiento en entrenamiento (80\%) y validación (20\%)
+    \item Imputamos los \emph{missing values} usando la mediana
+\end{enumerate}
+
+En este pre-procesado, y en todos los siguientes, cuando realizamos una transformación sobre el conjunto de entrenamiento con parámetros que se aprenden, se aplicará en validación y test con dichos parámetros, aprendidos en entrenamiento. Si aprendiésemos dichos parámetros sobre todo el conjunto de datos (\emph{training}, validación y test juntos) estaríamos cometiendo \emph{data snooping}.
+
+El modelo aplicado es muy básico: dos modelos de regresión logística. En este caso, y en todos los posteriores, entrenaremos dos modelos del mismo tipo para clasificar las dos etiquetas. Esto lo haremos cómodamente con la clase \lstinline{MultiOutputClassifier}. De ahora en adelante, este detalle técnico lo omitiremos y hablaremos directamente de modelos, entendiendo por ello lo que aquí detallamos.
+
+Es en este experimento en el que realizamos dos propuestas fallidas, como muestra \customcite{resumen_resultados:tabla}.
+
+\subsection{Experimento 2}
+
+% Combinacion de variables en una unica
+
 \pagebreak
 
 % Bibliografia
