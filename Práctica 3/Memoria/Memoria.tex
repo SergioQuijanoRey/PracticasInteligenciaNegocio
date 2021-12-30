@@ -94,6 +94,10 @@
 % Para que las notas al pie de pagina queden bien abajo
 \usepackage[bottom]{footmisc}
 
+% Para poner tablas en horizontal, ocupando bien la página
+% cuando hay mucho texto en la table
+\usepackage{lscape}
+
 % Comandos personalizados
 %===================================================================================================
 
@@ -191,6 +195,53 @@ En quinto y último lugar, se podrá consultar el código de esta práctica (y d
 \section{Desarrollo de los experimentos}
 
 \subsection{Resumen de los experimentos realizados}
+
+En la siguiente tabla mostramos un resumen del desarrollo de los experimentos. El desarrollo de los experimentos se ha realizado de forma incremental. Es decir, hemos partido del experimento anterior, y hemos añadido mejoras o cambios, en la mayoría de los casos no disruptivos. En caso de un cambio de gran calado se indicará en la siguiente tabla. Por lo tanto, la siguiente tabla recoge los cambios de forma incremental.
+
+Por la longitud de las tabla global, separaremos dicha tabla en dos tablas. Una tabla que muestre los resultados obtenidos en la competición, y otra tabla que explique los cambios realizados. Mostramos ambas tablas a continuación:
+
+\begin{table}[H]
+\begin{center}
+    \begin{tabular}{|p{0.1\linewidth} | p{0.35\linewidth} | p{0.1\linewidth}| p{0.25\linewidth}| p{0.2\linewidth}|}
+        \hline
+        Propuesta & Fecha y hora (hora española) & Posición ocupada & Score Training & Score Test Driven Data \\
+
+        \hline
+        1 & 27/12/2021 12:08 & 793 & - & 0.8182 \\ \hline
+        2 & 27/12/2021 16:17 & 398 & 0.8658 & 0.8537 \\ \hline
+        3 & 27/12/2021 21:33 & 402 & 0.8426 & 0.8536 \\ \hline
+        4 & 28/12/2021 19:12 & 405 & 0.85966 & 0.8534 \\ \hline
+        5 & 28/12/2021 19:40 & 339 & 0.8630 & 0.8573 \\ \hline
+        6 & 29/12/2021 00:09 & 305 & 0.8823 & 0.8589 \\ \hline
+        7 & 29/12/2021 13:27 & 305 & 0.8646 & 0.8589 \\ \hline
+        8 & 29/12/2021 14:26 & 305 & 0.8648 & 0.8589 \\ \hline
+        9 & 29/12/2021 18:25 & 248 & 0.8641 & 0.8604 \\ \hline
+    \end{tabular}
+\end{center}
+    \caption{Resumen de los resultados logrados con los cambios incrementales a lo largo de la práctica}
+\end{table}
+
+\begin{landscape}
+\begin{table}[t]
+\begin{center}
+    \begin{tabular}{|p{0.1\linewidth} | p{0.3\linewidth} | p{0.3\linewidth}| p{0.3\linewidth}|}
+        \hline
+        Nombre Propuesta & Descripción preprocesado & Descripción Algoritmo & Configuración de parámetros \\ \hline
+        1 & Nos quedamos solo con las variables numéricas, imputamos los missing values usando la mediana & Regresión logística, entrenando dos modelos para las dos variables objetivo & C = 1, regularización l2 \\ \hline
+        2 & Imputamos missing values con la mediana. Normalizamos a media 0 y desviación 1 & Añadimos cross validation. Decidimos usar AdaBoost & lr = 0.5, n\_estimators = 200 \\ \hline
+        3 & Imputamos missing values con un estimador en base a las otras variables. Usamos Smote+TomekLinks & Volvemos a hacer CV y tomamos los mejores parámetros & lr = 0.75 n\_estimatos = 200 \\ \hline
+        4 & Borramos SMOTE + TomekLinks, cacheamos el pre-procesado de datos para poder hacer iteraciones más rápidas & Añadimos CatBoost y hacemos CV para seleccionar los mejores hiperparámetros & lr = 0.5, iterations = 20, depth = 4 \\ \hline
+        5 & Entrenamos sobre todo el conjunto de datos tras entrenar y evaluar en validación & Catboost al que hemos cambiado manualmente los parámetros & lr = 0.5, iterations = 40, depth = 4 \\ \hline
+        6 & - & Ajustamos CV para todos los modelos, incluido Random Forest. Sigue siendo el mejor Catboost & lr = 0.25, iterations = 80, depth = 4 \\ \hline
+        7 & - & Ensemble con los cuatro algoritmos, con los mejores parámetros que hemos encontrado & Logistic: penalty = "l2", C = 0.05 ; Adaboost: n\_estimators = 200, learning\_rate = 0.5 ; Catboost: iterations=80, learning\_rate=0.25, depth=4 ; Random Forest:     n\_estimators = 200, criterion = "entropy", min\_samples\_split = 4, min\_samples\_leaf = 3 \\ \hline
+        8 & - & Ponderamos el ensemble con los resultados de los modelos individuales, en validación, aplicando softmax & - \\ \hline
+        9 & Además del borrado de outliers que teníamos, añado IsolationForest para borrar outliers & Aplicamos correctamente el ensemble (estábamos re-entrenando con un Catboost simple) & - \\ \hline
+    \end{tabular}
+\end{center}
+    \caption{Resumen de los cambios incrementales realizados a lo largo de la práctica}
+\end{table}
+\end{landscape}
+
 
 \pagebreak
 
