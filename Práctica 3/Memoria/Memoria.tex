@@ -229,7 +229,7 @@ Por la longitud de las tabla global, separaremos dicha tabla en dos tablas. Una 
         \hline
         Nombre Propuesta & Descripción preprocesado & Descripción Algoritmo & Configuración de parámetros \\ \hline
         1 & Nos quedamos solo con las variables numéricas, imputamos los missing values usando la mediana & Regresión logística, entrenando dos modelos para las dos variables objetivo & C = 1, regularización l2 \\ \hline
-        2 & Imputamos missing values con la mediana. Normalizamos a media 0 y desviación 1 & Añadimos cross validation. Decidimos usar AdaBoost & lr = 0.5, n\_estimators = 200 \\ \hline
+        2 & Imputamos missing values con la mediana. Normalizamos a media 0 y desviación 1. Nos quedamos con las variables categóricas, que transformamos a numéricas usando \emph{one hot encoding} & Añadimos cross validation. Decidimos usar AdaBoost. Añadimos la evaluación del modelo sobre el conjunto de validación & lr = 0.5, n\_estimators = 200 \\ \hline
         3 & Imputamos missing values con un estimador en base a las otras variables. Usamos Smote+TomekLinks & Volvemos a hacer CV y tomamos los mejores parámetros & lr = 0.75 n\_estimatos = 200 \\ \hline
         4 & Borramos SMOTE + TomekLinks, cacheamos el pre-procesado de datos para poder hacer iteraciones más rápidas & Añadimos CatBoost y hacemos CV para seleccionar los mejores hiperparámetros & lr = 0.5, iterations = 20, depth = 4 \\ \hline
         5 & Entrenamos sobre todo el conjunto de datos tras entrenar y evaluar en validación & Catboost al que hemos cambiado manualmente los parámetros & lr = 0.5, iterations = 40, depth = 4 \\ \hline
@@ -267,15 +267,69 @@ El pre-procesado de los datos es muy básico:
 
 En este pre-procesado, y en todos los siguientes, cuando realizamos una transformación sobre el conjunto de entrenamiento con parámetros que se aprenden, se aplicará en validación y test con dichos parámetros, aprendidos en entrenamiento. Si aprendiésemos dichos parámetros sobre todo el conjunto de datos (\emph{training}, validación y test juntos) estaríamos cometiendo \emph{data snooping}.
 
+A la hora de separar en \emph{training} y \emph{validation}, usamos estratificación por la etiqueta de salida. Como tenemos dos etiquetas, las combinamos en una sola, estratificamos usando esa etiqueta combinada, y deshacemos el combinado de etiquetas.
+
 El modelo aplicado es muy básico: dos modelos de regresión logística. En este caso, y en todos los posteriores, entrenaremos dos modelos del mismo tipo para clasificar las dos etiquetas. Esto lo haremos cómodamente con la clase \lstinline{MultiOutputClassifier}. De ahora en adelante, este detalle técnico lo omitiremos y hablaremos directamente de modelos, entendiendo por ello lo que aquí detallamos.
 
 Es en este experimento en el que realizamos dos propuestas fallidas, como muestra \customcite{resumen_resultados:tabla}.
 
-\subsection{Experimento 2}
+Los resultados se muestran en las siguientes figura:
 
-% Combinacion de variables en una unica
+\begin{figure}[H]
+    \centering
+
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{../Notebook01/27-12-2021::12:08:09.png}
+        \caption{Score obtenida en la \emph{submission}}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{../Notebook01/27-12-2021::12:08:42.png}
+        \caption{Posición de ese momento en la competición}
+    \end{subfigure}
+
+    \caption{Resultados obtenidos tras hacer la \emph{submission} en la plataforma \emph{online}}
+\end{figure}
 
 \pagebreak
+
+\subsection{Experimento 2}
+
+El pre-procesado en este experimento es:
+
+\begin{enumerate}
+    \item Seguimos imputando los \emph{missing values} con la mediana
+    \item Normalizamos el conjunto de datos a media 0 y desviación típica 1
+    \item En vez de eliminar las variables numéricas, las pasamos a numéricas con \emph{one hot enconding} y las consideramos en nuestro conjunto de entrenamiento
+\end{enumerate}
+
+Además de ese pre-procesado de los datos, añadimos el modelo \emph{Adaboost}. Escribimos un \emph{GridSearch} propio para hacer \emph{Hyper Parameter Tuning}. Con esto nos referimos a que especificamos los conjuntos de parámetros manualmente, así como el bucle en que evaluamos con \emph{10-fold Cross Validation}. Con esto tenemos un mayor control en este proceso que puede ser muy largo. Por ejemplo, podemos parar la búsqueda en la mitad del proceso, y tomar el mejor parámetro encontrado hasta el momento. O definir los \emph{logs} que queremos mostrar durante el proceso. Esto no lo podíamos hacer con la funcionalidad correspondientes de \lstinline{sklearn}, y al no suponer mucho código, lo implementamos nosotros para resolver nuestras necesidades.
+
+Aplicamos dicha búsqueda a los dos modelos que hemos tratado hasta ahora. Empleamos \emph{Adaboost} por dar mejores resultados.
+
+Además, añadimos la evaluación del modelo. Para ello, llamamos a la función propia \lstinline{evaluate_model}, en la que calculamos algunas métricas adicionales.
+
+Todavía no hemos implementado el re-entrenamiento sobre todo el conjunto de datos, así que la \emph{submission} se realiza con el modelo entrenado en un subconjunto de los datos iniciales.
+
+Los resultados se muestran en las siguiente figura:
+
+\begin{figure}[H]
+    \centering
+
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{../Notebook02/27-12-2021::16:16:34.png}
+        \caption{Score obtenida en la \emph{submission}}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{../Notebook02/27-12-2021::16:16:54.png}
+        \caption{Posición de ese momento en la competición}
+    \end{subfigure}
+
+    \caption{Resultados obtenidos tras hacer la \emph{submission} en la plataforma \emph{online}}
+\end{figure}
+
+\pagebreak
+
+\subsection{Experimento 3}
 
 % Bibliografia
 \bibliography{./References}
