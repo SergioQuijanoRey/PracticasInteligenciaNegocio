@@ -672,6 +672,108 @@ Los resultados no han cambiado. Lo más probable es que la plataforma esté prep
 
 \pagebreak
 
+\subsection{Experimento 12}
+
+Respecto al procesado o manejo de los datos:
+
+\begin{enumerate}
+    \item Volvemos a realizar una normalización rigurosa, aprendiendo los parámetros en entrenamiento y aplicando dicha transformación en entrenamiento, validación y test
+\end{enumerate}
+
+Respecto al uso de modelos:
+
+\begin{enumerate}
+    \item Añadimos \emph{Xgboost} como modelo a estudiar
+    \item Exploramos sus parámetros usando \emph{Cross Validation}
+    \item Lo añadimos al \emph{ensemble}
+\end{enumerate}
+
+Los resultados se muestran en la siguiente figura:
+
+\begin{figure}[H]
+    \centering
+
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{../Notebook12/30-12-2021::23:04:29.png}
+        \caption{Score obtenida en la \emph{submission}}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{../Notebook12/30-12-2021::23:04:37.png}
+        \caption{Posición de ese momento en la competición}
+    \end{subfigure}
+
+    \caption{Resultados obtenidos tras hacer la \emph{submission} en la plataforma \emph{online}}
+\end{figure}
+
+En este caso, vemos una gran mejora al añadir este modelo a nuestro \emph{ensemble}. Además, es la mejor posición que ocupamos en el momento de terminar de realizar experimentos (31/12/2021). Teniendo en cuenta que terminamos en la posición 199 de 3370, esto nos deja en el top 6\% de la competición en ese momento.
+
+\pagebreak
+
+\subsection{Experimento 13}
+
+Respecto al procesado o manejo de los datos, no realizamos modificaciones. Respecto al uso de modelos:
+
+\begin{enumerate}
+    \item En vez de aplicar \emph{softmax} sobre los scores de los modelos para generar los pesos del modelo, usamos un \emph{ranking} inverso como pesos (7 para el mejor modelo, 1 para el peor modelo)
+\end{enumerate}
+
+Los resultados se muestran en la siguiente figura:
+
+\begin{figure}[H]
+    \centering
+
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{../Notebook13/31-12-2021::17:55:03.png}
+        \caption{Score obtenida en la \emph{submission}}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{../Notebook13/31-12-2021::17:55:26.png}
+        \caption{Posición de ese momento en la competición}
+    \end{subfigure}
+
+    \caption{Resultados obtenidos tras hacer la \emph{submission} en la plataforma \emph{online}}
+\end{figure}
+
+En este caso, empeoramos ligeramente los resultados obtenidos.
+
+\pagebreak
+
+\subsection{Experimento 14}
+
+Respecto al procesado o manejo de los datos, no realizamos modificaciones. Respecto al uso de modelos:
+
+\begin{enumerate}
+    \item En vez de usar todos los modelos en el \emph{ensemble}, usamos solo los mejores obtenidos
+    \item Estos modelos son: \emph{Catboost}, \emph{MLP} y \emph{Xgboost}
+    \item Por haber dado peores resultados en el anterior experimento, volvemos a usar \emph{softmax} para normalizar los pesos a partir de los resultados en validación
+\end{enumerate}
+
+Los resultados se muestran en la siguiente figura:
+
+\begin{figure}[H]
+    \centering
+
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{../Notebook14/31-12-2021::18:12:31.png}
+        \caption{Score obtenida en la \emph{submission}}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{../Notebook14/31-12-2021::18:12:44.png}
+        \caption{Posición de ese momento en la competición}
+    \end{subfigure}
+
+    \caption{Resultados obtenidos tras hacer la \emph{submission} en la plataforma \emph{online}}
+\end{figure}
+
+Al usar menos modelos en el \emph{ensemble}, a pesar de ser los mejores modelos, vemos que los resultados empeoran significativamente.
+
+\pagebreak
+
+\section{Conclusiones}
+
+
+\pagebreak
+
 
 % Bibliografia
 \bibliography{./References}
