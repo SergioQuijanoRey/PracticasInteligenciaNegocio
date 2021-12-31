@@ -601,7 +601,57 @@ En este caso sí que podemos ver una mejora significativa respecto a los experim
 
 \pagebreak
 
+\subsection{Experimento 10}
 
+Respecto al procesado o manejo de los datos:
+
+\begin{enumerate}
+    \item En vez de imputar \emph{missing values} con un estimador sobre el resto de variables, volvemos a imputar con la mediana, que dio muy buenos resultados en los primeros experimentos
+\end{enumerate}
+
+Respecto al uso de modelos:
+
+\begin{enumerate}
+    \item Añadimos los modelos \emph{Extreme Random Forest} y \emph{MLP}
+    \item Exploramos sus parámetros con \emph{Cross Validation}
+    \item Al cambiar algo el conjunto de datos, exploramos los parámetros de todos los algoritmos que llevamos estudiados hasta ahora
+    \item Añadimos estos dos nuevos modelos, con sus mejores parámetros, al \emph{ensemble}
+\end{enumerate}
+
+Los resultados se muestran en la siguiente figura:
+
+\begin{figure}[H]
+    \centering
+
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{../Notebook10/30-12-2021::18:40:06.png}
+        \caption{Score obtenida en la \emph{submission}}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{../Notebook10/30-12-2021::18:40:16.png}
+        \caption{Posición de ese momento en la competición}
+    \end{subfigure}
+
+    \caption{Resultados obtenidos tras hacer la \emph{submission} en la plataforma \emph{online}}
+\end{figure}
+
+Seguimos mejorando progresivamente los resultados.
+
+\pagebreak
+
+\subsection{Experimento 11}
+
+Respecto al procesado o manejo de los datos:
+
+\begin{enumerate}
+    \item
+\end{enumerate}
+
+Respecto al uso de modelos:
+
+\begin{enumerate}
+    \item
+\end{enumerate}
 
 % Bibliografia
 \bibliography{./References}
