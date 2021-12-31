@@ -192,7 +192,9 @@ Hemos empleado la herramienta \emph{Google Colab} intensamente. Principalmente a
 
 En cuarto lugar, subimos también a \emph{PRADO} el archivo \lstinline{pyproject.toml}, en el que definimos todos los paquetes usados para el desarrollo de la práctica. Algunos paquetes pueden no encontrarse en las instalaciones por defecto de entornos de \emph{Data Science} habituales (como pudiera ser \lstinline{conda}). Por tanto, y para permitir reproducir los experimentos independientemente del entorno, especificamos los paquetes empleados en este fichero (que se corresponde al gestor de paquetes \lstinline{poetry}).
 
-En quinto y último lugar, se podrá consultar el código de esta práctica (y de todas las prácticas de la asignatura) en el repositorio de \emph{Github} \url{https://github.com/SergioQuijanoRey/PracticasInteligenciaNegocio}. Este repositorio será público a partir del 7 de enero, momento en el que las prácticas de la asignatura finalizan.
+En quinto lugar, se podrá consultar el código de esta práctica (y de todas las prácticas de la asignatura) en el repositorio de \emph{Github} \url{https://github.com/SergioQuijanoRey/PracticasInteligenciaNegocio}. Este repositorio será público a partir del 7 de enero, momento en el que las prácticas de la asignatura finalizan.
+
+En sexto y último lugar, por falta de tiempo (pues hemos tenido que preparar otras asignaturas), solo hemos realizado propuestas hasta el 31 de Diciembre de 2021. Tenemos más ideas de cómo continuar mejorando los resultados, pero no disponemos del tiempo para ello. Esto se deja de manifiesto en \customcite{conclusiones:seccion}, donde se comenta la posición en la competición en esa fecha.
 
 \pagebreak
 
@@ -508,7 +510,7 @@ Mantenemos igual el pre-procesado de los datos. Respecto al uso de modelos:
 
 \begin{enumerate}
     \item Realizamos un \textbf{cambio fundamentan en el enfoque} usado en el resto de la práctica
-    \item Construimos un \emph{ensemble} con los cuatro modelos con los que estamos trabajando
+    \item Construimos un \emph{ensemble} con los cuatro modelos con los que estamos trabajando. Usamos \emph{soft voting} porque necesitamos realizar predicciones probabilísticas y no predicciones binarias (que correspondería a voto mayoritario)
     \item Usamos los mejores parámetros encontrados usando \emph{Cross Validation}
     \item Por un error humano, re-entrenamos sobre todo el conjunto de datos usando \emph{Catboost} y no todo el \emph{ensemble}. Por tanto, no será visible el cambio producido por este cambio de paradigma
 \end{enumerate}
@@ -769,8 +771,35 @@ Al usar menos modelos en el \emph{ensemble}, a pesar de ser los mejores modelos,
 
 \pagebreak
 
-\section{Conclusiones}
+\section{Conclusiones} \label{conclusiones:seccion}
 
+En primer lugar, a lo largo de los experimentos ha quedado clara la importancia de realizar un buen procesado de los datos. La normalización de datos, el tipo de imputación de \emph{missing values}, el tipo de borrado de \emph{outliers} o la \emph{numerización} de variables categóricas han sido partes clave en la mejora de los resultados en la competición.
+
+En segundo lugar, hemos usado modelos considerados como \entrecomillado{estado del arte} a la hora de realizar una tarea de clasificación, como pueden ser \emph{Catboost} o \emph{Xgboost}. Sin embargo, y lo que nos ha proporcionado una mejora constante (aunque no disruptiva) ha sido la construcción apropiada de un \emph{ensemble} con voto suave con todos los modelos explorados hasta el momento.
+
+De hecho, en los últimos experimentos, hemos visto cómo \entrecomillado{adelgazar} el \emph{ensemble} ha resultado en peores resultados. Incluso cuando hemos quitado del \emph{ensemble} los peores modelos.
+
+A pesar de esto, tenemos que tener en consideración que este proceder para una competición es una buena idea. Sin embargo, para otros escenarios puede no ser ideal. Por ejemplo, podemos considerar los siguientes problemas:
+
+\begin{enumerate}
+    \item Al considerar tantos modelos perdemos mucha capacidad para extraer conocimiento directamente de los modelos. En nuestro caso concreto, predecimos muy bien si una persona se vacuna o no, pero no extraemos información sobre el por qué
+    \item Los tiempos de entrenamiento, pero sobre todo de inferencia, aumentan considerablemente. Si queremos usar el modelo en entornos de respuesta relativamente rápida, no podremos usar \emph{ensembles} tan grandes
+\end{enumerate}
+
+Pasamos ahora a evaluar los resultados. Como ya hemos dicho, por problemas de tiempo, solo realizamos propuestas en la competición hasta el 31 de Diciembre de 2021. Mostramos la posición en la que quedamos en el momento de escribir estas conclusiones:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.9 \textwidth]{ultima_propuesta_posicion}
+    \caption{Posición final a la hora de escribir estas conclusiones, el 31 de Diciembre de 2021}
+\pagebreak
+\end{figure}
+
+Teniendo en cuenta que quedamos en la posición 202 de 3380 competidores, esto supone que quedamos en el mejor 6\% de la competición, en esta fecha. Por inactividad seguramente bajemos muchas posiciones en la competición. Aún así, estamos contentos con los resultados obtenidos. Quedamos en una posición satisfactoria para nosotros. Y además, como demuestra esta memoria, hemos mejorado constantemente los resultados con los experimentos llevados a cabo. Además ha sido una buena oportunidad para trabajar con un problema real, con modelos y técnicas consideradas a día de hoy como \entrecomillado{estado del arte}.
+
+Y para finalizar, de haber tenido más tiempo para seguir realizando propuestas, seguiríamos probando modelos \entrecomillado{estado del arte}. Además, seguiríamos trabajando en mejorar el \emph{ensemble}, que nos ha dado una mejora incremental con el aumento de su tamaño. Por ejemplo, probaríamos con modelos como \emph{lightgbm}.
+
+También, y para buscar mejoras de gran calado, buscaríamos mejorar el procesado de datos. Esto ha sido en la práctica más costoso, porque suponía repetir la exploración de parámetros con \emph{Cross Validation} para todos los modelos, lo que nos ha llegado a suponer 14h de procesamiento en \emph{Google Colab}.
 
 \pagebreak
 
