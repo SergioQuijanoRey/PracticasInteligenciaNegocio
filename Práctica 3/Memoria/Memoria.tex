@@ -392,6 +392,47 @@ Los resultados se muestran en las siguiente figura:
 
 \pagebreak
 
+\subsection{Experimento 4}
+
+Los cambios en el pre-procesado de datos son:
+
+\begin{enumerate}
+    \item Borramos el balanceo de los datos usando \emph{Smote + Tomek Links} por los malos resultados que producen
+    \item Añadimos una variable global que nos permite cachear el procesado de datos
+\end{enumerate}
+
+Cacheando el procesado de datos, podemos evitar realizar este cómputo de forma repetitiva en caso de que no hayamos cambiado nada en iteraciones previas (en otro experimento o en el mismo experimento). Si cacheamos, nos saltamos el procesado de datos y cargamos los datos desde la caché (un fichero de \lstinline{numpy}). En otro caso, realizamos el pre-procesado y actualizamos la caché.
+
+Respecto a los cambios en los algoritmos:
+
+\begin{enumerate}
+    \item Añadimos \emph{Catboost} a la lista de algoritmos a explorar
+    \item Exploramos sus parámetros usando \emph{Cross Validation}
+    \item Seleccionamos \emph{Catboost} como mejor modelo
+\end{enumerate}
+
+Los resultados se muestran en las siguiente figura:
+
+\begin{figure}[H]
+    \centering
+
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{../Notebook04/28-12-2021::19:11:01.png}
+        \caption{Score obtenida en la \emph{submission}}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{../Notebook04/28-12-2021::19:11:19.png}
+        \caption{Posición de ese momento en la competición}
+    \end{subfigure}
+
+    \caption{Resultados obtenidos tras hacer la \emph{submission} en la plataforma \emph{online}}
+\end{figure}
+
+Seguimos sin mejorar los resultados.
+
+\pagebreak
+
+
 
 % Bibliografia
 \bibliography{./References}
