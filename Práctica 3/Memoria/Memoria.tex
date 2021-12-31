@@ -644,14 +644,34 @@ Seguimos mejorando progresivamente los resultados.
 Respecto al procesado o manejo de los datos:
 
 \begin{enumerate}
-    \item
+    \item Hasta ahora, hemos normalizado los datos evitando hacer \emph{data snooping}
+    \item Es decir, aprendemos los parámetros de la normalización ($\mu, \sigma$) en entrenamiento, y aplicamos esta normalización con estos parámetros en entrenamiento, validación y test
+    \item Probamos a normalizar considerando, en el aprendizaje de los parámetros, los tres conjuntos de datos
+    \item Por tanto, estamos cometiendo, de forma consciente, \emph{data snooping}
+    \item Esto está totalmente desaconsejado en aplicaciones reales en las que el rigor es muy importante para asegurar el buen funcionamiento fuera de datos nunca vistos. Pero aquí esto no es central, sino que lo importante es mejorar los resultados usando todos los datos que la plataforma nos proporciona
 \end{enumerate}
 
-Respecto al uso de modelos:
+Respecto al uso de modelos, no realizamos modificaciones. Los resultados se muestran en la siguiente figura:
 
-\begin{enumerate}
-    \item
-\end{enumerate}
+\begin{figure}[H]
+    \centering
+
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{../Notebook11/30-12-2021::19:07:51.png}
+        \caption{Score obtenida en la \emph{submission}}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{../Notebook11/30-12-2021::19:07:59.png}
+        \caption{Posición de ese momento en la competición}
+    \end{subfigure}
+
+    \caption{Resultados obtenidos tras hacer la \emph{submission} en la plataforma \emph{online}}
+\end{figure}
+
+Los resultados no han cambiado. Lo más probable es que la plataforma esté preparada para minimizar el efecto de usar este mal procedimiento. O también es posible que, al estar obteniendo resultados cercanos a los mejores de la competición (en el momento de realizar esta propuesta), este mal procedimiento no tenga un impacto significativo.
+
+\pagebreak
+
 
 % Bibliografia
 \bibliography{./References}
