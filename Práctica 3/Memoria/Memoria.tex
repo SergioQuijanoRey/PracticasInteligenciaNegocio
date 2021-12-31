@@ -239,7 +239,7 @@ Por la longitud de las tabla global, separaremos dicha tabla en dos tablas. Una 
         Nombre Propuesta & Descripción preprocesado & Descripción Algoritmo & Configuración de parámetros \\ \hline
         1 & Nos quedamos solo con las variables numéricas, imputamos los missing values usando la mediana & Regresión logística, entrenando dos modelos para las dos variables objetivo & C = 1, regularización l2 \\ \hline
         2 & Imputamos missing values con la mediana. Normalizamos a media 0 y desviación 1. Nos quedamos con las variables categóricas, que transformamos a numéricas usando \emph{one hot encoding} & Añadimos cross validation. Decidimos usar AdaBoost. Añadimos la evaluación del modelo sobre el conjunto de validación & lr = 0.5, n\_estimators = 200 \\ \hline
-        3 & Imputamos missing values con un estimador en base a las otras variables. Usamos Smote+TomekLinks & Volvemos a hacer CV y tomamos los mejores parámetros & lr = 0.75 n\_estimatos = 200 \\ \hline
+        3 & Imputamos missing values con un estimador en base a las otras variables. Usamos Smote+TomekLinks. Borramos \emph{outliers} con \emph{Local Outlier Factor} & Volvemos a hacer CV y tomamos los mejores parámetros & lr = 0.75 n\_estimatos = 200 \\ \hline
         4 & Borramos SMOTE + TomekLinks, cacheamos el pre-procesado de datos para poder hacer iteraciones más rápidas & Añadimos CatBoost y hacemos CV para seleccionar los mejores hiperparámetros & lr = 0.5, iterations = 20, depth = 4 \\ \hline
         5 & Entrenamos sobre todo el conjunto de datos tras entrenar y evaluar en validación & Catboost al que hemos cambiado manualmente los parámetros & lr = 0.5, iterations = 40, depth = 4 \\ \hline
         6 & - & Ajustamos CV para todos los modelos, incluido Random Forest. Sigue siendo el mejor Catboost & lr = 0.25, iterations = 80, depth = 4 \\ \hline
@@ -363,8 +363,35 @@ Los cambios en el pre-procesado de datos son:
 
 \begin{itemize}
     \item En vez de imputar \emph{missing values} usando la mediana, usamos predictores en el resto de variables
-    \item
+    \item Para balancear los datos (la etiqueta \lstinline{h1n1} tiene mucho desbalanceo) usamos \emph{smote + tomek links}
+    \item Para el borrado de \emph{outliers}, usamos una técnica avanzada como es \emph{Local Outlier Factor}
 \end{itemize}
+
+De nuevo, para hacer el balanceo con \emph{smote + tomek links}, combinamos las dos variables de salida en una única, realizamos el balanceo, y descombinamos dicha etiqueta única.
+
+Respecto a los algoritmos, esta modificación al conjunto de datos (el balanceo y el borrado de \emph{outliers}) nos obliga a repetir \emph{Cross Validation} para tomar los mejores parámetros, del conjunto de parámetros que exploramos. Seleccionamos de nuevo \emph{AdaBoost} por ser el mejor modelo de los dos que estamos considerando.
+
+Como se ve en \customcite{resumen_resultados:tabla}, este pre-procesado de datos no consigue mejorar los resultados, es más, los empeora ligeramente.
+
+Los resultados se muestran en las siguiente figura:
+
+\begin{figure}[H]
+    \centering
+
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{../Notebook03/27-12-2021::21:33:41.png}
+        \caption{Score obtenida en la \emph{submission}}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{../Notebook03/27-12-2021::21:33:58.png}
+        \caption{Posición de ese momento en la competición}
+    \end{subfigure}
+
+    \caption{Resultados obtenidos tras hacer la \emph{submission} en la plataforma \emph{online}}
+\end{figure}
+
+\pagebreak
+
 
 % Bibliografia
 \bibliography{./References}
