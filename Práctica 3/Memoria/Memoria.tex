@@ -532,8 +532,76 @@ Los resultados se muestran en la siguiente figura:
 
 Vemos que no mejoramos por el error que ya hemos comentado.
 
+\pagebreak
+
+\subsection{Experimento 8}
+
+Mantenemos igual el pre-procesado de los datos. Respecto al uso de modelos:
+
+\begin{enumerate}
+    \item Ponderamos la importancia de cada modelo del \emph{ensemble} usando los resultados de los modelos, de forma individual, sobre el conjunto de validación
+    \item Para ello usamos los \emph{scores} sobre validación (el área bajo la curva ROC) y aplicamos \emph{softmax} para normalizar estos resultados y usarlos como vector de pesos
+    \item Por el mismo error , re-entrenamos sobre todo el conjunto de datos usando \emph{Catboost} y no todo el \emph{ensemble}. Por tanto, no será visible el cambio producido por este cambio de paradigma
+\end{enumerate}
+
+Los resultados se muestran en la siguiente figura:
+
+\begin{figure}[H]
+    \centering
+
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{../Notebook07/29-12-2021::13:27:00.png}
+        \caption{Score obtenida en la \emph{submission}}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{../Notebook07/29-12-2021::13:27:10.png}
+        \caption{Posición de ese momento en la competición}
+    \end{subfigure}
+
+    \caption{Resultados obtenidos tras hacer la \emph{submission} en la plataforma \emph{online}}
+\end{figure}
+
+Vemos que no mejoramos por el error que ya hemos comentado.
 
 \pagebreak
+
+\subsection{Experimento 9}
+
+Respecto al procesado o manejo de los datos:
+
+\begin{enumerate}
+    \item Al borrado de \emph{outliers} usando \emph{Local Outlier Factor}, añadimos (sin sustituir) borrado de \emph{outliers} usando \emph{Isolation Forest}
+\end{enumerate}
+
+Respecto al uso de modelos:
+
+\begin{enumerate}
+    \item Corregimos el error que hemos tenido en los dos modelos previos
+    \item Al re-entrenar sobre todo el conjunto de datos, usamos el \emph{ensemble} construido y ponderado previamente
+\end{enumerate}
+
+Los resultados se muestran en la siguiente figura:
+
+\begin{figure}[H]
+    \centering
+
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{../Notebook09/29-12-2021::18:24:05.png}
+        \caption{Score obtenida en la \emph{submission}}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{../Notebook09/29-12-2021::18:24:17.png}
+        \caption{Posición de ese momento en la competición}
+    \end{subfigure}
+
+    \caption{Resultados obtenidos tras hacer la \emph{submission} en la plataforma \emph{online}}
+\end{figure}
+
+En este caso sí que podemos ver una mejora significativa respecto a los experimentos anteriores. Por tanto, seguiremos durante unos cuantos experimentos expandiendo la potencia del \emph{ensemble}.
+
+\pagebreak
+
+
 
 % Bibliografia
 \bibliography{./References}
