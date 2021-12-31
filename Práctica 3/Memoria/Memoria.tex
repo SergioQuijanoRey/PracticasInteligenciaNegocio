@@ -470,18 +470,70 @@ En este caso sí que vemos una mejora notable en los resultados de la competici�
 
 \subsection{Experimento 6}
 
-Respecto al procesado o manejo de los datos:
+Mantenemos igual el pre-procesado de los datos. Respecto al uso de modelos:
 
 \begin{enumerate}
-    \item
+    \item Exploramos los parámetros de los modelos, usando \emph{Cross Validation}, de forma más concienzuda.
+    \item Anteriormente los parámetros óptimos se alcanzaban en las fronteras, lo que indica que hay que seguir expandiendo dicha frontera para encontrar aún mejores parámetros
+    \item Incluimos Random Forest a nuestro conjunto de modelos a explorar
+    \item Exploramos sus parámetros usando \emph{Cross Validation}
+    \item Seguimos usando \emph{Catboost} por sus buenos resultados
+    \item Por la cantidad de modelos que estamos explorando, añadimos un diccionario con los mejores resultados de cada modelo, que mostramos conjuntamente tras realizar todos los procesos de \emph{Cross Validation}
 \end{enumerate}
 
-Respecto al uso de modelos:
+Los resultados se muestran en la siguiente figura:
+
+\begin{figure}[H]
+    \centering
+
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{../Notebook06/29-12-2021::00:08:30.png}
+        \caption{Score obtenida en la \emph{submission}}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{../Notebook06/29-12-2021::00:08:41.png}
+        \caption{Posición de ese momento en la competición}
+    \end{subfigure}
+
+    \caption{Resultados obtenidos tras hacer la \emph{submission} en la plataforma \emph{online}}
+\end{figure}
+
+Conseguimos mejorar progresivamente los resultados en la plataforma \emph{Driven Data}.
+
+\pagebreak
+
+\subsection{Experimento 7}
+
+Mantenemos igual el pre-procesado de los datos. Respecto al uso de modelos:
 
 \begin{enumerate}
-    \item
+    \item Realizamos un \textbf{cambio fundamentan en el enfoque} usado en el resto de la práctica
+    \item Construimos un \emph{ensemble} con los cuatro modelos con los que estamos trabajando
+    \item Usamos los mejores parámetros encontrados usando \emph{Cross Validation}
+    \item Por un error humano, re-entrenamos sobre todo el conjunto de datos usando \emph{Catboost} y no todo el \emph{ensemble}. Por tanto, no será visible el cambio producido por este cambio de paradigma
 \end{enumerate}
 
+Los resultados se muestran en la siguiente figura:
+
+\begin{figure}[H]
+    \centering
+
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{../Notebook07/29-12-2021::13:27:00.png}
+        \caption{Score obtenida en la \emph{submission}}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45 \textwidth}
+        \includegraphics[width = 0.9 \textwidth]{../Notebook07/29-12-2021::13:27:10.png}
+        \caption{Posición de ese momento en la competición}
+    \end{subfigure}
+
+    \caption{Resultados obtenidos tras hacer la \emph{submission} en la plataforma \emph{online}}
+\end{figure}
+
+Vemos que no mejoramos por el error que ya hemos comentado.
+
+
+\pagebreak
 
 % Bibliografia
 \bibliography{./References}
