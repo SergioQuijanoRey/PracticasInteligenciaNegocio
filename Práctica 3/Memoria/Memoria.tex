@@ -244,12 +244,31 @@ Por la longitud de las tabla global, separaremos dicha tabla en dos tablas. Una 
         5 & Entrenamos sobre todo el conjunto de datos tras entrenar y evaluar en validación & Catboost al que hemos cambiado manualmente los parámetros & lr = 0.5, iterations = 40, depth = 4 \\ \hline
         6 & - & Ajustamos CV para todos los modelos, incluido Random Forest. Sigue siendo el mejor Catboost & lr = 0.25, iterations = 80, depth = 4 \\ \hline
         7 & - & Ensemble con los cuatro algoritmos, con los mejores parámetros que hemos encontrado & Logistic: penalty = "l2", C = 0.05 ; Adaboost: n\_estimators = 200, learning\_rate = 0.5 ; Catboost: iterations=80, learning\_rate=0.25, depth=4 ; Random Forest:     n\_estimators = 200, criterion = "entropy", min\_samples\_split = 4, min\_samples\_leaf = 3 \\ \hline
-        8 & - & Ponderamos el ensemble con los resultados de los modelos individuales, en validación, aplicando softmax & - \\ \hline
-        9 & Además del borrado de outliers que teníamos, añado IsolationForest para borrar outliers & Aplicamos correctamente el ensemble (estábamos re-entrenando con un Catboost simple) & - \\ \hline
     \end{tabular}
 \end{center}
-    \caption{Resumen de los cambios incrementales realizados a lo largo de la práctica}
-    \label{resumen_cambios:tabla}
+    \caption{Resumen de los cambios incrementales realizados a lo largo de la práctica, primera parte}
+    \label{resumen_cambios_parte1:tabla}
+\end{table}
+\end{landscape}
+
+\begin{landscape}
+\begin{table}[t]
+\begin{center}
+    \begin{tabular}{|p{0.1\linewidth} | p{0.3\linewidth} | p{0.3\linewidth}| p{0.3\linewidth}|}
+        \hline
+        Nombre Propuesta & Descripción preprocesado & Descripción Algoritmo & Configuración de parámetros \\ \hline
+        8 & - & Ponderamos el ensemble con los resultados de los modelos individuales, en validación, aplicando softmax & - \\ \hline
+        9 & Además del borrado de outliers que teníamos, añado IsolationForest para borrar outliers & Aplicamos correctamente el ensemble (estábamos re-entrenando con un Catboost simple) & - \\ \hline
+        10 & En vez de usar imputación con estimador, imputamos usando la mediana & Añadimos Extreme Random Forest y MLP. Hacemos hyperparamter tuning de todos los algoritmos que llevamos explorados hasta ahora. Añadimos los dos nuevos modelos al ensemble & Mismos parámetros para modelos ya explorados. Extreme random forest: nestimators: 300, min\_samples\_split: 2, min\_samples\_leaf: 3. MLP: alpha: 0.1, learning\_rate\_init: 0.0001 \\ \hline
+        11 & En la normalización de datos, aprendemos los parámetros usando training, validación y test & - & - \\ \hline
+        12 & Deshago la normalización de datos usando todos los conjuntos. Solo uso el conjunto de entrenamiento para aprender los parámetros & Añado XGBOOST. Exploro sus parámetros con CV. Lo añado al ensemble de modelos & XGBOOST: max\_depth: 4, eta: 0.15 \\ \hline
+        13 & - & Uso ranking en vez de softmax para realizar la asignación de pesos & - \\ \hline
+        14 & - & Uso solo MLP, Catboost y Xgboost para el ensemble. Volvemos a usar softmax para los pesos del ensemble, en vez del ranking & - \\ \hline
+
+    \end{tabular}
+\end{center}
+    \caption{Resumen de los cambios incrementales realizados a lo largo de la práctica, segunda parte}
+    \label{resumen_cambios_parte1:tabla}
 \end{table}
 \end{landscape}
 
